@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(0, 0, 0);">
+    <button onclick={handleClick()}>hi</button>
+    <input type="text" oninput="handleChange(event)">
+
+    <button on={Shanu(blur )}>hello</button>
+</body>
+
+</html>
+
+<script>
+
+    const handleClick = () => {
+        console.log("akbdakskasdjksadjksa askdksadasjkdg asjd sagd aksdg kasdg kahd")
+    }
+
+
+    const handleChange = (event) => {
+        // This will log every time the user types or modifies the input
+        console.log(event.target.value);
+    }
+
+
+    const video = document.querySelector('video');
+    video.onabort = () => {
+        console.log('Video loading was cancelled');
+    };
+
+</script>

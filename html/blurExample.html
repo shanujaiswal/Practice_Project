@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Blur Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px 0;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: rgb(77, 76, 76);
+            display: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Example 1: Auto-blur on Enter -->
+    <div class="input-group">
+        <h3>Auto-blur on Enter</h3>
+        <input 
+            type="text" 
+            id="autoBlurInput" 
+            placeholder="Press Enter to blur..."
+        >
+    </div>
+
+    <!-- Example 2: Validation on blur -->
+    <div class="input-group">
+        <h3>Email Validation on Blur</h3>
+        <input 
+            type="email" 
+            id="emailInput" 
+            placeholder="Enter email..."
+        >
+        <div id="emailError" class="error">
+            Please enter a valid email address
+        </div>
+    </div>
+
+    <!-- Example 3: Manual blur with button -->
+    <div class="input-group">
+        <h3>Manual Blur with Save</h3>
+        <input 
+            type="text" 
+            id="manualBlurInput" 
+            placeholder="Type something..."
+        >
+        <button id="saveButton">Save & Blur</button>
+    </div>
+
+    <!-- Example 4: Auto-format on blur -->
+    <div class="input-group">
+        <h3>Phone Number Format on Blur</h3>
+        <input 
+            type="tel" 
+            id="phoneInput" 
+            placeholder="Enter phone number..."
+        >
+    </div>
+
+    <script>
+        // Example 1: Auto-blur on Enter
+        const autoBlurInput = document.getElementById('autoBlurInput');
+        autoBlurInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                autoBlurInput.blur();
+            }
+        });
+
+        // Example 2: Email validation on blur
+        const emailInput = document.getElementById('emailInput');
+        const emailError = document.getElementById('emailError');
+
+        emailInput.addEventListener('blur', () => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value) && emailInput.value !== '') {
+                emailError.style.display = 'block';
+                emailInput.focus(); // Return focus if invalid
+            } else {
+                emailError.style.display = 'none';
+            }
+        });
+
+        // Example 3: Manual blur with save
+        const manualBlurInput = document.getElementById('manualBlurInput');
+        const saveButton = document.getElementById('saveButton');
+
+        saveButton.addEventListener('click', () => {
+            // Simulate saving data
+            console.log('Saving:', manualBlurInput.value);
+            manualBlurInput.blur();
+            // Show success feedback
+            saveButton.textContent = 'Saved!';
+            setTimeout(() => {
+                saveButton.textContent = 'Save & Blur';
+            }, 1500);
+        });
+
+        // Example 4: Phone number formatting on blur
+        const phoneInput = document.getElementById('phoneInput');
+        
+        phoneInput.addEventListener('blur', () => {
+            const cleaned = phoneInput.value.replace(/\D/g, '');
+            if (cleaned.length === 10) {
+                const formatted = cleaned.replace(
+                    /^(\d{3})(\d{3})(\d{4})$/, 
+                    '($1) $2-$3'
+                );
+                phoneInput.value = formatted;
+            }
+        });
+    </script>
+</body>
+</html>

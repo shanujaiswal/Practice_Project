@@ -1,0 +1,43 @@
+.clock{
+    height: 50px;
+    width: 50px;
+    border: 0.1cm solid black;
+    border-radius: 50%;
+    margin: 207px 569px;
+    padding: 100px;
+}
+
+.secHands , .minHands , .hourHands{
+    background: 1px solid black ;
+}
+
+.secHands{
+    width: 20px;
+    height: 30%;
+    background: black;
+}
+
+.minHands{
+    width: 20px;
+    height: 25%;
+    background: black;
+}
+
+.hourHands{
+    width: 20px;
+    height: 25%;
+    background: black;
+}
+
+.number{
+    position: absolute;
+    height: 32%;
+    font-size: 15px;
+    transform: rotate(var(--rotation));
+    margin-top: -106px;
+    margin-left: -7px;
+}
+
+.middle{
+    border: 2px solid black;
+}

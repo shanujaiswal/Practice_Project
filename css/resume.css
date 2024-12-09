@@ -1,0 +1,238 @@
+.main {
+    margin-top: 40px !important;
+}
+
+.one {
+    background-color: #ffffff;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.two {
+    background-color: #ffffff;
+    margin-top: 20px;
+    width: 70px;
+    border-radius: 50px;
+}
+
+.icon {
+    width: 25px;
+    display: block;
+    margin: auto;
+}
+
+.sideNavIcons {
+    background-color: skyblue;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    display: flex;
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #727272 !important;
+}
+
+.second {
+    background-color: #ffffff;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.photo {
+    width: 100%;
+    height: 60vh;
+}
+
+.name {
+    text-align: center;
+    color: black;
+}
+
+.social {
+    width: 55px;
+    border: 2px solid black;
+    border-radius: 30%;
+    margin: 3%;
+    padding: 5%;
+    height: 55px;
+}
+
+.socialIcons {
+    justify-content: center;
+}
+
+.icon-3 {
+    width: 16px;
+    display: inline-flex;
+}
+
+.icon-4 {
+    width: 42px;
+    display: inline-flex;
+}
+
+.service {
+    margin-top: 60px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 8px 16px;
+    /* height: fit-content; */
+}
+
+.pricing {
+    margin-top: 60px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 8px 16px;
+}
+
+.duration {
+    border: 1px solid black;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 8px 16px;
+}
+
+.serviceProvide {
+    margin: 30px 0px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 8px 16px;
+    /* height: fit-content; */
+}
+
+.orderNow{
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 8px 16px;
+}
+
+
+/* Common classes */
+.bt {
+    border-top: 1px solid grey;
+}
+
+.br {
+    border-right: 1px solid grey;
+}
+
+.bl {
+    border-left: 1px solid grey;
+}
+
+.bb {
+    border-bottom: 1px solid grey;
+}
+
+.flex {
+    display: flex;
+}
+
+.contentCenter {
+    justify-content: center;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.icon:hover {
+    /* fill: rgb(96, 96, 204); */
+    background-color: rgb(202, 9, 9);
+}
+
+.fs {
+    font-size: 55px;
+}
+
+
+.pa {
+    padding: 20px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+.pl-27 {
+    padding-left: 27px;
+}
+
+.pl-60 {
+    padding-left: 60px;
+}
+
+.pl-5 {
+    padding-left: 5px;
+}
+
+.flexWrap {
+    flex-wrap: wrap;
+}
+
+.pa-122 {
+    padding: 0px 0px 0px 20px;
+}
+
+.ml-149{
+    margin-left: 149px;
+}
+
+.ml-172{
+    margin-left: 172px;
+}
+ 
+.mtb{
+    margin: 30px 0px ;
+}
+
+.pa-1{
+    padding: 12px;
+}

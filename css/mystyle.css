@@ -1,0 +1,24 @@
+.container {
+    margin: 500px;
+}
+
+.fsfs {
+    margin-bottom: 10px;
+    color: white;
+    background-color: rgb(60, 199, 209);
+    height: auto;
+    width: auto;
+    padding: auto;
+}
+
+.inputStyle input {
+    margin-bottom: 20px;
+    border-color: black;
+    border-width: 1px;
+    display: block;
+}
+
+.Submit {
+    background-color: #00d2e7;
+    border-radius: 3px ;
+}
