@@ -1,4 +1,4 @@
-.clock {
+.digitalClock {
     height: 300px;
     width: 300px;
     border: 2px solid black;
@@ -71,4 +71,12 @@
     height: 100%;
     top: 0;
     left: 0;
+}
+
+.time{
+margin-left: 50%;
+border: 3px solid black ;
+width: 10%;
+height: 10%;
+background-color: aquamarine;
 }
