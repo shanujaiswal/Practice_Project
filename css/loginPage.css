@@ -1,0 +1,31 @@
+.main {
+    margin: 40px !important;
+}
+
+
+.form {
+    display: flex;
+}
+
+.introduction {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    background-image: url('https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75.jpg');
+    
+    border: 5px solid black;
+
+    color: white;
+    padding: 50%;
+}
+
+
+
+
+.fit-width {
+    background-size: 100% auto;
+}
+
+.fit-height {
+    background-size: auto 100%
+}
