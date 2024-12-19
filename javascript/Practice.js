@@ -26,5 +26,39 @@ console.log(e[e.length - 1])  //find words from backward
 let f = "  Shanu   e"
 f = f.trim(); // method 1 to trim 
 console.log(f)
-let h = f.trim();  //method 2  to trim 
-console.log(h);
+let g = f.trim();  //method 2  to trim 
+console.log(g);
+
+//Access words in dict 
+const h = {
+    Abhishek_m : "Owner",
+    Ivan : "Product Manager",
+    Dharambir : "Developer",
+    Pankaj : "Full Stack" ,
+    shanu : "Tester",
+}
+console.log(h.shanu) //method 1 
+console.log(h["shanu"]) // method 2 
+const { shanu} = h;
+console.log(shanu)  //method 3 
+//method 4 
+console.log(Object.keys(h));  // Get all keys
+console.log(Object.values(h)); // Get all values
+console.log(Object.entries(h));   // Get key-value pairs as arrays
+console.log(h.hasOwnProperty("shanu"));   // Check if property exists
+
+//Access words in dict (for nested objects)
+const person = {
+    name: "John",
+    address: {
+        city: "New York"
+    }
+};
+
+// Without optional chaining
+console.log(person.address && person.address.city); // Old way
+
+// With optional chaining
+console.log(person?.address?.city);    // Output: "New York"
+console.log(person?.contacts?.email);  // Output: undefined (no error)
+
