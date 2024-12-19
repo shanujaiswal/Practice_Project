@@ -3,9 +3,13 @@
 //setting a value to variable
 let a = "shanu" 
 console.log(a);
+console.log(typeof a);  //Know type of value
+
 
 //printing words directly using console log
 console.log("hello world");
+
+
 
 // adding two variable 
 let b = "shanu";
@@ -62,3 +66,14 @@ console.log(person.address && person.address.city); // Old way
 console.log(person?.address?.city);    // Output: "New York"
 console.log(person?.contacts?.email);  // Output: undefined (no error)
 
+//Prompt -- Used to ask details 
+let i = prompt("what is your name")
+console.log(i);
+
+//Convert input string to integer
+i = Number.parseInt(i) //method 1
+i = Number(i)  //method 2 
+console.log(typeof i)
+
+//alert - to tell any alert 
+let j =  alert("you are not allowed ")
