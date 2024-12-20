@@ -1,8 +1,9 @@
-// adding two variable 
+// adding two string / concatinate
 let a = "shanu";
-console.log(a);
 let b = "jaiswal"
 console.log(a + b);
+console.log(a +" "+ b);
+
 
 // Doing operation inside console 
 let c = 100;
@@ -56,3 +57,34 @@ console.log(typeof l)
 let m = +"shanu"; //method 2 
 console.log(typeof m);
 
+ // template string 
+ let myName = "Shanu";
+ let age = 22
+
+ let aboutMe = "My name is " + myName + " and my age is " + age; //normal method 
+console.log(aboutMe)
+
+let aboutMe1 = `my name is ${myName} and my age is ${age}`  // template method
+console.log(aboutMe1)
+
+//undifined 
+let n
+console.log(typeof n)
+n = "apple";
+console.log(typeof n)
+
+//null
+let o = null;
+console.log(o);
+o = "Shanu";
+console.log(typeof o)
+console.log(typeof null)
+
+//bigint
+console.log(Number.MAX_SAFE_INTEGER);  //safely to store integer after that use bigint 
+let p = BigInt(123)  //method 1
+console.log(typeof p)
+let q = 123n;  //method 2 
+console.log(typeof q)
+
+//if- else condition 
