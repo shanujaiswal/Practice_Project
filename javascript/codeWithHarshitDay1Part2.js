@@ -1,6 +1,6 @@
 // if condition
 let a = 23;
-if(a >= 18){
+if (a >= 18) {
     console.log("you can give vote");
 }
 
@@ -8,10 +8,10 @@ if(a >= 18){
 //ex - 1 ;
 let b = 12;
 
-if(b%2==0){
+if (b % 2 == 0) {
     console.log("even");
 }
-else{
+else {
     console.log("odd");
 }
 //ex - 2 Due to Prompt it is in comment ;
@@ -33,17 +33,17 @@ else{
 
 // "", '' (empty strings)
 let d;
-if(d){
+if (d) {
     console.log(d);
-}else{
+} else {
     console.log("d is kinda empty");
 }
 
 // null, undefined and NaN
 let e = null;
-if(e){
+if (e) {
     console.log(e);
-}else{
+} else {
     console.log("e is kinda empty");
 }
 
@@ -51,9 +51,9 @@ if(e){
 //method - normal method 
 let f = 12;
 
-if(f>=10){
+if (f >= 10) {
     g = "coffee"
-} else{
+} else {
     g = "milk"
 }
 console.log(g)
@@ -64,5 +64,43 @@ let i = h >= 5 ? "coffee" : "milk";
 console.log(i)
 
 let j = 2;
-let k = j >= 5 ? "coffee" : j<=2 ? "milk" : "water";
-console.log(k) 
+let k = j >= 5 ? "coffee" : j <= 2 ? "milk" : "water";
+console.log(k)
+
+// and or operator 
+let l = "Shanu";
+let m = 24;
+
+if (l[0] === "S" && m > 22) {
+    console.log("your name start with s")
+}else {
+    console.log("you are what")
+    }
+
+let n = "Shanu";
+let o = 24;
+if (n[4] === "S" || o < 22) {
+    console.log("your name start with s")
+} else {
+console.log("you are what")
+}
+
+
+
+//reverse given string
+// var shanu=()=>{
+//     var n = "check"
+//     var len = n.length
+//     var io = 0
+//     let res = ""
+//     let rev = ""
+//     while (io<len) {
+//         res = n.substring(io,io+1)
+//         rev = res+rev
+//         io++;
+//     }
+//     console.log(rev)
+// }
+// shanu()
+
+
