@@ -50,5 +50,9 @@ k = String(k) //method 2
 console.log(typeof k)
 
 // string to number
-let l = +"shanu";
-console.log(typeof l);
+let l = "shanu"
+l = Number(l) //method 1
+console.log(typeof l)
+let m = +"shanu"; //method 2 
+console.log(typeof m);
+
