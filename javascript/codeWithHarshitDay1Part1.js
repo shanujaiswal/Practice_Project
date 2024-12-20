@@ -86,5 +86,3 @@ let p = BigInt(123)  //method 1
 console.log(typeof p)
 let q = 123n;  //method 2 
 console.log(typeof q)
-
-//if- else condition 
