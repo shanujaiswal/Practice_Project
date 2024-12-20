@@ -30,4 +30,25 @@ let h = "Shanu"
 let i = h.slice(0,2); // to give letters between range 
 console.log(i);
 let j = h.slice(3); // to give letters after that range 
-console.log(j);
+console.log(j);  
+
+//Types of operator 
+// String. - "Shanu"
+//Number.- 2,3,4,5,6,7,8
+// Boolean. - True / False
+// Null. - {}
+// Undefined.
+// BigInt.
+// Symbol.
+// Object.
+
+// number to string
+let k = 24;
+k = k + ""; //method 1
+console.log(typeof k)
+k = String(k) //method 2
+console.log(typeof k)
+
+// string to number
+let l = +"shanu";
+console.log(typeof l);
