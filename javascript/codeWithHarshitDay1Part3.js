@@ -73,4 +73,6 @@ let f =100;
 
  // for loop 
 
- for(let )
+for (let h = 0; h <= 9; h++) {
+    console.log(h);
+}
