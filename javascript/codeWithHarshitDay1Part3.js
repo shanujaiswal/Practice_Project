@@ -76,3 +76,19 @@ let f =100;
 for (let h = 0; h <= 9; h++) {
     console.log(h);
 }
+
+//break  -- break the output when reached to expected output 
+for (let i = 0; i <= 9; i++) {
+    if(i===6){
+    break;
+    }
+    console.log(i);
+}
+
+//continue keywords  -- continue the  output from starting to end except the desire result 
+for (let j = 0; j <= 9; j++) {
+    if(j ===6){
+    continue;
+    }
+    console.log(j);
+}
