@@ -29,6 +29,20 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 --> Created using [ ]
 --> Reference types Also known as objects 
 -->
+==> Memory Layout:
+
+---> Primitive (x and y):
+
+--> x is in the stack with value 20.
+--> y is in the stack with value 10.
+--> x and y are independent copies.
+
+---> Reference Type (obj1 and obj2):
+--> obj1 and obj2 are in the stack, both holding the same reference to an object in the heap.
+--> The object in the heap looks like { name: "Bob" }.
+--> Both obj1 and obj2 point to the same object, so modifying the object through either reference affects both.
+
+![Differences in Memory Storage of Primitive and Reference ](image-1.png)
 
 -->To access string we use square bracket []
 
@@ -54,7 +68,7 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 --> Condition is checked after the loop body executes.
 --> Use do-while when you want the loop to execute at least once before checking the condition (e.g., when a menu is presented to the user and you want to ensure the menu shows up at least once).
  
-![alt text](image.png)
+![Difference between for , while , do while loop ](image.png)
 
 ==> break 
 --> it will stop after given condition satisfy 
