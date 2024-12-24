@@ -28,11 +28,10 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 ==> Array -- ordered Collection of items / elements 
 --> Created using [ ]
 --> Reference types Also known as objects 
--->
+
 ==> Memory Layout:
 
 ---> Primitive (x and y):
-
 --> x is in the stack with value 20.
 --> y is in the stack with value 10.
 --> x and y are independent copies.
@@ -42,16 +41,13 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 --> The object in the heap looks like { name: "Bob" }.
 --> Both obj1 and obj2 point to the same object, so modifying the object through either reference affects both.
 
-![Differences in Memory Storage of Primitive and Reference ](image-1.png)
+![Differences in Memory Storage of Primitive and Reference](image-1.png)
 
 -->To access string we use square bracket []
-
-
 
 ==> Switch Statement
 --> evaluates a value against multiple cases and executes the code block of the matching case
 -->  Provide break if you want to stop the execution and no further responses from code otherwise it will provide all the given cases 
-
 
 ==> While loop
 --> Condition is checked before the loop body executes.
@@ -76,8 +72,5 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 ==> continue 
 --> continue the  output from starting to end except the desire result.
 
-
 ==> push and pop is faster than unshift & shift 
 because push and pop have to create and dealt with last element whereas unshift & shift have to make changes in starting and deal with all other elements 
-
-

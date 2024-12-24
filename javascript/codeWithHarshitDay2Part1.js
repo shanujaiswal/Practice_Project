@@ -66,5 +66,29 @@ let o = n;
 console.log(n)
 console.log(o)
 n.push("item3")
-console.log(n) // Output the new value of 'l' (prints: 8)
+console.log(n) 
 console.log(o)
+
+//clone array 
+
+let p =["item1","item2","item3"]
+let q = p
+console.log(p===q)  // it make array clone 
+
+let r = ["item1","item2","item3"]
+let s = ["item1","item2","item3"]  //method 1 cloning  -- normal and old method 
+let t = r.slice(0)  //method 2 cloning -- slicing method
+let u =[].concat(r)  //method 3 cloning --concat 
+let v = [...r]
+
+r.push("item4")
+console.log(r===s)
+console.log(r===t)
+console.log(r===u)
+console.log(r===v)
+
+console.log(r)
+console.log(s)
+console.log(t)
+console.log(u)
+console.log(v)
