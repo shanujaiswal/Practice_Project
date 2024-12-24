@@ -1,9 +1,27 @@
+ALT + Shift + Down Button -- Duplicate the Current Line 
+CTRL + Shift + J -- Open console in Browser (not for VS Code)
+CTRL + / -- Comment 
+ALT + UP Button or Down Button -- To move whole Line up and down 
+
+
+Primitive Data Types 
+--> Created using ( )
+--> number , string , null , undefined 
+
+Array -- ordered Collection of items / elements 
+--> Created using [ ]
+--> Reference types 
+
+-->To access string we use square bracket []
+
+
+
 Switch Statement
 --> evaluates a value against multiple cases and executes the code block of the matching case
 -->  Provide break if you want to stop the execution and no further responses from code otherwise it will provide all the given cases 
 
 
-*While loop*
+While loop
 --> Condition is checked before the loop body executes.
 --> Use while when you don't know in advance how many times the loop will execute, and you want to repeat the loop as long as a condition remains true.
 --> we declare variable before starting while 
