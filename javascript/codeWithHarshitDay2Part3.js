@@ -13,3 +13,5 @@ let b = {
     }
 console.log(b);
 console.log(b.hobbies)   //to access array in object
+
+//add key value pair to objects 
