@@ -29,6 +29,18 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 --> Created using [ ]
 --> Reference types Also known as objects 
 
+==>Objects
+--> Array are good but not sufficent for real world data 
+--> objects store key value pairs 
+--> objects don't have index
+
+==> Primitive - 
+--> 1, 2, 3, 4, "String", null, undefined
+==> Array 
+--> [1, 2, 3, 4, "String", null, undefined ]
+==>Objects 
+--> { }
+
 ==> Memory Layout:
 
 ---> Primitive (x and y):
@@ -40,6 +52,7 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 --> obj1 and obj2 are in the stack, both holding the same reference to an object in the heap.
 --> The object in the heap looks like { name: "Bob" }.
 --> Both obj1 and obj2 point to the same object, so modifying the object through either reference affects both.
+--> array , objects
 
 ![Differences in Memory Storage of Primitive and Reference](image-1.png)
 
@@ -54,7 +67,7 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 --> Use while when you don't know in advance how many times the loop will execute, and you want to repeat the loop as long as a condition remains true.
 --> we declare variable before starting while 
 
-==> loop function 
+==> for loop function 
 --> for loop Condition is checked before the loop body executes, similar to while, but it has an initialization step, a condition, and an increment step all in one line
 --> Use for when the number of iterations is known or easily determined before the loop starts (e.g., looping over a range or through an array).
 --> if we declare variable inside starting   paranthesis then it will became local variable 
@@ -77,3 +90,6 @@ because push and pop have to create and dealt with last element whereas unshift 
 
 
 ![Difference between for in and for of](image-2.png)
+
+
+
