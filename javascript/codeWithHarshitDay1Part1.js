@@ -2,7 +2,7 @@
 let a = "shanu";
 let b = "jaiswal"
 console.log(a + b);
-console.log(a +" "+ b);
+console.log(a + " " + b);
 
 
 // Doing operation inside console 
@@ -28,10 +28,10 @@ console.log(g.toLowerCase()); // making lowerCase
 
 //Slicing 
 let h = "Shanu"
-let i = h.slice(0,2); // to give letters between range 
+let i = h.slice(0, 2); // to give letters between range 
 console.log(i);
 let j = h.slice(3); // to give letters after that range 
-console.log(j);  
+console.log(j);
 
 //Types of operator 
 // String. - "Shanu"
@@ -57,11 +57,11 @@ console.log(typeof l)
 let m = +"shanu"; //method 2 
 console.log(typeof m);
 
- // template string 
- let myName = "Shanu";
- let age = 22
+// template string 
+let myName = "Shanu";
+let age = 22
 
- let aboutMe = "My name is " + myName + " and my age is " + age; //normal method 
+let aboutMe = "My name is " + myName + " and my age is " + age; //normal method 
 console.log(aboutMe)
 
 let aboutMe1 = `my name is ${myName} and my age is ${age}`  // template method

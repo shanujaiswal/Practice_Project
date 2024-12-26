@@ -73,16 +73,16 @@ let m = 24;
 
 if (l[0] === "S" && m > 22) {
     console.log("your name start with s")
-}else {
+} else {
     console.log("you are what")
-    }
+}
 
 let n = "Shanu";
 let o = 24;
 if (n[4] === "S" || o < 22) {
     console.log("your name start with s")
 } else {
-console.log("you are what")
+    console.log("you are what")
 }
 
 //nested if else

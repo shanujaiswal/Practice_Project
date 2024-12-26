@@ -60,18 +60,18 @@ while (c <= 7) {
 //method 1 
 let d = 0
 let e = 0
-while (e<=100){
+while (e <= 100) {
     d = d + e;
     e++;
 }
 console.log(d)
 
 //method 2
-let f =100;
- let g = (f*(f+1))/2;
- console.log(g)
+let f = 100;
+let g = (f * (f + 1)) / 2;
+console.log(g)
 
- // for loop 
+// for loop 
 
 for (let h = 0; h <= 9; h++) {
     console.log(h);
@@ -79,24 +79,24 @@ for (let h = 0; h <= 9; h++) {
 
 //break  -- break the output when reached to expected output 
 for (let i = 0; i <= 9; i++) {
-    if(i===6){
-    break;
+    if (i === 6) {
+        break;
     }
     console.log(i);
 }
 
 //continue keywords  -- continue the  output from starting to end except the desire result 
 for (let j = 0; j <= 9; j++) {
-    if(j ===6){
-    continue;
+    if (j === 6) {
+        continue;
     }
     console.log(j);
 }
 
 // do while 
-let k = 10 ;
-do{
+let k = 10;
+do {
     console.log(k);
     k++;
-} while(k<=9);
+} while (k <= 9);
 console.log(k)

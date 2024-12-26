@@ -1,16 +1,19 @@
-.header{
+.header {
     height: 70px;
     background-color: red;
 }
-.banner{
+
+.banner {
     height: 60vh;
     background-color: blue;
 }
-.box{
+
+.box {
     height: 100px;
     background-color: blueviolet;
 }
-.flex{
+
+.flex {
     display: flex;
 
 }
