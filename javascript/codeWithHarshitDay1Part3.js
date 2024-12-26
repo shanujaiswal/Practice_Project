@@ -92,3 +92,11 @@ for (let j = 0; j <= 9; j++) {
     }
     console.log(j);
 }
+
+// do while 
+let k = 10 ;
+do{
+    console.log(k);
+    k++;
+} while(k<=9);
+console.log(k)

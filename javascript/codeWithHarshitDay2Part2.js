@@ -21,13 +21,10 @@ f.push("cherry")
 console.log(f)
 
 // while loop 
-// while loop 
 const g = ["apple", "grapes", "mango", "banana"];
-const h =[];
-let i = 0;
-while (i < g.length) {
-    g.push(g[i].toUpperCase());
-    i++;
+let h = 0;
+while (h < g.length) {
+    console.log(g[h].toUpperCase());
+    h++;
 }
-console.log(g);
 
