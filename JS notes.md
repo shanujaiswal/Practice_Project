@@ -38,8 +38,10 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 --> 1, 2, 3, 4, "String", null, undefined
 ==> Array 
 --> [1, 2, 3, 4, "String", null, undefined ]
+--> semi colon 
 ==>Objects 
---> { }
+--> { name:"Shanu", age:23}
+--> comma ,
 
 ==> Memory Layout:
 
