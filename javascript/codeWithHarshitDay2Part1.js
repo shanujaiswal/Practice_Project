@@ -79,7 +79,7 @@ let r = ["item1","item2","item3"]
 let s = ["item1","item2","item3"]  //method 1 cloning  -- normal and old method 
 let t = r.slice(0)  //method 2 cloning -- slicing method
 let u =[].concat(r)  //method 3 cloning --concat 
-let v = [...r]
+let v = [...r]  //method 4 cloning --new way -- spread operator  
 
 r.push("item4")
 console.log(r===s)

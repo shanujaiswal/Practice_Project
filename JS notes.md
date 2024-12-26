@@ -22,7 +22,7 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 
 ==> Primitive Data Types 
 --> Created using ( )
---> number , string , null , undefined 
+--> number , string ,boolean ,null ,undefined ,symbol(introduced in ES6) ,bigint (introduced in ES11)
 -->Primitive are saved in stack 
 
 ==> Array -- ordered Collection of items / elements 
