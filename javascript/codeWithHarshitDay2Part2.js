@@ -41,3 +41,20 @@ for (let l in k) {    // j is changable we can write any thing in place of j wit
     console.log(k[l])
 }
 
+// array Destructing 
+//normal method
+const m = ["value1","value2"];
+let n = m[0];
+let o = m[1];
+console.log(n)
+console.log(o)
+
+// use time cutting methog
+let[p,q] = m;  //if you are doing with let you can change value .if you are using const you can not change values 
+console.log(p)
+console.log(q)
+
+const r = ["value1","value2","value3","value4","value5"];
+let[s,,,u ]= r;   //to escape value no of value escape that much null value
+console.log(s)
+console.log(u)
