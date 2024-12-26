@@ -74,3 +74,6 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 
 ==> push and pop is faster than unshift & shift 
 because push and pop have to create and dealt with last element whereas unshift & shift have to make changes in starting and deal with all other elements 
+
+
+![Difference between for in and for of](image-2.png)

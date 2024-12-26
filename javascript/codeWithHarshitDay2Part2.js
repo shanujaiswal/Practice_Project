@@ -20,11 +20,24 @@ const f = ["apple", "grapes", "mango", "banana"];
 f.push("cherry")
 console.log(f)
 
-// while loop 
+// while loop in array
 const g = ["apple", "grapes", "mango", "banana"];
 let h = 0;
 while (h < g.length) {
     console.log(g[h].toUpperCase());
     h++;
+}
+
+// for of loop in array  ---- Use for in when you need to work with properties of an object.
+const i = ["apple", "grapes", "mango", "banana"];
+for (let j of i) {    // j is changable we can write any thing in place of j without declaration 
+    console.log(j)
+}
+
+// for in loop in array  ----  Use for of when you need to loop through the values of an iterable like an array or string.
+const k = ["apple", "grapes", "mango", "banana"];
+for (let l in k) {    // j is changable we can write any thing in place of j without declaration 
+    console.log(l)
+    console.log(k[l])
 }
 
