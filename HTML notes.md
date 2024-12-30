@@ -74,7 +74,16 @@ eg :- The HTML tag contains the Head and Body tags forming a nested structure
 ==> del --> tag is used to mark text that has been deleted from a document
 ==> q --> Used for short, inline quotations 
 ==> blockquote --> defines a section that is quoted from another source. 
-==> cite --> tag is used to mark the title of a creative work that is being cited. ??
+==> cite --> tag is used to mark the title of a creative work that is being cited. 
 ==> abbr -->tag defines an abbreviation or an acronym
-==> address --> tag defines the contact information for the author/owner of a document or an article.
+==> address --> tag defines the contact information for the author/owner of a document or an article. Title attribute to show the description for the abbreviation/acronym when you mouse over the element.
+==> bdo --> tag is used to override the current text direction. BDO stands for Bi-Directional Override.
+--> e.g --> <bdo dir="rtl">This text will be written from right to left</bdo>
+
+==> Color Value 
+RGB(red, green, and blue) values --> rgb(255, 99, 71)
+HEX(hexadecimal) values --> #ff6347
+HSL(hue, saturation, and lightness) values --> hsl(9, 100%, 64%)
+RGBA(red, green, blue, and alpha) values --> rgba(255, 99, 71, 0.5)
+HSLA(Hue-Saturation-Lightness-Alpha) values --> hsla(9, 100%, 64%, 0.5)
 
