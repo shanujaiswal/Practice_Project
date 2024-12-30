@@ -81,9 +81,15 @@ eg :- The HTML tag contains the Head and Body tags forming a nested structure
 --> e.g --> <bdo dir="rtl">This text will be written from right to left</bdo>
 
 ==> Color Value 
-RGB(red, green, and blue) values --> rgb(255, 99, 71)
-HEX(hexadecimal) values --> #ff6347
-HSL(hue, saturation, and lightness) values --> hsl(9, 100%, 64%)
-RGBA(red, green, blue, and alpha) values --> rgba(255, 99, 71, 0.5)
-HSLA(Hue-Saturation-Lightness-Alpha) values --> hsla(9, 100%, 64%, 0.5)
+--> RGB(red, green, and blue) values --> rgb(255, 99, 71)
+--> HEX(hexadecimal) values --> #ff6347
+--> HSL(hue, saturation, and lightness) values --> hsl(9, 100%, 64%)
+--> RGBA(red, green, blue, and alpha) values --> rgba(255, 99, 71, 0.5)
+--> HSLA(Hue-Saturation-Lightness-Alpha) values --> hsla(9, 100%, 64%, 0.5)
 
+--> By default all hyperlinks are underlined
+--> text-decoration:none --> to remove the underline from the link.
+
+--> <style>
+a:hover {color:red}
+</style>  --> correct syntax for making a link red when you mouse over it
