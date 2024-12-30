@@ -64,3 +64,17 @@ eg :- The HTML tag contains the Head and Body tags forming a nested structure
 ==> ul --> Unordered list 
 ==> li --> list item 
 ==> hr --> Add horizontal ruler 
+==> br --> break line 
+==> pre --> preserve all spaces and linebreaks when the element is displayed.
+==> strong --> Add extra importance to the word
+==> b --> elements makes the text bold 
+==> em --> emphesize the word 
+==> mark --> Highlight the word
+==> sub --> subscript formatting to the number 
+==> del --> tag is used to mark text that has been deleted from a document
+==> q --> Used for short, inline quotations 
+==> blockquote --> defines a section that is quoted from another source. 
+==> cite --> tag is used to mark the title of a creative work that is being cited. ??
+==> abbr -->tag defines an abbreviation or an acronym
+==> address --> tag defines the contact information for the author/owner of a document or an article.
+
