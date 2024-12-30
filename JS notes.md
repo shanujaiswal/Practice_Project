@@ -95,3 +95,4 @@ because push and pop have to create and dealt with last element whereas unshift 
 
 
 
+in javascript key are in string 
