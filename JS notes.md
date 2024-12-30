@@ -2,44 +2,36 @@
 ==> CTRL + Shift + J -- Open console in Browser (not for VS Code)
 ==> CTRL + / -- Comment 
 ==> ALT + UP Button or Down Button -- To move whole Line up and down 
+==> Common Practice to end statement in javascript with a semi-colon (;)
 
-==>i++
--->(Post-increment)
-It is the post-increment operator. It increases the value of i by 1, but returns the original value of i before the increment.
---> If i = 5, i++ will first return 5 (the original value), and then increment i to 6.
-==> 
-==> ++i
---> It is the pre-increment operator. It increases the value of i by 1, but returns the incremented value.
---> If i = 5, ++i will first increment i to 6 and then return 6.
+==> Variable 
+--> Point to a specific Memeory address that store a value 
+--> Giving a name 
+--> It is done with let,Const & Var 
+--> Assign a value to variable using assignment Operator ( = )
+--> Assigning a value to a variable at moment of its declaration is knownas Initialization 
 
-==> i--
--->It is the post-decrement operator. It decreases the value of i by 1, but returns the original value of i before the decrement.
---> If i = 5, i-- will first return 5 (the original value), and then decrement i to 4.
-
-==> --i
--->This is the pre-decrement operator. It decreases the value of i by 1, but returns the decremented value.
---> If i = 5, --i will first decrement i to 4 and then return 4.
+==> Var --> Used for very old Java script 
+==> Const --> Value Cannot change 
+==> Let --> Value Can be changed 
 
 ==> Primitive Data Types 
 --> Created using ( )
 --> number , string ,boolean ,null ,undefined ,symbol(introduced in ES6) ,bigint (introduced in ES11)
--->Primitive are saved in stack 
+--> Primitive are saved in stack 
+--> 1, 2, 3, 4, "String", null, undefined
 
-==> Array -- ordered Collection of items / elements 
+==> Array 
 --> Created using [ ]
+--> ordered Collection of items / elements 
 --> Reference types Also known as objects 
+--> [1, 2, 3, 4, "String", null, undefined ]
+--> semi colon 
 
-==>Objects
+==> Objects
 --> Array are good but not sufficent for real world data 
 --> objects store key value pairs 
 --> objects don't have index
-
-==> Primitive - 
---> 1, 2, 3, 4, "String", null, undefined
-==> Array 
---> [1, 2, 3, 4, "String", null, undefined ]
---> semi colon 
-==>Objects 
 --> { name:"Shanu", age:23}
 --> comma ,
 
@@ -50,7 +42,7 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 --> y is in the stack with value 10.
 --> x and y are independent copies.
 
----> Reference Type (obj1 and obj2):
+--> Reference Type (obj1 and obj2):
 --> obj1 and obj2 are in the stack, both holding the same reference to an object in the heap.
 --> The object in the heap looks like { name: "Bob" }.
 --> Both obj1 and obj2 point to the same object, so modifying the object through either reference affects both.
@@ -58,11 +50,11 @@ It is the post-increment operator. It increases the value of i by 1, but returns
 
 ![Differences in Memory Storage of Primitive and Reference](image-1.png)
 
--->To access string we use square bracket []
+--> To access string we use square bracket []
 
 ==> Switch Statement
 --> evaluates a value against multiple cases and executes the code block of the matching case
--->  Provide break if you want to stop the execution and no further responses from code otherwise it will provide all the given cases 
+--> Provide break if you want to stop the execution and no further responses from code otherwise it will provide all the given cases 
 
 ==> While loop
 --> Condition is checked before the loop body executes.
@@ -81,18 +73,15 @@ It is the post-increment operator. It increases the value of i by 1, but returns
  
 ![Difference between for , while , do while loop ](image.png)
 
-==> break 
---> it will stop after given condition satisfy 
+==> Break 
+--> It will stop after given condition satisfy 
 
-==> continue 
+==> Continue 
 --> continue the  output from starting to end except the desire result.
 
 ==> push and pop is faster than unshift & shift 
 because push and pop have to create and dealt with last element whereas unshift & shift have to make changes in starting and deal with all other elements 
 
-
 ![Difference between for in and for of](image-2.png)
 
-
-
-in javascript key are in string 
+--> In javascript key are in string 
