@@ -27,3 +27,5 @@ let c = {
 }
 console.log(c.age)    //dot notation -- if single key 
 console.log(c["person hobbies"]);    //bracket notation -- if two keys are there 
+
+let d = " "

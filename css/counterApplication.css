@@ -4,7 +4,6 @@
     padding: 10px 0px 0px 30px;
     border: 1px solid black;
     border-radius: 30%;
-    align-content: stretch;
     display: flex;
     background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fgratisography.com%2F&psig=AOvVaw1DhZX8qFpOzN8rKDHEdCa0&ust=1733917966649000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJjhi_aRnYoDFQAAAAAdAAAAABAE);
 }
@@ -17,7 +16,6 @@
     border-radius: 30%;
     margin-top: 10px;
     display: flex;
-
 }
 
 .display {
@@ -25,7 +23,6 @@
     width: 30px;
     text-align: center;
     display: flex;
-
 }
 
 .mt {}

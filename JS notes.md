@@ -4,6 +4,8 @@
 ==> ALT + UP Button or Down Button -- To move whole Line up and down 
 ==> Common Practice to end statement in javascript with a semi-colon (;)
 
+--> In JavaScript, variable names are case-sensitive. This means that name and NAME would be treated as two different variables.
+--> function is used to define a function in JavaScript
 ==> Variable 
 --> Point to a specific Memeory address that store a value 
 --> Giving a name 
@@ -37,7 +39,7 @@
 
 ==> Memory Layout:
 
----> Primitive (x and y):
+--> Primitive (x and y):
 --> x is in the stack with value 20.
 --> y is in the stack with value 10.
 --> x and y are independent copies.
@@ -85,3 +87,14 @@ because push and pop have to create and dealt with last element whereas unshift 
 ![Difference between for in and for of](image-2.png)
 
 --> In javascript key are in string 
+
+==> Dot Notation:
+--> Uses a period (.) to access object properties
+--> Used for static property access
+
+==> Bracket Notation:
+--> Uses square brackets [] to access properties
+--> Required when property names are not valid identifiers
+--> When property names contain special characters or spaces,using variables or expressions to access properties,property names start with numbers:
+
+--> window.alert(),console.log(),document.write() are correct syntax for writing output in JavaScript
