@@ -57,22 +57,29 @@ for (let key in f) {
 }
 
 for (let key in f) {
-    console.log(key,f[key])     //Method 2 - to get the key and values of given objects 
+    console.log(key, f[key])     //Method 2 - to get the key and values of given objects 
 }
 
 //object.key
-console.log(Object.keys(f))     
+console.log(Object.keys(f))
 
 //computed properties - allow you to define properties that are derived from other data, rather than being set directly.
-const key1 = "obj1";
-const key2 = "obj2";
+const g = "obj1";
+const h = "obj2";
 
-const value1 = "value1";
-const value2 = "value2";
+const i = "value1";
+const j = "value2";
 
 //method -1 
-const g ={
-    [key1] : value1,
-    [key2] : value2
+const k = {
+    [g]: i,
+    [h]: j
 }
-console.log(g)
+console.log(k)
+
+// spread operator
+const l = {
+    m: "values",
+    n: "values"
+}
+console.log(l)
