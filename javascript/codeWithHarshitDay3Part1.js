@@ -38,9 +38,26 @@ console.log(f())     //console.log(f(prompt())) --> if we wanta number from user
 console.log(2 % 2 === 0)  //use prompt inplace of 1 to get values from users  one line function to check if odd or even  
 
 // to get the first value of words
-function g(anyString){
+function g(anyString) {
     return anyString[0];
 }
-console.log(g("shanu"));  
+console.log(g("shanu"));
 
 // to check the index of target if target is present in array 
+function h(array, target) {
+    for (let i = 0; i <= array.length; i++) {
+        if (array[i] === target) {
+            return i;
+        }
+    }
+    return -1;
+}
+const i = [1, 2, 3, 4, 5, 6, 7, 8]
+console.log(h(i, 98))
+
+// function expression --> way to define a function in programming (usually JavaScript) using an expression.
+const j = function () {
+    console.log("happy birthday to you ......")
+}
+j()
+

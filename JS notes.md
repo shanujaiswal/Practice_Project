@@ -42,7 +42,8 @@
 --> function functionName(parameters) {
     // code to be executed
 }
---> 
+==> function expression 
+--> way to define a function in programming (usually JavaScript) using an expression.
 
 ==> Memory Layout:
 
