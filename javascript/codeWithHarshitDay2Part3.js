@@ -78,8 +78,60 @@ const k = {
 console.log(k)
 
 // spread operator
+// if single value key 
 const l = {
     m: "values",
     n: "values"
 }
 console.log(l)
+
+// if two different value for same key 
+const obj3 = {
+    key1: "Values",
+    key2: "Values"
+}
+const obj4 = {
+    key1: "Values57545",
+    key4: "Values",
+    key5: "Values"
+}
+const o = { ...obj4, ...obj3 };
+console.log(o)                 //always take value of last clone value
+
+const p = { ...obj4, ...obj3, key6: "Value" };
+console.log(p)                 //always take value of last clone value
+
+// Creating an object with letters as keys using the spread operator
+const q = { ..."abcdefghijklmnopqrstuvwxyz" }
+console.log(q)
+
+//object destructuring 
+const r = {
+    banned: "whole",
+    famous: "To be Find"
+}
+const banned = r.banned         // key can be changed
+const famous = r.famous         // key can be changed   
+console.log(banned, famous)
+
+//shortcut
+const s = {
+    apple: "whole",
+    cherry: "To be Find"
+}
+const { apple, cherry } = s;
+console.log(apple)
+
+//objects inside array -- very useful in real world application 
+
+const t = [
+    { userId: 1, firstname: 'Shanu', gender: 'male' },
+    { userId: 2, firstname: 'Sachin', gender: 'male' },
+    { userId: 3, firstname: 'Rahul', gender: 'male' },
+]
+for (let user of t) {
+    console.log(user)
+}
+
+const [user1, user2, user3] = t;
+console.log(user1)
