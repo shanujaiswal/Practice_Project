@@ -31,11 +31,18 @@
 --> semi colon 
 
 ==> Objects
+--> Created using { }
 --> Array are good but not sufficent for real world data 
 --> objects store key value pairs 
 --> objects don't have index
 --> { name:"Shanu", age:23}
 --> comma ,
+
+==> Function 
+--> function functionName(parameters) {
+    // code to be executed
+}
+--> 
 
 ==> Memory Layout:
 

@@ -4,7 +4,6 @@ let b = "jaiswal"
 console.log(a + b);
 console.log(a + " " + b);
 
-
 // Doing operation inside console 
 let c = 100;
 console.log(c * 11)  //change signs for changing operation.
