@@ -28,4 +28,51 @@ let c = {
 console.log(c.age)    //dot notation -- if single key 
 console.log(c["person hobbies"]);    //bracket notation -- if two keys are there 
 
-let d = " "
+let d = " email";
+const e = {
+    name: "Shanu",
+    age: 23,
+    "person hobbies": ["chess", "cricket", "music"]
+}
+e[d] = "Shanuj4all@gmail.com" // to add key value in object 
+console.log(e)
+
+// how to iterate objects
+const f = {
+    name: "Shanu",
+    age: 23,
+    "person hobbies": ["chess", "cricket", "music"]
+}
+// for in loops
+for (let key in f) {
+    console.log(key)   //to get the keys of the objects 
+}
+
+for (let key in f) {
+    console.log(f[key])     //to get the values in given objects  
+}
+
+for (let key in f) {
+    console.log(`${key} : ${f[key]}`)     //Method 1 - to get the key and values of given objects 
+}
+
+for (let key in f) {
+    console.log(key,f[key])     //Method 2 - to get the key and values of given objects 
+}
+
+//object.key
+console.log(Object.keys(f))     
+
+//computed properties - allow you to define properties that are derived from other data, rather than being set directly.
+const key1 = "obj1";
+const key2 = "obj2";
+
+const value1 = "value1";
+const value2 = "value2";
+
+//method -1 
+const g ={
+    [key1] : value1,
+    [key2] : value2
+}
+console.log(g)
