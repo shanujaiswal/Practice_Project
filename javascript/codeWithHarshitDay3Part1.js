@@ -61,8 +61,24 @@ const j = function () {
 }
 
 // Arrow Function
+// normal 
 const k = () => {
     console.log("My name is shanu jaiswal")
 }
 k()
 
+// to add number
+const l = (num7, num8, num9) => {
+    return num7 + num8 + num9
+}
+console.log(l(2, 3, 4,))
+
+//to check even or not --> normal big way 
+const m = (Number) => {
+    return Number % 2 === 0
+}
+console.log(m(11))
+
+// one line 
+const n = Number => Number % 2 === 0; 
+console.log(n(14))
