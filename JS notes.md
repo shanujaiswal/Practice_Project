@@ -23,6 +23,8 @@
 --> Primitive are saved in stack 
 --> 1, 2, 3, 4, "String", null, undefined
 
+** Use split() to make string to array 
+
 ==> Array 
 --> Created using [ ]
 --> ordered Collection of items / elements 
