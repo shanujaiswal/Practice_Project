@@ -39,11 +39,21 @@
 --> comma ,
 
 ==> Function 
+
+--> Function Decleration 
 --> function functionName(parameters) {
     // code to be executed
 }
-==> function expression 
+
+--> function expression 
 --> way to define a function in programming (usually JavaScript) using an expression.
+--> const j = function () {
+    console.log("happy birthday to you ......")
+}
+j()
+
+--> Arrow Function 
+
 
 ==> Memory Layout:
 

@@ -59,5 +59,10 @@ console.log(h(i, 98))
 const j = function () {
     console.log("happy birthday to you ......")
 }
-j()
+
+// Arrow Function
+const k = () => {
+    console.log("My name is shanu jaiswal")
+}
+k()
 
