@@ -63,3 +63,9 @@ function l(x, y) {
 console.log(l(8, 6))
 
 // rest parameter
+function m(a,b,...c){
+    console.log(`${a}`);
+    console.log(`${b}`);
+    console.log(`${c}`);
+}
+m(1,2,3,4,5,6,7);

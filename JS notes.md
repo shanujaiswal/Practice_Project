@@ -41,28 +41,6 @@
 --> { name:"Shanu", age:23}
 --> comma ,
 
-#  Function 
---> Function Decleration 
---> function functionName(parameters) {
-    // code to be executed
-}
-
-# Function expression 
---> way to define a function in programming (usually JavaScript) using an expression.
---> const j = function () {
-    console.log("happy birthday to you ......")
-}
-j()
-
-# Arrow Function 
-const k = () => {
-    console.log("My name is shanu jaiswal")
-}
-k()
-
---> one line 
-const n = Number => Number % 2 === 0;
-console.log(n(14))
 
 #  Memory Layout:
 --> Primitive (x and y):
@@ -121,6 +99,29 @@ console.log(n(14))
 --> When property names contain special characters or spaces,using variables or expressions to access properties,property names start with numbers:
 
 ==> window.alert(),console.log(),document.write() are correct syntax for writing output in JavaScript
+
+#  Function 
+--> Function Decleration 
+--> function functionName(parameters) {
+    // code to be executed
+    }
+
+# Function expression 
+--> way to define a function in programming (usually JavaScript) using an expression.
+--> const j = function () {
+    console.log("happy birthday to you ......")
+    }
+    j()
+
+# Arrow Function 
+-->    const k = () => {
+        console.log("My name is shanu jaiswal")
+    }
+    k()
+
+# one line Function 
+--> const n = Number => Number % 2 === 0;
+    console.log(n(14))
 
 #  JavaScript Hoisting
 --> a variable can be declared after it has been used./ a variable can be used before it has been declared.
