@@ -51,3 +51,15 @@ f();
     var k = "Shanu jaiswal"
 }
 console.log(k)
+
+// default parameter
+function l(x, y) {
+    if (typeof y === "undefined") {
+        y = 4;      // if user provide one value it will set the value of y as 4
+    }
+
+    return x + y;
+}
+console.log(l(8, 6))
+
+// rest parameter

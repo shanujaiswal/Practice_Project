@@ -124,6 +124,7 @@ console.log(n(14))
 
 #  JavaScript Hoisting
 --> a variable can be declared after it has been used./ a variable can be used before it has been declared.
+
 # Lexical Scope 
 -–> This concept refers to the scope in which a variable is defined. When a value is requested, the program first checks if it is available within the current scope. If it’s not found, the search continues in the parent scope, and so on, moving upwards through the scope chain until the value is found or the global scope is reached.
 
