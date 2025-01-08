@@ -80,5 +80,6 @@ const m = (Number) => {
 console.log(m(11))
 
 // one line 
-const n = Number => Number % 2 === 0; 
+const n = Number => Number % 2 === 0;
 console.log(n(14))
+
