@@ -127,9 +127,13 @@ console.log(n(14))
 # Lexical Scope 
 -–> This concept refers to the scope in which a variable is defined. When a value is requested, the program first checks if it is available within the current scope. If it’s not found, the search continues in the parent scope, and so on, moving upwards through the scope chain until the value is found or the global scope is reached.
 
-# block scope vs function scope
+# block scope 
 --> let and const are block scope 
 --> let and const are only access in that block scope 
--->
+--> we can use same name variable if we are using block scope
+--> we can not call variable in different block 
 
+# function scope
 --> var is function scope 
+--> var is access from outside of block scope 
+--> we can call variable in different block 

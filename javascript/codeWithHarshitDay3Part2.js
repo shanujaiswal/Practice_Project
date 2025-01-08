@@ -11,26 +11,26 @@ function b() {
         console.log("Hello from shanu")
     }
 
-    const d = (num1, num2) =>{
-        return num1+num2
+    const d = (num1, num2) => {
+        return num1 + num2
     }
-    const e = (num3, num4) => num3*num4
+    const e = (num3, num4) => num3 * num4
 
     c();
-    console.log(d(2,3))
-    console.log(e(1,4))
+    console.log(d(2, 3))
+    console.log(e(1, 4))
 }
 b();
 
 // lexical scope 
-function f(){
+function f() {
     const g = "Value 1";
-    function h(){
+    function h() {
         // const g = "value 2"
         console.log("inside h", g)
     }
-    const i = function(){}
-    const j = () => {}
+    const i = function () { }
+    const j = () => { }
     console.log(g)
     h();
 }
@@ -39,9 +39,15 @@ f();
 // block scope vs function scope
 
 {
-let k = "Shanu Jaiswal"
+    let k = "Shanu Jaiswal"
+    console.log(k)
+}
+{
+    const k = "Shanu Jaiswal"
+    console.log(k)
+}
+
+{
+    var k = "Shanu jaiswal"
 }
 console.log(k)
-{
-
-}
