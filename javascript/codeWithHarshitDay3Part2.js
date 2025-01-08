@@ -68,3 +68,13 @@ function m(a,b,...c){
     console.log(`${c}`);
 }
 m(1,2,3,4,5,6,7);
+
+//adding 
+function n(...numbers){
+    let total = 0;
+    for (let number of numbers){
+        total = total + number;
+    }
+    return total;
+}
+console.log(n(1,3,6,7,6,6,7))
