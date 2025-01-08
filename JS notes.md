@@ -47,7 +47,7 @@
     // code to be executed
 }
 
-# function expression 
+# Function expression 
 --> way to define a function in programming (usually JavaScript) using an expression.
 --> const j = function () {
     console.log("happy birthday to you ......")
@@ -55,7 +55,14 @@
 j()
 
 # Arrow Function 
+const k = () => {
+    console.log("My name is shanu jaiswal")
+}
+k()
 
+--> one line 
+const n = Number => Number % 2 === 0;
+console.log(n(14))
 
 #  Memory Layout:
 --> Primitive (x and y):
@@ -117,3 +124,12 @@ j()
 
 #  JavaScript Hoisting
 --> a variable can be declared after it has been used./ a variable can be used before it has been declared.
+# Lexical Scope 
+-–> This concept refers to the scope in which a variable is defined. When a value is requested, the program first checks if it is available within the current scope. If it’s not found, the search continues in the parent scope, and so on, moving upwards through the scope chain until the value is found or the global scope is reached.
+
+# block scope vs function scope
+--> let and const are block scope 
+--> let and const are only access in that block scope 
+-->
+
+--> var is function scope 

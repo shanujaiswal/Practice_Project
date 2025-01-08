@@ -22,12 +22,26 @@ function b() {
 }
 b();
 
-// lexical scope
+// lexical scope 
 function f(){
-    const g = "Value 1"
-    function h(){}
+    const g = "Value 1";
+    function h(){
+        // const g = "value 2"
+        console.log("inside h", g)
+    }
     const i = function(){}
     const j = () => {}
     console.log(g)
+    h();
 }
 f();
+
+// block scope vs function scope
+
+{
+let k = "Shanu Jaiswal"
+}
+console.log(k)
+{
+
+}
