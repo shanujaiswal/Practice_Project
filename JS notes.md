@@ -139,3 +139,9 @@
 --> var is function scope 
 --> var is access from outside of block scope 
 --> we can call variable in different block 
+
+# Default Parameter
+--> Provide a default value for a parameter if no value is provided.
+
+# Rest Parameter
+--> Collect all remaining arguments into an array.

@@ -37,7 +37,6 @@ function f() {
 f();
 
 // block scope vs function scope
-
 {
     let k = "Shanu Jaiswal"
     console.log(k)
