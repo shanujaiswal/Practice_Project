@@ -58,6 +58,8 @@ if (f >= 10) {
 }
 console.log(g)
 
+// condition ? (condition? true : false) : (condition? true : false));
+
 //*method - ternary operator /conditional operator *
 let h = 8;
 let i = h >= 5 ? "coffee" : "milk";
