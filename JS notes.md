@@ -145,3 +145,11 @@
 
 # Rest Parameter
 --> Collect all remaining arguments into an array.
+
+# Destructuring 
+--> simplifies extracting values from arrays and objects.
+--> It makes the function parameters more readable, especially when working with complex data structures.
+--> You can use default values to ensure that a parameter has a fallback value.
+
+# Callback function 
+--> is a function that is passed as an argument to another function and is executed after the completion of that function's execution. This allows you to customize the behavior of the function you are passing it to, based on certain conditions, or to be executed once some task is finished.
