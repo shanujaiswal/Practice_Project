@@ -4,6 +4,8 @@
 --> ALT + UP Button or Down Button -- To move whole Line up and down 
 --> Common Practice to end statement in javascript with a semi-colon (;)
 
+--> ${name} inserts the value of the name variable into the string.
+
 --> In JavaScript, variable names are case-sensitive. This means that name and NAME would be treated as two different variables.
 --> function is used to define a function in JavaScript
 
@@ -153,3 +155,7 @@
 
 # Callback function 
 --> is a function that is passed as an argument to another function and is executed after the completion of that function's execution. This allows you to customize the behavior of the function you are passing it to, based on certain conditions, or to be executed once some task is finished.
+
+# ForEach 
+--> It used in placeof for loop . but it is not conditional as in for loop  .
+--> It will execute the code till the end .
