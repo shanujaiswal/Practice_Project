@@ -165,5 +165,8 @@
 --> It will return new array.
 
 # Filter method 
---> The filter() method is used to create a new array containing all the elements from an original array that pass a test specified by a provided function. 
+--> The filter() method is used to create a new array containing all the elements from an original array that pass a test specified by a provided function.
+--> Work on boolean function . Returns true or False. 
 --> It doesn't modify the original array but returns a new one with the elements that satisfy the condition set in the callback function.
+
+# In function method if there is return we have to create a new variable , if there is direct console then there is no need to make a new variable 

@@ -13,22 +13,21 @@ a.forEach(b)
 
 // can be written like this also 
 const c = [1, 2, 3, 4, 5, 6];
-
-c.forEach(function (number, index) {
-    console.log(`index is ${index} number is ${number}`)
-})
-
+console.log(c.forEach((number, index) => `index is ${index} number is ${number}`))
 // map method
-const d = [3, 4, 5, 6]
 
-const e = [
+const d = [
     { firstName: "Abhishek", age: 23 },
     { firstName: "Rahul", age: 23 },
     { firstName: "Dharambir", age: 23 },
     { firstName: "Ivan", age: 23 },
 ]
-e.map((user)=>{
-    console.log(user.firstName)
-})
+console.log(d.map((user) => user.firstName))
 
 // filter method
+const e = [1, 2, 3, 4, 5, 6]
+console.log(e.filter((number) => number % 2 === 0))
+
+// reduce method 
+const f = [1, 2, 3, 4, 5, 6]
+console.log(f.reduce((num1, num2) => num1 + num2))
