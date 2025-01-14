@@ -159,3 +159,11 @@
 # ForEach 
 --> It used in placeof for loop . but it is not conditional as in for loop  .
 --> It will execute the code till the end .
+--> It will not give new array .and we use console not return 
+
+# Map
+--> It will return new array.
+
+# Filter method 
+--> The filter() method is used to create a new array containing all the elements from an original array that pass a test specified by a provided function. 
+--> It doesn't modify the original array but returns a new one with the elements that satisfy the condition set in the callback function.
