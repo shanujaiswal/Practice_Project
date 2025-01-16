@@ -39,7 +39,7 @@ const g = [
 ]
 console.log(g.reduce((price1, price2) => price1 + price2.price, 0))    //0 will be the initial value -- generally used in objects if we change the 0 the initial value will also change 
 
-//sort 
+//Sort 
 //Default Sorting (As Strings):
 let h = [5000, 300, 80, 1, 200];
 h.sort();
@@ -50,12 +50,12 @@ let i = [5000, 300, 80, 1, 200];
 i.sort((a, b) => a - b);
 console.log(i); // Output: [1, 80, 200, 300, 5000]
 
-//Sorting Strings:
-let j = ['banana', 'apple', 'cherry', 'date', 'appld', 'applf', 'appled', 'applet'];
+//Sorting Strings: -- It sorts capital letters first 
+let j = ['banana', 'apple', 'Apple' ,'APPLE', 'cherry', 'date', 'appld', 'applf', 'appled', 'applet'];
 j.sort();
 console.log(j);
 
-//
+//Sorting Objects:
 let k = [
     { name: 'John', age: 30 },
     { name: 'Jane', age: 25 },
@@ -64,5 +64,3 @@ let k = [
 
 k.sort((a, b) => a.age - b.age);
 console.log(k);
-
-
