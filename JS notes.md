@@ -156,6 +156,7 @@
 # Callback function 
 --> is a function that is passed as an argument to another function and is executed after the completion of that function's execution. This allows you to customize the behavior of the function you are passing it to, based on certain conditions, or to be executed once some task is finished.
 
+# Methods used in array
 # ForEach 
 --> It used in placeof for loop . but it is not conditional as in for loop  .
 --> It will execute the code till the end .
@@ -170,3 +171,10 @@
 --> It doesn't modify the original array but returns a new one with the elements that satisfy the condition set in the callback function.
 
 # In function method if there is return we have to create a new variable , if there is direct console then there is no need to make a new variable 
+
+# Reduce method
+--> The reduce() method is used to reduce an array to a single value by applying a reducer function on each element of the array, one at a time, and accumulating the results
+
+# Sort method 
+--> the sort() function is used to sort the elements of an array in place. 
+--> By default, it sorts the elements as strings, but we can provide a custom sorting function to sort elements according to specific criteria.

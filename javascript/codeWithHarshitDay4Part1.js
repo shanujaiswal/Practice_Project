@@ -31,3 +31,38 @@ console.log(e.filter((number) => number % 2 === 0))
 // reduce method 
 const f = [1, 2, 3, 4, 5, 6]
 console.log(f.reduce((num1, num2) => num1 + num2))
+
+const g = [
+    { productId: 1, productName: "mobile", price: 12000 },
+    { productId: 2, productName: "laptop", price: 22000 },
+    { productId: 3, productName: "tv", price: 18000 },
+]
+console.log(g.reduce((price1, price2) => price1 + price2.price, 0))    //0 will be the initial value -- generally used in objects if we change the 0 the initial value will also change 
+
+//sort 
+//Default Sorting (As Strings):
+let h = [5000, 300, 80, 1, 200];
+h.sort();
+console.log(h); // Output: [1, 200, 300, 5000, 80]   --> Because it will take it as string then chose only first number and convert to ASCII 
+
+//Sorting Numbers Correctly:
+let i = [5000, 300, 80, 1, 200];
+i.sort((a, b) => a - b);
+console.log(i); // Output: [1, 80, 200, 300, 5000]
+
+//Sorting Strings:
+let j = ['banana', 'apple', 'cherry', 'date', 'appld', 'applf', 'appled', 'applet'];
+j.sort();
+console.log(j);
+
+//
+let k = [
+    { name: 'John', age: 30 },
+    { name: 'Jane', age: 25 },
+    { name: 'Alex', age: 35 }
+];
+
+k.sort((a, b) => a.age - b.age);
+console.log(k);
+
+
