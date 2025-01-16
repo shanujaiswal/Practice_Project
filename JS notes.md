@@ -197,3 +197,7 @@
 # FIll method 
 --> The fill method in JavaScript is an array method used to fill all or part of an array with a static value. 
 --> You can specify the start and end indices to control which part of the array is filled.
+
+# Splice method 
+--> The splice method in JavaScript is an array method used to add, remove, or replace elements in an array. 
+--> It modifies the original array and optionally returns the removed elements as a new array.

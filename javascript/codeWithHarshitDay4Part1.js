@@ -106,6 +106,26 @@ r.fill(0, -2);
 console.log(r); // [5, 6, 0, 0] -2 starts filling from the second-to-last element.
 
 // Filling an empty array
-const arr = new Array(5); // Creates an array with 5 empty slots
-arr.fill(1);
-console.log(arr); // [1, 1, 1, 1, 1]
+const s = new Array(5); // Creates an array with 5 empty slots
+s.fill(1);
+console.log(s); // [1, 1, 1, 1, 1]
+
+// Splice   ---> Start , delete , insert 
+//to delete 
+const t = [5, 6, 7, 8];
+const u = t.splice(1, 2); // Start at index 1, remove 2 elements
+console.log("Updated array:", t);
+console.log("Deleted elements:", u);
+
+//to insert
+const v = [5, 6, 7, 8];
+v.splice(1,0, "Shanu")   //1 is used as place from where to delete , 0  is how much number to delete from that place , Shanu is Word to add 
+console.log(v)
+
+//to Insert & delete
+const w = [5, 6, 7, 8];
+const x = w.splice(1, 2, "Shanu", "Shanu2"); // Start at index 1, remove 2 elements, and insert "Shanu" and "Shanu2"
+
+console.log("Updated array:", w); // [5, "Shanu", "Shanu2", 8]
+console.log("Deleted elements:", x); // [6, 7]
+
