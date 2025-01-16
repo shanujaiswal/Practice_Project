@@ -47,20 +47,27 @@ console.log(h); // Output: [1, 200, 300, 5000, 80]   --> Because it will take it
 
 //Sorting Numbers Correctly:
 let i = [5000, 300, 80, 1, 200];
-i.sort((a, b) => a - b);
-console.log(i); // Output: [1, 80, 200, 300, 5000]
+i.sort((a, b) => a - b);    //Ascending Order
+console.log(i);  //Output: [1, 80, 200, 300, 5000]
 
-//Sorting Strings: -- It sorts capital letters first 
-let j = ['banana', 'apple', 'Apple' ,'APPLE', 'cherry', 'date', 'appld', 'applf', 'appled', 'applet'];
-j.sort();
+let j = [5000, 300, 80, 1, 200];
+j.sort((a, b) => b - a);    //Descending order
 console.log(j);
 
+//Sorting Strings: -- It sorts capital letters first 
+let k = ['banana', 'apple', 'Apple' ,'APPLE', 'cherry', 'date', 'appld', 'applf', 'appled', 'applet'];
+k.sort();
+console.log(k);
+
 //Sorting Objects:
-let k = [
+let l = [
     { name: 'John', age: 30 },
     { name: 'Jane', age: 25 },
     { name: 'Alex', age: 35 }
 ];
 
-k.sort((a, b) => a.age - b.age);
-console.log(k);
+l.sort((a, b) => a.age - b.age);
+console.log(l);
+
+//Find method
+
