@@ -128,4 +128,3 @@ const x = w.splice(1, 2, "Shanu", "Shanu2"); // Start at index 1, remove 2 eleme
 
 console.log("Updated array:", w); // [5, "Shanu", "Shanu2", 8]
 console.log("Deleted elements:", x); // [6, 7]
-
