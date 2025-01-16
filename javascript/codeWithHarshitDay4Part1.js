@@ -37,7 +37,7 @@ const g = [
     { productId: 2, productName: "laptop", price: 22000 },
     { productId: 3, productName: "tv", price: 18000 },
 ]
-console.log(g.reduce((price1, price2) => price1 + price2.price, 0))    //0 will be the initial value -- generally used in objects if we change the 0 the initial value will also change 
+console.log(g.reduce((price1, price2) => price1 + price2.price, 0))  //0 will be the initial value -- generally used in objects if we change the 0 the initial value will also change 
 
 //Sort 
 //Default Sorting (As Strings):
@@ -71,8 +71,41 @@ console.log(l);
 
 //Find method
 //Finding a number in an array
-const numbers = [10, 20, 30, 40, 50];
+const m = [10, 20, 30, 40, 50];
 
-const result = numbers.find(num => num > 25);
+const result = m.find(num => num > 25);
 console.log(result); // 30
 
+//Every 
+// Checking if all elements are even
+const n = [2, 4, 6, 8];
+
+const allEven = n.every(num => num % 2 === 0);
+console.log(allEven); 
+
+//Some 
+// Checking if all elements are even
+const o = [3, 5, 8, 9];
+
+const Even = o.some(num => num % 2 === 0);
+console.log(Even); 
+
+//Fill 
+const p = [1, 2, 3, 4];
+p.fill(0);
+console.log(p); 
+
+//Filling part of an array
+const q = [1, 2, 3, 4];
+q.fill(9, 1, 3);
+console.log(q);  //Here: 9 is the value to fill, 1 is the start index (inclusive), 3 is the end index (exclusive).
+
+//Using negative indices
+const r = [5, 6, 7, 8];
+r.fill(0, -2);
+console.log(r); // [5, 6, 0, 0] -2 starts filling from the second-to-last element.
+
+// Filling an empty array
+const arr = new Array(5); // Creates an array with 5 empty slots
+arr.fill(1);
+console.log(arr); // [1, 1, 1, 1, 1]

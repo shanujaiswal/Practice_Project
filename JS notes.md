@@ -186,5 +186,14 @@
 --> Once the condition is met, it returns that element. If no element is found that satisfies the condition, it returns undefined.
 
 # Every method 
---> The every method in JavaScript is an array method used to test whether all elements in an array pass a given condition (specified by a callback function). 
+--> The every method in JavaScript is an array method used to test whether "all elements" in an array pass the given condition (specified by a callback function). 
 --> If every element in the array satisfies the condition, the method returns true; otherwise, it returns false.
+--> Return in Boolean 
+
+# Some method
+--> The some method in JavaScript is an array method that checks if "at least one element" in the array satisfies the condition specified in a callback function. 
+--> If any element meets the condition, it returns true; otherwise, it returns false.
+
+# FIll method 
+--> The fill method in JavaScript is an array method used to fill all or part of an array with a static value. 
+--> You can specify the start and end indices to control which part of the array is filled.
