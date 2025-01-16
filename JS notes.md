@@ -185,3 +185,6 @@
 --> The find() method in JavaScript is an array method that is used to search for the first element in an array that satisfies a provided test condition
 --> Once the condition is met, it returns that element. If no element is found that satisfies the condition, it returns undefined.
 
+# Every method 
+--> The every method in JavaScript is an array method used to test whether all elements in an array pass a given condition (specified by a callback function). 
+--> If every element in the array satisfies the condition, the method returns true; otherwise, it returns false.

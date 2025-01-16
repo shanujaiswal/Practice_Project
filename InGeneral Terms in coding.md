@@ -1,8 +1,8 @@
---> ALT + UP Button or Down Button --> To move whole Line up and down 
---> ALT + Shift + Down Button --> Duplicate the Current Line 
 --> CTRL + ? --> Comment 
+--> ALT + UP/Down Button --> To move whole Line up and down 
+--> ALT + Shift + UP/Down Button --> Duplicate the Current Line 
 --> CTRL + Shift + J --> Open console in Browser (not for VS Code)
---> CTRL + Shift + I --> Open network in Browser (not for VS Code)
+--> CTRL + Shift + I --> Open network in Browser after opening Console (not for VS Code)
 
 # i++
 --> It is the post-increment operator. It increases the value of i by 1, but returns the original value of i before the increment.

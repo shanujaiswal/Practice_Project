@@ -70,4 +70,9 @@ l.sort((a, b) => a.age - b.age);
 console.log(l);
 
 //Find method
+//Finding a number in an array
+const numbers = [10, 20, 30, 40, 50];
+
+const result = numbers.find(num => num > 25);
+console.log(result); // 30
 
