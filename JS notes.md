@@ -60,6 +60,9 @@
 ![Differences in Memory Storage of Primitive and Reference](image-1.png)
 --> To access string we use square bracket []
 
+# Iterables 
+--> An iterable is an object that can be iterated over, meaning its elements can be accessed sequentially
+
 # Switch Statement
 --> evaluates a value against multiple cases and executes the code block of the matching case
 --> Provide break if you want to stop the execution and no further responses from code otherwise it will provide all the given cases 
@@ -78,8 +81,8 @@
 # Do while 
 --> Condition is checked after the loop body executes.
 --> Use do-while when you want the loop to execute at least once before checking the condition (e.g., when a menu is presented to the user and you want to ensure the menu shows up at least once).
- 
-![Difference between for , while , do while loop ](image.png)
+# ![Several types of for loops for iterating](image-3.png)
+# ![Difference between for , while , do while loop ](image-1.png)
 
 # Break 
 --> It will stop after given condition satisfy 
