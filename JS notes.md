@@ -4,13 +4,6 @@
 --> function is used to define a function in JavaScript
 --> ${name} inserts the value of the name variable into the string.
 
-# Callback: 
---> Format :- (callback(element, index, array), thisArg);
---> A function that tests each element in the array. It takes the following arguments:
---> Element: The current element being processed in the array.
---> Index (optional): The index of the current element.
---> Array (optional): The array that find() is called on.
---> ThisArg (optional): A value to use as this when executing the callback.
 
 # Variable 
 --> Point to a specific Memeory address that store a value 
@@ -44,7 +37,17 @@
 --> objects store key value pairs 
 --> objects don't have index
 --> { name:"Shanu", age:23}
---> comma ,
+--> comma at end of each object
+
+# Array.from() --> Converts any iterable or array-like object into a real array
+# The spread operator (...) --> can also convert array-like objects into arrays.
+
+# Array like object
+--> Objects that resemble arrays but do not have all the features of a true array
+--> Manipulating DOM NodeLists when working with the DOM.
+--> Performing array operations on any object with a length and indexed properties.
+--> They lack array-specific methods like .push(), .map(), or .filter().
+# ![Differences Between Arrays and Array-Like Objects](image-4.png)
 
 # Memory Layout:
 --> Primitive (x and y):
@@ -57,11 +60,15 @@
 --> The object in the heap looks like { name: "Bob" }.
 --> Both obj1 and obj2 point to the same object, so modifying the object through either reference affects both.
 --> array , objects
-![Differences in Memory Storage of Primitive and Reference](image-1.png)
 --> To access string we use square bracket []
+![Differences in Memory Storage of Primitive and Reference](image-1.png)
 
 # Iterables 
 --> An iterable is an object that can be iterated over, meaning its elements can be accessed sequentially
+--> Arrays: [1, 2, 3], Strings: 'Hello', Maps: new Map() ,Sets: new Set(), Typed Arrays: Int32Array, Uint8Array, etc., Arguments Object (function arguments)
+
+# Non-Iterable Objects
+--> Objects like plain JavaScript objects {} are not iterable by default. 
 
 # Switch Statement
 --> evaluates a value against multiple cases and executes the code block of the matching case
@@ -81,8 +88,9 @@
 # Do while 
 --> Condition is checked after the loop body executes.
 --> Use do-while when you want the loop to execute at least once before checking the condition (e.g., when a menu is presented to the user and you want to ensure the menu shows up at least once).
+# ![Difference between for , while , do while loop ](image.png)
+# ![Difference between for in and for of](image-2.png)
 # ![Several types of for loops for iterating](image-3.png)
-# ![Difference between for , while , do while loop ](image-1.png)
 
 # Break 
 --> It will stop after given condition satisfy 
@@ -91,8 +99,6 @@
 --> continue the  output from starting to end except the desire result.
 
 # push and pop is faster than unshift & shift because push and pop have to create and dealt with last element whereas unshift & shift have to make changes in starting and deal with all other elements 
-
-# ![Difference between for in and for of](image-2.png)
 
 --> In javascript key are in string 
 
@@ -159,7 +165,14 @@
 --> You can use default values to ensure that a parameter has a fallback value.
 
 # Callback function 
---> Is a function that is passed as an argument to another function and is executed after the completion of that function's execution. This allows you to customize the behavior of the function you are passing it to, based on certain conditions, or to be executed once some task is finished.
+--> Format :- (callback(element, index, array), thisArg);
+--> Is a function that is passed as an argument to another function and is executed after the completion of that function's execution. 
+--> It allows you to customize the behavior of the function you are passing it to, based on certain conditions, or to be executed once some task is finished.
+--> A function that tests each element in the array. It takes the following arguments:
+--> Element: The current element being processed in the array.
+--> Index (optional): The index of the current element.
+--> Array (optional): The array that find() is called on.
+--> ThisArg (optional): A value to use as this when executing the callback.
 
 # Methods used in array
 # ForEach 
@@ -204,3 +217,11 @@
 # Splice method 
 --> The splice method in JavaScript is an array method used to add, remove, or replace elements in an array. 
 --> It modifies the original array and optionally returns the removed elements as a new array.
+
+# Sets
+--> It is iterable ,
+--> used to store data , of any type, whether primitive values or object references.
+--> Unique items only (no duplicate allowed)
+--> It also have its own methods
+--> No index based access
+--> Order is not guaranteed
