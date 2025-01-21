@@ -1,9 +1,7 @@
-
 --> Common Practice to end statement in javascript with a semi-colon (;)
 --> In JavaScript, variable names are case-sensitive. This means that name and NAME would be treated as two different variables.
 --> function is used to define a function in JavaScript
 --> ${name} inserts the value of the name variable into the string.
-
 
 # Variable 
 --> Point to a specific Memeory address that store a value 
@@ -48,6 +46,40 @@
 --> Performing array operations on any object with a length and indexed properties.
 --> They lack array-specific methods like .push(), .map(), or .filter().
 # ![Differences Between Arrays and Array-Like Objects](image-4.png)
+
+# Function 
+--> Function Decleration 
+--> function functionName(parameters) {
+    // code to be executed
+    }
+
+# Function expression 
+--> way to define a function in programming (usually JavaScript) using an expression.
+--> const j = function () {
+    console.log("happy birthday to you ......")
+    }
+    j()
+
+# Arrow Function 
+--> const k = () => {
+    console.log("My name is shanu jaiswal")
+    }
+    k()
+
+# One line Function 
+--> const n = Number => Number % 2 === 0;
+    console.log(n(14))
+
+# JavaScript Hoisting
+--> a variable can be declared after it has been used./ a variable can be used before it has been declared.
+
+# Sets
+--> It is iterable
+--> used to store data , of any type, whether primitive values or object references.
+--> Unique items only (no duplicate allowed)
+--> It also have its own methods
+--> No index based access
+--> Order is not guaranteed  
 
 # Memory Layout:
 --> Primitive (x and y):
@@ -96,7 +128,7 @@
 --> It will stop after given condition satisfy 
 
 # Continue 
---> continue the  output from starting to end except the desire result.
+--> continue the output from starting to end except the desire result.
 
 # push and pop is faster than unshift & shift because push and pop have to create and dealt with last element whereas unshift & shift have to make changes in starting and deal with all other elements 
 
@@ -112,32 +144,6 @@
 --> When property names contain special characters or spaces,using variables or expressions to access properties,property names start with numbers:
 
 ==> window.alert(),console.log(),document.write() are correct syntax for writing output in JavaScript
-
-# Function 
---> Function Decleration 
---> function functionName(parameters) {
-    // code to be executed
-    }
-
-# Function expression 
---> way to define a function in programming (usually JavaScript) using an expression.
---> const j = function () {
-    console.log("happy birthday to you ......")
-    }
-    j()
-
-# Arrow Function 
---> const k = () => {
-    console.log("My name is shanu jaiswal")
-    }
-    k()
-
-# One line Function 
---> const n = Number => Number % 2 === 0;
-    console.log(n(14))
-
-# JavaScript Hoisting
---> a variable can be declared after it has been used./ a variable can be used before it has been declared.
 
 # Lexical Scope 
 -–> This concept refers to the scope in which a variable is defined. When a value is requested, the program first checks if it is available within the current scope. If it’s not found, the search continues in the parent scope, and so on, moving upwards through the scope chain until the value is found or the global scope is reached.
@@ -217,11 +223,3 @@
 # Splice method 
 --> The splice method in JavaScript is an array method used to add, remove, or replace elements in an array. 
 --> It modifies the original array and optionally returns the removed elements as a new array.
-
-# Sets
---> It is iterable ,
---> used to store data , of any type, whether primitive values or object references.
---> Unique items only (no duplicate allowed)
---> It also have its own methods
---> No index based access
---> Order is not guaranteed
