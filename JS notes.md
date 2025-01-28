@@ -74,12 +74,24 @@
 --> a variable can be declared after it has been used./ a variable can be used before it has been declared.
 
 # Sets
+--> ([ ])
 --> It is iterable
 --> used to store data , of any type, whether primitive values or object references.
 --> Unique items only (no duplicate allowed)
 --> It also have its own methods
 --> No index based access
 --> Order is not guaranteed  
+--> Best uses in creating id's because it takes only unique values 
+# ![Difference Between Sets and arrays](image-5.png)
+
+# Map
+--> Map is a collection of key-value pairs where the keys can be of any data type (objects, functions, primitives, etc.). 
+--> It is similar to an object but provides more flexibility and useful methods for working with key-value pairs.
+--> It is an iterable.
+--> Store data in ordered fashion.
+--> Store key value pair(like object).
+--> Duplicate keys are not allowed like objects.
+# ![Difference between objects and map](image-6.png)
 
 # Memory Layout:
 --> Primitive (x and y):
