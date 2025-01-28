@@ -135,3 +135,17 @@ for (let user of t) {
 
 const [user1, user2, user3] = t;
 console.log(user1)
+
+//objects literal 
+// key -> string 
+// key -> symbol 
+const u ={
+    firstName : "Harshit",
+    age:7,
+    1:"one"
+}
+console.log(u.firstName)
+console.log(u["firstName"])
+for (let key in u){
+    console.log(typeof key);
+}
