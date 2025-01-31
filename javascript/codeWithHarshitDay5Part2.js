@@ -5,3 +5,6 @@ a.set(1,'age');
 console.log(a)
 console.log(a.get('firstname'))       // Retrieve and log the value associated with the key 'firstname' from the Map
 console.log(a.keys())       // Retrieve and log the value associated with the key 'firstname' from the Map
+for (let key of a.keys()){
+    console.log(key)
+}
