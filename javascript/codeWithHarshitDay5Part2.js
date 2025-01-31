@@ -8,3 +8,4 @@ console.log(a.keys())       // Retrieve and log the value associated with the ke
 for (let key of a.keys()){
     console.log(key)
 }
+
