@@ -78,7 +78,7 @@ eg :- The HTML tag contains the Head and Body tags forming a nested structure
 ==> abbr -->tag defines an abbreviation or an acronym
 ==> address --> tag defines the contact information for the author/owner of a document or an article. Title attribute to show the description for the abbreviation/acronym when you mouse over the element.
 ==> bdo --> tag is used to override the current text direction. BDO stands for Bi-Directional Override.
---> e.g --> <bdo dir="rtl">This text will be written from right to left</bdo>
+# e.g --> <bdo dir="rtl">This text will be written from right to left</bdo>
 
 ==> Color Value 
 --> RGB(red, green, and blue) values --> rgb(255, 99, 71)
