@@ -10,8 +10,8 @@
 --> It is a semantic element that helps with SEO & accessibilty 
 SEO --> Search Engine Optimization 
 
-==> .a ---> class ---> 1 page ---> Unlimited Repeat
-==> #a ---> ID ---> 1 page ---> 1 tiime Repeat
+# .a ---> class ---> 1 page ---> Unlimited Repeat
+# #a ---> ID ---> 1 page ---> 1 tiime Repeat
 
 ==> Input --> to Collect Data
 ==> Type --> Type of input to be given 
