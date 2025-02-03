@@ -61,3 +61,12 @@ const i = {
 
 console.log(i.firstName)
 console.log(i.address.houseNumber)
+
+const j = {
+    firstName: "Shanu",
+    // address:{houseNumber: '1234'}
+}
+console.log(j?.firstName)       // Use optional chaining (?.) to safely access 'firstName' (exists, so it prints "Shanu")
+// Use optional chaining (?.) to safely access 'houseNumber' inside 'address'
+// Since 'address' is undefined, this avoids an error and returns 'undefined' instead
+console.log(j?.address?.houseNumber)
