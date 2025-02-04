@@ -11,6 +11,7 @@ for (let i = 0; i < a.length; i++) {
 }
 a.forEach(b)
 
+
 // can be written like this also 
 const c = [1, 2, 3, 4, 5, 6];
 console.log(c.forEach((number, index) => `index is ${index} number is ${number}`))

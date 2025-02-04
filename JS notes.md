@@ -235,3 +235,9 @@
 # Splice method 
 --> The splice method in JavaScript is an array method used to add, remove, or replace elements in an array. 
 --> It modifies the original array and optionally returns the removed elements as a new array.
+
+
+# OOPs / Prototypal Inheritance
+
+# Methods
+--> Function inside object 
