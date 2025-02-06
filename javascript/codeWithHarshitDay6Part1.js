@@ -34,3 +34,12 @@ b();
 person1.about();
 person2.about();
 person3.about();
+
+
+const c = {
+  firstName: "adarsh",
+  age: 31,
+  about: function(hobby , favthing){
+    console.log(this.firstName,this.age)
+  }
+};

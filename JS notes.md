@@ -241,3 +241,5 @@
 
 # Methods
 --> Function inside object 
+
+# type console.log(this) orconsole.log(window) in the browser's developer console, the output depends on the execution context:
