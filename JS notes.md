@@ -261,3 +261,8 @@
 # When to Use?
 --> Use call() when passing arguments one by one, apply() when passing arguments as an array, and bind() when you need a function to be called later with a fixed this value.
 # ![difference between call ,apply and bind in javasscript ](image-7.png)
+
+# Arrow function 
+--> Arrow Functions Don’t Have Their Own this
+--> Arrow Functions Inherit this from Their Parent Scope
+--> Arrow Functions Are Useful for Callbacks
