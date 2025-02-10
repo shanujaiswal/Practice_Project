@@ -242,4 +242,22 @@
 # Methods
 --> Function inside object 
 
-# type console.log(this) orconsole.log(window) in the browser's developer console, the output depends on the execution context:
+# type console.log(this) or console.log(window) in the browser's developer console, the output depends on the execution context:
+
+--> In JavaScript, call(), apply(), and bind() are methods used to manipulate the this keyword and invoke functions in different ways. Here’s how they differ:
+
+# call() Method
+--> Calls a function immediately.
+--> Takes arguments individually.
+
+# apply() Method
+--> Calls a function immediately.
+--> Takes arguments as an array.
+
+# bind() Method
+--> Returns a new function instead of calling it immediately.
+--> Allows binding this for later execution.
+
+# When to Use?
+--> Use call() when passing arguments one by one, apply() when passing arguments as an array, and bind() when you need a function to be called later with a fixed this value.
+# ![difference between call ,apply and bind in javasscript ](image-7.png)
