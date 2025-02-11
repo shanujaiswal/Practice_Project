@@ -113,9 +113,10 @@ const j = {
     return this.age >= 18;
   },
 };
-console.log(j)
+console.log(j);
 
 //If there is more user
+// DrawBack -- Inefficient Memory Usage --> Since functions are recreated for every object, this causes unnecessary memory consumption, especially when creating thousands of users.
 function k(firstName, lastName, email, age, address) {
   const l = {};
   l.firstName = firstName;
@@ -131,10 +132,37 @@ function k(firstName, lastName, email, age, address) {
   };
   return l;
 }
-
 const m = k("Shanu", "jaiswal", "Shanu@warpx.ai", 19, "my address");
 console.log(m);
 const is18 = m.is18();
 console.log(is18);
 const about7 = m.about7();
 console.log(about7);
+
+// Using less Memory
+const n = {
+  about8: function () {
+    return `${this.firstName} is  ${this.age} years old`;
+  },
+  is18: function () {
+    return this.age >= 18;
+  },
+};
+function o(firstName, lastName, email, age, address) {
+  const p = {};
+  p.firstName = firstName;
+  p.lastName = lastName;
+  p.email = email;
+  p.age = age;
+  p.address = address;
+  p.about = n.about8;
+  p.is18 = n.is18;
+  return p;
+}
+
+const user1 = o("Shanu", "jaiswal", "Shanu@warpx.ai", 19, "my address");
+const user2 = o("Rahul", "jaiswal", "Shanu@warpx.ai", 21, "my address");
+const user3 = o("Harsh", "jaiswal", "Shanu@warpx.ai", 23, "my address");
+console.log(user1.about())
+console.log(user2.about())
+console.log(user3.about())
