@@ -7,9 +7,18 @@ function a(firstName, lastName, email, age, address) {
   user.age = age;
   user.address = address;
   user.about = function () {
-    return `${this.firstName} is  ${this.age} years`;
+    return `${this.firstName} is  ${this.age} years old` ;
   };
-  user.is18: function(){
+  user.is18 = function () {
     return this.age >= 18;
-  }
+  };
+  return user;
 }
+
+const user1 = a("Shanu", "jaiswal", "Shanu@warpx.ai", 19, "my address");
+console.log(user1);
+const is18 = user1.is18()
+console.log(is18)
+const about = user1.about()
+console.log(about)
+
