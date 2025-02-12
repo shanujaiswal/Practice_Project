@@ -328,5 +328,42 @@ console.log(n(14))
 
 --> Tell the name of the function
 
+--> We can add our own properties.
 --> Function provides more usefull properties.
 --> Only Function provide prototype property
+
+# [[Prototype]], **proto**, and .prototype
+
+# [[Prototype]] (Internal Prototype)
+
+--> It is an internal hidden property that refers to an object's prototype.
+--> Every object in JavaScript has this property (except Object.create(null)).
+--> It forms the prototype chain used for inheritance.
+--> Not directly accessible, but can be retrieved using Object.getPrototypeOf(obj).
+
+# **proto** (Deprecated Public Access to [[Prototype]])
+
+--> It is a getter/setter for [[Prototype]], allowing explicit access to an object's prototype.
+--> Deprecated but still works in modern browsers.
+--> Avoid using it in production; prefer Object.getPrototypeOf(obj) or Object.setPrototypeOf(obj, proto) instead.
+
+# .prototype (Constructor Function Prototype)
+
+--> Only exists on functions (not regular objects).
+--> Used to define methods and properties for instances created by constructor functions.
+--> When an object is created using new, its [[Prototype]] is set to the constructor's .prototype
+
+# Summary of [[Prototype]], **proto**, and .prototype
+
+--> [[Prototype]] – The real internal prototype, accessible via Object.getPrototypeOf(obj).
+--> **proto** – A public, now-deprecated way to access or modify [[Prototype]].
+--> .prototype – A function property used to define methods for objects created via constructors.
+
+# Best Practices
+
+--> Use Object.getPrototypeOf(obj) instead of obj.**proto** (to access the prototype).
+--> Use Object.setPrototypeOf(obj, proto) instead of obj.**proto** = proto (to modify the prototype).
+--> Use .prototype only when defining methods for constructor functions.
+
+--> ![Difference Between [[Prototype]], __proto__, and .prototype in JavaScript](image-8.png)
+![Key Difference Between [[Prototype]], __proto__, and .prototype in JavaScript](image-9.png)
