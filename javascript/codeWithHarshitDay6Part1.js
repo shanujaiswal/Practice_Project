@@ -99,7 +99,7 @@ const i = {
 i.about5();
 
 //Proto , Prototype , Class
-//If there is one user
+//1. Creating a Single User Object
 const j = {
   firstName: "Shanu",
   lastName: "Jaiswal",
@@ -115,7 +115,7 @@ const j = {
 };
 console.log(j);
 
-//If there is more user
+//Creating Multiple Users (Inefficient Memory Usage)
 // DrawBack -- Inefficient Memory Usage --> Since functions are recreated for every object, this causes unnecessary memory consumption, especially when creating thousands of users.
 function k(firstName, lastName, email, age, address) {
   const l = {};
@@ -139,7 +139,7 @@ console.log(is18);
 const about7 = m.about7();
 console.log(about7);
 
-// Using less Memory
+// Optimized Memory Usage (Using Shared Methods)
 const n = {
   about8: function () {
     return `${this.firstName} is  ${this.age} years old`;
@@ -163,6 +163,35 @@ function o(firstName, lastName, email, age, address) {
 const user1 = o("Shanu", "jaiswal", "Shanu@warpx.ai", 19, "my address");
 const user2 = o("Rahul", "jaiswal", "Shanu@warpx.ai", 21, "my address");
 const user3 = o("Harsh", "jaiswal", "Shanu@warpx.ai", 23, "my address");
-console.log(user1.about())
-console.log(user2.about())
-console.log(user3.about())
+console.log(user1.about());
+console.log(user2.about());
+console.log(user3.about());
+
+// Best Approach (Prototype-Based Object Creation)
+const q = {
+  about8: function () {
+    return `${this.firstName} is  ${this.age} years old`;
+  },
+  is18: function () {
+    return this.age >= 18;
+  },
+  sing: function () {
+    return "toon naa naa naa ";
+  },
+};
+function r(firstName, lastName, email, age, address) {
+  const s = Object.create(q);
+  s.firstName = firstName;
+  s.lastName = lastName;
+  s.email = email;
+  s.age = age;
+  s.address = address;
+  return s;
+}
+
+const user4 = r("Shanu", "jaiswal", "Shanu@warpx.ai", 19, "my address");
+const user5 = r("Rahul", "jaiswal", "Shanu@warpx.ai", 21, "my address");
+const user6 = r("Harsh", "jaiswal", "Shanu@warpx.ai", 23, "my address");
+console.log(user4);
+console.log(user5.about8());
+console.log(user6.sing());

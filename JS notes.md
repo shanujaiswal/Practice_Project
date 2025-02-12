@@ -48,6 +48,7 @@
 # ![Differences Between Arrays and Array-Like Objects](image-4.png)
 
 # Function 
+--> It provides more useful properties.
 --> Function Decleration 
 --> function functionName(parameters) {
     // code to be executed
@@ -266,3 +267,6 @@
 --> Arrow Functions Don’t Have Their Own this
 --> Arrow Functions Inherit this from Their Parent Scope
 --> Arrow Functions Are Useful for Callbacks
+
+# Name Property 
+--> Tell the name of the function 
