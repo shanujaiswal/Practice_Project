@@ -196,15 +196,46 @@ console.log(user4);
 console.log(user5.about8());
 console.log(user6.sing());
 
+// Understanding Prototype in JavaScript
+// 1. Checking Prototype in an Object
+const t = {
+  key1: "Value1",
+};
+
+if (t.prototype) {
+  console.log("prototype is present");
+} else {
+  console.log("prototype is not present");
+}
+
+// 2. Checking Prototype in a Function
+function u() {
+  console.log("Hello World");
+}
+if (u.prototype) {
+  console.log("prototype is present");
+} else {
+  console.log("prototype is not present");
+}
+
+u.prototype.abc = "abc";
+u.prototype.xyz = "xyz";
+u.prototype.sing = function () {
+  return "laa laa laa";
+};
+console.log(u.prototype);
+console.log(u.prototype.sing);
+
+
 //Object Creation Using Prototype in JavaScriptFF
-function t(firstName, lastName, email, age, address) {
-  const u = Object.create(t.prototype);
-  u.firstName = firstName;
-  u.lastName = lastName;
-  u.email = email;
-  u.age = age;
-  u.address = address;
-  return u;
+function v(firstName, lastName, email, age, address) {
+  const w = Object.create(v.prototype);
+  w.firstName = firstName;
+  w.lastName = lastName;
+  w.email = email;
+  w.age = age;
+  w.address = address;
+  return w;
 }
 t.prototype.about9 = function () {
   return `${this.firstName} is the ${this.age} years old`;
@@ -216,9 +247,9 @@ t.prototype.sing = function () {
   return "toon naa naa naa ";
 };
 
-const user7 = new t("shashi", "jaiswal", "Shanu@warpx.ai", 19, "my address");
-const user8 = new t("ashish", "jaiswal", "Shanu@warpx.ai", 21, "my address");
-const user9 = new t("sachin", "jaiswal", "Shanu@warpx.ai", 23, "my address");
+const user7 = new v("shashi", "jaiswal", "Shanu@warpx.ai", 19, "my address");
+const user8 = new v("ashish", "jaiswal", "Shanu@warpx.ai", 21, "my address");
+const user9 = new v("sachin", "jaiswal", "Shanu@warpx.ai", 23, "my address");
 console.log(user7);
 console.log(user8.about9());
 console.log(user9.sing());
