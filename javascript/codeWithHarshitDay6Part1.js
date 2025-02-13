@@ -253,4 +253,3 @@ const user9 = new v("sachin", "jaiswal", "Shanu@warpx.ai", 23, "my address");
 console.log(user7);
 console.log(user8.about9());
 console.log(user9.sing());
-
