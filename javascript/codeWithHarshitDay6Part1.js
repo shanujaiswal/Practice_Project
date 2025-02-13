@@ -195,3 +195,31 @@ const user6 = r("Harsh", "jaiswal", "Shanu@warpx.ai", 23, "my address");
 console.log(user4);
 console.log(user5.about8());
 console.log(user6.sing());
+
+//Object Creation Using Prototype in JavaScriptFF
+function t(firstName, lastName, email, age, address) {
+  const u = Object.create(t.prototype);
+  u.firstName = firstName;
+  u.lastName = lastName;
+  u.email = email;
+  u.age = age;
+  u.address = address;
+  return u;
+}
+t.prototype.about9 = function () {
+  return `${this.firstName} is the ${this.age} years old`;
+};
+t.prototype.is18 = function () {
+  return this.age >= 18;
+};
+t.prototype.sing = function () {
+  return "toon naa naa naa ";
+};
+
+const user7 = new t("shashi", "jaiswal", "Shanu@warpx.ai", 19, "my address");
+const user8 = new t("ashish", "jaiswal", "Shanu@warpx.ai", 21, "my address");
+const user9 = new t("sachin", "jaiswal", "Shanu@warpx.ai", 23, "my address");
+console.log(user7);
+console.log(user8.about9());
+console.log(user9.sing());
+
