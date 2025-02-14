@@ -55,7 +55,7 @@
 # ![Differences Between Arrays and Array-Like Objects](image-4.png)
 
 # Function
-
+--> Need reusable logic that performs an action, such as calculations, event handling, or API calls. 
 --> It provides more useful properties.
 --> Only function provdie prototype property.
 --> Function Decleration

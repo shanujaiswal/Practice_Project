@@ -8,3 +8,5 @@ a.prototype.about = function(){
 }
 const user1 = new a("Shanu", 24)
 console.log(user1)
+
+ 
