@@ -367,3 +367,7 @@ console.log(n(14))
 
 --> ![Difference Between [[Prototype]], __proto__, and .prototype in JavaScript](image-8.png)
 ![Key Difference Between [[Prototype]], __proto__, and .prototype in JavaScript](image-9.png)
+
+# New Keyword 
+--> It gives new empty object 
+--> Return empty object 
