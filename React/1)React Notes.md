@@ -4,8 +4,8 @@
 # npm run eject --> Removes this tool and copies build dependencies, configuration file and scripts into the app directory .If it is done , we can't go back.
 
 # Extension to Download in vscode 
-1. Thunder Client ---- > For API
-2. ES7+ React/Redux/React-Native snippets by dsznajder    ---- > For Full Form
+1. Thunder Client --> For API
+2. ES7+ React/Redux/React-Native snippets by dsznajder    ----> For Full Form
 
 # NPM
 --> NPM is a package manager for JavaScript and is used to manage dependencies (libraries, frameworks, and tools) in Node.js projects.
