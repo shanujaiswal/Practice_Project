@@ -3,6 +3,14 @@
 --> function is used to define a function in JavaScript
 --> ${name} inserts the value of the name variable into the string.
 
+# alert() – Displays a simple pop-up message
+
+# prompt() – Asks the user for input and returns the value.
+
+# confirm() – Shows a confirmation dialog with OK and Cancel buttons.
+
+# window.print() – Opens the print dialog for the current page.
+
 # Variable
 
 --> Point to a specific Memeory address that store a value
@@ -55,7 +63,8 @@
 # ![Differences Between Arrays and Array-Like Objects](image-4.png)
 
 # Function
---> Need reusable logic that performs an action, such as calculations, event handling, or API calls. 
+
+--> Need reusable logic that performs an action, such as calculations, event handling, or API calls.
 --> It provides more useful properties.
 --> Only function provdie prototype property.
 --> Function Decleration
@@ -368,6 +377,7 @@ console.log(n(14))
 --> ![Difference Between [[Prototype]], __proto__, and .prototype in JavaScript](image-8.png)
 ![Key Difference Between [[Prototype]], __proto__, and .prototype in JavaScript](image-9.png)
 
-# New Keyword 
---> It gives new empty object 
---> Return empty object 
+# New Keyword
+
+--> It gives new empty object
+--> Return empty object
