@@ -24,3 +24,5 @@ npm run script-name
 --> NPX is a tool that comes with NPM.
 --> It is used to execute packages directly without installing them globally.
 ![Key Difference Between NPM and NPX](image.png)
+
+# To Create a new file 
