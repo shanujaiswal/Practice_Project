@@ -7,7 +7,7 @@
 1. Thunder Client --> For API
 2. ES7+ React/Redux/React-Native snippets by dsznajder    ----> For Full Form
 
-# NPM
+# NPM -- node package manager
 --> NPM is a package manager for JavaScript and is used to manage dependencies (libraries, frameworks, and tools) in Node.js projects.
 -->For Running it we need to install Package globally 
 --> Installing Packages:
@@ -20,9 +20,24 @@ npm run script-name
 # Managing Project Dependencies:
 --> package.json contains project dependencies and metadata.
 --> node_modules/ stores installed packages.
-# NPX
+
+# NPX -- node package executer
 --> NPX is a tool that comes with NPM.
 --> It is used to execute packages directly without installing them globally.
 ![Key Difference Between NPM and NPX](image.png)
 
 # To Create a new file 
+npx create-react-app
+npm create vite@latest
+
+
+# Props
+--> Props (short for "properties") in React are used to pass data from a parent component to a child component as read-only values.
+
+# Onchange 
+--> An event handler used primarily with form elements like <input>, <textarea>, and <select>. 
+--> It triggers when the value of the element changes, allowing you to update the component’s state or perform other actions based on user input.
+--> Works with different input types (text, checkbox, radio, select, etc.)
+
+react-dom --> for website 
+react-native  --> for mobile 
