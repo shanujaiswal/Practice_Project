@@ -32,10 +32,10 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary my-4 " onClick={handleUpClick}>
+        <button className="btn btn-primary  " onClick={handleUpClick}>
           Convert To UpperCase
         </button>
-        <button className="btn btn-primary my-4 mx-4" onClick={handleLoClick}>
+        <button className="btn btn-primary  mx-1" onClick={handleLoClick}>
           Convert To lowerCase
         </button>
       </div>
