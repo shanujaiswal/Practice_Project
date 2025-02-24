@@ -41,3 +41,6 @@ npm create vite@latest
 
 react-dom --> for website 
 react-native  --> for mobile 
+
+
+# if writing code just after return there is no need  for bracket , if we are writing code  in next line then there is a bracket needed. 

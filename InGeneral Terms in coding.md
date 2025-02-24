@@ -19,3 +19,6 @@
 # --i
 --> This is the pre-decrement operator. It decreases the value of i by 1, but returns the decremented value.
 --> If i = 5, --i will first decrement i to 4 and then return 4.
+
+# $0 
+--> It is a special variable in the browser's developer tools (DevTools). It represents the currently selected DOM element in the Elements panel.
