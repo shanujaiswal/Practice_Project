@@ -75,7 +75,7 @@ export default function Navbar(props) {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">    
+              <button className="btn btn-outline-success" type="submit">
                 {/* to make success- green Primary -- Blue */}
                 Search
               </button>
