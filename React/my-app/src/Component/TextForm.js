@@ -25,6 +25,10 @@ export default function TextForm(props) {
       text.charAt(0).toUpperCase() + text.substring(1).toLowerCase();
     setText(handleSentenceCase);
   };
+  // const handleCopy = () => {
+  //   let handleCopy = navigator.clipboard.writeText(text);
+  //   setText(handleCopy);
+  // };
 
   //To be read properly
   const handleCamelCase = () => {
@@ -74,6 +78,11 @@ export default function TextForm(props) {
         <button className="btn btn-primary    m-1" onClick={handleSentenceCase}>
           Convert To Sentence Case
         </button>
+
+        {/* <button className="btn btn-primary    m-1" onClick={handleCopy}>
+          Copy The Text
+        </button> */}
+
         <button className="btn btn-primary    m-1" onClick={handleCamelCase}>
           Convert To Camel Case
         </button>
