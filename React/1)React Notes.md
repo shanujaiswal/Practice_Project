@@ -44,3 +44,6 @@ react-native  --> for mobile
 
 
 # if writing code just after return there is no need  for bracket , if we are writing code  in next line then there is a bracket needed. 
+
+{} --> To write javascript in jsx
+{{}} --> to write object 

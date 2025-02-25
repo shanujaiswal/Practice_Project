@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function TextForm(props) {
   // state variables
-  const [text, setText] = useState("Enter text here");
+  const [text, setText] = useState("");
 
   // functions
   const handleUpClick = () => {
@@ -64,6 +64,7 @@ export default function TextForm(props) {
             onChange={handleOnChange}
             id="myBox"
             rows="8"
+            placeholder="Enter Text here"
           ></textarea>
         </div>
         <button className="btn btn-primary m-1 " onClick={handleUpClick}>
@@ -94,7 +95,11 @@ export default function TextForm(props) {
         </p>
         <p>{0.008 * text.split(" ").length} Minutes read</p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>
+          {text.length > 0
+            ? text
+            : "Enter something in the text above to preview "}
+        </p>
       </div>
     </>
   );
