@@ -3,6 +3,7 @@ import "./App.css";
 // import About from "./Component/About";
 import Navbar from "./Component/Navbar";
 import TextForm from "./Component/TextForm";
+import Alert from "./Component/Alert";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -47,7 +48,8 @@ function App() {
       {/* <div className="container">
         <About Heading="About Me" />
       </div> */}
-    </>
+      <Alert/>
+      </>
   );
 }
 
