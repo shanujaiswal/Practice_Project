@@ -54,6 +54,7 @@ function App() {
         Text6="SomeThing Else"
         mode={mode}
         toggleMode={toggleMode}
+        
       />
       <div>
         <Alert alert={alert} />

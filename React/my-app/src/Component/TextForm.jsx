@@ -8,25 +8,25 @@ export default function TextForm(props) {
   const handleUpClick = () => {
     console.log("Uppercase was clicked" + text);
     let handleUpClick = text.toUpperCase();
-    props.showAlert("Converted to uppercase!","success")
+    props.showAlert("Converted to uppercase!", "success");
     setText(handleUpClick);
   };
   const handleLoClick = () => {
     console.log("lowercase was clicked" + text);
     let handleLoClick = text.toLowerCase();
-    props.showAlert("Converted to lowercase!","success")
+    props.showAlert("Converted to lowercase!", "success");
     setText(handleLoClick);
   };
   const handleClearClick = () => {
     console.log("Text is Cleared on clicking");
     let handleClearClick = "";
-    props.showAlert("Text is Clear !","success")
+    props.showAlert("Text is Clear !", "success");
     setText(handleClearClick);
   };
   const handleSentenceCase = () => {
     let handleSentenceCase =
-    text.charAt(0).toUpperCase() + text.substring(1).toLowerCase();
-    props.showAlert("Converted to Sentancecase!","success")
+      text.charAt(0).toUpperCase() + text.substring(1).toLowerCase();
+    props.showAlert("Converted to Sentancecase!", "success");
     setText(handleSentenceCase);
   };
   // const handleCopy = () => {
@@ -95,7 +95,7 @@ export default function TextForm(props) {
       <div className="container  my-3">
         <h1>Your text summary</h1>
         <p>
-          {text.split(" ").length}words and {text.length} Characters
+          {text.split(" ").length -1 } words and {text.length} Characters
         </p>
         <p>{0.008 * text.split(" ").length} Minutes read</p>
         <h2>Preview</h2>

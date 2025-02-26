@@ -79,6 +79,16 @@ export default function Navbar(props) {
                 Search
               </button>
             </form>
+            <button className={"btn btn-outline-success mx-2"} type="submit">
+              Red
+            </button>
+            <button className={"btn btn-outline-success mx-2"} type="submit">
+              Blue
+            </button>
+            <button className={"btn btn-outline-success mx-2"} type="submit">
+              Green
+            </button>
+
             <div
               className={`form-check form-switch text-${
                 props.mode === "light" ? "dark" : "light"
