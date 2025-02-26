@@ -8,21 +8,25 @@ export default function TextForm(props) {
   const handleUpClick = () => {
     console.log("Uppercase was clicked" + text);
     let handleUpClick = text.toUpperCase();
+    props.showAlert("Converted to uppercase!","success")
     setText(handleUpClick);
   };
   const handleLoClick = () => {
     console.log("lowercase was clicked" + text);
     let handleLoClick = text.toLowerCase();
+    props.showAlert("Converted to lowercase!","success")
     setText(handleLoClick);
   };
   const handleClearClick = () => {
     console.log("Text is Cleared on clicking");
     let handleClearClick = "";
+    props.showAlert("Text is Clear !","success")
     setText(handleClearClick);
   };
   const handleSentenceCase = () => {
     let handleSentenceCase =
-      text.charAt(0).toUpperCase() + text.substring(1).toLowerCase();
+    text.charAt(0).toUpperCase() + text.substring(1).toLowerCase();
+    props.showAlert("Converted to Sentancecase!","success")
     setText(handleSentenceCase);
   };
   // const handleCopy = () => {
