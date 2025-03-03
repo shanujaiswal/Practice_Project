@@ -47,9 +47,26 @@ function App() {
       <Alert alert={alert} />
 
       <Routes>
-        <Route path="/about" element={<About />} />
         <Route
-          path="/shanu"
+          path="Home"
+          element={
+            <>
+              <div className="container my-3">
+                <TextForm
+                  showAlert={showAlert}
+                  Heading="Enter the Text"
+                  mode={mode}
+                />
+              </div>
+              <div className="container">
+                <About Heading="About Me" />
+              </div>
+            </>
+          }
+        />
+
+        <Route
+          path="/Text"
           element={
             <div className="container my-3">
               <TextForm
@@ -60,11 +77,15 @@ function App() {
             </div>
           }
         />
+        <Route
+          path="/About"
+          element={
+            <div className="container">
+              <About Heading="About Me" />
+            </div>
+          }
+        />
       </Routes>
-
-      <div className="container">
-        <About Heading="About Me" />
-      </div>
     </Router>
   );
 }
