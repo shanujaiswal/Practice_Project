@@ -26,7 +26,7 @@ export default function Sidebar() {
         </div>
         <ul className="nav flex-column flex-grow-1">
           <li className="nav-item">
-            <a href="/MyDay" className="nav-link text-white">
+            <a href="/Myday" className="nav-link text-white">
               {" "}
               <IoSunnyOutline />
               {isOpen && "  My Day"}

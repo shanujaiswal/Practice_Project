@@ -4,23 +4,18 @@ import Navbar from "./Component/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <>
-      <Router>
-        <div>
+    <Router>
+      <div className="d-flex ">
+        <div className="flex-grow-1">
           <Navbar />
         </div>
-        <Routes>
-          <Route
-            path="/MyDay"
-            element={
-              <div>
-                <Myday/>;
-              </div>
-            }
-          ></Route>
-        </Routes>
-      </Router>
-    </>
+        <div className="container mt-3">
+          <Routes>
+            <Route path="/MyDay" element={<Myday />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 export default App;
