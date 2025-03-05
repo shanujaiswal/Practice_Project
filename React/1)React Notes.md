@@ -59,14 +59,23 @@ npm run script-name
 # React Render HTML
 
 --> React renders HTML to the web page by using a function called createRoot() and its method render()
-==> The createRoot Function
+
+# The createRoot Function
+
 --> The createRoot() function takes one argument, an HTML element.
 
 --> The purpose of the function is to define the HTML element where a React component should be displayed.
-==> The render Method
+
+# The render Method
+
 --> The render() method is then called to define the React component that should be rendered.
 
+# React JSX
 
+--> JSX stands for JavaScript XML.
+--> JSX allows us to write HTML in React.
+--> JSX makes it easier to write and add HTML in React.
+--> JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChild() methods.
 
 ==> To Be Known in React
 
