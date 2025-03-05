@@ -1,20 +1,28 @@
-# Extension to Download in vscode
+react-dom --> for website
+react-native --> for mobile
 
-1. Thunder Client --> For API
-2. ES7+ React/Redux/React-Native snippets by dsznajder ----> For Full Form
+# React
+
+--> Javascript library for building user interfaces
+--> Used to build single-page applications.
+--> Allows us to create reusable UI components.
+--> React creates a VIRTUAL DOM in memory.
+--> Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+--> Start by including three scripts, the first two let us write React code in our JavaScripts, and the third, Babel, allows us to write JSX syntax and ES6 in older browsers.
 
 # To Create a new file
 
---> npx create-react-app --> for normal create
+==> npx create-react-app my-react-app
+--> Node.js is required to use create-react-app.
+--> Create-react-app tool is an officially supported way to create React applications.
+--> my-react-app  == It is the name of new React project folder/directory. It can be replace with preferred project name.
+--> A new browser window will pop up with localhost:3000
 --> npm create vite@latest --> for vite create
 
-# npm start --> Start the development Server
-
-# npm run build --> Bundles the app into statics files for production
-
-# npm test --> Starts the test runner
-
-# npm run eject --> Removes this tool and copies build dependencies, configuration file and scripts into the app directory .If it is done , we can't go back.
+==> npm start --> Start the development Server
+==> npm run build --> Bundles the app into statics files for production
+==> npm test --> Starts the test runner
+==> npm run eject --> Removes this tool and copies build dependencies, configuration file and scripts into the app directory .If it is done , we can't go back.
 
 # NPM -- node package manager
 
@@ -39,24 +47,30 @@ npm run script-name
 --> It is used to execute packages directly without installing them globally.
 ![Key Difference Between NPM and NPX](image.png)
 
-# To Be Known in javascript
+==> To Be Known in React
 
-{} --> To write javascript in jsx
-{{}} --> to write object
+--> {} --> To write javascript in jsx
+--> {{}} --> to write object
 
-react-dom --> for website
-react-native --> for mobile
-
-# if writing code just after return there is no need for bracket , if we are writing code in next line then there is a bracket needed.
+# If writing code just after return there is no need for bracket , if we are writing code in next line then there is a bracket needed.
 
 # Props
 
 --> Props (short for "properties") in React are used to pass data from a parent component to a child component as read-only values.
 
-# UseState
+# React useState Hook
 
 --> Allows us to track state in a function component.
 --> Generally refers to data or properties that need to be tracking in an application
+
+==> Initialize useState
+--> We initialize our state by calling useState in our function component.
+--> useState accepts an initial state and returns two values:
+
+1. The current state.
+2. A function that updates the state.
+
+--> These names are variables that can be named anything you would like.
 
 # Onchange
 

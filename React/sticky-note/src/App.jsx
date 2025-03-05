@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <div className="d-flex ">
-        <div className="flex-grow-1">
+        <div className="flex">
           <Navbar />
         </div>
         <div className="container mt-3">
