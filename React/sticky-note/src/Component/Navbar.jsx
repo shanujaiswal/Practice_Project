@@ -49,7 +49,7 @@ export default function Sidebar() {
             </a>
           </li>
           <li className="nav-item">
-            <a href="/" className="nav-link text-white">
+            <a href="/Task" className="nav-link text-white">
             <CiHome />
 
               {isOpen && "  Tasks"}

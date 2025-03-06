@@ -77,6 +77,12 @@ npm run script-name
 --> JSX makes it easier to write and add HTML in React.
 --> JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChild() methods.
 
+# Expressions in JSX
+
+--> With JSX you can write expressions inside curly braces { }.
+
+--> The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:
+
 ==> To Be Known in React
 
 --> {} --> To write javascript in jsx
@@ -102,8 +108,14 @@ npm run script-name
 
 --> These names are variables that can be named anything you would like.
 
-# Onchange
+# onClick 
+--> It triggers when a user clicks an element (like a button, div, or span).
+--> Commonly used for handling button clicks or toggling states.
+
+
+# onchange
 
 --> An event handler used primarily with form elements like <input>, <textarea>, and <select>.
 --> It triggers when the value of the element changes, allowing you to update the component’s state or perform other actions based on user input.
 --> Works with different input types (text, checkbox, radio, select, etc.)
+![difference between onclick and onchange in react](image-2.png)
