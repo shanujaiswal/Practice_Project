@@ -3,11 +3,6 @@ import Clock from "./Clock";
 import { LuExternalLink } from "react-icons/lu";
 
 export default function My_Day() {
-  const [mode, setmode] = useState("");
-  useEffect(() => {
-    
-  });
-
   return (
     <>
       <div>
