@@ -53,8 +53,74 @@ npm run script-name
 --> Classes, Arrow Functions, Variables (let, const, var), Array Methods like .map(), Destructuring, Modules, Ternary Operator, Spread Operator
 ![Summary of ES6 Updates in React](image-1.png)
 
-==> React ES6 Classes
+# React ES6 Classes(nowdays Function)
+
 --> A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
+--> In modern React development, functional components with hooks have largely replaced ES6 class components.
+
+==> Methods in function
+--> Methods (or functions) are defined inside the component and do not require this like in class components.
+--> Can use regular functions or arrow functions inside a functional component.
+
+==> Inheritance Using Functional Components
+--> instead of defining a class with methods, you create a functional component with state and props.
+--> React does not use class inheritance. Instead, use composition and props.
+
+# Arrow function
+
+--> Arrow functions allow us to write shorter function syntax:
+--> hello = () => {
+return "Hello World!";
+}
+==> If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword:
+--> Arrow Functions Return Value by Default:
+hello = () => "Hello World!"; // works only if the function has only one statement.
+==> If you have parameters, you pass them inside the parentheses:
+--> Arrow Function With Parameters:
+hello = (val) => "Hello " + val;
+==> if have only one parameter, you can skip the parentheses as well:
+--> Arrow Function Without Parentheses:
+hello = val => "Hello " + val;
+
+# React ES6 Variables
+
+# Variables (var x = 5.6;)
+
+--> var has a function scope, not a block scope
+--> Before ES6 there was only one way of defining variables: with the var keyword. If did not define them, they would be assigned to the global object. Unless it was in strict mode, then would get an error if variables were undefined.
+--> With ES6, there are three ways of defining your variables: var, let, and const.
+--> If you use var outside of a function, it belongs to the global scope.
+--> If you use var inside of a function, it belongs to that function.
+--> If you use var inside of a block, i.e. a for loop, the variable is still available outside of that block.
+
+# Const (const x = 5.6;)
+
+--> const is a variable that once it has been created, its value can never change.
+--> const has a block scope.
+-->The keyword const is a bit misleading.It does not define a constant value. It defines a constant reference to a value.
+==> Because of const we can NOT:
+Reassign a constant value
+Reassign a constant array
+Reassign a constant object
+==> But you CAN:
+Change the elements of constant array
+Change the properties of constant object
+
+# let (let x = 5.6;)
+
+--> let has a block scope.
+--> let is the block scoped version of var, and is limited to the block (or expression) where it is defined.
+-->If you use let inside of a block, i.e. a for loop, the variable is only available inside of that loop.
+
+# React ES6 Array Methods
+
+--> There are many JavaScript array methods.
+--> One of the most useful in React is the .map() array method.
+--> The .map() method allows you to run a function on each item in the array, returning a new array as the result.
+--> In React, map() can be used to generate lists.
+
+# React ES6 Destructuring
+
 
 # React Render HTML
 
@@ -108,10 +174,10 @@ npm run script-name
 
 --> These names are variables that can be named anything you would like.
 
-# onClick 
+# onClick
+
 --> It triggers when a user clicks an element (like a button, div, or span).
 --> Commonly used for handling button clicks or toggling states.
-
 
 # onchange
 

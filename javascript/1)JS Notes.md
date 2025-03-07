@@ -148,12 +148,12 @@ console.log(n(14))
 # Switch Statement
 
 --> evaluates a value against multiple cases and executes the code block of the matching case
---> Provide break if you want to stop the execution and no further responses from code otherwise it will provide all the given cases
+--> Provide break if want to stop the execution and no further responses from code otherwise it will provide all the given cases
 
 # While loop
 
 --> Condition is checked before the loop body executes.
---> Use while when you don't know in advance how many times the loop will execute, and you want to repeat the loop as long as a condition remains true.
+--> Use while when don't know in advance how many times the loop will execute, and want to repeat the loop as long as a condition remains true.
 --> we declare variable before starting while
 
 # For loop function
@@ -166,7 +166,7 @@ console.log(n(14))
 # Do while
 
 --> Condition is checked after the loop body executes.
---> Use do-while when you want the loop to execute at least once before checking the condition (e.g., when a menu is presented to the user and you want to ensure the menu shows up at least once).
+--> Use do-while when want the loop to execute at least once before checking the condition (e.g., when a menu is presented to the user and want to ensure the menu shows up at least once).
 
 # ![Difference between for , while , do while loop ](image.png)
 
@@ -226,15 +226,15 @@ console.log(n(14))
 
 # Destructuring
 
---> simplifies extracting values from arrays and objects.
+--> Simplifies extracting values from arrays and objects.
 --> It makes the function parameters more readable, especially when working with complex data structures.
---> You can use default values to ensure that a parameter has a fallback value.
+--> can use default values to ensure that a parameter has a fallback value.
 
 # Callback function
 
 --> Format :- (callback(element, index, array), thisArg);
 --> Is a function that is passed as an argument to another function and is executed after the completion of that function's execution.
---> It allows you to customize the behavior of the function you are passing it to, based on certain conditions, or to be executed once some task is finished.
+--> It allows to customize the behavior of the function that are passing it to, based on certain conditions, or to be executed once some task is finished.
 --> A function that tests each element in the array. It takes the following arguments:
 --> Element: The current element being processed in the array.
 --> Index (optional): The index of the current element.
@@ -289,7 +289,7 @@ console.log(n(14))
 # FIll method
 
 --> The fill method in JavaScript is an array method used to fill all or part of an array with a static value.
---> You can specify the start and end indices to control which part of the array is filled.
+--> can specify the start and end indices to control which part of the array is filled.
 
 # Splice method
 
@@ -323,7 +323,7 @@ console.log(n(14))
 
 # When to Use?
 
---> Use call() when passing arguments one by one, apply() when passing arguments as an array, and bind() when you need a function to be called later with a fixed this value.
+--> Use call() when passing arguments one by one, apply() when passing arguments as an array, and bind() when  need a function to be called later with a fixed this value.
 
 # ![difference between call ,apply and bind in javasscript ](image-7.png)
 

@@ -56,7 +56,7 @@ eg :- The HTML tag contains the Head and Body tags forming a nested structure
 --> Used to make form
 --> <action> ---> Indicates where form data should be sent 
 
---> If We add a "title" attribute within a <p> tag in HTML, it will essentially add a tooltip text that appears when you hover over the paragraph with your mouse, providing additional information about the paragraph content without changing the visible text itself;
+--> If We add a "title" attribute within a <p> tag in HTML, it will essentially add a tooltip text that appears when hover over the paragraph with mouse, providing additional information about the paragraph content without changing the visible text itself;
 --> An element Without Closing tag is known as void Element 
 --> Text holder is used for writing more words 
 
@@ -76,7 +76,7 @@ eg :- The HTML tag contains the Head and Body tags forming a nested structure
 ==> blockquote --> defines a section that is quoted from another source. 
 ==> cite --> tag is used to mark the title of a creative work that is being cited. 
 ==> abbr -->tag defines an abbreviation or an acronym
-==> address --> tag defines the contact information for the author/owner of a document or an article. Title attribute to show the description for the abbreviation/acronym when you mouse over the element.
+==> address --> tag defines the contact information for the author/owner of a document or an article. Title attribute to show the description for the abbreviation/acronym when mouse over the element.
 ==> bdo --> tag is used to override the current text direction. BDO stands for Bi-Directional Override.
 # e.g --> <bdo dir="rtl">This text will be written from right to left</bdo>
 
@@ -92,4 +92,4 @@ eg :- The HTML tag contains the Head and Body tags forming a nested structure
 
 --> <style>
 a:hover {color:red}
-</style>  --> correct syntax for making a link red when you mouse over it
+</style>  --> correct syntax for making a link red when  mouse over it
