@@ -84,7 +84,7 @@ hello = val => "Hello " + val;
 
 # React ES6 Variables
 
-# Variables (var x = 5.6;)
+1. Variables (var x = 5.6;)
 
 --> var has a function scope, not a block scope
 --> Before ES6 there was only one way of defining variables: with the var keyword. If did not define them, they would be assigned to the global object. Unless it was in strict mode, then would get an error if variables were undefined.
@@ -93,7 +93,7 @@ hello = val => "Hello " + val;
 --> If you use var inside of a function, it belongs to that function.
 --> If you use var inside of a block, i.e. a for loop, the variable is still available outside of that block.
 
-# Const (const x = 5.6;)
+2. Const (const x = 5.6;)
 
 --> const is a variable that once it has been created, its value can never change.
 --> const has a block scope.
@@ -106,7 +106,7 @@ Reassign a constant object
 Change the elements of constant array
 Change the properties of constant object
 
-# let (let x = 5.6;)
+3. let (let x = 5.6;)
 
 --> let has a block scope.
 --> let is the block scoped version of var, and is limited to the block (or expression) where it is defined.
@@ -121,15 +121,41 @@ Change the properties of constant object
 
 # React ES6 Destructuring
 
+--> A convenient way to extract values from objects or arrays and use them directly in components. It simplifies code, making it cleaner and more readable.
+--> When destructuring arrays, the order that variables are declared is important.If we want only item 1 and item 3, we can leave out item 2 but keep the comma for item 2 [ item1, , item3]
+--> Using ES6 destructuring in React helps to: ✔ Reduce redundant props. and this.state. references
+--> Make code more readable
+--> Improve maintainability
+
+# React ES6 Spread Operator
+
+--> The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+--> The spread operator is often used in combination with destructuring.
+--> The properties that did not match are combined, but the property that did match are overwritten by the last object that was passed
+
+# React ES6 Modules
+
+==> Modules
+--> JavaScript modules allow us to break up code into separate files.
+--> This makes it easier to maintain the code-base.
+--> ES Modules rely on the import and export statements.
+--> ES6 modules allow you to split code into reusable files and import/export them as needed. This improves code organization and maintainability.
+
+# React ES6 Ternary Operator \*\*
+
+--> The ternary operator is a simplified conditional operator like if / else.
+--> Syntax(If there is one condition ) condition ? <expression if true> : <expression if false>
+--> Syntax(If there is two or more condition ) condition1 ? <expression if true> : condition2 ? <expression if true> : condition3 ? <expression if true> : <expression if false>;
 
 # React Render HTML
 
 --> React renders HTML to the web page by using a function called createRoot() and its method render()
+--> In React, HTML is rendered using JSX (JavaScript XML), which allows you to write HTML-like syntax inside JavaScript. React then converts JSX into standard JavaScript using React.createElement()
+--> React requires elements to be wrapped in a single parent element, often using a <div> or <> (Fragment).
 
 # The createRoot Function
 
 --> The createRoot() function takes one argument, an HTML element.
-
 --> The purpose of the function is to define the HTML element where a React component should be displayed.
 
 # The render Method
@@ -146,7 +172,6 @@ Change the properties of constant object
 # Expressions in JSX
 
 --> With JSX you can write expressions inside curly braces { }.
-
 --> The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:
 
 ==> To Be Known in React
