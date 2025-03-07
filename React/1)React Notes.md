@@ -169,13 +169,24 @@ Change the properties of constant object
 --> JSX makes it easier to write and add HTML in React.
 --> JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChild() methods.
 
-# Expressions in JSX
+==> Expressions in JSX
 
 --> With JSX you can write expressions inside curly braces { }.
 --> The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:
+--> To write HTML on multiple lines, put the HTML inside parentheses():
+--> if write two paragraphs, you must put them inside a parent element, like a div element. Alternatively, you can use a "fragment"(A fragment looks like an empty HTML tag: <></>) to wrap multiple lines. This will prevent unnecessarily adding extra nodes to the DOM.
+--> JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.
+==> Elements Must be Closed
+--> JSX follows XML rules, and therefore HTML elements must be properly closed
+==> Attribute class => className
+--> The class attribute is a much used attribute in HTML, but since JSX is rendered as JavaScript, and the class keyword is a reserved word in JavaScript, you are not allowed to use it in JSX. Use attribute className instead.
+==> Conditions - if statements
+--> React supports if statements, but not inside JSX.
+--> To be able to use conditional statements in JSX, should put the if statements outside of the JSX, or use a ternary expression instead
+
+--> can write expressions inside curly braces { }
 
 ==> To Be Known in React
-
 --> {} --> To write javascript in jsx
 --> {{}} --> to write object
 

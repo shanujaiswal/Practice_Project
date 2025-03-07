@@ -47,3 +47,18 @@ const UserProfile = ({ user }) => {
 
   return <div>Profile Loaded</div>;
 };
+
+// Conditions - if statements
+// Write "Hello" if x is less than 10, otherwise "Goodbye":
+
+const x = 5;
+let text = "Goodbye";
+if (x < 10) {
+  text = "Hello";
+}
+
+const myElement = <h1>{text}</h1>;
+
+// Use ternary expressions instead:
+const x = 5;
+const myElement = <h1>{x < 10 ? "Hello" : "Goodbye"}</h1>;
