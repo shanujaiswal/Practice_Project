@@ -28,8 +28,15 @@
 --> \uXXXX → Unicode character (represents a Unicode symbol, e.g., \u2764 → ❤)
 --> Raw Strings (r"" or R"" in Python)
 Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
+--> Strings can be concatenated (glued together) with the + operator, and repeated with \*:
+--> Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.-- works with two literals though, not with variables or expressions:
+--> Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
+--> Mixing operators between numbers and strings is not supported:
 
+![Slicing ](image.png)
 ==> Numbers
 --> Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals).
 -->(It also supports complex numbers)
--->
+
+# List
+
