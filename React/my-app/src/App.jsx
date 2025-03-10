@@ -6,7 +6,7 @@ import Navbar from "./Component/Navbar";
 import TextForm from "./Component/TextForm";
 import Alert from "./Component/Alert";
 
-function App() {
+function AppOld() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
 
@@ -90,4 +90,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppOld;

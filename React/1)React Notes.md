@@ -209,7 +209,7 @@ Change the properties of constant object
 --> Just like HTML DOM events, React can perform actions based on user events.
 --> React has the same events as HTML: click, change, mouseover etc.
 --> React events are written in camelCase syntax:( onClick instead of onclick. )
---> React event handlers are written inside curly braces:
+--> React event handlers are written inside curly braces:(onClick={shoot} instead of onclick="shoot()".)
 
 ==> Adding Events
 --> Handling user interactions using event listeners, such as clicks, form submissions, key presses, etc. React uses synthetic events, which are wrappers around native browser events, ensuring consistency across different browsers.
@@ -219,12 +219,44 @@ Change the properties of constant object
 --> Event handlers have access to the React event that triggered the function.
 
 # React Conditional Rendering
---> In React, you can conditionally render components.
+
+--> In React, can conditionally render components.
 -->There are several ways to do this
 ==> if Statement
 --> Can use the "if" JavaScript operator to decide which component to render.
 ==> Logical && Operator
 --> Another way to conditionally render a React component is by using the && operator.
+==> Logical && Operator
+--> Another way to conditionally render a React component is by using the && operator.
+==> Ternary Operator
+--> Another way to conditionally render elements is by using a ternary operator.
+--> condition ? true : false
+
+# React Lists
+
+--> will render lists with some type of loop.
+--> The JavaScript map() array method is generally the preferred method.
+
+# Keys
+
+--> Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be re-rendered instead of the entire list.
+--> Keys need to be unique to each sibling. But they can be duplicated globally.
+
+# React Forms
+
+--> Just like in HTML, React uses forms to allow users to interact with the web page.
+==> Adding Forms in React
+--> Add a form with React like any other element:
+==> Handling Forms
+--> Handling forms is about how handle the data when it changes value or gets submitted.
+--> In HTML, form data is usually handled by the DOM.In React, form data is usually handled by the components.
+--> When the data is handled by the components, all the data is stored in the component state.Can control changes by adding event handlers in the onChange attribute.
+--> use the useState Hook to keep track of each inputs value and provide a "single source of truth" for the entire application.
+==> Submitting Forms
+--> Can control the submit action by adding an event handler in the onSubmit attribute for the <form>:
+==> Multiple Input Fields
+You can control the values of more than one input field by adding a name attribute to each element.
+
 # React useState Hook
 
 --> Allows us to track state in a function component.
