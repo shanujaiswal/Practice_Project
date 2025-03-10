@@ -168,10 +168,15 @@ Change the properties of constant object
 --> JSX allows us to write HTML in React.
 --> JSX makes it easier to write and add HTML in React.
 --> JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChild() methods.
+--> can write expressions inside curly braces { }
+
+==> To Be Known in React
+--> {} --> To write javascript in jsx
+--> {{}} --> to write object
+
+# If writing code just after return there is no need for bracket , if we are writing code in next line then there is a bracket needed.
 
 ==> Expressions in JSX
-
---> With JSX you can write expressions inside curly braces { }.
 --> The expression can be a React variable, or property, or any other valid JavaScript expression. JSX will execute the expression and return the result:
 --> To write HTML on multiple lines, put the HTML inside parentheses():
 --> if write two paragraphs, you must put them inside a parent element, like a div element. Alternatively, you can use a "fragment"(A fragment looks like an empty HTML tag: <></>) to wrap multiple lines. This will prevent unnecessarily adding extra nodes to the DOM.
@@ -184,18 +189,42 @@ Change the properties of constant object
 --> React supports if statements, but not inside JSX.
 --> To be able to use conditional statements in JSX, should put the if statements outside of the JSX, or use a ternary expression instead
 
---> can write expressions inside curly braces { }
+# React Components
 
-==> To Be Known in React
---> {} --> To write javascript in jsx
---> {{}} --> to write object
+--> Components are like functions that return HTML elements.
+-->Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+--> When creating a React component, the component's name MUST start with an upper case letter.
+--> A Function component also returns HTML, and behaves much the same way as a Class component, but Function components can be written using much less code, are easier to understand, and will be preferred in this tutorial.
+==> Rendering a Component
+--> rendering a component means displaying it inside the DOM. You can render a component using ReactDOM in a regular project or simply return it inside another component.
 
-# If writing code just after return there is no need for bracket , if we are writing code in next line then there is a bracket needed.
-
-# Props
+# React Props
 
 --> Props (short for "properties") in React are used to pass data from a parent component to a child component as read-only values.
+--> Props are like function arguments, and you send them into the component as attributes.
+--> React Props are read-only! You will get an error if you try to change their value.
 
+# React Events
+
+--> Just like HTML DOM events, React can perform actions based on user events.
+--> React has the same events as HTML: click, change, mouseover etc.
+--> React events are written in camelCase syntax:( onClick instead of onclick. )
+--> React event handlers are written inside curly braces:
+
+==> Adding Events
+--> Handling user interactions using event listeners, such as clicks, form submissions, key presses, etc. React uses synthetic events, which are wrappers around native browser events, ensuring consistency across different browsers.
+==> Passing Arguments
+--> To pass an argument to an event handler, use an arrow function.
+==> React Event Object
+--> Event handlers have access to the React event that triggered the function.
+
+# React Conditional Rendering
+--> In React, you can conditionally render components.
+-->There are several ways to do this
+==> if Statement
+--> Can use the "if" JavaScript operator to decide which component to render.
+==> Logical && Operator
+--> Another way to conditionally render a React component is by using the && operator.
 # React useState Hook
 
 --> Allows us to track state in a function component.
