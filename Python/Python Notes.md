@@ -20,12 +20,7 @@
 --> Strings are defined either with a single quote or a double quotes.
 --> Triple-Quoted Strings -- For multi-line strings or embedded quotes.
 --> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
---> \n → Newline (moves to the next line)
---> \t → Tab (adds a horizontal space)
---> \\ → Backslash (adds a literal \)
---> \' → Single quote (allows ' inside single-quoted strings)
---> \" → Double quote (allows " inside double-quoted strings)
---> \uXXXX → Unicode character (represents a Unicode symbol, e.g., \u2764 → ❤)
+![Escape Characters](image-1.png)
 --> Raw Strings (r"" or R"" in Python)
 Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
 --> Strings can be concatenated (glued together) with the + operator, and repeated with \*:
@@ -34,9 +29,46 @@ Raw strings treat backslashes (\) as literal characters, useful for file paths a
 --> Mixing operators between numbers and strings is not supported:
 
 ![Slicing ](image.png)
-==> Numbers
+
+# Numbers
+
 --> Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals).
 -->(It also supports complex numbers)
 
 # List
 
+--> Lists are very similar to arrays.
+--> They can contain any type of variable, and they can contain as many variables as you wish
+--> A built-in data structure that allows you to store multiple items in a single variable. Lists are ordered, mutable (changeable), and allow duplicate values.
+
+\\ Creating a List
+--> can create a list using square brackets []
+\\ Accessing Elements
+--> Use indexing (starting from 0) to access elements:
+\\ Modifying Lists
+\\ Adding Elements
+--> append() → Adds an element at the end.
+--> insert(index, item) → Inserts an element at a specific index.
+\\ Removing Elements
+--> remove(value) → Removes the first occurrence of a value.
+--> pop(index) → Removes and returns an element at a specific index (default: last).
+--> clear() → Removes all elements.
+
+\\ Looping Through a List
+--> for fruit in fruits:
+print(fruit)
+\\ List Operations
+--> Concatenation: new_list = list1 + list2
+--> Repetition: list3 = list1 \* 2
+--> Check if an item exists: "apple" in fruits
+
+\\ Sorting and Reversing
+--> fruits.sort() # Sorts the list in ascending order
+--> fruits.reverse() # Reverses the list
+
+--> List Methods (append(), extend(), sort(), etc.)
+--> List Slicing (list[start:stop:step])
+--> Nested Lists (Lists inside lists)
+--> Shallow vs. Deep Copy (copy() and deepcopy())
+--> List vs. Tuple (Differences and when to use each)
+--> Performance Considerations (Time complexity of list operations)
