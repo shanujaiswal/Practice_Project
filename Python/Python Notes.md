@@ -72,3 +72,79 @@ print(fruit)
 --> Shallow vs. Deep Copy (copy() and deepcopy())
 --> List vs. Tuple (Differences and when to use each)
 --> Performance Considerations (Time complexity of list operations)
+
+# Basic Operators
+
+# Arithmetic Operators
+
+--> Arithmetic operators in Python are used to perform mathematical operations like addition, subtraction, multiplication, and more.
+--> ![Arithmetic Operators](image-2.png)
+
+# Using Operators with Strings in Python
+
+1. String Concatenation (`+`)
+
+- The `+` operator is used to join two or more strings.
+- It does **not** add spaces automatically, so you must include them manually if needed.
+
+2. String Repetition (`*`)
+
+- The `*` operator repeats a string multiple times.
+
+3. Using Comparison Operators with Strings
+
+- Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
+- Strings are compared lexicographically (alphabetical order based on ASCII values).
+
+4. Membership Operators (`in`, `not in`)
+
+- The `in` operator checks if a substring exists within a string.
+- The `not in` operator checks if a substring does **not** exist in a string.
+
+5. Using Logical Operators with Strings
+
+- Python treats non-empty strings as `True` and empty strings as `False`.
+- `and`, `or`, and `not` can be used with strings.
+
+6. Using Assignment Operators with Strings
+
+- The `+=` operator appends a string to an existing string.
+- Equivalent to `string = string + new_value`.
+
+# Using Operators with Lists in Python
+
+1. Concatenation (`+`)
+
+- The `+` operator is used to combine two or more lists into a new list.
+- It **does not** modify the original lists but creates a new one.
+
+2. Repetition (`*`)
+
+- The `*` operator repeats a list multiple times.
+
+3. Membership Operators (`in`, `not in`)
+
+- The `in` operator checks if an element exists in a list.
+- The `not in` operator checks if an element does **not** exist in a list.
+
+4. Comparison Operators (`==`, `!=`, `<`, `>`, `<=`, `>=`)
+
+- Lists are compared **element by element**.
+- The comparison is **lexicographical** (similar to string comparison based on ASCII values).
+
+5. Assignment Operators (`+=`, `*=`)
+
+- The `+=` operator appends elements from another list to the existing list.
+- The `*=` operator repeats and updates the list in place.
+
+6. Identity Operators (`is`, `is not`)
+
+- The `is` operator checks if two lists refer to the **same memory location**.
+- The `is not` operator checks if they refer to **different objects**.
+
+7. Logical Operators (`and`, `or`, `not`)
+
+- `and` returns the second list if the first list is non-empty, otherwise returns the first list.
+- `or` returns the first non-empty list.
+- `not` returns `True` if the list is empty, otherwise `False`.
+
