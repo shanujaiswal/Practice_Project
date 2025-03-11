@@ -255,7 +255,91 @@ Change the properties of constant object
 ==> Submitting Forms
 --> Can control the submit action by adding an event handler in the onSubmit attribute for the <form>:
 ==> Multiple Input Fields
-You can control the values of more than one input field by adding a name attribute to each element.
+--> You can control the values of more than one input field by adding a name attribute to each element.
+--> To access the fields in the event handler use the event.target.name and event.target.value syntax.
+--> To update the state, use square brackets [bracket notation] around the property name.
+==> Textarea
+--> The textarea element in React is slightly different from ordinary HTML.
+--> In HTML the value of a textarea was the text between the start tag <textarea> and the end tag </textarea> In React the value of a textarea is placed in a value attribute. We'll use the useState Hook to manage the value of the textarea:
+==> Select
+--> A drop down list, or a select box, in React is also a bit different from HTML.
+--> In HTML, the selected value in the drop down list was defined with the selected attribute.In React, the selected value is defined with a value attribute on the select tag:
+
+# React Router
+
+--> React Router is a popular library used to enable client-side navigation in React applications.
+--> It allows users to switch between different views (pages) without reloading the browser.
+
+# Add React Router
+
+--> To add React Router in your application, run this in the terminal from the root directory of the application:
+npm i -D react-router-dom
+npm i -D react-router-dom@latest //for upgrading the react router
+==> Basic Usage
+--> See Example
+--> We wrap our content first with <BrowserRouter>.
+--> Then we define our <Routes>. An application can have multiple <Routes>. Our basic example only uses one.
+--> <Route>s can be nested. The first <Route> has a path of / and renders the Layout component.
+--> The nested <Route>s inherit and add to the parent route. So the blogs path is combined with the parent and becomes /blogs.
+--> The Home component route does not have a path but has an index attribute. That specifies this route as the default route for the parent route, which is /.
+--> Setting the path to \* will act as a catch-all for any undefined URLs. This is great for a 404 error page
+==> Pages / Components
+--> The Layout component has <Outlet> and <Link> elements.
+--> The <Outlet> renders the current route selected.
+--> <Link> is used to set the URL and keep track of browsing history.
+--> Anytime we link to an internal path, we will use <Link> instead of <a href="">.
+--> The "layout route" is a shared component that inserts common content on all pages, such as a navigation menu.
+
+# React Memo
+
+# Styling React Using CSS
+--> There are many ways to style React with CSS,will take a closer look at three common ways:
+
+Inline styling
+CSS stylesheets
+CSS Modules
+
+==> Inline Styling
+--> To style an element with the inline style attribute, the value must be a JavaScript object:
+--> n JSX, JavaScript expressions are written inside curly braces, and since JavaScript objects also use curly braces, the styling is written inside two sets of curly braces {{}}.
+
+==> camelCased Property Names
+--> Since the inline CSS is written in a JavaScript object, properties with hyphen separators, like background-color, must be written with camel case syntax:
+--> Use backgroundColor instead of background-color:
+
+# Styling React Using Sass(Read it  sepreatly from w3school )
+--> Sass is a CSS pre-processor.
+--> Sass files are executed on the server and sends CSS to the browser
+--> Install Sass by running this command in your terminal:
+npm i sass
+==> Create a Sass file
+--> Create a Sass file the same way as you create CSS files, but Sass files have the file extension .scss
+--> In Sass files you can use variables and other Sass functions:
+
+# React Hooks
+--> Hooks were added to React in version 16.8.
+--> Hooks allow function components to have access to state and other React features. 
+--> Because of this, class components are generally no longer needed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # React useState Hook
 
