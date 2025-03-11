@@ -32,7 +32,6 @@ print(word[0])  # First character ('P')
 print(word[5])  # Last character ('n')
 print(word[-1])  # Last character using negative indexing ('n')
 print(word[-2])  # Second last character ('o')
-
 # String slicing
 print(word[0:2])  # First two characters ('Py')
 print(word[2:5])  # Characters from index 2 to 4 ('tho')
@@ -48,8 +47,44 @@ print(word[:4] + word[4:])  # Entire word ('Python')
 print("J" + word[1:])  # 'Python' → 'Jython'
 print(word[:2] + "py")  # 'Python' → 'Pypy'
 
+# String Length
 s = "supercalifragilisticexpialidocious"
 print(len(s))  # Count number of characters in the string
+
+# String Case Operations
+print(word.upper())  # Output: PYTHON
+print(word.lower())  # Output: python
+print(word.title())  # Output: Python
+print(word.index("o"))  # Output: 4 (as 'o' appears at index 4 in "Python")
+
+# String Strip Operations
+text = "   Hello Python   "
+print(text.strip())  # Output: Hello Python
+print(text.lstrip())  # Output: "Hello Python   "
+print(text.rstrip())  # Output: "   Hello Python"
+
+# String Find and Replace
+message = "Hello World"
+print(message.find("World"))  # Output: 6
+print(message.replace("World", "Python"))  # Output: Hello Python
+
+# String Splitting and Joining
+sentence = "Python is fun"
+words = sentence.split()  # Splits on spaces
+print(words)  # Output: ['Python', 'is', 'fun']
+
+joined_sentence = "-".join(words)
+print(joined_sentence)  # Output: Python-is-fun
+
+# Checking Substrings
+print("Python" in sentence)  # Output: True
+print("Java" in sentence)  # Output: False
+
+# String Formatting
+name = "Alice"
+print(f"Hello, {name}!")  # Output: Hello, Alice!
+print("Hello, {}!".format(name))  # Output: Hello, Alice!
+print("Hello, %s!" % name)  # Output: Hello, Alice!
 
 # Arithmetic operations
 one = 1
@@ -219,3 +254,36 @@ print(list1 and list2)  # Output: [] (empty list)
 print(list1 or list2)  # Output: [1, 2, 3] (first non-empty list)
 print(not list1)  # Output: False (list is not empty)
 print(not list2)  # Output: True (list is empty)
+
+# 1. Using % Operator (Old Style)
+name = "Alice"
+age = 25
+print("Hello, my name is %s and I am %d years old." % (name, age))
+
+# 2. Using format() Method
+print("Hello, my name is {} and I am {} years old.".format(name, age))
+print("I have {1} apples and {0} oranges.".format(5, 10))  # Positional arguments
+print("Name: {n}, Age: {a}".format(n=name, a=age))  # Keyword arguments
+
+# 3. Using f-strings (Python 3.6+)
+print(f"Hello, my name is {name} and I am {age} years old.")
+x, y = 10, 20
+print(f"Sum of {x} and {y} is {x + y}")
+
+# 4. Using Template Strings
+from string import Template
+
+t = Template("Hello, my name is $name and I am $age years old.")
+print(t.substitute(name="Bob", age=30))
+
+# 5. Formatting Numbers
+pi = 3.14159
+print(f"Pi rounded to 2 decimal places: {pi:.2f}")  # Output: 3.14
+print(f"Number with commas: {1000000:,}")  # Output: 1,000,000
+print(f"Left align: {'Hello':<10}, Right align: {'Hello':>10}, Center: {'Hello':^10}")
+
+# 6. Formatting Dates
+from datetime import datetime
+
+now = datetime.now()
+print(f"Current Date and Time: {now:%Y-%m-%d %H:%M:%S}")  # Output: 2025-03-11 14:30:15
