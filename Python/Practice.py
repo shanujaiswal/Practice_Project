@@ -287,3 +287,83 @@ from datetime import datetime
 
 now = datetime.now()
 print(f"Current Date and Time: {now:%Y-%m-%d %H:%M:%S}")  # Output: 2025-03-11 14:30:15
+
+# Variable Assignment vs. Comparison
+x = 10  # Assignment
+y = 20
+print(x == y)  # False (Comparison)
+print(x != y)  # True
+
+# Boolean Operators
+x = 5
+y = 10
+print(x > 2 and y < 15)  # True
+print(x > 10 or y < 15)  # True
+print(not (x > 2))  # False
+
+# The "in" Operator
+fruits = ["apple", "banana", "cherry"]
+print("banana" in fruits)  # True
+print("grape" in fruits)  # False
+
+# Indentation in Python
+x = 10
+if x > 5:
+    print("x is greater than 5")  # Indented block
+
+# Truthy and Falsy Values
+print(bool(0))  # False
+print(bool([]))  # False
+print(bool("Hi"))  # True
+
+# The "is" Operator
+x = [1, 2, 3]
+y = [1, 2, 3]
+z = x
+print(x == y)  # True (Values are equal)
+print(x is y)  # False (Different memory locations)
+print(x is z)  # True (Same object)
+
+# Example of a for loop
+for num in range(1, 6):
+    print(num)
+
+# Example of a while loop
+count = 1
+while count <= 5:
+    print(count)
+    count += 1
+
+# Using break in a for loop
+for num in range(1, 6):
+    if num == 3:
+        break  # Stops the loop at 3
+    print(num)
+
+# Using continue in a for loop
+for num in range(1, 6):
+    if num == 3:
+        continue  # Skips printing 3
+    print(num)
+
+# Using else with a for loop
+for num in range(1, 6):
+    if num == 3:
+        break
+    print(num)
+else:
+    print("Loop completed")
+
+# Looping through a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# Looping through a string
+for char in "Python":
+    print(char)
+
+# Looping through a dictionary
+person = {"name": "Alice", "age": 25}
+for key, value in person.items():
+    print(key, ":", value)

@@ -226,3 +226,130 @@ Advanced List Concepts
 - `f"Hello, {name}!"` (f-strings)
 - `"Hello, {}!".format(name)`
 - `"Hello, %s!" % name` (old-style)
+
+# Conditions
+--> Python uses boolean logic to evaluate conditions. --> The boolean values True and False are returned when an expression is compared or evaluated.
+--> Notice that variable assignment is done using a single equals operator "=", whereas comparison between two variables is done using the double equals operator "==". The "not equals" operator is marked as "!=".
+
+# Conditions in Python  
+
+Python uses boolean logic to evaluate conditions. The boolean values **True** and **False** are returned when an expression is compared or evaluated.  
+
+## **Variable Assignment vs. Comparison**
+- Variable assignment is done using a single equals operator (`=`).
+- Comparison between two variables is done using the double equals operator (`==`).
+- The "not equals" operator is marked as (`!=`).
+
+## **Boolean Operators**
+Python has three boolean operators to evaluate conditions:
+1. `and` – Returns `True` if both conditions are `True`.
+2. `or` – Returns `True` if at least one condition is `True`.
+3. `not` – Negates a condition (`True` becomes `False`, and vice versa).
+
+## **The "in" Operator**
+- The `in` operator is used to check if a specified object exists within an iterable object container, such as a list or string.
+
+## **Indentation in Python**
+- Python uses indentation to define code blocks instead of brackets `{}`.
+- The standard Python indentation is **4 spaces**, though tabs and other space sizes will work as long as they are consistent.
+
+## **Truthy and Falsy Values**
+A statement is evaluated as `True` if one of the following is correct:
+1. The **`True`** boolean variable is given, or calculated using an expression.
+2. An object that is **not considered empty** is passed.
+
+Falsy values include:
+- `None`
+- `False`
+- `0` (integer or float)
+- `""` (empty string)
+- `[]` (empty list)
+- `{}` (empty dictionary)
+- `set()` (empty set)
+
+## **The "is" Operator**
+- Unlike the double equals operator (`==`), the **`is`** operator checks whether two variables refer to the **same object in memory**.
+
+## **Summary of Comparison Operators**
+| Operator | Meaning                |
+|----------|------------------------|
+| `==`     | Equal to               |
+| `!=`     | Not equal to           |
+| `>`      | Greater than           |
+| `<`      | Less than              |
+| `>=`     | Greater than or equal to |
+| `<=`     | Less than or equal to   |
+| `is`     | Same object reference  |
+| `in`     | Exists in an iterable  |
+
+# Loops in Python
+
+## Types of Loops in Python
+There are two types of loops in Python:
+1. **for loop** - Used for iterating over a sequence (list, tuple, string, dictionary, range, etc.).
+2. **while loop** - Runs as long as a specified condition is `True`.
+
+## The "for" Loop
+For loops iterate over a given sequence. 
+
+### Example:
+```python
+for num in range(1, 6):
+    print(num)
+```
+
+For loops can iterate over a sequence of numbers using the `range()` function. The difference between `range()` and `xrange()` (in Python 2) is that `range()` returns a new list, whereas `xrange()` returns an iterator, making it more memory efficient. In Python 3, `range()` behaves like `xrange()`.
+
+## The "while" Loop
+While loops repeat as long as a certain boolean condition is met. 
+
+### Example:
+```python
+count = 1
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+## "break" and "continue" Statements
+- **break** – Terminates the loop immediately.
+- **continue** – Skips the current iteration and moves to the next.
+
+### Example:
+```python
+for num in range(1, 6):
+    if num == 3:
+        break  # Stops the loop at 3
+    print(num)
+```
+
+```python
+for num in range(1, 6):
+    if num == 3:
+        continue  # Skips printing 3
+    print(num)
+```
+
+## Using "else" with Loops
+Unlike C or C++, Python allows an `else` clause with loops. When the loop condition of `for` or `while` fails, the `else` part executes. However, if a `break` statement is encountered, the `else` part is skipped.
+
+### Example:
+```python
+for num in range(1, 6):
+    if num == 3:
+        break
+    print(num)
+else:
+    print("Loop completed")
+```
+
+## Looping Through Data Structures
+You can use loops to iterate over different data structures such as:
+- Lists
+- Strings
+- Dictionaries
+
+## When to Use Which Loop?
+- Use `for` loops when the number of iterations is known.
+- Use `while` loops when the number of iterations depends on a condition.
+
