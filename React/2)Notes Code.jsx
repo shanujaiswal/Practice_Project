@@ -87,8 +87,6 @@ export default function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
 
 // Create multiple state Hooks:
 
@@ -111,8 +109,7 @@ function Car() {
   )
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Car />);
+
 
 // Create a single Hook that holds an object:
 
@@ -137,8 +134,7 @@ function Car() {
   )
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Car />);
+
 
 // Use the JavaScript spread operator to update only the color of the car:
 
@@ -173,8 +169,7 @@ function Car() {
   )
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Car />);
+
 
 // Use setTimeout() to count 1 second after initial render:
 
@@ -193,5 +188,3 @@ function Timer() {
   return <h1>I've rendered {count} times!</h1>;
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Timer />);
