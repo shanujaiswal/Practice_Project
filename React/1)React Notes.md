@@ -293,6 +293,7 @@ npm i -D react-router-dom@latest //for upgrading the react router
 # React Memo
 
 # Styling React Using CSS
+
 --> There are many ways to style React with CSS,will take a closer look at three common ways:
 
 Inline styling
@@ -307,7 +308,8 @@ CSS Modules
 --> Since the inline CSS is written in a JavaScript object, properties with hyphen separators, like background-color, must be written with camel case syntax:
 --> Use backgroundColor instead of background-color:
 
-# Styling React Using Sass(Read it  sepreatly from w3school )
+# Styling React Using Sass(Read it sepreatly from w3school )
+
 --> Sass is a CSS pre-processor.
 --> Sass files are executed on the server and sends CSS to the browser
 --> Install Sass by running this command in your terminal:
@@ -317,43 +319,71 @@ npm i sass
 --> In Sass files you can use variables and other Sass functions:
 
 # React Hooks
+
 --> Hooks were added to React in version 16.8.
---> Hooks allow function components to have access to state and other React features. 
+--> Hooks allow function components to have access to state and other React features.
 --> Because of this, class components are generally no longer needed.
+--> Hooks generally replace class components, there are no plans to remove classes from React.
+--> Must import Hooks from react.
+--> State generally refers to application data or properties that need to be tracked.
+--> using the **useState** Hook to keep track of the application state.
 
+# Hook Rules
 
+--> There are 3 rules for hooks:
 
+1. Hooks can only be called inside React function components.
+2. Hooks can only be called at the top level of a component.
+3. Hooks cannot be conditional
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+==> Custom Hooks
+If have stateful logic that needs to be reused in several components, can build our own custom Hooks.
 
 # React useState Hook
 
 --> Allows us to track state in a function component.
 --> Generally refers to data or properties that need to be tracking in an application
 
-==> Initialize useState
---> We initialize our state by calling useState in our function component.
---> useState accepts an initial state and returns two values:
+==> Import useState
+--> To use the useState Hook, we first need to import it into our component.At the top of our component, import the useState Hook.
+import { useState } from "react";
 
+==> Initialize useState
+--> Initialize our state by calling useState in our function component.
+--> useState accepts an initial state and returns two values:
 1. The current state.
 2. A function that updates the state.
+==> Initialize state at the top of the function component.
+import { useState } from "react";
+function FavoriteColor() {
+  const [color, setColor] = useState("");
+}
+--> As we are destructuring the returned values from useState.
+--> The first value, color, is our current state.
+--> The second value, setColor, is the function that is used to update our state.
 
---> These names are variables that can be named anything you would like.
+--> These names are variables that can be named anything would like.
+--> Lastly, we set the initial state to an empty string: useState("")
+
+==> Update State
+--> To update our state, we use our state updater function.
+--> We should never directly update state. Ex: color = "red" is not allowed.
+-->   const [color, setColor] = useState("red");  // Initializes state with "red", setColor updates it.
+
+==> What Can State Hold
+--> The useState Hook can be used to keep track of strings, numbers, booleans, arrays, objects, and any combination of these!
+--> We could create multiple state Hooks to track individual values
+--> Or, we can just use one state and include an object instead!
+
+
+
+
+
+
+
+
+
+
 
 # onClick
 
