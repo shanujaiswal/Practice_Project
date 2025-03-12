@@ -351,12 +351,14 @@ import { useState } from "react";
 ==> Initialize useState
 --> Initialize our state by calling useState in our function component.
 --> useState accepts an initial state and returns two values:
+
 1. The current state.
 2. A function that updates the state.
+
 ==> Initialize state at the top of the function component.
 import { useState } from "react";
 function FavoriteColor() {
-  const [color, setColor] = useState("");
+const [color, setColor] = useState("");
 }
 --> As we are destructuring the returned values from useState.
 --> The first value, color, is our current state.
@@ -368,31 +370,58 @@ function FavoriteColor() {
 ==> Update State
 --> To update our state, we use our state updater function.
 --> We should never directly update state. Ex: color = "red" is not allowed.
--->   const [color, setColor] = useState("red");  // Initializes state with "red", setColor updates it.
+--> const [color, setColor] = useState("red"); // Initializes state with "red", setColor updates it.
 
 ==> What Can State Hold
 --> The useState Hook can be used to keep track of strings, numbers, booleans, arrays, objects, and any combination of these!
 --> We could create multiple state Hooks to track individual values
 --> Or, we can just use one state and include an object instead!
 
+==> Updating Objects and Arrays in State
+--> When state is updated, the entire state gets overwritten.
+--> What if we only want to update the color of our car?(refer to example)
+--> If we only called setCar({color: "blue"}), this would remove the brand, model, and year from our state.
+--> We can use the JavaScript spread operator to help us.
 
+# React useEffect Hooks
 
+--> The useEffect Hook allows you to perform side effects in your components.
+--> Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+--> useEffect accepts two arguments. The second argument is optional.
+--> useEffect(<function>, <dependency>)
+--> useEffect runs on every render. That means that when the count changes, a render happens, which then triggers another effect.always include the second parameter which accepts an array. We can optionally pass dependencies to useEffect in this array.
 
+1. No dependency passed:
 
+useEffect(() => {
+//Runs on every render
+});
 
+2. An empty array:
 
+useEffect(() => {
+//Runs only on the first render
+}, []);
 
+3. Props or state values:
 
+useEffect(() => {
+//Runs on the first render
+//And any time any dependency value changes
+}, [prop, state]);
 
+--> If there are multiple dependencies, they should be included in the useEffect dependency array.
 
-# onClick
+==> Effect Cleanup
+--> Some effects require cleanup to reduce memory leaks.
+--> Timeouts, subscriptions, event listeners, and other effects that are no longer needed should be disposed.
+--> Do this by including a return function at the end of the useEffect Hook.
 
---> It triggers when a user clicks an element (like a button, div, or span).
---> Commonly used for handling button clicks or toggling states.
+# React useContext Hook
+--> React Context is a way to manage state globally.
+--> It can be used together with the useState Hook to share state between deeply nested components more easily than with useState alone.
 
-# onchange
+==> The Problem
+--> State should be held by the highest parent component in the stack that requires access to the state.
+--> If, we have many nested components. The component at the top and bottom of the stack need access to the state.To do this without Context, we will need to pass the state as "props" through each nested component. This is called "prop drilling".
 
---> An event handler used primarily with form elements like <input>, <textarea>, and <select>.
---> It triggers when the value of the element changes, allowing you to update the component’s state or perform other actions based on user input.
---> Works with different input types (text, checkbox, radio, select, etc.)
-![difference between onclick and onchange in react](image-2.png)

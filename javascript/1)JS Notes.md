@@ -381,3 +381,20 @@ console.log(n(14))
 
 --> It gives new empty object
 --> Return empty object
+
+
+
+
+# Effect handler 
+
+# onClick
+
+--> It triggers when a user clicks an element (like a button, div, or span).
+--> Commonly used for handling button clicks or toggling states.
+
+# onchange
+
+--> An event handler used primarily with form elements like <input>, <textarea>, and <select>.
+--> It triggers when the value of the element changes, allowing you to update the component’s state or perform other actions based on user input.
+--> Works with different input types (text, checkbox, radio, select, etc.)
+![difference between onclick and onchange in react](image-2.png)
