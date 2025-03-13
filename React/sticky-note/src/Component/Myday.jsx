@@ -1,5 +1,6 @@
 import React from "react";
 import Clock from "./Clock";
+import Task from "./Task";
 import { LuExternalLink } from "react-icons/lu";
 
 export default function My_Day() {
@@ -10,6 +11,7 @@ export default function My_Day() {
         <LuExternalLink />
       </div>
       <Clock />
+      <Task />
     </>
   );
 }

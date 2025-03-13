@@ -323,7 +323,7 @@ console.log(n(14))
 
 # When to Use?
 
---> Use call() when passing arguments one by one, apply() when passing arguments as an array, and bind() when  need a function to be called later with a fixed this value.
+--> Use call() when passing arguments one by one, apply() when passing arguments as an array, and bind() when need a function to be called later with a fixed this value.
 
 # ![difference between call ,apply and bind in javasscript ](image-7.png)
 
@@ -382,10 +382,7 @@ console.log(n(14))
 --> It gives new empty object
 --> Return empty object
 
-
-
-
-# Effect handler 
+# Effect handler
 
 # onClick
 
@@ -398,3 +395,4 @@ console.log(n(14))
 --> It triggers when the value of the element changes, allowing you to update the component’s state or perform other actions based on user input.
 --> Works with different input types (text, checkbox, radio, select, etc.)
 ![difference between onclick and onchange in react](image-2.png)
+
