@@ -418,6 +418,7 @@ useEffect(() => {
 --> Do this by including a return function at the end of the useEffect Hook.
 
 # React useContext Hook
+
 --> React Context is a way to manage state globally.
 --> It can be used together with the useState Hook to share state between deeply nested components more easily than with useState alone.
 
@@ -425,38 +426,49 @@ useEffect(() => {
 --> State should be held by the highest parent component in the stack that requires access to the state.
 --> If, we have many nested components. The component at the top and bottom of the stack need access to the state.To do this without Context, we will need to pass the state as "props" through each nested component. This is called "prop drilling".
 
+==> The Solution
+--> The solution is to create context.
+==> Create Context
+--> To create context, you must Import createContext and initialize it:
+
 # React useRef Hook
+
 --> The useRef Hook allows you to persist values between renders.
 --> It can be used to store a mutable value that does not cause a re-render when updated.
 --> It can be used to access a DOM element directly.
 
 ==> Does Not Cause Re-renders
 --> If we tried to count how many times our application renders using the useState Hook, we would be caught in an infinite loop since this Hook itself causes a re-render.
----> To avoid this, we can use the useRef Hook.
+--> To avoid this, we can use the useRef Hook.
+--> useRef() only returns one item. It returns an Object called current.
+--> When we initialize useRef we set the initial value: useRef(0).
+==> Accessing DOM Elements
+--> In general, we want to let React handle all DOM manipulation.
+--> But there are some instances where useRef can be used without causing issues.
+--> In React, we can add a ref attribute to an element to access it directly in the DOM.
+==> Tracking State Changes
+--> The useRef Hook can also be used to keep track of previous state values.
+--> This is because we are able to persist useRef values between renders.
 
+# React useReducer Hook
 
+--> The useReducer Hook is similar to the useState Hook.
+--> It allows for custom state logic.
+--> If you find yourself keeping track of multiple pieces of state that rely on complex logic, useReducer may be useful.
+==> Syntax
+--> The useReducer Hook accepts two arguments.
+--> useReducer(<reducer>, <initialState>)
+--> The reducer function contains your custom state logic and the initialStatecan be a simple value but generally will contain an object.
+--> The useReducer Hook returns the current stateand a dispatchmethod.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# JavaScript JSON
+# React Custom Hooks
+--> Hooks are reusable functions.
+--> When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
+--> Custom Hooks start with "use". Example: useFetch.
+\\ ==> Build a Hook
+--> Will use the JSONPlaceholder service to fetch fake data. This service is great for testing applications when there is no existing data. 
+--> 
+# JavaScript JSON --- Used for database
 
 --> JSON is a format for storing and transporting data.
 --> Often used when data is sent from a server to a web page.
@@ -503,9 +515,9 @@ This JSON syntax defines an employees object: an array of 3 employee records (ob
 
 --> Just like in JavaScript, an array can contain objects:
 "employees":[
-  {"firstName":"John", "lastName":"Doe"},
-  {"firstName":"Anna", "lastName":"Smith"},
-  {"firstName":"Peter", "lastName":"Jones"}
+{"firstName":"John", "lastName":"Doe"},
+{"firstName":"Anna", "lastName":"Smith"},
+{"firstName":"Peter", "lastName":"Jones"}
 ]
 In the example above, the object "employees" is an array. It contains three objects.
 
@@ -527,6 +539,7 @@ const obj = JSON.parse(text);
 Finally, use the new JavaScript object in your page:
 
 Example
+
 <p id="demo"></p>
 
 <script>

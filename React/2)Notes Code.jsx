@@ -188,3 +188,116 @@ function Timer() {
   return <h1>I've rendered {count} times!</h1>;
 }
 
+
+// Use useRef to focus the input:
+
+import { useRef } from "react";
+import ReactDOM from "react-dom/client";
+
+function App() {
+  const inputElement = useRef();
+
+  const focusInput = () => {
+    inputElement.current.focus();
+  };
+
+  return (
+    <>
+      <input type="text" ref={inputElement} />
+      <button onClick={focusInput}>Focus Input</button>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+// Use useRef to keep track of previous state values:
+
+import { useState, useEffect, useRef } from "react";
+import ReactDOM from "react-dom/client";
+
+function App() {
+  const [inputValue, setInputValue] = useState("");
+  const previousInputValue = useRef("");
+
+  useEffect(() => {
+    previousInputValue.current = inputValue;
+  }, [inputValue]);
+
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h2>Current Value: {inputValue}</h2>
+      <h2>Previous Value: {previousInputValue.current}</h2>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+
+//  an example of useReducer in a counter app:
+import { useReducer } from "react";
+import ReactDOM from "react-dom/client";
+
+const initialTodos = [
+  {
+    id: 1,
+    title: "Todo 1",
+    complete: false,
+  },
+  {
+    id: 2,
+    title: "Todo 2",
+    complete: false,
+  },
+];
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "COMPLETE":
+      return state.map((todo) => {
+        if (todo.id === action.id) {
+          return { ...todo, complete: !todo.complete };
+        } else {
+          return todo;
+        }
+      });
+    default:
+      return state;
+  }
+};
+
+function Todos() {
+  const [todos, dispatch] = useReducer(reducer, initialTodos);
+
+  const handleComplete = (todo) => {
+    dispatch({ type: "COMPLETE", id: todo.id });
+  };
+
+  return (
+    <>
+      {todos.map((todo) => (
+        <div key={todo.id}>
+          <label>
+            <input
+              type="checkbox"
+              checked={todo.complete}
+              onChange={() => handleComplete(todo)}
+            />
+            {todo.title}
+          </label>
+        </div>
+      ))}
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Todos />);
