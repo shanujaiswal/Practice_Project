@@ -42,34 +42,47 @@ float(input()) ---> value will be float
 --> Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals).
 -->(It also supports complex numbers)
 
+# Strings
+
+--> Strings are defined either with a single quote or a double quotes.
+--> Triple-Quoted Strings -- For multi-line strings or embedded quotes.
+--> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
+--> Raw Strings (r"" or R"" in Python)
+Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
+--> Strings can be concatenated (glued together) with the + operator, and repeated with \*:
+--> Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.-- works with two literals though, not with variables or expressions:
+--> Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
+--> Mixing operators between numbers and strings is not supported:
+
+![Escape Characters](image-1.png)
+![Slicing ](image.png)
+
 # List
 
 --> Lists are very similar to arrays.
 --> They can contain any type of variable, and they can contain as many variables as you wish
 --> A built-in data structure that allows you to store multiple items in a single variable. Lists are ordered, mutable (changeable), and allow duplicate values.
 
-\\ Creating a List
+==> Creating a List
 --> can create a list using square brackets []
-\\ Accessing Elements
+==> Accessing Elements
 --> Use indexing (starting from 0) to access elements:
-\\ Modifying Lists
-\\ Adding Elements
+==> Modifying Lists
+==> Adding Elements
 --> append() → Adds an element at the end.
 --> insert(index, item) → Inserts an element at a specific index.
-\\ Removing Elements
+==> Removing Elements
 --> remove(value) → Removes the first occurrence of a value.
 --> pop(index) → Removes and returns an element at a specific index (default: last).
 --> clear() → Removes all elements.
-
-\\ Looping Through a List
+==> Looping Through a List
 --> for fruit in fruits:
 print(fruit)
-\\ List Operations
+==> List Operations
 --> Concatenation: new_list = list1 + list2
 --> Repetition: list3 = list1 \* 2
 --> Check if an item exists: "apple" in fruits
-
-\\ Sorting and Reversing
+==> Sorting and Reversing
 --> fruits.sort() # Sorts the list in ascending order
 --> fruits.reverse() # Reverses the list
 
@@ -89,21 +102,6 @@ Advanced List Concepts
 
 Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
 float is superior than int.
-
-# Strings
-
---> Strings are defined either with a single quote or a double quotes.
---> Triple-Quoted Strings -- For multi-line strings or embedded quotes.
---> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
-![Escape Characters](image-1.png)
---> Raw Strings (r"" or R"" in Python)
-Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
---> Strings can be concatenated (glued together) with the + operator, and repeated with \*:
---> Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.-- works with two literals though, not with variables or expressions:
---> Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
---> Mixing operators between numbers and strings is not supported:
-
-![Slicing ](image.png)
 
 # Basic Operators
 
@@ -153,98 +151,107 @@ Raw strings treat backslashes (\) as literal characters, useful for file paths a
 
 # Using Operators with Strings in Python
 
-## 1. String Concatenation (`+`)
-- Strings can be **combined** using the `+` operator.
-- It does **not** add spaces automatically, so must include them manually if needed.
-- Example: `"Hello" + " World"` → `"Hello World"`
-
-## 2. String Repetition (`*`)
-- The `*` operator repeats a string multiple times.
-- Example: `"Hi" * 3` → `"HiHiHi"`
-
-## 3. Using Comparison Operators with Strings
-- Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
-- Strings are compared lexicographically (alphabetical order based on ASCII values).
-
-## 4. Membership Operators (`in`, `not in`)
-- The `in` operator checks if a substring exists within a string.
-- The `not in` operator checks if a substring does **not** exist in a string.
-- Example: `"Py" in "Python"` → `True`
-
-## 5. Using Logical Operators with Strings
-- Python treats non-empty strings as `True` and empty strings as `False`.
-- `and`, `or`, and `not` can be used with strings.
-
-## 6. Using Assignment Operators with Strings
-- The `+=` operator appends a string to an existing string.
-- Equivalent to `string = string + new_value`.
-
----
-
-# String Operations in Python
-
 ## 1. String Creation
-- Strings can be created using **single (`'`), double (`"`)**, or **triple quotes (`''' """`)**.
 
-## 2. Accessing Characters
-- Strings are **indexed** starting from `0`.
-- Example: `"Python"[0]` → `'P'`, `"Python"[-1]` → `'n'`
+--> Strings can be created using **single (`'`), double (`"`)**, or **triple quotes (`''' """`)**.
 
-## 3. String Slicing
-- Extract a portion of a string using `[start:end]` notation.
-- Example: `"Python"[0:3]` → `'Pyt'` (Characters from index 0 to 2)
+## 2. String Concatenation (`+`)
 
-## 4. String Length
-- Use `len(string)` to find the length of a string.
+--> Strings can be **combined** using the `+` operator.
+--> It does **not** add spaces automatically, so must include them manually if needed.
+--> Example: `"Hello" + " World"` → `"Hello World"`
 
-## 5. String Case Operations
-- `.upper()` → Converts string to uppercase.
-- `.lower()` → Converts string to lowercase.
-- `.title()` → Converts first letter of each word to uppercase.
+## 3. String Length
 
-## 6. String Strip Operations
-- `.strip()` → Removes spaces from both ends.
-- `.lstrip()` → Removes spaces from the left.
-- `.rstrip()` → Removes spaces from the right.
+--> Use `len(string)` to find the length of a string.
 
-## 7. String Find and Replace
-- `.find(substring)` → Returns index of first occurrence.
-- `.replace(old, new)` → Replaces occurrences of a substring.
+## 4. Accessing Characters
 
-## 8. String Splitting and Joining
-- `.split(delimiter)` → Splits a string into a list.
-- `.join(iterable)` → Joins elements of an iterable into a string.
+--> Strings are **indexed** starting from `0`.
+--> Example: `"Python"[0]` → `'P'`, `"Python"[-1]` → `'n'`
 
-## 9. Checking Substrings
-- `"substring" in "string"` → Returns `True` or `False`.
+## 5. String Slicing(Accessing parts of a strings)
 
----
+--> Extract a portion of a string using `[start:end]` notation.
+--> Example: `"Python"[0:3]` → `'Pyt'` (Characters from index 0 to 2)
+
+## 6. String Case Operations
+
+--> `.upper()` → Converts string to uppercase.
+--> `.lower()` → Converts string to lowercase.
+--> `.title()` → Converts first letter of each word to uppercase.
+--> `.capitalize()` → Capitalizes 1st char
+
+## 7. String Strip Operations
+
+--> `.strip()` → Removes spaces from both ends.
+--> `.lstrip()` → Removes spaces from the left.
+--> `.rstrip()` → Removes spaces from the right.
+
+## 8. String Find and Replace
+
+--> `.find(substring)` → Returns index of first occurrence.
+--> `.replace(old, new)` → Replaces occurrences of a substring.
+--> `.endswith("substr")` → returns true if string ends with substr
+--> `.count("word")` → counts the occurrence of substr in string
+
+## 9. String Splitting and Joining
+
+--> `.split(delimiter)` → Splits a string into a list.
+--> `.join(iterable)` → Joins elements of an iterable into a string.
+
+## 10. Checking Substrings
+
+--> `"substring" in "string"` → Returns `True` or `False`.
+
+## 11. String Repetition (`*`)
+
+--> The `*` operator repeats a string multiple times.
+--> Example: `"Hi" * 3` → `"HiHiHi"`
+
+## 12. Using Comparison Operators with Strings
+
+--> Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
+--> Strings are compared lexicographically (alphabetical order based on ASCII values).
+
+## 13. Membership Operators (`in`, `not in`)
+
+--> The `in` operator checks if a substring exists within a string.
+--> The `not in` operator checks if a substring does **not** exist in a string.
+--> Example: `"Py" in "Python"` → `True`
 
 # String Formatting in Python
 
 ## 1. Using `%` Operator (Old Style Formatting)
-- The `%` operator is used like C-style string formatting.
-- `%s` for strings, `%d` for integers, `%f` for floating-point numbers.
-- Example: `"Hello %s" % name`
+
+--> The `%` operator is used like C-style string formatting.
+--> `%s` for strings, `%d` for integers, `%f` for floating-point numbers.
+--> Example: `"Hello %s" % name`
 
 ## 2. Using `format()` Method (Modern Style)
-- The `format()` method allows inserting variables inside curly `{}` braces.
+
+--> The `format()` method allows inserting variables inside curly `{}` braces.
+
 - Supports positional and keyword arguments.
 - Example: `"Hello, {}!".format(name)`
 
 ## 3. Using f-strings (Python 3.6+)
+
 - Introduced in Python 3.6, f-strings are prefixed with `f` and allow embedding expressions directly inside `{}`.
 - Example: `f"Hello, {name}!"`
 
 ## 4. Using Template Strings (`string.Template`)
+
 - The `Template` class from the `string` module allows placeholder-based string formatting using `$`.
 
 ## 5. Formatting Numbers
+
 - `{:.2f}` → Rounds to 2 decimal places.
 - `{:,}` → Adds a thousands separator.
 - `{:<10}` → Left-align, `{:>10}` → Right-align, `{:^10}` → Center-align.
 
 ## 6. Formatting Dates
+
 - The `strftime()` method from the `datetime` module is used to format dates.
 
 # Conditions

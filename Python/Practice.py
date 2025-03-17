@@ -35,9 +35,11 @@ print(word[-2])  # Second last character ('o')
 # String slicing
 print(word[0:2])  # First two characters ('Py')
 print(word[2:5])  # Characters from index 2 to 4 ('tho')
+print(word[2:len(word)])  # Prints the substring of 'word' starting from index 2 to the end
 print(word[:2])  # First two characters ('Py')
 print(word[4:])  # Characters from index 4 to end ('on')
 print(word[-2:])  # Last two characters ('on')
+print(word[-3:-1])  # Prints the substring of 'word' from the third-to-last character up to (but not including) the last character.
 
 # String concatenation using slicing
 print(word[:2] + word[2:])  # Entire word ('Python')
@@ -48,13 +50,14 @@ print("J" + word[1:])  # 'Python' → 'Jython'
 print(word[:2] + "py")  # 'Python' → 'Pypy'
 
 # String Length
-s = "supercalifragilisticexpialidocious"
+s = "super califragilistice xpialidocious"
 print(len(s))  # Count number of characters in the string
 
 # String Case Operations
 print(word.upper())  # Output: PYTHON
 print(word.lower())  # Output: python
-print(word.title())  # Output: Python
+print(s.title())  # Output: Python
+print(s.capitalize())  # Output: Python
 print(word.index("o"))  # Output: 4 (as 'o' appears at index 4 in "Python")
 
 # String Strip Operations
