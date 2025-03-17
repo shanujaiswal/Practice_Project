@@ -98,6 +98,21 @@ Advanced List Concepts
 Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
 float is superior than int.
 
+# Strings
+
+--> Strings are defined either with a single quote or a double quotes.
+--> Triple-Quoted Strings -- For multi-line strings or embedded quotes.
+--> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
+![Escape Characters](image-1.png)
+--> Raw Strings (r"" or R"" in Python)
+Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
+--> Strings can be concatenated (glued together) with the + operator, and repeated with \*:
+--> Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.-- works with two literals though, not with variables or expressions:
+--> Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
+--> Mixing operators between numbers and strings is not supported:
+
+![Slicing ](image.png)
+
 # Basic Operators
 
 # Arithmetic Operators
