@@ -2,15 +2,21 @@
 
 --> Python is a very simple language, and has a very straightforward syntax.
 --> Python is a popular programming language.
---> Case Sensetive 
+--> Case Sensetive
 --> Python can be used on a server to create web applications.
 --> There are two major Python versions, Python 2 and Python 3. Python 2 and 3 are quite different
 --> One difference between Python 2 and 3 is the print statement. In Python 2, the "print" statement is not a function, and therefore it is invoked without parentheses. However, in Python 3, it is a function, and must be invoked with parentheses.
 
-
 # Indentation
 
 --> Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard indentation requires standard Python code to use four spaces.
+
+# input in Python
+
+input() statement is used to accept value ( using keyboard) from user
+input()--> default is always a str
+int(input()) ---> value will be integer
+float(input()) ---> value will be float
 
 # Variables and Types
 
@@ -30,21 +36,6 @@
 4. Identifier can be of any length
 
 ![Reserved KeyWords](image-4.png)
-
-# Strings
-
---> Strings are defined either with a single quote or a double quotes.
---> Triple-Quoted Strings -- For multi-line strings or embedded quotes.
---> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
-![Escape Characters](image-1.png)
---> Raw Strings (r"" or R"" in Python)
-Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
---> Strings can be concatenated (glued together) with the + operator, and repeated with \*:
---> Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.-- works with two literals though, not with variables or expressions:
---> Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
---> Mixing operators between numbers and strings is not supported:
-
-![Slicing ](image.png)
 
 # Numbers
 
@@ -95,6 +86,7 @@ Advanced List Concepts
 ![List vs. Tuple](image-3.png)
 
 # Type Conversion(automatically) & type casting(manual)
+
 Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
 float is superior than int.
 
@@ -119,37 +111,6 @@ Raw strings treat backslashes (\) as literal characters, useful for file paths a
 
 --> Arithmetic operators in Python are used to perform mathematical operations like addition, subtraction, multiplication, and more.
 --> ![Arithmetic Operators](image-2.png)
-
-# Using Operators with Strings in Python
-
-1. String Concatenation (`+`)
-
---> The `+` operator is used to join two or more strings.
---> It does **not** add spaces automatically, so you must include them manually if needed.
-
-2. String Repetition (`*`)
-
---> The `*` operator repeats a string multiple times.
-
-3. Using Comparison Operators with Strings
-
---> Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
---> Strings are compared lexicographically (alphabetical order based on ASCII values).
-
-4. Membership Operators (`in`, `not in`)
-
---> The `in` operator checks if a substring exists within a string.
---> The `not in` operator checks if a substring does **not** exist in a string.
-
-5. Using Logical Operators with Strings
-
---> Python treats non-empty strings as `True` and empty strings as `False`.
---> `and`, `or`, and `not` can be used with strings.
-
-6. Using Assignment Operators with Strings
-
---> The `+=` operator appends a string to an existing string.
---> Equivalent to `string = string + new_value`.
 
 # Using Operators with Lists in Python
 
@@ -190,97 +151,101 @@ Raw strings treat backslashes (\) as literal characters, useful for file paths a
 
 ![Types of Operators](image-5.png)
 
-# input in Python 
-input() statement is used to accept value ( using keyboard) from user 
-input()--> default is always a str 
-int(input())  ---> value will be integer
-float(input())  ---> value will be float
+# Using Operators with Strings in Python
 
-# String Formatting
-
-1. Using `%` Operator (Old Style Formatting)
-   --> The `%` operator is used like C-style string formatting.
-   --> `%s` is used for strings, `%d` for integers, and `%f` for floating-point numbers, %.<number of digits>f - Floating point numbers with a fixed amount of digits to the right of the dot, %x/%X - Integers in hex representation (lowercase/uppercase)
-
-2. Using `format()` Method (Modern Style)
-   --> The `format()` method allows inserting variables inside curly `{}` braces.
-   --> It supports positional and keyword arguments.
-
-3. Using f-strings (Python 3.6+)
-   --> Introduced in Python 3.6, f-strings are prefixed with `f` and allow embedding expressions directly inside `{}`.
-
-4. Using Template Strings (`string.Template`)
-   --> The `Template` class from the `string` module allows placeholder-based string formatting using `$`.
-
-5. Formatting Numbers
-   --> `{:.2f}` → Rounds to 2 decimal places.
-   --> `{:,}` → Adds a thousands separator.
-   --> `{:<10}` → Left-align, `{:>10}` → Right-align, `{:^10}` → Center-align.
-
-6. Formatting Dates
-   --> The `strftime()` method from the `datetime` module is used to format dates.
-
-# Basic String Operations in Python
-
-## 1. String Creation
-
-- Strings can be created using **single (`'`), double (`"`)**, or **triple quotes (`''' """`)**.
-
-## 2. String Concatenation
-
+## 1. String Concatenation (`+`)
 - Strings can be **combined** using the `+` operator.
+- It does **not** add spaces automatically, so must include them manually if needed.
 - Example: `"Hello" + " World"` → `"Hello World"`
 
-## 3. String Repetition
-
-- Strings can be repeated using the `*` operator.
+## 2. String Repetition (`*`)
+- The `*` operator repeats a string multiple times.
 - Example: `"Hi" * 3` → `"HiHiHi"`
 
-## 4. Accessing Characters
+## 3. Using Comparison Operators with Strings
+- Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
+- Strings are compared lexicographically (alphabetical order based on ASCII values).
 
+## 4. Membership Operators (`in`, `not in`)
+- The `in` operator checks if a substring exists within a string.
+- The `not in` operator checks if a substring does **not** exist in a string.
+- Example: `"Py" in "Python"` → `True`
+
+## 5. Using Logical Operators with Strings
+- Python treats non-empty strings as `True` and empty strings as `False`.
+- `and`, `or`, and `not` can be used with strings.
+
+## 6. Using Assignment Operators with Strings
+- The `+=` operator appends a string to an existing string.
+- Equivalent to `string = string + new_value`.
+
+---
+
+# String Operations in Python
+
+## 1. String Creation
+- Strings can be created using **single (`'`), double (`"`)**, or **triple quotes (`''' """`)**.
+
+## 2. Accessing Characters
 - Strings are **indexed** starting from `0`.
 - Example: `"Python"[0]` → `'P'`, `"Python"[-1]` → `'n'`
 
-## 5. String Slicing
-
+## 3. String Slicing
 - Extract a portion of a string using `[start:end]` notation.
 - Example: `"Python"[0:3]` → `'Pyt'` (Characters from index 0 to 2)
 
-## 6. String Length
-
+## 4. String Length
 - Use `len(string)` to find the length of a string.
 
-## 7. String Case Operations
-
+## 5. String Case Operations
 - `.upper()` → Converts string to uppercase.
 - `.lower()` → Converts string to lowercase.
 - `.title()` → Converts first letter of each word to uppercase.
 
-## 8. String Strip Operations
-
+## 6. String Strip Operations
 - `.strip()` → Removes spaces from both ends.
 - `.lstrip()` → Removes spaces from the left.
 - `.rstrip()` → Removes spaces from the right.
 
-## 9. String Find and Replace
-
+## 7. String Find and Replace
 - `.find(substring)` → Returns index of first occurrence.
 - `.replace(old, new)` → Replaces occurrences of a substring.
 
-## 10. String Splitting and Joining
-
+## 8. String Splitting and Joining
 - `.split(delimiter)` → Splits a string into a list.
 - `.join(iterable)` → Joins elements of an iterable into a string.
 
-## 11. Checking Substrings
-
+## 9. Checking Substrings
 - `"substring" in "string"` → Returns `True` or `False`.
 
-## 12. String Formatting
+---
 
-- `f"Hello, {name}!"` (f-strings)
-- `"Hello, {}!".format(name)`
-- `"Hello, %s!" % name` (old-style)
+# String Formatting in Python
+
+## 1. Using `%` Operator (Old Style Formatting)
+- The `%` operator is used like C-style string formatting.
+- `%s` for strings, `%d` for integers, `%f` for floating-point numbers.
+- Example: `"Hello %s" % name`
+
+## 2. Using `format()` Method (Modern Style)
+- The `format()` method allows inserting variables inside curly `{}` braces.
+- Supports positional and keyword arguments.
+- Example: `"Hello, {}!".format(name)`
+
+## 3. Using f-strings (Python 3.6+)
+- Introduced in Python 3.6, f-strings are prefixed with `f` and allow embedding expressions directly inside `{}`.
+- Example: `f"Hello, {name}!"`
+
+## 4. Using Template Strings (`string.Template`)
+- The `Template` class from the `string` module allows placeholder-based string formatting using `$`.
+
+## 5. Formatting Numbers
+- `{:.2f}` → Rounds to 2 decimal places.
+- `{:,}` → Adds a thousands separator.
+- `{:<10}` → Left-align, `{:>10}` → Right-align, `{:^10}` → Center-align.
+
+## 6. Formatting Dates
+- The `strftime()` method from the `datetime` module is used to format dates.
 
 # Conditions
 
