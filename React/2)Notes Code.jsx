@@ -209,9 +209,6 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
-
 // Use useRef to keep track of previous state values:
 
 import { useState, useEffect, useRef } from "react";
@@ -237,9 +234,6 @@ function App() {
     </>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
 
 
 //  an example of useReducer in a counter app:
