@@ -461,13 +461,14 @@ useEffect(() => {
 --> The reducer function contains your custom state logic and the initialStatecan be a simple value but generally will contain an object.
 --> The useReducer Hook returns the current stateand a dispatchmethod.
 
-# React Custom Hooks
+# React Custom Hooks(Read through video)
+
 --> Hooks are reusable functions.
 --> When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
 --> Custom Hooks start with "use". Example: useFetch.
 \\ ==> Build a Hook
---> Will use the JSONPlaceholder service to fetch fake data. This service is great for testing applications when there is no existing data. 
---> 
+--> Will use the JSONPlaceholder service to fetch fake data. This service is great for testing applications when there is no existing data.
+
 # JavaScript JSON --- Used for database
 
 --> JSON is a format for storing and transporting data.
