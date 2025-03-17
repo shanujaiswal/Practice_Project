@@ -37,3 +37,6 @@
 --> It is commonly used in programming languages like Python, Java, C, and JavaScript.
 --> There are 2 types --implicit and explicit type casting.
 ![Difference between implicit and explicit regarding different programming language](image.png)
+
+// -- Javascript comments 
+ # --> Python comments 

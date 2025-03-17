@@ -1,5 +1,5 @@
 # Variable
-#             String
+# String
 # Defining strings
 mystring = "hello"
 print(mystring)
