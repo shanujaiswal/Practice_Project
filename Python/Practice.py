@@ -417,3 +417,6 @@ new_dict = {"city": "delhi", "age": 20}  # Added value for "age"
 student.update(new_dict)  # Updates student dictionary
 
 print(student)
+
+
+# Looping through while loop
