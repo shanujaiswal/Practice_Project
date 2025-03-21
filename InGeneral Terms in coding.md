@@ -24,7 +24,6 @@
 --> This is the pre-decrement operator. It decreases the value of i by 1, but returns the decremented value.
 --> If i = 5, --i will first decrement i to 4 and then return 4.
 
-
 --> It is a special variable in the browser's developer tools (DevTools). It represents the currently selected DOM element in the Elements panel.
 
 # Extension to Download in vscode
@@ -32,11 +31,15 @@
 1. Thunder Client --> For API
 2. ES7+ React/Redux/React-Native snippets by dsznajder ----> For Full Form
 
-# Type Casting 
---> Type casting (also called type conversion) is the process of converting one data type into another. 
+# Type Casting
+
+--> Type casting (also called type conversion) is the process of converting one data type into another.
 --> It is commonly used in programming languages like Python, Java, C, and JavaScript.
 --> There are 2 types --implicit and explicit type casting.
 ![Difference between implicit and explicit regarding different programming language](image.png)
 
-// -- Javascript comments 
- # --> Python comments 
+// -- Javascript comments
+
+# --> Python comments
+
+![bracket differences in python and javascript](image-2.png)

@@ -29,7 +29,7 @@ float(input()) ---> value will be float
 
 --> a name used to identify a variable, function, class, module, or other object
 
-1. it can be combination of uppercase and lowercase letters,digits or an underscore(-),
+1. It can be combination of uppercase and lowercase letters,digits or an underscore(-),
    ex:- myVariable , variable_1, variable_for_print all aare valid python identifier
 2. An identifier can not start with digit .So while variable1 is valid 1Variable is not valid
 3. An identifier can not start with symbols like !,@,#,%,$ ,etc in our identifier
@@ -57,47 +57,6 @@ Raw strings treat backslashes (\) as literal characters, useful for file paths a
 ![Escape Characters](image-1.png)
 ![Slicing ](image.png)
 
-# List
-
---> Lists are very similar to arrays.
---> They can contain any type of variable, and they can contain as many variables as you wish
---> A built-in data structure that allows you to store multiple items in a single variable. Lists are ordered, mutable (changeable), and allow duplicate values.
-
-==> Creating a List
---> can create a list using square brackets []
-==> Accessing Elements
---> Use indexing (starting from 0) to access elements:
-==> Modifying Lists
-==> Adding Elements
---> append() → Adds an element at the end.
---> insert(index, item) → Inserts an element at a specific index.
-==> Removing Elements
---> remove(value) → Removes the first occurrence of a value.
---> pop(index) → Removes and returns an element at a specific index (default: last).
---> clear() → Removes all elements.
-==> Looping Through a List
---> for fruit in fruits:
-print(fruit)
-==> List Operations
---> Concatenation: new_list = list1 + list2
---> Repetition: list3 = list1 \* 2
---> Check if an item exists: "apple" in fruits
-==> Sorting and Reversing
---> fruits.sort() # Sorts the list in ascending order
---> fruits.reverse() # Reverses the list
-
---> List Methods (append(), extend(), sort(), etc.)
---> Shallow Copy (copy()) → Copies references, not actual objects.
---> Deep Copy (deepcopy()) → Creates an independent copy.
-Advanced List Concepts
-
---> List Slicing (list[start:stop:step])
---> Nested Lists (Lists inside lists)
---> Shallow vs. Deep Copy (copy() and deepcopy())
---> List vs. Tuple (Differences and when to use each)
---> Performance Considerations (Time complexity of list operations)
-![List vs. Tuple](image-3.png)
-
 # Type Conversion(automatically) & type casting(manual)
 
 Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
@@ -109,43 +68,6 @@ float is superior than int.
 
 --> Arithmetic operators in Python are used to perform mathematical operations like addition, subtraction, multiplication, and more.
 --> ![Arithmetic Operators](image-2.png)
-
-# Using Operators with Lists in Python
-
-1. Concatenation (`+`)
-
---> The `+` operator is used to combine two or more lists into a new list.
---> It **does not** modify the original lists but creates a new one.
-
-2. Repetition (`*`)
-
---> The `*` operator repeats a list multiple times.
-
-3. Membership Operators (`in`, `not in`)
-
---> The `in` operator checks if an element exists in a list.
---> The `not in` operator checks if an element does **not** exist in a list.
-
-4. Comparison Operators (`==`, `!=`, `<`, `>`, `<=`, `>=`)
-
---> Lists are compared **element by element**.
---> The comparison is **lexicographical** (similar to string comparison based on ASCII values).
-
-5. Assignment Operators (`+=`, `*=`)
-
---> The `+=` operator appends elements from another list to the existing list.
---> The `*=` operator repeats and updates the list in place.
-
-6. Identity Operators (`is`, `is not`)
-
---> The `is` operator checks if two lists refer to the **same memory location**.
---> The `is not` operator checks if they refer to **different objects**.
-
-7. Logical Operators (`and`, `or`, `not`)
-
---> `and` returns the second list if the first list is non-empty, otherwise returns the first list.
---> `or` returns the first non-empty list.
---> `not` returns `True` if the list is empty, otherwise `False`.
 
 ![Types of Operators](image-5.png)
 
@@ -244,24 +166,15 @@ float is superior than int.
 
 - The `Template` class from the `string` module allows placeholder-based string formatting using `$`.
 
-## 5. Formatting Numbers
+5. Formatting Numbers
 
 - `{:.2f}` → Rounds to 2 decimal places.
 - `{:,}` → Adds a thousands separator.
 - `{:<10}` → Left-align, `{:>10}` → Right-align, `{:^10}` → Center-align.
 
-## 6. Formatting Dates
+6. Formatting Dates
 
 - The `strftime()` method from the `datetime` module is used to format dates.
-
-# Conditions
-
---> Python uses boolean logic to evaluate conditions. --> The boolean values True and False are returned when an expression is compared or evaluated.
---> Notice that variable assignment is done using a single equals operator "=", whereas comparison between two variables is done using the double equals operator "==". The "not equals" operator is marked as "!=".
-
-# Conditions in Python
-
-Python uses boolean logic to evaluate conditions. The boolean values **True** and **False** are returned when an expression is compared or evaluated.
 
 ## **Variable Assignment vs. Comparison**
 
@@ -280,11 +193,6 @@ Python has three boolean operators to evaluate conditions:
 ## **The "in" Operator**
 
 - The `in` operator is used to check if a specified object exists within an iterable object container, such as a list or string.
-
-## **Indentation in Python**
-
-- Python uses indentation to define code blocks instead of brackets `{}`.
-- The standard Python indentation is **4 spaces**, though tabs and other space sizes will work as long as they are consistent.
 
 ## **Truthy and Falsy Values**
 
@@ -320,9 +228,26 @@ Falsy values include:
 | `is`     | Same object reference    |
 | `in`     | Exists in an iterable    |
 
+# Conditions
+
+==> if-elif- else (syntax)
+if(condition):
+Statement 1
+elif(conditional):
+statement 2
+else:
+statement N
+
+# Nesting
+
+--> Writing statement inside another statement
+if (cond 1):
+if (cond 2):
+print()
+
 # Loops in Python
 
-## Types of Loops in Python
+==> Types of Loops in Python
 
 There are two types of loops in Python:
 
@@ -355,6 +280,11 @@ while count <= 5:
     count += 1
 ```
 
+## When to Use Which Loop?
+
+- Use `for` loops when the number of iterations is known.
+- Use `while` loops when the number of iterations depends on a condition.
+
 ## "break" and "continue" Statements
 
 - **break** – Terminates the loop immediately.
@@ -380,7 +310,7 @@ for num in range(1, 6):
 
 Unlike C or C++, Python allows an `else` clause with loops. When the loop condition of `for` or `while` fails, the `else` part executes. However, if a `break` statement is encountered, the `else` part is skipped.
 
-### Example:
+==> Example:
 
 ```python
 for num in range(1, 6):
@@ -399,7 +329,243 @@ You can use loops to iterate over different data structures such as:
 - Strings
 - Dictionaries
 
-## When to Use Which Loop?
+# List
 
-- Use `for` loops when the number of iterations is known.
-- Use `while` loops when the number of iterations depends on a condition.
+--> Lists are very similar to arrays.
+--> They can contain any type of variable, and they can contain as many variables as you wish
+--> A built-in data structure that allows you to store multiple items in a single variable. Lists are ordered, mutable (changeable), and allow duplicate values.
+
+==> Creating a List
+--> can create a list using square brackets []
+==> Accessing Elements
+--> Use indexing (starting from 0) to access elements:
+==> Modifying Lists
+==> Adding Elements
+--> append(): Adds an element at the end of the list.
+--> extend(): Adds multiple elements to the end of the list.
+--> insert(): Adds an element at a specific position.
+==> Removing Elements
+--> remove(value) → Removes the first occurrence of a value.
+--> pop(index) → Removes and returns an element at a specific index (default: last).
+--> clear() → Removes all elements.
+==> Looping Through a List
+--> for fruit in fruits:
+print(fruit)
+==> List Operations
+--> Concatenation: new_list = list1 + list2
+--> Repetition: list3 = list1 \* 2
+--> Check if an item exists: "apple" in fruits
+==> Sorting and Reversing
+--> fruits.sort() # Sorts the list in ascending order
+--> fruits.reverse() # Reverses the list
+
+--> List Methods (append(), extend(), sort(), etc.)
+--> Shallow Copy (copy()) → Copies references, not actual objects.
+--> Deep Copy (deepcopy()) → Creates an independent copy.
+Advanced List Concepts
+
+==> Nested Lists (Lists inside lists)
+--> Shallow vs. Deep Copy (copy() and deepcopy())
+--> List vs. Tuple (Differences and when to use each)
+--> Performance Considerations (Time complexity of list operations)
+![List vs. Tuple](image-3.png)
+
+# Using Operators with Lists in Python
+
+1. Concatenation (`+`)
+
+--> The `+` operator is used to combine two or more lists into a new list.
+--> It **does not** modify the original lists but creates a new one.
+
+2. Repetition (`*`)
+
+--> The `*` operator repeats a list multiple times.
+
+3. Membership Operators (`in`, `not in`)
+
+--> The `in` operator checks if an element exists in a list.
+--> The `not in` operator checks if an element does **not** exist in a list.
+
+4. Comparison Operators (`==`, `!=`, `<`, `>`, `<=`, `>=`)
+
+--> Lists are compared **element by element**.
+--> The comparison is **lexicographical** (similar to string comparison based on ASCII values).
+
+5. Assignment Operators (`+=`, `*=`)
+
+--> The `+=` operator appends elements from another list to the existing list.
+--> The `*=` operator repeats and updates the list in place.
+
+6. Identity Operators (`is`, `is not`)
+
+--> The `is` operator checks if two lists refer to the **same memory location**.
+--> The `is not` operator checks if they refer to **different objects**.
+
+7. Logical Operators (`and`, `or`, `not`)
+
+--> `and` returns the second list if the first list is non-empty, otherwise returns the first list.
+--> `or` returns the first non-empty list.
+--> `not` returns `True` if the list is empty, otherwise `False`.
+
+# List Methods
+
+list.append(4) # adds one element at the end [2, 1, 3, 4]
+list.sort() # sorts in ascending order [1, 2, 3]
+list.sort(reverse=True) # sorts in descending order [3, 2, 1]
+list.reverse() # reverses list [3, 1, 2]
+list.insert(idx, el) # insert element at index
+list.remove() # removes first occurrence if elements
+list.pop(idx) # removeelements at idx
+
+# Tuples in Python
+
+--> A tuple is a built-in immutable data structure in Python that allows you to store multiple items in a single variable.
+--> Tuples are ordered, indexed, and can contain mixed data types like lists, but they cannot be modified after creation.
+--> Tuples are useful for storing fixed data, returning multiple values from functions, and using as dictionary keys.
+--> Tuples are more memory-efficient and faster than lists due to their immutability.
+
+==> Creating a Tuple
+--> Tuples are defined using parentheses ()
+==> Accessing Tuple Elements
+--> Like lists, tuples are indexed, meaning each element has a position starting from 0
+==> Tuple Immutability
+Tuples cannot be modified after creation.
+==> Slicing a Tuple
+--> Tuples support slicing (start:end:step).
+
+==> Tuple Functions
+print(len(nums)) # Length of tuple: 5
+print(max(nums)) # Max value: 9
+print(min(nums)) # Min value: 1
+tup.index(element) #returns index of first occurrence.
+tup.count(element) #return total count occurrences.
+
+==> Converting Between Lists and Tuples
+--> tuples are immutable, can convert them into lists to modify them.
+![When to Use Tuples Instead of Lists](image-6.png)
+
+# Dictionaries & Sets
+
+--> A dictionary is an unordered, mutable collection of key:value pairs.
+--> Each key in a dictionary must be unique and immutable, while values can be of any data type.
+--> A dictionary can be created using curly braces {} or the dict() constructor.
+--> Each item in a dictionary consists of a key and its corresponding value, separated by a colon ":"
+--> Dictionaries are mutable, meaning their contents can be modified after creation.
+--> Keys in a dictionary must be unique. If a duplicate key is assigned a new value, it overwrites the previous value.
+--> Values can be accessed using their corresponding keys inside square brackets [] or with the get() method.
+--> Items can be removed using methods like pop(), popitem(), del, or clear().
+--> A dictionary can contain another dictionary as a value, creating a nested structure.
+--> data = {
+"names": ["Alice", "Bob", "Charlie"], # List inside dictionary
+"coordinates": (40.7128, -74.0060), # Tuple inside dictionary
+"details": {
+"age": 25,
+"city": "New York"
+}
+}
+
+print(data) # Printing the entire dictionary
+print(data["names"]) # List inside dictionary  
+print(data["details"]["age"]) # Nested dictionary value
+
+variable_name["key1"],variable_name["key2"],variable_name["key3"]
+variable_name["key1"]= "Value" # To assign or add new
+--> To create new dict
+dict = {} # create empty dict.
+
+# Dictionary Methods
+
+--> myDict.keys() -- Returns all the keys from the dictionary.
+--> myDict.values() -- Returns all the values from the dictionary.
+--> myDict.items() -- Returns all (key, value) pairs as tuples.
+--> myDict.get("key") -- Returns the value associated with the specified key.
+If the key does not exist, it returns None instead of an error.
+--> myDict.update(newDict) --Inserts the specified items from newDict into myDict.
+Updates existing keys or adds new keys if they don’t exist.
+--> print(len(list(Variable_name.keys()))) -- counts and prints the number of keys in the given dictionary
+
+# Set
+
+--> A set in Python is an unordered, mutable collection of unique elements.
+--> It is used to store distinct items and supports various set operations such as union, intersection, and difference.
+--> Duplicate value will be ignored
+
+# To create new set
+
+variable = set{} # create empty set
+
+==> Characteristics of Sets
+--> Unordered → Elements in a set do not maintain a specific order.
+--> Mutable → Elements can be added or removed after creation.
+--> Unique Elements → A set does not allow duplicate values
+--> Unindexed → Does not support indexing or slicing.
+--> Hashable Elements Only → Elements must be immutable (e.g., numbers, strings, tuples) because sets use a hash table for storage.
+
+==> Operations on Sets
+--> set.add(el) → Use methods to insert new elements.
+--> set.remove(el) → Different methods allow deleting elements safely.
+--> Set Operations → Includes union, intersection, difference, and symmetric difference.
+--> Membership Testing → Checking whether an element exists in a set.
+--> Set Comprehension → Create sets dynamically using expressions.
+--> set.clear() -> empties the set.
+--> set.pop() -> remove a random value.
+
+==> Set Methods
+--> Creation → Can be defined using {} or set().
+--> Adding Elements → Methods allow adding single or multiple elements.
+--> Removing Elements → Provides ways to remove specific items or clear the set.
+--> Mathematical Operations → Includes union, intersection, difference, and symmetric difference.
+--> Copying a Set → Methods exist to create a duplicate of a set.
+--> Frozen Set → An immutable version of a set that does not allow modification.
+--> set.union(set2) # combine set values & returns new
+--> set.intersection(set2) #combine common values & returns new
+
+==> Use Cases of Sets
+--> Removing duplicates from a collection.
+--> Efficient membership checks due to hashing.
+--> Performing set operations in mathematical computations.
+--> Storing unique values in a collection.
+
+# loops in python
+
+--> Loops in Python are used to execute a block of code multiple times.
+--> There are different types of loops, each with its specific use case.
+--> for loop ,while loop
+
+==> while Loop
+--> The while loop runs a block of code as long as a given condition is True.
+--> The loop checks the condition before each iteration.
+--> If the condition becomes False, the loop terminates.
+--> It requires careful use to prevent infinite loops.
+--> while condition:
+statement to print
+==> for Loop
+--> The for loop is used for iterating over a sequence, such as a list, tuple, string, or range.
+--> It runs a block of code for each element in the sequence.
+--> The loop variable takes the value of each item in the sequence during each iteration.
+--> It automatically stops when all elements in the sequence have been processed.
+
+==> Nested Loops
+--> A nested loop is a loop inside another loop.
+--> The inner loop runs completely for each iteration of the outer loop.
+--> It is commonly used for processing multi-dimensional data.
+
+==> Loop Control Statements
+Python provides control statements to alter the normal loop execution:
+--> break Statement
+Exits the loop immediately when encountered.
+Stops further iterations even if the loop condition is still True.
+--> continue Statement
+Skips the current iteration and moves to the next one.
+The loop does not terminate but jumps to the next cycle.
+--> pass Statement
+Used as a placeholder when a statement is required syntactically but no action is needed.
+
+==> else Clause in Loops
+--> The else clause in loops executes after the loop completes all iterations normally.
+--> If the loop is terminated using break, the else block does not execute.
+
+## Switch Statement in Python
+
+--> Python does not have a built-in switch statement like some other programming languages (such as C, C++, or Java).
+--> Similar functionality can be achieved using match statements (introduced in Python 3.10) or dictionary-based approaches.

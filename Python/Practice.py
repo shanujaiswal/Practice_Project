@@ -12,6 +12,39 @@ print(mystring)
 mystring = "Don't worry about apostrophes"
 print(mystring)
 
+name = "Shanu Jaiswal"
+age = 23
+location = 23.3
+print(location)
+
+# print sum
+a = 22
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)  # Remainder
+
+# Type conversion
+c = 2
+d = 2.5
+sum = c + d
+print(sum)
+
+# Type Casting
+e = "3"
+f = int(e)  # use float for converting in float
+g = 5
+print(f + g)
+
+# Taking Input
+name = input("Enter your name ")
+age = input("Enter your age ")
+marks = input("Enter your marks ")
+print("Welcome my name is ", name, "i am ", age, "year old", "my total marks is", marks)
+
+
 # Escape sequences
 print("Hello\nWorld")  # New line
 print("Path: C:\\Users\\John")  # Backslash escape
@@ -35,11 +68,15 @@ print(word[-2])  # Second last character ('o')
 # String slicing
 print(word[0:2])  # First two characters ('Py')
 print(word[2:5])  # Characters from index 2 to 4 ('tho')
-print(word[2:len(word)])  # Prints the substring of 'word' starting from index 2 to the end
+print(
+    word[2 : len(word)]
+)  # Prints the substring of 'word' starting from index 2 to the end
 print(word[:2])  # First two characters ('Py')
 print(word[4:])  # Characters from index 4 to end ('on')
 print(word[-2:])  # Last two characters ('on')
-print(word[-3:-1])  # Prints the substring of 'word' from the third-to-last character up to (but not including) the last character.
+print(
+    word[-3:-1]
+)  # Prints the substring of 'word' from the third-to-last character up to (but not including) the last character.
 
 # String concatenation using slicing
 print(word[:2] + word[2:])  # Entire word ('Python')
@@ -370,3 +407,13 @@ for char in "Python":
 person = {"name": "Alice", "age": 25}
 for key, value in person.items():
     print(key, ":", value)
+
+# Updating dictionary
+
+student = {"name": "rahul kumar", "subjects": {"phy": 97, "chem": 98, "math": 95}}
+
+new_dict = {"city": "delhi", "age": 20}  # Added value for "age"
+
+student.update(new_dict)  # Updates student dictionary
+
+print(student)
