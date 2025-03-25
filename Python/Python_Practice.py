@@ -132,3 +132,68 @@
 
 # ii)  By making them as tuple
 # values = {("float", 9.0), ("int", 9)}
+
+# print number  1 to 100
+# i = 1
+# while i<= 100:        #stopping condition
+#     print(i)
+#     i += 1
+
+# print number from 100 to 1
+# i = 100
+# while i>=1:
+#     print(i)
+#     i -= 1
+
+
+# Multiplication table of n
+# n = int(input("Enter the number of which you want table "))
+
+# i = 1
+# while i <= 10:
+#     print(f"{n}*{i} = ", n * i )
+#     i+= 1
+
+# Print the element of the  following list using loop
+# n = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+# i = 0
+# while i < len(n):
+#     print(n[i])
+#     i += 1
+
+# print(n)
+
+# Finding a number in tuple
+# n = (1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
+
+# i = 0
+# while i < len(n):
+#     if n[i] == 49:
+#         print("Number is found at", i)
+#     i += 1
+
+# print elements of the following list using a loop
+# a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# for num in a:
+#    print (num)
+
+# number x in tuple using loop 
+# a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+# x = int(input("The number you want is : "))
+# for num in a: 
+#     if num == x:
+#         print ("The number  is found")
+#     else :
+#         print("the number is not found ")
+
+# Printing numbers from 1 to 100
+# Using while()
+# i = 0
+# while i <= 100 :
+#     print (i)
+#     i += 1 
+
+# Using Range()
+# for i in range(1, 100):
+#     print(i)

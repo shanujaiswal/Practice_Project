@@ -395,4 +395,3 @@ console.log(n(14))
 --> It triggers when the value of the element changes, allowing you to update the component’s state or perform other actions based on user input.
 --> Works with different input types (text, checkbox, radio, select, etc.)
 ![difference between onclick and onchange in react](image-2.png)
-
