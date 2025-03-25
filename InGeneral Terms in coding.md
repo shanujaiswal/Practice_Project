@@ -42,4 +42,4 @@
 
 # --> Python comments
 
-![bracket differences in python and javascript](image-2.png)
+![bracket differences in python and javascript](image-1.png)
