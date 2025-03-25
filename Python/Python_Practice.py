@@ -159,7 +159,7 @@
 # i = 0
 # while i < len(n):
 #     print(n[i])
-#     i += 1
+#     i += 1F
 
 # print(n)
 
@@ -178,10 +178,10 @@
 # for num in a:
 #    print (num)
 
-# number x in tuple using loop 
+# number x in tuple using loop
 # a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 # x = int(input("The number you want is : "))
-# for num in a: 
+# for num in a:
 #     if num == x:
 #         print ("The number  is found")
 #     else :
@@ -192,7 +192,7 @@
 # i = 0
 # while i <= 100 :
 #     print (i)
-#     i += 1 
+#     i += 1
 
 # Using Range()
 # for i in range(1, 100):
