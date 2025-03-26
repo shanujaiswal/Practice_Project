@@ -269,3 +269,68 @@
 # for i in range (1,n+1):
 #     fact *= i
 #     print(fact)
+
+# average of three number
+# def average(num1, num2, num3):
+#     avg = (num1 + num2 + num3)/ 3
+#     print(avg)
+#     return avg
+
+# average(3, 3, 3)
+
+# waf to print the length of a list
+# def length (lst):
+#     return len(lst)
+
+# print(length(["my name is shanu","my name is shanu"]))
+
+# WAF tto print the element of a list in single line
+# def Single_line(lst):
+#      print (lst, end=" ")
+
+# Single_line(["Shanu"])
+# Single_line(["Rahul"])
+# Single_line(["Raj"])
+
+# WAF to find the factorial of n
+
+# Case 1
+# num = int(input("Enter the number for which you need Factorial = "))
+
+# def cal_fact(num):
+#     fact = 1
+#     for i in range(1, num+1):
+#         fact *= i
+# print(fact)    # Only the final factorial , When you just need the result
+
+# cal_fact(num)
+
+# Case 2
+# num = int(input("Enter the number for which you need Factorial = "))
+
+# def cal_fact(num):
+#     fact = 1
+#     for i in range(1, num+1):
+#         fact *= i
+#         print(fact)    # Step-by-step factorial calculations , When you need the result at each step
+
+# cal_fact(num)
+
+#Convert USD To INR 
+# num = int(input("How much USD You want to Change : "))
+ 
+# def Conv(USD):
+#     print(USD*83)
+     
+# Conv(num)
+
+# WAF to check if number is odd or even
+num = int(input("Enter a number = "))
+
+def Check(val):
+    if val % 2 == 0 :
+        print("Even")
+    else :
+        print("Odd")
+        
+Check(num)

@@ -24,10 +24,17 @@ float(input()) ---> value will be float
 --> Variable is a name given to a memory location in a program.
 --> Every variable in Python is an object.
 --> Python is completely "object oriented", and not "statically typed". Do not need to declare variables before using them, or declare their type.
+--> lst = [1, 2, 3, 4, 5] # List  
+--> tpl = (1, 2, 3, 4, 5) # Tuple  
+--> strg = "Hello" # String  
+--> dct = {"a": 1, "b": 2} # Dictionary  
+--> st = {1, 2, 3, 4, 5} # Set  
+--> rng = range(10) # Range  
+--> byt = b"Hello" # Bytes
 
 # Rules for identifier (any name )
 
---> a name used to identify a variable, function, class, module, or other object
+--> A name used to identify a variable, function, class, module, or other object
 
 1. It can be combination of uppercase and lowercase letters,digits or an underscore(-),
    ex:- myVariable , variable_1, variable_for_print all aare valid python identifier
@@ -643,6 +650,45 @@ return val
 func_name(arg1, arg2..)
 --> eg:-  
 def sum(a,b):
-    s = a + b
-    return s
+s = a + b
+return s
 print(sum(2,3))
+
+# Types of Functions in Python 🐍
+
+1. Built-in Functions
+   --> These are predefined functions in Python, available without importing any module.
+   --> Examples: print(), len(), type(), sum(), max(), min(), etc.
+2. User-Defined Functions
+   These are functions created by the user to perform a specific task.
+3. Anonymous (Lambda) Functions
+   These are single-line functions without a name, defined using the lambda keyword.
+4. Recursive Functions
+   These functions call themselves repeatedly until a condition is met.
+5. Higher-Order Functions
+   These are functions that take other functions as arguments or return functions.
+6. Generator Functions
+   These use yield instead of return, allowing them to produce values lazily.
+7. Nested Functions (Inner Functions)
+   A function inside another function.
+
+![Types of Functions in Python](image-7.png)
+
+==> Default Parameters
+--> Assigning a default value to parameter , which is used when no argument is passed
+--> Non default argument follow default argument
+
+# Recursion
+
+--> A process where a function calls itself to solve a smaller subproblem of the original problem.
+--> It continues calling itself until it reaches a base case, which is a condition where the recursion stops.
+--> The function keeps calling itself, reducing the problem step by step.
+
+
+==> Key Components of Recursion
+
+1. Base Case:
+   --> This stops the recursion when a certain condition is met.
+   --> Without a base case, the function will call itself infinitely, leading to a stack overflow.
+2. Recursive Case:
+   --> This is where the function calls itself with a smaller or simpler input to gradually reach the base case.
