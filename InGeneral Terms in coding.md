@@ -43,3 +43,5 @@
 # --> Python comments
 
 ![bracket differences in python and javascript](image-1.png)
+
+append -- add at the end.

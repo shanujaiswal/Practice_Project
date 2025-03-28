@@ -325,12 +325,34 @@
 # Conv(num)
 
 # WAF to check if number is odd or even
-num = int(input("Enter a number = "))
+# num = int(input("Enter a number = "))
 
-def Check(val):
-    if val % 2 == 0 :
-        print("Even")
-    else :
-        print("Odd")
+# def Check(val):
+#     if val % 2 == 0 :
+#         print("Even")
+#     else :
+#         print("Odd")
         
-Check(num)
+# Check(num)
+
+# WARF to add n natural number
+# n = int(input("Sum of how much natural number : "))
+
+# def Sum_number(num):
+#     if(n == 0):
+#         return 0
+#     return Sum_number(n-1) + n
+
+
+# print(Sum_number(n))
+
+# WAF to print all element of a list
+# WAF to print all element of a list
+
+# def print_ele(lst, index=0):
+#     if index == len(lst) :
+#         return
+#     print(lst[index], end=" ")        # Remove end=" " to print each element in a new line
+#     print_ele(lst, index+1)
+    
+# print_ele(["Shanu","Shivam"])

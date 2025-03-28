@@ -684,7 +684,6 @@ print(sum(2,3))
 --> It continues calling itself until it reaches a base case, which is a condition where the recursion stops.
 --> The function keeps calling itself, reducing the problem step by step.
 
-
 ==> Key Components of Recursion
 
 1. Base Case:
@@ -692,3 +691,57 @@ print(sum(2,3))
    --> Without a base case, the function will call itself infinitely, leading to a stack overflow.
 2. Recursive Case:
    --> This is where the function calls itself with a smaller or simpler input to gradually reach the base case.
+
+# File I/O in Python
+
+--> File I/O (Input/Output) in Python allows reading from and writing to files.
+--> Python provides built-in functions to handle file operations efficiently.
+
+1. File Handling Modes
+   When working with files, you need to specify the mode:
+   --> "r" Read (default mode). Opens file for reading; error if file doesn't exist.
+   --> "w" Write. Creates a new file or overwrites an existing one.
+   --> "a" Append. Opens file for writing but preserves existing content.
+   --> "r+" Read and Write. File must exist.
+   --> "w+" Write and Read. Creates a new file or overwrites an existing one.
+   --> "a+" Append and Read. Creates file if it doesn’t exist.
+   --> 'x' create a new file and open it for writing
+   --> 'b' binary mode
+   --> 't' text mode (default)
+   --> '+' open a disk file for updating (reading and writing)
+2. Opening and Closing a File (open,read & Close File)
+   --> Use open("filename", "mode") to open a file.
+   --> Always close the file using close() to free system resources.
+   --> Default value is read
+   --> Example
+   f = open("example.txt", "r") # Open file in read mode
+   f.close() # Close file
+3. Reading a File
+   --> read() → Reads entire file.
+   --> readline() → Reads one line at a time.
+   --> readlines() → Reads all lines as a list.
+   --> Example
+   f = open("example.txt", "r")
+   content = f.read() # Reads the entire file
+   f.close()
+4. Writing to a File
+   write() → Writes a string to the file.
+   writelines() → Writes a list of strings.
+   --> Example
+   f = open("example.txt", "w")
+   f.write("Hello, World!") # Overwrites the file with this text
+   f.close()
+5. ** Using with Statement (Best Practice) ** 
+   The with statement automatically closes the file after execution.
+   --> Example
+   with open("example.txt", "r") as f:
+   content = f.read() # No need to explicitly close the file
+6. File Handling Exceptions
+   Always handle errors using try-except to prevent crashes.
+   --> Example
+   try:
+   f = open("nonexistent.txt", "r")
+   except FileNotFoundError:
+   print("File not found!")
+7. Working with Binary Files
+   Use "rb" or "wb" modes for non-text files (e.g., images, PDFs).
