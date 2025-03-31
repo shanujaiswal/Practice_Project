@@ -347,7 +347,6 @@
 # print(Sum_number(n))
 
 # WAF to print all element of a list
-# WAF to print all element of a list
 
 # def print_ele(lst, index=0):
 #     if index == len(lst) :

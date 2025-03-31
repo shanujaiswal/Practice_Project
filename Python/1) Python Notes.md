@@ -709,6 +709,7 @@ print(sum(2,3))
    --> 'b' binary mode
    --> 't' text mode (default)
    --> '+' open a disk file for updating (reading and writing)
+   ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-8.png)
 2. Opening and Closing a File (open,read & Close File)
    --> Use open("filename", "mode") to open a file.
    --> Always close the file using close() to free system resources.
@@ -731,7 +732,7 @@ print(sum(2,3))
    f = open("example.txt", "w")
    f.write("Hello, World!") # Overwrites the file with this text
    f.close()
-5. ** Using with Statement (Best Practice) ** 
+5. ** Using with Statement (Best Practice) **
    The with statement automatically closes the file after execution.
    --> Example
    with open("example.txt", "r") as f:
@@ -745,3 +746,11 @@ print(sum(2,3))
    print("File not found!")
 7. Working with Binary Files
    Use "rb" or "wb" modes for non-text files (e.g., images, PDFs).
+8. Deleting a File
+   using the os module
+   --> import os
+   os.remove(filename)
+
+# Module(Code Library)
+
+--> It is a file written by another programmer that generally has a function we can use
