@@ -1,29 +1,46 @@
 # Python
 
 --> Python is a very simple language, and has a very straightforward syntax.
+-->
 --> Python is a popular programming language.
---> Case Sensetive
+--> Python is a case-sensitive language. It considers that uppercase and lowercase characters are different.
 --> Python can be used on a server to create web applications.
 --> There are two major Python versions, Python 2 and Python 3. Python 2 and 3 are quite different
 --> One difference between Python 2 and 3 is the print statement. In Python 2, the "print" statement is not a function, and therefore it is invoked without parentheses. However, in Python 3, it is a function, and must be invoked with parentheses.
 
 # Indentation
 
---> Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard indentation requires standard Python code to use four spaces.
+--> Indentation refers to the spaces at the beginning of a code line.
+--> Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.
+--> Python uses indentation to indicate a block of code . Python will give you an error if you skip the indentation:
+--> The standard indentation requires standard Python code to use four spaces,but it has to be at least one.
 
-# input in Python
+# Input in Python
 
 input() statement is used to accept value ( using keyboard) from user
 input()--> default is always a str
 int(input()) ---> value will be integer
 float(input()) ---> value will be float
 
+# Comments
+
+--> used to explain Python code.
+--> used to make the code more readable.
+--> used to prevent execution when testing code.
+--> Comments starts with a #, and Python will ignore them:
+--> Add a multiline string (triple quotes) in our code, and place your comment inside it:
+
 # Variables and Types
 
---> Variable -- Memory allocation
+--> Variable -- containers for storing data values -- Memory allocation
 --> Variable is a name given to a memory location in a program.
 --> Every variable in Python is an object.
 --> Python is completely "object oriented", and not "statically typed". Do not need to declare variables before using them, or declare their type.
+
+# Type Conversion(automatically) & type casting(manual)
+
+Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
+float is superior than int.
 --> lst = [1, 2, 3, 4, 5] # List  
 --> tpl = (1, 2, 3, 4, 5) # Tuple  
 --> strg = "Hello" # String  
@@ -31,12 +48,21 @@ float(input()) ---> value will be float
 --> st = {1, 2, 3, 4, 5} # Set  
 --> rng = range(10) # Range  
 --> byt = b"Hello" # Bytes
+==> Get the Type
+--> Get the data type of a variable with the type() function
+
+--> correct syntax to add the value to 3 variables in one statement
+x = y = z = "Hello World"
+--> correct syntax to assign values to multiple variables in one line
+x,y,z = "Orange", "Banana", "Cherry"
+
+# Global Variable
 
 # Rules for identifier (any name )
 
 --> A name used to identify a variable, function, class, module, or other object
 
-1. It can be combination of uppercase and lowercase letters,digits or an underscore(-),
+1. It can be combination of uppercase and lowercase letters,digits or an underscore(\_),
    ex:- myVariable , variable_1, variable_for_print all aare valid python identifier
 2. An identifier can not start with digit .So while variable1 is valid 1Variable is not valid
 3. An identifier can not start with symbols like !,@,#,%,$ ,etc in our identifier
@@ -63,11 +89,6 @@ Raw strings treat backslashes (\) as literal characters, useful for file paths a
 
 ![Escape Characters](image-1.png)
 ![Slicing ](image.png)
-
-# Type Conversion(automatically) & type casting(manual)
-
-Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
-float is superior than int.
 
 # Basic Operators
 
@@ -213,10 +234,12 @@ Falsy values include:
 - `None`
 - `False`
 - `0` (integer or float)
+- `0.0` (float zero)
 - `""` (empty string)
 - `[]` (empty list)
 - `{}` (empty dictionary)
 - `set()` (empty set)
+- `()` (empty tuple)
 
 ## **The "is" Operator**
 
@@ -754,3 +777,76 @@ print(sum(2,3))
 # Module(Code Library)
 
 --> It is a file written by another programmer that generally has a function we can use
+
+# OOPS in Python
+
+--> To map with real world scenarios we started using objects in code.It is called as object orinted programming .
+--> Object-Oriented Programming (OOP) in Python is based on four fundamental principles:
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism.
+
+--> there are several other related concepts, such as classes, objects, constructors, and method overriding.
+
+# Classes and Objects
+
+--> A class is a blueprint for creating objects. It defines attributes (variables) and methods (functions) that describe the behavior of objects.
+--> Class name always start with capital letter.
+--> eg: creating class
+class Student:
+name = "karan kumar"
+--> An object is an instance of a class that holds data and can perform actions defined by the class.
+eg : Creating object (instance)
+s1 = Student()
+print(s1.name)
+
+# **init** Function /\ Constructors
+
+--> A constructor (**init** method) is a special method that initializes an object's attributes when it is created.
+--> It is automatically called when a new instance of a class is created.
+
+# Encapsulation
+
+--> Encapsulation is the process of bundling data (attributes) and methods (functions) that operate on the data into a single unit called a class.
+--> It restricts direct access to certain details of an object and can be achieved using access modifiers:
+
+1. Public: Accessible from anywhere.
+2. Protected: Indicated with a single underscore (\_), meant to be used within the class and subclasses.
+3. Private: Indicated with double underscores (\_\_), intended for internal use within the class.
+
+--> Encapsulation helps in data hiding and ensures controlled access to an object's attributes.
+
+# Abstraction
+
+--> Abstraction is the concept of hiding the internal implementation details of an object and exposing only the necessary functionalities.
+--> It allows users to interact with an object through a well-defined interface without knowing the underlying complexity.
+--> Abstraction is typically achieved using abstract classes and methods, which define a structure but leave implementation details to subclasses.
+
+# Inheritance
+
+--> Inheritance is the mechanism that allows a class (child class) to inherit attributes and methods from another class (parent class).
+-->It helps in code reusability and hierarchical classification.
+==> Types of Inheritance in Python:
+
+1. Single Inheritance: A child class inherits from a single parent class.
+2. Multiple Inheritance: A child class inherits from more than one parent class.
+3. Multilevel Inheritance: A class inherits from another class, which in turn inherits from another class, forming a chain.
+4. Hierarchical Inheritance: Multiple child classes inherit from a single parent class.
+5. Hybrid Inheritance: A combination of multiple inheritance types.
+
+# Polymorphism
+
+--> Polymorphism allows a single interface to be used for different types.
+--> It enables the same function or method to have different behaviors based on the object it is acting upon.
+==> Types of Polymorphism:
+
+1. Method Overriding: A child class provides a specific implementation of a method that is already defined in its parent class.
+2. Method Overloading (not directly supported in Python): Achieved through default arguments or variable-length arguments (\*args, \*\*kwargs).
+3. Operator Overloading: The ability to define the behavior of operators (+, -, \*, etc.) for user-defined objects.
+
+# Method Overriding
+
+--> Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its parent class.
+--> The overridden method in the child class must have the same name and parameters as the method in the parent class.
