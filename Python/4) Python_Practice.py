@@ -316,12 +316,12 @@
 
 # cal_fact(num)
 
-#Convert USD To INR 
+# Convert USD To INR
 # num = int(input("How much USD You want to Change : "))
- 
+
 # def Conv(USD):
 #     print(USD*83)
-     
+
 # Conv(num)
 
 # WAF to check if number is odd or even
@@ -332,7 +332,7 @@
 #         print("Even")
 #     else :
 #         print("Odd")
-        
+
 # Check(num)
 
 # WARF to add n natural number
@@ -353,5 +353,95 @@
 #         return
 #     print(lst[index], end=" ")        # Remove end=" " to print each element in a new line
 #     print_ele(lst, index+1)
-    
+
 # print_ele(["Shanu","Shivam"])
+
+#  Create a new file "practice.txt" using python .Add the following data in it
+# with open("practice.txt", "w") as a:
+#     a.write("Hi everyone\n")
+#     a.write(
+#         "we are learning File I/O\n",
+#     )
+#     a.write(
+#         "using java\n",
+#     )
+#     a.write(
+#         "i like programming in java\n",
+#     )
+
+# To replace a word in the file
+
+# with open("practice.txt", "r") as a:
+#     data = a.read()
+#     print(data)
+
+# new_data = data.replace("java", "python")
+# print(new_data)
+
+# with open("practice.txt", "w") as a:
+#     a.write(new_data)
+
+# To Find a word in the file
+
+
+# def find_word(word):
+# word = input("Enter the word you want to find: ")
+# with open("practice.txt", "r") as a:
+#     data = a.read()
+#     if data.find(word) != -1:
+#         print("Word is found")
+#     else:
+#         print("Word is not found")
+
+
+# WAF to find the in which line the word "learning" occurs first in the file
+# Method 1
+# def check_lines():
+#     word = input("Enter the word you want to find: ")
+#     data = True
+#     line_no = 1
+#     with open("practice.txt", "r") as a:
+#         while data:
+#             data = a.readline()
+#             if word in data:
+#                 print(f"Word found in line {line_no}: {data.strip()}")
+#                 return
+#             line_no += 1
+#     return -1
+
+
+# print(check_lines())
+
+# Method 2
+#  word  = input("Enter the word you want to find: ")
+# with open("practice.txt", "r") as a:
+#     lines = a.readlines()
+#     for i, line in enumerate(lines):
+#         if word in line:
+#             print(f"Word found in line {i+1}: {line.strip()}")
+#             break
+#     else:
+#         print("Word not found in any line")
+
+
+# From a file containing numbers separated by commas, print the count of even numbers.
+# def count_even_numbers():
+#     with open("practice.txt", "r") as a:
+#         data = a.read()
+#         print(data)
+# Method 1
+# num = ""
+# for i in range(len(data)):
+#     if(data[i] == ","):
+#         print(int(num))
+#         num = ""
+#     else:
+#         num += data[i]
+
+# Method 2
+#         nums = data.split(",")
+#         for val in nums:
+#             if int(val) % 2 == 0:
+#                 count += 1
+
+#         print(count_even_numbers())
