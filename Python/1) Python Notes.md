@@ -1,7 +1,6 @@
 # Python
 
 --> Python is a very simple language, and has a very straightforward syntax.
--->
 --> Python is a popular programming language.
 --> Python is a case-sensitive language. It considers that uppercase and lowercase characters are different.
 --> Python can be used on a server to create web applications.
@@ -36,6 +35,100 @@ float(input()) ---> value will be float
 --> Variable is a name given to a memory location in a program.
 --> Every variable in Python is an object.
 --> Python is completely "object oriented", and not "statically typed". Do not need to declare variables before using them, or declare their type.
+--> A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).
+
+==>Rules for Python variables:
+--> A variable name must start with a letter or the underscore character
+--> A variable name cannot start with a number
+--> A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and \_ )
+--> Variable names are case-sensitive (age, Age and AGE are three different variables)
+--> A variable name cannot be any of the Python keywords.
+
+==> Legal variable names:
+myvar = "John"
+my_var = "John"
+\_my_var = "John"
+myVar = "John"
+MYVAR = "John"
+myvar2 = "John"
+
+==> Illegal variable names:
+2myvar = "John"
+my-var = "John"
+my var = "John"
+
+==> Multi Words Variable Names
+--> Variable names with more than one word can be difficult to read.
+--> There are several techniques you can use to make them more readable:
+
+==> Camel Case
+--> Each word, except the first, starts with a capital letter:
+myVariableName = "John"
+==> Pascal Case
+--> Each word starts with a capital letter:
+MyVariableName = "John"
+==> Snake Case
+--> Each word is separated by an underscore character:
+my_variable_name = "John"
+
+# Variables - Assign Multiple Values
+
+==> Many Values to Multiple Variables
+--> correct syntax to assign values to multiple variables in one line
+x,y,z = "Orange", "Banana", "Cherry"
+==> One Value to Multiple Variables
+--> The same value to multiple variables in one line:
+--> correct syntax to add the value to 3 variables in one statement
+x = y = z = "Hello World"
+==> Unpack a Collection
+--> If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.
+==> Unpack a list:
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+
+# Python - Output Variables
+
+==> Output Variables
+--> The Python print() function is often used to output variables.
+--> In the print() function, you output multiple variables, separated by a comma:
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)
+--> Can also use the + operator to output multiple variables, For numbers, the + character works as a mathematical operator
+x = "Python "
+y = "is "
+z = "awesome"
+print(x + y + z)
+--> In the print() function, when you try to combine a string and a number with the + operator, Python will give you an error, The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:
+
+# Global Variable
+
+--> Variables that are created outside of a function
+are known as global variables.
+--> Global variables can be used by everyone, both inside of functions and outside.
+--> If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.
+==> The global Keyword
+--> Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function.
+--> To create a global variable inside a function, you can use the global keyword.
+--> Use the global keyword if want to change a global variable inside a function.(To change the value of a global variable inside a function, refer to the variable by using the global keyword)
+--> def myfunc():
+global
+x
+x = "fantastic"
+
+# Built-in Data Types
+
+--> In programming, data type is an important concept.
+--> Variables can store data of different types, and different types can do different things.
+--> Python has the following data types built-in by default, in these categories:
+--> Can get the data type of any object by using the type() function:
+![Built-in by default data types](image-9.png)
+![Examole of built-in by default data types ](image-10.png)
+![constructor functions](image-11.png)
 
 # Type Conversion(automatically) & type casting(manual)
 
@@ -51,13 +144,6 @@ float is superior than int.
 ==> Get the Type
 --> Get the data type of a variable with the type() function
 
---> correct syntax to add the value to 3 variables in one statement
-x = y = z = "Hello World"
---> correct syntax to assign values to multiple variables in one line
-x,y,z = "Orange", "Banana", "Cherry"
-
-# Global Variable
-
 # Rules for identifier (any name )
 
 --> A name used to identify a variable, function, class, module, or other object
@@ -72,23 +158,33 @@ x,y,z = "Orange", "Banana", "Cherry"
 
 # Numbers
 
---> Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals).
--->(It also supports complex numbers)
+--> Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals) ,also supports complex numbers ,
+--> Float can also be scientific numbers with an "e" to indicate the power of 10.
+--> Complex numbers are written with a "j" as the imaginary part:
+--> Cannot convert complex numbers into another number type.
+==> Random Number
+--> Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:
+--> ex:-
+import random
+print(random.randrange(1, 10))
 
 # Strings
 
 --> Strings are defined either with a single quote or a double quotes.
 --> Triple-Quoted Strings -- For multi-line strings or embedded quotes.
 --> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
---> Raw Strings (r"" or R"" in Python)
+==> Raw Strings (r"" or R"" in Python)
 Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
 --> Strings can be concatenated (glued together) with the + operator, and repeated with \*:
 --> Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.-- works with two literals though, not with variables or expressions:
 --> Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
 --> Mixing operators between numbers and strings is not supported:
-
 ![Escape Characters](image-1.png)
 ![Slicing ](image.png)
+
+==> Strings are Arrays
+--> Strings in Python are arrays of bytes representing unicode characters.
+--> Square brackets can be used to access elements of the string.
 
 # Basic Operators
 
@@ -96,8 +192,6 @@ Raw strings treat backslashes (\) as literal characters, useful for file paths a
 
 --> Arithmetic operators in Python are used to perform mathematical operations like addition, subtraction, multiplication, and more.
 --> ![Arithmetic Operators](image-2.png)
-
-![Types of Operators](image-5.png)
 
 # Using Operators with Strings in Python
 
@@ -274,90 +368,6 @@ statement N
 if (cond 1):
 if (cond 2):
 print()
-
-# Loops in Python
-
-==> Types of Loops in Python
-
-There are two types of loops in Python:
-
-1. **for loop** - Used for iterating over a sequence (list, tuple, string, dictionary, range, etc.).
-2. **while loop** - Runs as long as a specified condition is `True`.
-
-## The "for" Loop
-
-For loops iterate over a given sequence.
-
-### Example:
-
-```python
-for num in range(1, 6):
-    print(num)
-```
-
-For loops can iterate over a sequence of numbers using the `range()` function. The difference between `range()` and `xrange()` (in Python 2) is that `range()` returns a new list, whereas `xrange()` returns an iterator, making it more memory efficient. In Python 3, `range()` behaves like `xrange()`.
-
-## The "while" Loop
-
-While loops repeat as long as a certain boolean condition is met.
-
-### Example:
-
-```python
-count = 1
-while count <= 5:
-    print(count)
-    count += 1
-```
-
-## When to Use Which Loop?
-
-- Use `for` loops when the number of iterations is known.
-- Use `while` loops when the number of iterations depends on a condition.
-
-## "break" and "continue" Statements
-
-- **break** – Terminates the loop immediately.
-- **continue** – Skips the current iteration and moves to the next.
-
-### Example:
-
-```python
-for num in range(1, 6):
-    if num == 3:
-        break  # Stops the loop at 3
-    print(num)
-```
-
-```python
-for num in range(1, 6):
-    if num == 3:
-        continue  # Skips printing 3
-    print(num)
-```
-
-## Using "else" with Loops
-
-Unlike C or C++, Python allows an `else` clause with loops. When the loop condition of `for` or `while` fails, the `else` part executes. However, if a `break` statement is encountered, the `else` part is skipped.
-
-==> Example:
-
-```python
-for num in range(1, 6):
-    if num == 3:
-        break
-    print(num)
-else:
-    print("Loop completed")
-```
-
-## Looping Through Data Structures
-
-You can use loops to iterate over different data structures such as:
-
-- Lists
-- Strings
-- Dictionaries
 
 # List
 
@@ -574,7 +584,15 @@ variable = set{} # create empty set
 2. Iteration
    Iteration is the process of repeatedly accessing elements in a sequence, usually using loops (for or while).
 
-==> while Loop
+==> Types of Loops in Python
+
+There are two types of loops in Python:
+
+--> **for loop** - Used for iterating over a sequence (list, tuple, string, dictionary, range, etc.).
+--> **while loop** - Runs as long as a specified condition is `True`.
+
+# while Loop
+
 --> The while loop runs a block of code as long as a given condition is True.
 --> The loop checks the condition before each iteration.
 --> If the condition becomes False, the loop terminates.
@@ -582,6 +600,12 @@ variable = set{} # create empty set
 --> Syntax
 while condition:
 statement to print(upto condition is true)
+--> Example:
+
+count = 1
+while count <= 5:
+print(count)
+count += 1
 
 ==> Loop Control Statements
 Python provides control statements to alter the normal loop execution:
@@ -589,12 +613,26 @@ Python provides control statements to alter the normal loop execution:
 ==> break Statement
 --> Exits the loop immediately when encountered.
 --> Stops further iterations even if the loop condition is still True.
+--> ```python
+for num in range(1, 6):
+if num == 3:
+break # Stops the loop at 3
+print(num)
+
+````
 
 ==> continue Statement
 --> Skips the current iteration and moves to the next one.
 --> The loop does not terminate but jumps to the next cycle.
+```python
+for num in range(1, 6):
+    if num == 3:
+        continue  # Skips printing 3
+    print(num)
+````
 
-==> for Loop
+# for Loop
+
 --> The for loop is used for iterating over a sequence, such as a list, tuple, string, or range.
 --> It runs a block of code for each element in the sequence.
 --> The loop variable takes the value of each item in the sequence during each iteration.
@@ -608,11 +646,23 @@ print("message")
 ==> else Clause in for Loops
 --> The else clause in loops executes after the loop completes all iterations normally.
 --> If the loop is terminated using break, the else block does not execute.
+--> ```python
+for num in range(1, 6):
+if num == 3:
+break
+print(num)
+else:
+print("Loop completed")
 
 ==> Nested Loops
 --> A nested loop is a loop inside another loop.
 --> The inner loop runs completely for each iteration of the outer loop.
 --> It is commonly used for processing multi-dimensional data.
+
+## When to Use Which Loop?
+
+- Use `for` loops when the number of iterations is known.
+- Use `while` loops when the number of iterations depends on a condition.
 
 ## Switch Statement in Python
 
@@ -671,7 +721,7 @@ pass
 def func_name( param1, param2..) : # some work
 return val
 func_name(arg1, arg2..)
---> eg:-  
+--> eg:-
 def sum(a,b):
 s = a + b
 return s
@@ -788,9 +838,9 @@ print(sum(2,3))
 3. Inheritance
 4. Polymorphism.
 
---> there are several other related concepts, such as classes, objects, constructors, and method overriding.
+--> there are several other related concepts, such as class, objects, constructors, and method overriding.
 
-# Classes and Objects
+# Class and Objects
 
 --> A class is a blueprint for creating objects. It defines attributes (variables) and methods (functions) that describe the behavior of objects.
 --> Class name always start with capital letter.
@@ -806,6 +856,16 @@ print(s1.name)
 
 --> A constructor (**init** method) is a special method that initializes an object's attributes when it is created.
 --> It is automatically called when a new instance of a class is created.
+
+==> Creating class
+class Student :
+def **init**(self,fullname):
+self.name = fullname
+--> The self parameter is a reference to the current instance of the class , and is used to access variable that belong to the class
+
+==> creating object
+s1 = Student("karan")
+print(s1.name)
 
 # Encapsulation
 
