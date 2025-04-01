@@ -68,15 +68,11 @@ print(word[-2])  # Second last character ('o')
 # String slicing
 print(word[0:2])  # First two characters ('Py')
 print(word[2:5])  # Characters from index 2 to 4 ('tho')
-print(
-    word[2 : len(word)]
-)  # Prints the substring of 'word' starting from index 2 to the end
+print(word[2 : len(word)])  # Prints the substring of 'word' starting from index 2 to the end
 print(word[:2])  # First two characters ('Py')
 print(word[4:])  # Characters from index 4 to end ('on')
 print(word[-2:])  # Last two characters ('on')
-print(
-    word[-3:-1]
-)  # Prints the substring of 'word' from the third-to-last character up to (but not including) the last character.
+print(word[-3:-1])  # Prints the substring of 'word' from the third-to-last character up to (but not including) the last character.
 
 # String concatenation using slicing
 print(word[:2] + word[2:])  # Entire word ('Python')

@@ -182,9 +182,23 @@ Raw strings treat backslashes (\) as literal characters, useful for file paths a
 ![Escape Characters](image-1.png)
 ![Slicing ](image.png)
 
-==> Strings are Arrays
+# Strings are Arrays
+
 --> Strings in Python are arrays of bytes representing unicode characters.
 --> Square brackets can be used to access elements of the string.
+
+==> Looping Through a String
+--> Since strings are arrays, we can loop through the characters in a string, with a for loop.
+--> Loop through the letters in the word "Shanu":
+for x in "Shanu":
+print(x)
+--> String Length
+--> To get the length of a string, use the len() function.
+--> Example
+The len() function returns the length of a string:
+a = "Hello, World!"
+print(len(a))
+
 
 # Basic Operators
 
