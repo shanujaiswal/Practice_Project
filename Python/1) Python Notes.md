@@ -199,7 +199,6 @@ The len() function returns the length of a string:
 a = "Hello, World!"
 print(len(a))
 
-
 # Basic Operators
 
 # Arithmetic Operators
@@ -866,6 +865,36 @@ eg : Creating object (instance)
 s1 = Student()
 print(s1.name)
 
+obj attr > class attr
+
+# What is a Method?
+
+A method in Python is a function that is defined inside a class and operates on instances (objects) of that class. It is used to perform operations related to the object’s data.
+
+==> Types of Methods in Python
+
+1. Instance Methods
+   These methods work on instance variables (attributes) and require an instance of the class.
+   The first parameter of an instance method is always self, which refers to the current object.
+   These methods can access and modify instance attributes.
+2. Class Methods
+   Defined using @classmethod decorator.
+   The first parameter is cls, which refers to the class itself.
+   Can modify class attributes but not instance attributes directly.
+3. Static Methods
+   Defined using @staticmethod decorator.
+   Do not require self or cls as the first parameter.
+   Act as regular functions inside the class but are logically related to the class.
+
+==> Special Methods (Dunder Methods)
+**init**() → Constructor method, initializes object attributes.
+**str**() → Returns a string representation of the object.
+**repr**() → Used for debugging, returns an official string representation.
+
+==> Method Calling
+--> Methods are called using the dot (.) operator with an object (object.method()).
+--> Class methods and static methods can be called using the class name (Class.method()).
+
 # **init** Function /\ Constructors
 
 --> A constructor (**init** method) is a special method that initializes an object's attributes when it is created.
@@ -880,6 +909,23 @@ self.name = fullname
 ==> creating object
 s1 = Student("karan")
 print(s1.name)
+--> different types of constructors based on how they are used:
+
+1. Default Constructor
+   --> A constructor that does not take any arguments except self.
+   --> It initializes the object with default values.
+2. Parameterized Constructor
+   --> A constructor that takes arguments in addition to self.
+   --> It allows object properties to be initialized with specific values at the time of object creation.
+3. Constructor with Default Arguments
+   --> A constructor that has default values for some or all parameters.
+   --> If arguments are not provided during object creation, the default values are used.
+4. Private Constructor
+   --> A constructor that is prefixed with double underscores (\*\*).
+   --> It restricts object instantiation outside the class.
+5. Static Constructor
+   --> Python does not have a built-in static constructor like some other languages.
+   --> However, class methods or the \*\*new\_\_ method can be used to mimic static initialization before the object is created.
 
 # Encapsulation
 
