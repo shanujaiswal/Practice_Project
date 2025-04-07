@@ -865,7 +865,18 @@ eg : Creating object (instance)
 s1 = Student()
 print(s1.name)
 
-obj attr > class attr
+obj attr >> class attr
+
+==> A class has two main parts:
+
+==> Data (Attributes)
+--> These are the variables that hold information about the object.
+For example, in a Car class, attributes could be color, make, and speed.
+The term "attributes" is another word for these data variables.
+
+==> Methods
+--> These are the functions defined inside a class that describe the behaviors or actions the object can perform.
+For the Car class, methods could be drive(), brake(), or honk().
 
 # What is a Method?
 
