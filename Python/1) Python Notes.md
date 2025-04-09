@@ -846,10 +846,10 @@ print(sum(2,3))
 --> To map with real world scenarios we started using objects in code.It is called as object orinted programming .
 --> Object-Oriented Programming (OOP) in Python is based on four fundamental principles:
 
-1. Encapsulation
-2. Abstraction
-3. Inheritance
-4. Polymorphism.
+1. Encapsulation – Wrapping data and methods into a single unit (class) and restricting direct access to some components.
+2. Abstraction – Hiding complex implementation details and showing only the essential features.
+3. Inheritance – Acquiring properties and behaviors of a parent class in a child class.
+4. Polymorphism – Performing the same operation in different ways based on the object or context.
 
 --> there are several other related concepts, such as class, objects, constructors, and method overriding.
 
@@ -874,7 +874,7 @@ obj attr >> class attr
 For example, in a Car class, attributes could be color, make, and speed.
 The term "attributes" is another word for these data variables.
 
-==> Methods
+==> Methods(Function)
 --> These are the functions defined inside a class that describe the behaviors or actions the object can perform.
 For the Car class, methods could be drive(), brake(), or honk().
 
@@ -885,17 +885,25 @@ A method in Python is a function that is defined inside a class and operates on 
 ==> Types of Methods in Python
 
 1. Instance Methods
-   These methods work on instance variables (attributes) and require an instance of the class.
-   The first parameter of an instance method is always self, which refers to the current object.
-   These methods can access and modify instance attributes.
+   --> These methods work on instance variables (attributes) and require an instance of the class.
+   --> The first parameter of an instance method is always self, which refers to the current object.
+   --> These methods can access and modify instance attributes.
 2. Class Methods
-   Defined using @classmethod decorator.
-   The first parameter is cls, which refers to the class itself.
-   Can modify class attributes but not instance attributes directly.
+   --> Defined using @classmethod decorator.
+   --> The first parameter is cls, which refers to the class itself.
+   --> Can modify class attributes but not instance attributes directly.
 3. Static Methods
-   Defined using @staticmethod decorator.
-   Do not require self or cls as the first parameter.
-   Act as regular functions inside the class but are logically related to the class.
+   --> Defined using @staticmethod decorator.
+   --> Convert a function to be a static method
+   --> Do not require self or cls as the first parameter.
+   --> Act as regular functions inside the class but are logically related to the class.
+   --> eg :
+   class Student:
+   @staticmethod # decorator
+   def college():
+   print("ABC College")
+
+--> Decorators -- It allow us to wrap another function in order to extend the behavior of the wrapped function ,without permanently modifying it
 
 ==> Special Methods (Dunder Methods)
 **init**() → Constructor method, initializes object attributes.
@@ -938,9 +946,15 @@ print(s1.name)
    --> Python does not have a built-in static constructor like some other languages.
    --> However, class methods or the \*\*new\_\_ method can be used to mimic static initialization before the object is created.
 
+# Abstraction
+
+--> Abstraction is the concept of hiding the internal implementation details of an object and exposing only the necessary functionalities.
+--> It allows users to interact with an object through a well-defined interface without knowing the underlying complexity.
+--> Abstraction is typically achieved using abstract classes and methods, which define a structure but leave implementation details to subclasses.
+
 # Encapsulation
 
---> Encapsulation is the process of bundling data (attributes) and methods (functions) that operate on the data into a single unit called a class.
+--> Encapsulation is the process of(Wrapping Data and function into a single unit(object))
 --> It restricts direct access to certain details of an object and can be achieved using access modifiers:
 
 1. Public: Accessible from anywhere.
@@ -948,12 +962,6 @@ print(s1.name)
 3. Private: Indicated with double underscores (\_\_), intended for internal use within the class.
 
 --> Encapsulation helps in data hiding and ensures controlled access to an object's attributes.
-
-# Abstraction
-
---> Abstraction is the concept of hiding the internal implementation details of an object and exposing only the necessary functionalities.
---> It allows users to interact with an object through a well-defined interface without knowing the underlying complexity.
---> Abstraction is typically achieved using abstract classes and methods, which define a structure but leave implementation details to subclasses.
 
 # Inheritance
 
@@ -981,3 +989,21 @@ print(s1.name)
 
 --> Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its parent class.
 --> The overridden method in the child class must have the same name and parameters as the method in the parent class.
+
+# Del Keyword
+--> Used to delete objects, such as variables, list items, or dictionary entries.
+--> Once deleted, the object or item is no longer accessible.
+--> eg :-
+class Student:
+def **init**(self, name):
+self.name = name
+
+s1 = Student("shradha")
+
+del s1
+print(s1)
+
+# Private(like) attribute & methods 
+--> Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
+--> Python doesn’t have strict access modifiers like private, protected, or public as in other languages like Java or C++. But we can simulate privacy using naming conventions.
+![alt text](image-12.png)

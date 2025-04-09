@@ -448,16 +448,40 @@
 
 # Takes the student's name and marks of three subjects as arguments in the constructor then create a method to calculate the average of the marks and print it
 # class Student:
-    
+
 #     def __init__(self, name ,marks):
-#         self.name = name 
+#         self.name = name
 #         self.marks = marks
-        
+
 #     def get_avg(self):
 #         sum = 0
 #         for val in self.marks:
 #             sum += val
 #         print("hi", self.name ,"your avg score is :", sum/3)
-        
+
 # s1  = Student("Shanu",[99,97,97])
 # s1.get_avg()
+
+
+# Account class with 2 attributes - balance & account no. Create methods for debit, credit & printing the balan
+# class Account:
+#     def __init__(self, bal, acc):
+#         self.balance = bal
+#         self.account_no = acc
+
+#     def debit(self, amount):
+#         self.balance -= amount
+#         print("Rs.", amount, "was debited")
+#         print("total balance =", self.get_balance())
+
+#     def credit(self, amount):
+#         self.balance += amount
+#         print("Rs.", amount, "was credit")
+#         print("total balance =", self.get_balance())
+
+#     def get_balance(self):
+#         return self.balance
+
+
+# acc1 = Account(10000, 123456)
+# acc1.debit(int(input("Enter the money you want to debit: ")))
