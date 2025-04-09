@@ -168,16 +168,17 @@ float is superior than int.
 import random
 print(random.randrange(1, 10))
 
+==> Arithmetic Operators
+--> Arithmetic operators in Python are used to perform mathematical operations like addition, subtraction, multiplication, and more.
+--> ![Arithmetic Operators](image-2.png)
+
 # Strings
 
 --> Strings are defined either with a single quote or a double quotes.
---> Triple-Quoted Strings -- For multi-line strings or embedded quotes.
+--> Triple-Quoted Strings -- For multi-line strings to a variable or embedded quotes.
 --> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
 ==> Raw Strings (r"" or R"" in Python)
 Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
---> Strings can be concatenated (glued together) with the + operator, and repeated with \*:
---> Two or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.-- works with two literals though, not with variables or expressions:
---> Strings can be indexed (subscripted), with the first character having index 0. There is no separate character type; a character is simply a string of size one:
 --> Mixing operators between numbers and strings is not supported:
 ![Escape Characters](image-1.png)
 ![Slicing ](image.png)
@@ -186,25 +187,15 @@ Raw strings treat backslashes (\) as literal characters, useful for file paths a
 
 --> Strings in Python are arrays of bytes representing unicode characters.
 --> Square brackets can be used to access elements of the string.
+--> Python does not have a character data type, a single character is simply a string with a length of 1.
 
-==> Looping Through a String
+# Looping Through a String
+
 --> Since strings are arrays, we can loop through the characters in a string, with a for loop.
+
 --> Loop through the letters in the word "Shanu":
 for x in "Shanu":
 print(x)
---> String Length
---> To get the length of a string, use the len() function.
---> Example
-The len() function returns the length of a string:
-a = "Hello, World!"
-print(len(a))
-
-# Basic Operators
-
-# Arithmetic Operators
-
---> Arithmetic operators in Python are used to perform mathematical operations like addition, subtraction, multiplication, and more.
---> ![Arithmetic Operators](image-2.png)
 
 # Using Operators with Strings in Python
 
@@ -257,9 +248,11 @@ print(len(a))
 --> `.split(delimiter)` → Splits a string into a list.
 --> `.join(iterable)` → Joins elements of an iterable into a string.
 
-## 10. Checking Substrings
+## 10. Membership Operators (`in`, `not in`)
 
---> `"substring" in "string"` → Returns `True` or `False`.
+--> The `in` operator checks if a substring exists within a string.
+--> The `not in` operator checks if a substring does **not** exist in a string.
+--> Example: `"Py" in "Python"` → `True`
 
 ## 11. String Repetition (`*`)
 
@@ -270,12 +263,6 @@ print(len(a))
 
 --> Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
 --> Strings are compared lexicographically (alphabetical order based on ASCII values).
-
-## 13. Membership Operators (`in`, `not in`)
-
---> The `in` operator checks if a substring exists within a string.
---> The `not in` operator checks if a substring does **not** exist in a string.
---> Example: `"Py" in "Python"` → `True`
 
 # String Formatting in Python
 
@@ -324,10 +311,6 @@ Python has three boolean operators to evaluate conditions:
 1. `and` – Returns `True` if both conditions are `True`.
 2. `or` – Returns `True` if at least one condition is `True`.
 3. `not` – Negates a condition (`True` becomes `False`, and vice versa).
-
-## **The "in" Operator**
-
-- The `in` operator is used to check if a specified object exists within an iterable object container, such as a list or string.
 
 ## **Truthy and Falsy Values**
 
@@ -991,6 +974,7 @@ print(s1.name)
 --> The overridden method in the child class must have the same name and parameters as the method in the parent class.
 
 # Del Keyword
+
 --> Used to delete objects, such as variables, list items, or dictionary entries.
 --> Once deleted, the object or item is no longer accessible.
 --> eg :-
@@ -1003,7 +987,8 @@ s1 = Student("shradha")
 del s1
 print(s1)
 
-# Private(like) attribute & methods 
+# Private(like) attribute & methods
+
 --> Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
 --> Python doesn’t have strict access modifiers like private, protected, or public as in other languages like Java or C++. But we can simulate privacy using naming conventions.
 ![alt text](image-12.png)
