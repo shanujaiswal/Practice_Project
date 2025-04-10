@@ -273,7 +273,7 @@ step: how many indices to jump (default is 1)
 --> Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
 --> Strings are compared lexicographically (alphabetical order based on ASCII values).
 
-![alt text](image-8.png)
+![Sring Method](image-8.png) ----> Image Fixed upto this
 
 # String Formatting in Python
 
@@ -322,16 +322,20 @@ print(txt)
 - Comparison between two variables is done using the double equals operator (`==`).
 - The "not equals" operator is marked as (`!=`).
 
+## **The "is" Operator**
+
+- Unlike the double equals operator (`==`), the **`is`** operator checks whether two variables refer to the **same object in memory**.
+
 ## **Boolean Operators**
 
-Python has three boolean operators to evaluate conditions:
+--> Booleans represent one of two values: True or False.
+--> Python has three boolean operators to evaluate conditions:
 
 1. `and` – Returns `True` if both conditions are `True`.
 2. `or` – Returns `True` if at least one condition is `True`.
 3. `not` – Negates a condition (`True` becomes `False`, and vice versa).
 
-## **Truthy and Falsy Values**
-
+==> **Truthy and Falsy Values**
 A statement is evaluated as `True` if one of the following is correct:
 
 1. The **`True`** boolean variable is given, or calculated using an expression.
@@ -348,40 +352,64 @@ Falsy values include:
 - `{}` (empty dictionary)
 - `set()` (empty set)
 - `()` (empty tuple)
+- object that is made from a class with a **len** function that returns 0 or False
 
-## **The "is" Operator**
+==> Functions can Return a Boolean
+--> can create functions that returns a Boolean Value
+--> Eg :-
+def myFunction() :
+return True
+print(myFunction())
+--> Python also has many built-in functions that return a boolean value, like the isinstance() function, which can be used to determine if an object is of a certain data type:
+--> EG:
+x = 200
+print(isinstance(x, int))
 
-- Unlike the double equals operator (`==`), the **`is`** operator checks whether two variables refer to the **same object in memory**.
+# Python Operators
 
-## **Summary of Comparison Operators**
+--> Python divides the operators in the following groups:
 
-| Operator | Meaning                  |
-| -------- | ------------------------ |
-| `==`     | Equal to                 |
-| `!=`     | Not equal to             |
-| `>`      | Greater than             |
-| `<`      | Less than                |
-| `>=`     | Greater than or equal to |
-| `<=`     | Less than or equal to    |
-| `is`     | Same object reference    |
-| `in`     | Exists in an iterable    |
+--> Arithmetic operators
+--> Assignment operators
+--> Comparison operators
+--> Logical operators
+--> Identity operators
+--> Membership operators
+--> Bitwise operators
 
-# Conditions
+1. Arithmetic Operators
+   --> Arithmetic operators are used with numeric values to perform common mathematical operations
+   --> ![Arithmetic Operators](image-9.png)
 
-==> if-elif- else (syntax)
-if(condition):
-Statement 1
-elif(conditional):
-statement 2
-else:
-statement N
+2. Assignment Operators
+   --> Assignment operators are used to assign values to variables
+   --> ![Assignment Operators](image-10.png)
 
-# Nesting
+3. Comparison Operators\*\*
+   --> Comparison operators are used to compare two values:
+   --> ![Comparison Operators](image-11.png)
 
---> Writing statement inside another statement
-if (cond 1):
-if (cond 2):
-print()
+4. Logical Operators
+   -->Logical operators are used to combine conditional statements:
+   --> ![Logical Operators](image-12.png)
+
+5. Identity Operators
+   --> Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:
+   --> ![Identity Operators](image-13.png)
+
+6. Membership Operators
+   --> Membership operators are used to test if a sequence is presented in an object:
+   --> ![Membership Operators](image-14.png)
+
+7. Bitwise Operators
+   --> Bitwise operators are used to compare (binary) numbers:
+   --> ![Bitwise Operators](image-15.png)
+
+# Operator Precedence
+
+--> Operator precedence describes the order in which operations are performed.
+--> Addition + and subtraction - has the same precedence, and therefore we evaluate the expression from left to right:
+--> ![Operator Precedence](image-16.png)
 
 # List
 
@@ -422,7 +450,7 @@ Advanced List Concepts
 --> Shallow vs. Deep Copy (copy() and deepcopy())
 --> List vs. Tuple (Differences and when to use each)
 --> Performance Considerations (Time complexity of list operations)
-![List vs. Tuple](image-9.png)
+![List vs. Tuple](image-21.png)
 
 # Using Operators with Lists in Python
 
@@ -496,7 +524,7 @@ tup.count(element) #return total count occurrences.
 
 ==> Converting Between Lists and Tuples
 --> tuples are immutable, can convert them into lists to modify them.
-![When to Use Tuples Instead of Lists](image-10.png)
+![When to Use Tuples Instead of Lists](image-22.png)
 
 # Dictionaries & Sets
 
@@ -579,6 +607,23 @@ variable = set{} # create empty set
 --> Efficient membership checks due to hashing.
 --> Performing set operations in mathematical computations.
 --> Storing unique values in a collection.
+
+# Conditions
+
+==> if-elif- else (syntax)
+if(condition):
+Statement 1
+elif(conditional):
+statement 2
+else:
+statement N
+
+# Nesting
+
+--> Writing statement inside another statement
+if (cond 1):
+if (cond 2):
+print()
 
 # Loops in python
 
@@ -759,7 +804,7 @@ print(sum(2,3))
 7. Nested Functions (Inner Functions)
    A function inside another function.
 
-![Types of Functions in Python](image-11.png)
+![Types of Functions in Python](image-23.png)
 
 ==> Default Parameters
 --> Assigning a default value to parameter , which is used when no argument is passed
@@ -796,7 +841,7 @@ print(sum(2,3))
    --> 'b' binary mode
    --> 't' text mode (default)
    --> '+' open a disk file for updating (reading and writing)
-   ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-12.png)
+   ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-24.png)
 2. Opening and Closing a File (open,read & Close File)
    --> Use open("filename", "mode") to open a file.
    --> Always close the file using close() to free system resources.
@@ -1009,4 +1054,4 @@ print(s1)
 
 --> Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
 --> Python doesn’t have strict access modifiers like private, protected, or public as in other languages like Java or C++. But we can simulate privacy using naming conventions.
-![Private-Public Mode](image-13.png)
+![Private-Public Mode](image-25.png)
