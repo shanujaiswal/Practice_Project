@@ -326,7 +326,7 @@ print(txt)
 
 - Unlike the double equals operator (`==`), the **`is`** operator checks whether two variables refer to the **same object in memory**.
 
-## **Boolean Operators**
+# Boolean Operators
 
 --> Booleans represent one of two values: True or False.
 --> Python has three boolean operators to evaluate conditions:
@@ -414,11 +414,24 @@ print(isinstance(x, int))
 # List
 
 --> Lists are very similar to arrays.
---> They can contain any type of variable, and they can contain as many variables as you wish
---> A built-in data structure that allows you to store multiple items in a single variable. Lists are ordered, mutable (changeable), and allow duplicate values.
-
-==> Creating a List
 --> can create a list using square brackets []
+--> They can contain any type of variable, and they can contain as many variables as needed
+--> A built-in data structure that allows you to store multiple items in a single variable.
+
+==> List Items
+--> Lists are ordered, mutable (changeable), and allow duplicate values.
+--> List items are indexed, the first item has index [0], the second item has index [1] etc.
+
+==> Ordered
+--> Lists are ordered, it means that the items have a defined order, and that order will not change.
+--> If add new items to a list, the new items will be placed at the end of the list.
+
+==> Changeable
+--> The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+
+==> Allow Duplicates
+--> lists are indexed, lists can have items with the same value:
+
 ==> Accessing Elements
 --> Use indexing (starting from 0) to access elements:
 ==> Modifying Lists
@@ -441,10 +454,7 @@ print(fruit)
 --> fruits.sort() # Sorts the list in ascending order
 --> fruits.reverse() # Reverses the list
 
---> List Methods (append(), extend(), sort(), etc.)
---> Shallow Copy (copy()) → Copies references, not actual objects.
---> Deep Copy (deepcopy()) → Creates an independent copy.
-Advanced List Concepts
+
 
 ==> Nested Lists (Lists inside lists)
 --> Shallow vs. Deep Copy (copy() and deepcopy())
@@ -491,13 +501,147 @@ Advanced List Concepts
 
 # List Methods
 
-list.append(4) # adds one element at the end [2, 1, 3, 4]
-list.sort() # sorts in ascending order [1, 2, 3]
-list.sort(reverse=True) # sorts in descending order [3, 2, 1]
-list.reverse() # reverses list [3, 1, 2]
-list.insert(idx, el) # insert element at index
-list.remove() # removes first occurrence if elements
-list.pop(idx) # removeelements at idx
+--> list.append(4) # adds one element at the end [2, 1, 3, 4]
+--> list.sort() # sorts in ascending order [1, 2, 3]
+--> list.sort(reverse=True) # sorts in descending order [3, 2, 1]
+--> list.reverse() # reverses list [3, 1, 2]
+--> list.insert(idx, el) # insert element at index
+--> list.remove() # removes first occurrence if elements
+--> list.pop(idx) # removeelements at idx
+--> Shallow Copy (copy()) → Copies references, not actual objects.
+--> Deep Copy (deepcopy()) → Creates an independent copy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Tuples in Python
 
