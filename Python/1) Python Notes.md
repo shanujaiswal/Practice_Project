@@ -126,9 +126,9 @@ x = "fantastic"
 --> Variables can store data of different types, and different types can do different things.
 --> Python has the following data types built-in by default, in these categories:
 --> Can get the data type of any object by using the type() function:
-![Built-in by default data types](image-9.png)
-![Examole of built-in by default data types ](image-10.png)
-![constructor functions](image-11.png)
+![Built-in by default data types](image-1.png)
+![Examole of built-in by default data types ](image-2.png)
+![The Specific Data Type](image-3.png)
 
 # Type Conversion(automatically) & type casting(manual)
 
@@ -170,7 +170,7 @@ print(random.randrange(1, 10))
 
 ==> Arithmetic Operators
 --> Arithmetic operators in Python are used to perform mathematical operations like addition, subtraction, multiplication, and more.
---> ![Arithmetic Operators](image-2.png)
+--> ![Arithmetic Operators](image-5.png)
 
 # Strings
 
@@ -180,8 +180,8 @@ print(random.randrange(1, 10))
 ==> Raw Strings (r"" or R"" in Python)
 Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
 --> Mixing operators between numbers and strings is not supported:
-![Escape Characters](image-1.png)
-![Slicing ](image.png)
+![Escape Characters](image-6.png)
+![Slicing ](image-7.png)
 
 # Strings are Arrays
 
@@ -208,6 +208,8 @@ print(x)
 --> Strings can be **combined** using the `+` operator.
 --> It does **not** add spaces automatically, so must include them manually if needed.
 --> Example: `"Hello" + " World"` → `"Hello World"`
+--> To add a space between them, add a " ":
+a + " " + b
 
 ## 3. String Length
 
@@ -221,7 +223,14 @@ print(x)
 ## 5. String Slicing(Accessing parts of a strings)
 
 --> Extract a portion of a string using `[start:end]` notation.
+--> sequence[start:stop:step]
+start: index to begin the slice (inclusive)
+stop: index to end the slice (exclusive)
+step: how many indices to jump (default is 1)
 --> Example: `"Python"[0:3]` → `'Pyt'` (Characters from index 0 to 2)
+--> By leaving out the start index, the range will start at the first character: (print(b[:5]))
+--> By leaving out the end index, the range will go to the end:(print(b[2:]))
+--> Use negative indexes to start the slice from the end of the string: print(b[-5:-2])
 
 ## 6. String Case Operations
 
@@ -264,6 +273,8 @@ print(x)
 --> Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
 --> Strings are compared lexicographically (alphabetical order based on ASCII values).
 
+![alt text](image-8.png)
+
 # String Formatting in Python
 
 ## 1. Using `%` Operator (Old Style Formatting)
@@ -284,17 +295,24 @@ print(x)
 - Introduced in Python 3.6, f-strings are prefixed with `f` and allow embedding expressions directly inside `{}`.
 - Example: `f"Hello, {name}!"`
 
-## 4. Using Template Strings (`string.Template`)
+==> Placeholders and Modifiers
+--> A placeholder can contain variables, operations, functions, and modifiers to format the value.
+--> eg : Add a placeholder for the price variable:
+price = 59
+txt = f"The price is {price} dollars"
+print(txt)
+
+## 4. Using Template Strings (`string.Template`)(Best to use in before Python 3.6+)
 
 - The `Template` class from the `string` module allows placeholder-based string formatting using `$`.
 
-5. Formatting Numbers
+## 5. Formatting Numbers
 
 - `{:.2f}` → Rounds to 2 decimal places.
 - `{:,}` → Adds a thousands separator.
 - `{:<10}` → Left-align, `{:>10}` → Right-align, `{:^10}` → Center-align.
 
-6. Formatting Dates
+## 6. Formatting Dates
 
 - The `strftime()` method from the `datetime` module is used to format dates.
 
@@ -404,7 +422,7 @@ Advanced List Concepts
 --> Shallow vs. Deep Copy (copy() and deepcopy())
 --> List vs. Tuple (Differences and when to use each)
 --> Performance Considerations (Time complexity of list operations)
-![List vs. Tuple](image-3.png)
+![List vs. Tuple](image-9.png)
 
 # Using Operators with Lists in Python
 
@@ -478,7 +496,7 @@ tup.count(element) #return total count occurrences.
 
 ==> Converting Between Lists and Tuples
 --> tuples are immutable, can convert them into lists to modify them.
-![When to Use Tuples Instead of Lists](image-6.png)
+![When to Use Tuples Instead of Lists](image-10.png)
 
 # Dictionaries & Sets
 
@@ -741,7 +759,7 @@ print(sum(2,3))
 7. Nested Functions (Inner Functions)
    A function inside another function.
 
-![Types of Functions in Python](image-7.png)
+![Types of Functions in Python](image-11.png)
 
 ==> Default Parameters
 --> Assigning a default value to parameter , which is used when no argument is passed
@@ -778,7 +796,7 @@ print(sum(2,3))
    --> 'b' binary mode
    --> 't' text mode (default)
    --> '+' open a disk file for updating (reading and writing)
-   ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-8.png)
+   ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-12.png)
 2. Opening and Closing a File (open,read & Close File)
    --> Use open("filename", "mode") to open a file.
    --> Always close the file using close() to free system resources.
@@ -991,4 +1009,4 @@ print(s1)
 
 --> Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
 --> Python doesn’t have strict access modifiers like private, protected, or public as in other languages like Java or C++. But we can simulate privacy using naming conventions.
-![alt text](image-12.png)
+![Private-Public Mode](image-13.png)
