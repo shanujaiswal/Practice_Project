@@ -673,10 +673,7 @@ list1.extend(list2)
 --> Tuples are ordered, indexed, and can contain mixed data types like lists, but unchangeable(cannot be modified after creation) .
 --> Tuples are useful for storing fixed data, returning multiple values from functions, and using as dictionary keys.
 --> Tuples are more memory-efficient and faster than lists due to their immutability.
-
-==> Tuple Items
---> Tuple items are ordered, unchangeable, and allow duplicate values.
--->Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+--> When creating a tuple with only one item, remember to include a comma after the item, otherwise it will not be identified as a tuple.
 
 ==> Ordered
 --> When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.
@@ -684,17 +681,30 @@ list1.extend(list2)
 ==> Unchangeable
 --> Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
 
-==> Allow Duplicates
---> Since tuples are indexed, they can have items with the same value:
-
 ==> Creating a Tuple
 --> Tuples are defined using parentheses ("")
 
-x = ("hello")
+--> x = ("hello")
 print(type(x)) # <class 'str'> ❗️not a tuple
 
-y = ("hello",)
+--> y = ("hello",)
 print(type(y)) # <class 'tuple'> ✅ tuple (note the comma)
+
+==> The tuple() Constructor
+--> It is also possible to use the tuple() constructor to make a tuple.
+--> Using the tuple() method to make a tuple:
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+print(thistuple)
+
+==> Tuple Items
+--> Tuple items are ordered, unchangeable, and allow duplicate values.
+-->Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+--> A tuple can contain different data types:
+A tuple with strings, integers and boolean values:
+tuple1 = ("abc", 34, True, 40, "male")
+
+==> Allow Duplicates
+--> Since tuples are indexed, they can have items with the same value:
 
 ==> Accessing Tuple Elements
 --> Like lists, tuples are indexed, meaning each element has a position starting from 0
@@ -702,13 +712,89 @@ print(type(y)) # <class 'tuple'> ✅ tuple (note the comma)
 Tuples cannot be modified after creation.
 ==> Slicing a Tuple
 --> Tuples support slicing (start:end:step).
+--> Negative Indexing
+--> Negative indexing means start from the end.
+--> -1 refers to the last item, -2 refers to the second last item etc.
+==> Range of Indexes
+--> Can specify a range of indexes by specifying where to start and where to end the range.
+--> When specifying a range, the return value will be a new tuple with the specified items.
+--> By leaving out the start value, the range will start at the first item:
+--> By leaving out the end value, the range will go on to the end of the tuple:
+==> Range of Negative Indexes
+negative indexes if you want to start the search from the end of the tuple
+--> thistuple = ("apple", "banana", "cherry")
+if "apple" in thistuple:
+print("Yes, 'apple' is in the fruits tuple")
+==> Check if Item Exists
+To determine if a specified item is present in a tuple use the in keyword:
+
+# Update Tuples
+
+--> Tuples are unchangeable, meaning that you cannot change, add, or remove items once the tuple is created.
+==> Change Tuple Values
+--> convert the tuple into a list, change the list, and convert the list back into a tuple.
+--> x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+==> Add Items
+--> Since tuples are immutable, they do not have a built-in append() method, but there are other ways to add items to a tuple.
+--> convert it into a list, add your item(s), and convert it back into a tuple.
+--> Add tuple to a tuple. You are allowed to add tuples to tuples, so if you want to add one item, (or many), create a new tuple with the item(s), and add it to the existing tuple:
+
+==> Remove Items
+--> use the same used for changing and adding tuple items Or you can delete the tuple completely:
+
+# Unpack Tuples
+
+--> When we create a tuple, we normally assign values to it. This is called **packing** a tuple:
+--> Packing a tuple:
+fruits = ("apple", "banana", "cherry")
+--> to extract the values back into variables. This is called **unpacking**:
+--> Unpacking a tuple:
+fruits = ("apple", "banana", "cherry")
+(green, yellow, red) = fruits
+print(green)
+print(yellow)
+print(red)
+--> Note: The number of variables must match the number of values in the tuple, if not, you must use an asterisk to collect the remaining values as a list.
+==> Using Asterisk*
+--> If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list:
+--> If the asterisk is added to another variable name than the last, Python will assign values to the variable until the number of values left matches the number of variables left.
+
+# Loop Tuples
+
+--> loop through the tuple items by using a for loop.
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+print(x)
+==> Loop Through the Index Numbers
+--> Use the range() and len() functions to create a suitable iterable.
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+print(thistuple[i])
+==> Using a While Loop
+--> loop through the tuple items by using a while loop.
+--> Use the len() function to determine the length of the tuple, then start at 0 and loop your way through the tuple items by referring to their indexes.
+
+# Join Tuples
+
+--> To join two or more tuples you can use the + operator:
+tuple3 = tuple1 + tuple2
+--> want to multiply the content of a tuple a given number of times, you can use the _ operator
+variable_name2 = variable_name1 _ 2
+
+==> Tuple Methods
+--> tup.index(element) #returns index of first occurrence.
+--> tup.count(element) #return total count occurrences.
 
 ==> Tuple Functions
 print(len(Variable_name)) # Length of tuple: 5
 print(max(nums)) # Max value: 9
 print(min(nums)) # Min value: 1
-tup.index(element) #returns index of first occurrence.
-tup.count(element) #return total count occurrences.
 
 ==> Converting Between Lists and Tuples
 --> tuples are immutable, can convert them into lists to modify them.
@@ -743,26 +829,58 @@ variable_name["key1"]= "Value" # To assign or add new
 --> To create new dict
 dict = {} # create empty dict.
 
-# Dictionary Methods
-
---> myDict.keys() -- Returns all the keys from the dictionary.
---> myDict.values() -- Returns all the values from the dictionary.
---> myDict.items() -- Returns all (key, value) pairs as tuples.
---> myDict.get("key") -- Returns the value associated with the specified key.
-If the key does not exist, it returns None instead of an error.
---> myDict.update(newDict) --Inserts the specified items from newDict into myDict.
-Updates existing keys or adds new keys if they don’t exist.
---> print(len(list(Variable_name.keys()))) -- counts and prints the number of keys in the given dictionary
-
 # Set
 
---> A set in Python is an unordered, mutable collection of unique elements.
+--> A set in Python is an unordered, mutable collection of unique elements, unchangeable( but can remove items and add new items.)
 --> It is used to store distinct items and supports various set operations such as union, intersection, and difference.
 --> Duplicate value will be ignored
+--> Used to store multiple items in a single variable.
+--> The values True and 1 are considered the same value in sets, and are treated as duplicates
+--> The values False and 0 are considered the same value in sets, and are treated as duplicates:
 
 # To create new set
 
 variable = set{} # create empty set
+--> The set() Constructor
+It is also possible to use the set() constructor to make a set.
+
+==> Access Set Items
+--> cannot access items in a set by referring to an index or a key.
+--> can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword
+--> Loop through the set, and print the values:
+thisset = {"apple", "banana", "cherry"}
+for x in thisset:
+print(x)
+--> Check if "banana" is present in the set:
+thisset = {"apple", "banana", "cherry"}
+print("banana" in thisset)
+--> Check if "banana" is NOT present in the set:
+thisset = {"apple", "banana", "cherry"}
+print("banana" not in thisset)
+==> Change Items
+Once a set is created, you cannot change its items, but you can add new items.
+
+# Add Set Items
+
+==> Add Items
+--> Once a set is created, you cannot change its items, but you can add new items.
+--> To add one item to a set use the add() method.
+==> Add Sets
+--> To add items from another set into the current set, use the update() method.
+==> Add Any Iterable
+-->The object in the update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
+
+Python - Remove Set Items
+--> To remove an item in a set, use the remove(), or the discard() method.
+--> If the item to remove does not exist, remove() will raise an error.
+--> If the item to remove does not exist, discard() will NOT raise an error.
+--> use the pop() method to remove an item, but this method will remove a random item, so you cannot be sure what item that gets removed.
+--> The return value of the pop() method is the removed item
+--> Sets are unordered, so when using the pop() method, you do not know which item that gets removed.
+
+# Loop Sets
+
+--> loop through the set items by using a for loop:
 
 ==> Characteristics of Sets
 --> Unordered → Elements in a set do not maintain a specific order.
@@ -779,6 +897,7 @@ variable = set{} # create empty set
 --> Set Comprehension → Create sets dynamically using expressions.
 --> set.clear() -> empties the set.
 --> set.pop() -> remove a random value.
+--> print(len(variable_name)) -> how many items a set has, use the len() function
 
 ==> Set Methods
 --> Creation → Can be defined using {} or set().
@@ -787,14 +906,51 @@ variable = set{} # create empty set
 --> Mathematical Operations → Includes union, intersection, difference, and symmetric difference.
 --> Copying a Set → Methods exist to create a duplicate of a set.
 --> Frozen Set → An immutable version of a set that does not allow modification.
+
+# Join Sets
+
 --> set.union(set2) # combine set values & returns new
 --> set.intersection(set2) #combine common values & returns new
+--> The difference() method keeps the items from the first set that are not in the other set(s).
+--> The symmetric_difference() method keeps all items EXCEPT the duplicates.
 
-==> Use Cases of Sets
+--> The union() and update() methods joins all items from both sets.
+set3 = set1.union(set2)
+--> use the | operator instead of the union() method, and you will get the same result.
+set3 = set1 | set2
+
+==> Join Multiple Sets
+--> All the joining methods and operators can be used to join multiple sets.
+--> When using a method, just add more sets in the parentheses, separated by commas:
+myset = set1.union(set2, set3, set4)
+--> When using the | operator, separate the sets with more | operators:
+--> myset = set1 | set2 | set3 |set4
+
+==> Join a Set and a Tuple
+--> The union() method allows you to join a set with other data types, like lists or tuples.
+--> The | operator only allows you to join sets with sets, and not with other data types like you can with the union() method.
+
+==> Update
+-->The update() method inserts all items from one set into another.
+-->The update() changes the original set, and does not return a new set.
+--> Both union() and update() will exclude any duplicate items.
+
+# Use Cases of Sets
 --> Removing duplicates from a collection.
 --> Efficient membership checks due to hashing.
 --> Performing set operations in mathematical computations.
 --> Storing unique values in a collection.
+
+# Dictionary Methods
+
+--> myDict.keys() -- Returns all the keys from the dictionary.
+--> myDict.values() -- Returns all the values from the dictionary.
+--> myDict.items() -- Returns all (key, value) pairs as tuples.
+--> myDict.get("key") -- Returns the value associated with the specified key.
+If the key does not exist, it returns None instead of an error.
+--> myDict.update(newDict) --Inserts the specified items from newDict into myDict.
+Updates existing keys or adds new keys if they don’t exist.
+--> print(len(list(Variable_name.keys()))) -- counts and prints the number of keys in the given dictionary
 
 # Conditions
 
