@@ -909,37 +909,59 @@ Python - Remove Set Items
 
 # Join Sets
 
+# union
+
 --> set.union(set2) # combine set values & returns new
---> set.intersection(set2) #combine common values & returns new
---> The difference() method keeps the items from the first set that are not in the other set(s).
---> The symmetric_difference() method keeps all items EXCEPT the duplicates.
 
 --> The union() and update() methods joins all items from both sets.
 set3 = set1.union(set2)
 --> use the | operator instead of the union() method, and you will get the same result.
 set3 = set1 | set2
-
 ==> Join Multiple Sets
 --> All the joining methods and operators can be used to join multiple sets.
 --> When using a method, just add more sets in the parentheses, separated by commas:
 myset = set1.union(set2, set3, set4)
 --> When using the | operator, separate the sets with more | operators:
 --> myset = set1 | set2 | set3 |set4
-
 ==> Join a Set and a Tuple
 --> The union() method allows you to join a set with other data types, like lists or tuples.
 --> The | operator only allows you to join sets with sets, and not with other data types like you can with the union() method.
-
 ==> Update
 -->The update() method inserts all items from one set into another.
 -->The update() changes the original set, and does not return a new set.
 --> Both union() and update() will exclude any duplicate items.
 
+# Intersection
+
+--> set.intersection(set2) #combine common values & returns new
+--> Keep ONLY the duplicates
+--> The intersection() method will return a new set, that only contains the items that are present in both set
+--> use the & operator instead of the intersection() method, and will get the same result.
+set3 = set1 & set2
+--> The intersection_update() method will also keep ONLY the duplicates, but it will change the original set instead of returning a new set.
+--> The values True and 1 are considered the same value. The same goes for False and 0.
+
+# Difference
+
+--> The difference() method will return a new set that will contain only the items from the first set that are not present in the other set.
+--> The difference() method keeps the items from the first set that are not in the other set(s).
+--> use the - operator instead of the difference() method, and you will get the same result.
+set3 = set1 - set2
+
+# Symmetric Differences
+
+--> The symmetric_difference() method keeps all items EXCEPT the duplicates.
+--> The symmetric_difference() method will keep only the elements that are NOT present in both sets.
+--> use the ^ operator instead of the symmetric_difference() method, and you will get the same result.
+--> The symmetric_difference_update() method will also keep all but the duplicates, but it will change the original set instead of returning a new set
+
 # Use Cases of Sets
+
 --> Removing duplicates from a collection.
 --> Efficient membership checks due to hashing.
 --> Performing set operations in mathematical computations.
 --> Storing unique values in a collection.
+![Set Methods](image-19.png)
 
 # Dictionary Methods
 
