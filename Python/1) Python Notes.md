@@ -89,7 +89,7 @@ print(x)
 print(y)
 print(z)
 
-# Python - Output Variables
+# Output Variables
 
 ==> Output Variables
 --> The Python print() function is often used to output variables.
@@ -130,6 +130,12 @@ x = "fantastic"
 ![Examole of built-in by default data types ](image-2.png)
 ![The Specific Data Type](image-3.png)
 
+1. List is a collection which is ordered and changeable. Allows duplicate members.
+2. Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+3. Set is a collection which is unordered, unchangeable\*, and unindexed. No duplicate members.
+4. Dictionary is a collection which is ordered\*\* and changeable. No duplicate members.
+   \*\* Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
+
 # Type Conversion(automatically) & type casting(manual)
 
 Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
@@ -167,10 +173,6 @@ float is superior than int.
 --> ex:-
 import random
 print(random.randrange(1, 10))
-
-==> Arithmetic Operators
---> Arithmetic operators in Python are used to perform mathematical operations like addition, subtraction, multiplication, and more.
---> ![Arithmetic Operators](image-5.png)
 
 # Strings
 
@@ -434,33 +436,49 @@ print(isinstance(x, int))
 
 ==> Accessing Elements
 --> Use indexing (starting from 0) to access elements:
+--> Negative Indexing
+Negative indexing means start from the end
+-1 refers to the last item, -2 refers to the second last item
+
+==> Range of Indexes
+--> specify a range of indexes by specifying where to start and where to end the range
+--> the search will includes start index but not includes the end index
+--> Range of Negative Indexes
+negative indexes if want to start the search from the end of the list
+
 ==> Modifying Lists
+
 ==> Adding Elements
 --> append(): Adds an element at the end of the list.
 --> extend(): Adds multiple elements to the end of the list.
 --> insert(): Adds an element at a specific position.
+
 ==> Removing Elements
 --> remove(value) → Removes the first occurrence of a value.
 --> pop(index) → Removes and returns an element at a specific index (default: last).
 --> clear() → Removes all elements.
+
 ==> Looping Through a List
 --> for fruit in fruits:
 print(fruit)
+
 ==> List Operations
 --> Concatenation: new_list = list1 + list2
 --> Repetition: list3 = list1 \* 2
 --> Check if an item exists: "apple" in fruits
+
 ==> Sorting and Reversing
 --> fruits.sort() # Sorts the list in ascending order
 --> fruits.reverse() # Reverses the list
 
-
+==> The list() Constructor
+--> use the list() constructor when creating a new list.
 
 ==> Nested Lists (Lists inside lists)
 --> Shallow vs. Deep Copy (copy() and deepcopy())
 --> List vs. Tuple (Differences and when to use each)
 --> Performance Considerations (Time complexity of list operations)
-![List vs. Tuple](image-21.png)
+![List vs. Tuple](image-17.png)
 
 # Using Operators with Lists in Python
 
@@ -501,6 +519,7 @@ print(fruit)
 
 # List Methods
 
+--> print(len()) # determine how many items a list has
 --> list.append(4) # adds one element at the end [2, 1, 3, 4]
 --> list.sort() # sorts in ascending order [1, 2, 3]
 --> list.sort(reverse=True) # sorts in descending order [3, 2, 1]
@@ -511,147 +530,172 @@ print(fruit)
 --> Shallow Copy (copy()) → Copies references, not actual objects.
 --> Deep Copy (deepcopy()) → Creates an independent copy.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+==> Change List Items
+--> To change the value of a specific item, refer to the index number:
+--> Example : Change the second item:
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+
+==> Change a Range of Item Values
+--> To change the value of items within a specific range, define a list with the new values, and refer to the range of index numbers where you want to insert the new values:
+--> If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
+--> The length of the list will change when the number of items inserted does not match the number of items replaced.
+--> If you insert less items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly
+--> Example Change the values "banana" and "cherry" with the values "blackcurrant" and "watermelon":
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+==> Insert Items
+--> To insert a new list item, without replacing any of the existing values, we can use the insert() method.
+--> The insert() method inserts an item at the specified index
+
+==> Extend List
+To append elements from another list to the current list, use the extend() method.
+--> Example Add the elements of tropical to thislist:
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+
+==> Add Any Iterable
+--> The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
+--> Example
+Add elements of a tuple to a list:
+
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+
+# Remove List Items
+
+--> Remove Specified Item
+--> The remove() method removes the specified item.
+--> If there are more than one item with the specified value, the remove() method removes the first occurrence:
+
+==> Remove Specified Index
+--> The pop() method removes the specified index.
+--> If you do not specify the index, the pop() method removes the last item.
+--> The del keyword also removes the specified index:The del keyword can also delete the list completely.
+
+==> Clear the List
+--> The clear() method empties the list.
+--> The list still remains, but it has no content.
+
+==> Loop Through a List
+--> You can loop through the list items by using a for loop:
+--> Example - Print all items in the list, one by one:
+
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+print(x)
+
+# Loop Through the Index Numbers
+
+--> You can also loop through the list items by referring to their index number.
+--> Use the range() and len() functions to create a suitable iterable.
+--> Example - Print all items by referring to their index number:
+
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+print(thislist[i])
+
+==> Using a While Loop
+--> Can loop through the list items by using a while loop.
+--> the len() function to determine the length of the list, then start at 0 and loop your way through the list items by referring to their indexes.
+
+# Looping Using List Comprehension
+
+--> List Comprehension offers the shortest syntax for looping through lists:
+--> Without list comprehension you will have to write a for statement with a conditional test
+--> Syntax :- newlist = [expression for item in iterable if condition == True]
+--> Eg : -
+thislist = ["apple", "banana", "cherry"]
+** [print(x) for x in thislist] **
+--> The return value is a new list, leaving the old list unchanged.
+
+==> Condition
+--> The condition is like a filter that only accepts the items that evaluate to True.
+
+==> Expression
+--> The expression is the current item in the iteration, but it is also the outcome, which you can manipulate before it ends up like a list item in the new list:
+
+# Sort Lists
+
+--> List objects have a sort() method that will sort the list alphanumerically, ascending, by default:
+
+==> Sort Descending
+To sort descending, use the keyword argument reverse = True:
+--> variable_name.sort(reverse = True)
+
+==> Customize Sort Function
+--> can also customize own function by using the keyword argument -- key = function
+
+==> Case Insensitive Sort
+--> By default the sort() method is case sensitive, resulting in all capital letters being sorted before lower case letters:
+--> want a case-insensitive sort function, use str.lower as a key function:
+--> variable_name.sort(key = str.lower)
+
+==> Reverse Order
+--> if you want to reverse the order of a list, regardless of the alphabet. The reverse() method reverses the current sorting order of the elements.
+
+# Copy Lists
+
+--> Use the copy() method
+variable_name2 = variable_name1.copy()
+--> Use the list() method
+variable_name2 = variable_name1(thislist)
+--> Use the slice Operator -- using the : (slice) operator.
+variable_name2 = variable_name1[:]
+
+# Join Lists
+
+==> Join Two Lists
+--> One of the easiest ways are by using the + operator.
+list3 = list1 + list2
+--> Another way to join two lists is by appending all the items from list2 into list1, one by one:
+--> eg :-
+for x in list2:
+list1.append(x)
+
+print(list1)
+--> can use the extend() method, where the purpose is to add elements from one list to another list:
+list1.extend(list2)
+--> ![List Methods](image-18.png)
 
 # Tuples in Python
 
 --> A tuple is a built-in immutable data structure in Python that allows you to store multiple items in a single variable.
---> Tuples are ordered, indexed, and can contain mixed data types like lists, but they cannot be modified after creation.
+--> Tuples are ordered, indexed, and can contain mixed data types like lists, but unchangeable(cannot be modified after creation) .
 --> Tuples are useful for storing fixed data, returning multiple values from functions, and using as dictionary keys.
 --> Tuples are more memory-efficient and faster than lists due to their immutability.
 
+==> Tuple Items
+--> Tuple items are ordered, unchangeable, and allow duplicate values.
+-->Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+
+==> Ordered
+--> When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.
+
+==> Unchangeable
+--> Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+
+==> Allow Duplicates
+--> Since tuples are indexed, they can have items with the same value:
+
 ==> Creating a Tuple
---> Tuples are defined using parentheses ()
+--> Tuples are defined using parentheses ("")
+
+x = ("hello")
+print(type(x)) # <class 'str'> ❗️not a tuple
+
+y = ("hello",)
+print(type(y)) # <class 'tuple'> ✅ tuple (note the comma)
+
 ==> Accessing Tuple Elements
 --> Like lists, tuples are indexed, meaning each element has a position starting from 0
 ==> Tuple Immutability
@@ -660,7 +704,7 @@ Tuples cannot be modified after creation.
 --> Tuples support slicing (start:end:step).
 
 ==> Tuple Functions
-print(len(nums)) # Length of tuple: 5
+print(len(Variable_name)) # Length of tuple: 5
 print(max(nums)) # Max value: 9
 print(min(nums)) # Min value: 1
 tup.index(element) #returns index of first occurrence.
