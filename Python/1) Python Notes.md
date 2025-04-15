@@ -965,16 +965,145 @@ set3 = set1 - set2
 
 # Dictionary Methods
 
+--> A dictionary is a collection which is ordered\*, changeable and do not allow duplicates.(Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.)
+--> Dictionaries are used to store data values in key:value pairs.
+--> Data Types -- The values in dictionary items can be of any data type
+--> dict() Constructor-- It is also possible to use the dict() constructor to make a dictionary
+
+# Accessing Items
+
+You can access the items of a dictionary by referring to its key name, inside square brackets:
 --> myDict.keys() -- Returns all the keys from the dictionary.
 --> myDict.values() -- Returns all the values from the dictionary.
 --> myDict.items() -- Returns all (key, value) pairs as tuples.
 --> myDict.get("key") -- Returns the value associated with the specified key.
+The list of the keys is a view of the dictionary, meaning that any changes done to the dictionary will be reflected in the keys list.
+--> print(len(thisdict)) -- Print the number of items in the dictionary:
 If the key does not exist, it returns None instead of an error.
 --> myDict.update(newDict) --Inserts the specified items from newDict into myDict.
 Updates existing keys or adds new keys if they don’t exist.
 --> print(len(list(Variable_name.keys()))) -- counts and prints the number of keys in the given dictionary
+--> Check if Key Exists
+To determine if a specified key is present in a dictionary use the in keyword:
+
+# Change Dictionary Items
+
+change the value of a specific item by referring to its key name
+==> Update Dictionary
+The update() method will update the dictionary with the items from the given argument.
+
+The argument must be a dictionary, or an iterable object with key:value pairs
+
+==> Adding Items
+--> Adding an item to the dictionary is done by using a new index key and assigning a value to it:
+Variable_name["key"] = "value"
+
+==> Update Dictionary
+--> The update() method will update the dictionary with the items from a given argument. If the item does not exist, the item will be added.
+--> The argument must be a dictionary, or an iterable object with key:value pairs.
+Variable_name.update({"key": "value"})
+
+==> Remove Dictionary Items
+--> There are several methods to remove items from a dictionary:
+--> The pop() method removes the item with the specified key name:
+Variable_name.pop("key")
+--> The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
+Variable_name.popitem()
+--> The del keyword removes the item with the specified key name:
+del Variable_name["key"]
+--> The del keyword can also delete the dictionary completely:
+del Variable_name
+--> The clear() method empties the dictionary:
+Variable_name.clear()
+
+# Loop Dictionaries
+
+==> Loop Through a Dictionary
+--> loop through a dictionary by using a for loop.
+--> When looping through a dictionary, the return value are the keys of the dictionary, but there are methods to return the values as well.
+for x in Variable_name:
+print(x)
+--> use the keys() method to return the keys of a dictionary:
+for x in thisdict.keys():
+print(x)
+--> can also use the values() method to return values of a dictionary:
+for x in Variable_name.values():
+print(x)
+--> Loop through both keys and values, by using the items() method:
+for x, y in thisdict.items():
+print(x, y)
+
+# Copy Dictionaries
+
+==> Copy a Dictionary
+--> use the built-in Dictionary method copy().
+Variable_name2 = Variable_name1.copy()
+--> Another way to make a copy is to use the built-in function dict().
+Variable_name2 = dict(Variable_name1)
+
+# Nested Dictionaries
+
+--> A dictionary can contain dictionaries, this is called nested dictionaries.
+myfamily = {
+"child1" : {
+"name" : "Emil",
+"year" : 2004
+},
+"child2" : {
+"name" : "Tobias",
+"year" : 2007
+},
+"child3" : {
+"name" : "Linus",
+"year" : 2011
+}
+}
+--> add three dictionaries into a new dictionary
+child1 = {
+"name" : "Emil",
+"year" : 2004
+}
+child2 = {
+"name" : "Tobias",
+"year" : 2007
+}
+child3 = {
+"name" : "Linus",
+"year" : 2011
+}
+
+myfamily = {
+"child1" : child1,
+"child2" : child2,
+"child3" : child3
+}
+
+==> Access Items in Nested Dictionaries
+--> To access items from a nested dictionary, you use the name of the dictionaries, starting with the outer dictionary:
+print(myfamily["child2"]["name"])       ----> Reference above exapmle 
+
+==> Loop Through Nested Dictionaries
+--> can loop through a dictionary by using the items() method like this:
+for x, obj in myfamily.items():
+  print(x)
+
+  for y in obj:
+    print(y + ':', obj[y])
+
+
+![Dictionary Methods](image-20.png)
 
 # Conditions
+--> Python supports the usual logical conditions from mathematics:
+
+Equals: a == b
+Not Equals: a != b
+Less than: a < b
+Less than or equal to: a <= b
+Greater than: a > b
+Greater than or equal to: a >= b
+-->These conditions can be used in several ways, most commonly in "if statements" and loops.
+
 
 ==> if-elif- else (syntax)
 if(condition):
