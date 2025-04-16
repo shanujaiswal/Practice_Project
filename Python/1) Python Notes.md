@@ -1,4 +1,4 @@
-# Python
+## Python
 
 --> Python is a very simple language, and has a very straightforward syntax.
 --> Python is a popular programming language.
@@ -7,21 +7,21 @@
 --> There are two major Python versions, Python 2 and Python 3. Python 2 and 3 are quite different
 --> One difference between Python 2 and 3 is the print statement. In Python 2, the "print" statement is not a function, and therefore it is invoked without parentheses. However, in Python 3, it is a function, and must be invoked with parentheses.
 
-# Indentation
+## Indentation
 
 --> Indentation refers to the spaces at the beginning of a code line.
 --> Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.
 --> Python uses indentation to indicate a block of code . Python will give you an error if you skip the indentation:
 --> The standard indentation requires standard Python code to use four spaces,but it has to be at least one.
 
-# Input in Python
+## Input in Python
 
 input() statement is used to accept value ( using keyboard) from user
 input()--> default is always a str
 int(input()) ---> value will be integer
 float(input()) ---> value will be float
 
-# Comments
+## Comments
 
 --> used to explain Python code.
 --> used to make the code more readable.
@@ -29,7 +29,7 @@ float(input()) ---> value will be float
 --> Comments starts with a #, and Python will ignore them:
 --> Add a multiline string (triple quotes) in our code, and place your comment inside it:
 
-# Variables and Types
+## Variables and Types
 
 --> Variable -- containers for storing data values -- Memory allocation
 --> Variable is a name given to a memory location in a program.
@@ -37,14 +37,16 @@ float(input()) ---> value will be float
 --> Python is completely "object oriented", and not "statically typed". Do not need to declare variables before using them, or declare their type.
 --> A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).
 
-==>Rules for Python variables:
+# Rules for Python variables:
+
 --> A variable name must start with a letter or the underscore character
 --> A variable name cannot start with a number
 --> A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and \_ )
 --> Variable names are case-sensitive (age, Age and AGE are three different variables)
 --> A variable name cannot be any of the Python keywords.
 
-==> Legal variable names:
+# Legal variable names:
+
 myvar = "John"
 my_var = "John"
 \_my_var = "John"
@@ -52,15 +54,16 @@ myVar = "John"
 MYVAR = "John"
 myvar2 = "John"
 
-==> Illegal variable names:
+# Illegal variable names:
+
 2myvar = "John"
 my-var = "John"
 my var = "John"
 
-==> Multi Words Variable Names
+# Multi Words Variable Names
+
 --> Variable names with more than one word can be difficult to read.
 --> There are several techniques you can use to make them more readable:
-
 ==> Camel Case
 --> Each word, except the first, starts with a capital letter:
 myVariableName = "John"
@@ -83,11 +86,14 @@ x = y = z = "Hello World"
 ==> Unpack a Collection
 --> If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.
 ==> Unpack a list:
+
+```python
 fruits = ["apple", "banana", "cherry"]
 x, y, z = fruits
 print(x)
 print(y)
 print(z)
+```
 
 # Output Variables
 
@@ -120,7 +126,7 @@ global
 x
 x = "fantastic"
 
-# Built-in Data Types
+## Built-in Data Types
 
 --> In programming, data type is an important concept.
 --> Variables can store data of different types, and different types can do different things.
@@ -136,17 +142,17 @@ x = "fantastic"
 4. Dictionary is a collection which is ordered\*\* and changeable. No duplicate members.
    \*\* Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
 
-# Type Conversion(automatically) & type casting(manual)
+## Type Conversion(automatically) & type casting(manual)
 
 Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
 float is superior than int.
---> lst = [1, 2, 3, 4, 5] # List  
---> tpl = (1, 2, 3, 4, 5) # Tuple  
---> strg = "Hello" # String  
---> dct = {"a": 1, "b": 2} # Dictionary  
---> st = {1, 2, 3, 4, 5} # Set  
---> rng = range(10) # Range  
---> byt = b"Hello" # Bytes
+--> lst = [1, 2, 3, 4, 5] -- List  
+--> tpl = (1, 2, 3, 4, 5) -- Tuple  
+--> strg = "Hello" -- String  
+--> dct = {"a": 1, "b": 2} -- Dictionary  
+--> st = {1, 2, 3, 4, 5} -- Set  
+--> rng = range(10) -- Range  
+--> byt = b"Hello" -- Bytes
 ==> Get the Type
 --> Get the data type of a variable with the type() function
 
@@ -154,15 +160,15 @@ float is superior than int.
 
 --> A name used to identify a variable, function, class, module, or other object
 
-1. It can be combination of uppercase and lowercase letters,digits or an underscore(\_),
-   ex:- myVariable , variable_1, variable_for_print all aare valid python identifier
+1. It can be combination of uppercase and lowercase letters,digits or an underscore(\_)
+   --> ex:- myVariable , variable_1, variable_for_print all aare valid python identifier
 2. An identifier can not start with digit .So while variable1 is valid 1Variable is not valid
 3. An identifier can not start with symbols like !,@,#,%,$ ,etc in our identifier
 4. Identifier can be of any length
 
 ![Reserved KeyWords](image-4.png)
 
-# Numbers
+## Numbers
 
 --> Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals) ,also supports complex numbers ,
 --> Float can also be scientific numbers with an "e" to indicate the power of 10.
@@ -174,12 +180,14 @@ float is superior than int.
 import random
 print(random.randrange(1, 10))
 
-# Strings
+## Strings
 
 --> Strings are defined either with a single quote or a double quotes.
 --> Triple-Quoted Strings -- For multi-line strings to a variable or embedded quotes.
 --> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
-==> Raw Strings (r"" or R"" in Python)
+
+# Raw Strings (r"" or R"" in Python)
+
 Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
 --> Mixing operators between numbers and strings is not supported:
 ![Escape Characters](image-6.png)
@@ -201,134 +209,113 @@ print(x)
 
 # Using Operators with Strings in Python
 
-## 1. String Creation
+1.  String Creation
+    --> Strings can be created using **single (`'`), double (`"`)**, or **triple quotes (`''' """`)**.
 
---> Strings can be created using **single (`'`), double (`"`)**, or **triple quotes (`''' """`)**.
+2.  String Concatenation (`+`)
+    --> Strings can be **combined** using the `+` operator.
+    --> It does **not** add spaces automatically, so must include them manually if needed.
+    --> Example: `"Hello" + " World"` → `"Hello World"`
+    --> To add a space between them, add a " ":
+    a + " " + b
 
-## 2. String Concatenation (`+`)
+3.  String Length
+    --> Use `len(string)` to find the length of a string.
 
---> Strings can be **combined** using the `+` operator.
---> It does **not** add spaces automatically, so must include them manually if needed.
---> Example: `"Hello" + " World"` → `"Hello World"`
---> To add a space between them, add a " ":
-a + " " + b
+4.  Accessing Characters
+    --> Strings are **indexed** starting from `0`.
+    --> Example: `"Python"[0]` → `'P'`, `"Python"[-1]` → `'n'`
 
-## 3. String Length
+5.  String Slicing(Accessing parts of a strings)
+    --> Extract a portion of a string using `[start:end]` notation.
+    --> sequence[start:stop:step]
+    start: index to begin the slice (inclusive)
+    stop: index to end the slice (exclusive)
+    step: how many indices to jump (default is 1)
+    --> Example: `"Python"[0:3]` → `'Pyt'` (Characters from index 0 to 2)
+    --> By leaving out the start index, the range will start at the first character: (print(b[:5]))
+    --> By leaving out the end index, the range will go to the end:(print(b[2:]))
+    --> Use negative indexes to start the slice from the end of the string: print(b[-5:-2])
 
---> Use `len(string)` to find the length of a string.
+6.  String Case Operations
+    --> `.upper()` → Converts string to uppercase.
+    --> `.lower()` → Converts string to lowercase.
+    --> `.title()` → Converts first letter of each word to uppercase.
+    --> `.capitalize()` → Capitalizes 1st char
 
-## 4. Accessing Characters
+7.  String Strip Operations
+    --> `.strip()` → Removes spaces from both ends.
+    --> `.lstrip()` → Removes spaces from the left.
+    --> `.rstrip()` → Removes spaces from the right.
 
---> Strings are **indexed** starting from `0`.
---> Example: `"Python"[0]` → `'P'`, `"Python"[-1]` → `'n'`
+8.  String Find and Replace
+    --> `.find(substring)` → Returns index of first occurrence.
+    --> `.replace(old, new)` → Replaces occurrences of a substring.
+    --> `.endswith("substr")` → returns true if string ends with substr
+    --> `.count("word")` → counts the occurrence of substr in string
 
-## 5. String Slicing(Accessing parts of a strings)
+9.  String Splitting and Joining
+    --> `.split(delimiter)` → Splits a string into a list.
+    --> `.join(iterable)` → Joins elements of an iterable into a string.
 
---> Extract a portion of a string using `[start:end]` notation.
---> sequence[start:stop:step]
-start: index to begin the slice (inclusive)
-stop: index to end the slice (exclusive)
-step: how many indices to jump (default is 1)
---> Example: `"Python"[0:3]` → `'Pyt'` (Characters from index 0 to 2)
---> By leaving out the start index, the range will start at the first character: (print(b[:5]))
---> By leaving out the end index, the range will go to the end:(print(b[2:]))
---> Use negative indexes to start the slice from the end of the string: print(b[-5:-2])
+10. Membership Operators (`in`, `not in`)
+    --> The `in` operator checks if a substring exists within a string.
+    --> The `not in` operator checks if a substring does **not** exist in a string.
+    --> Example: `"Py" in "Python"` → `True`
 
-## 6. String Case Operations
+11. String Repetition (`*`)
+    --> The `*` operator repeats a string multiple times.
+    --> Example: `"Hi" * 3` → `"HiHiHi"`
 
---> `.upper()` → Converts string to uppercase.
---> `.lower()` → Converts string to lowercase.
---> `.title()` → Converts first letter of each word to uppercase.
---> `.capitalize()` → Capitalizes 1st char
-
-## 7. String Strip Operations
-
---> `.strip()` → Removes spaces from both ends.
---> `.lstrip()` → Removes spaces from the left.
---> `.rstrip()` → Removes spaces from the right.
-
-## 8. String Find and Replace
-
---> `.find(substring)` → Returns index of first occurrence.
---> `.replace(old, new)` → Replaces occurrences of a substring.
---> `.endswith("substr")` → returns true if string ends with substr
---> `.count("word")` → counts the occurrence of substr in string
-
-## 9. String Splitting and Joining
-
---> `.split(delimiter)` → Splits a string into a list.
---> `.join(iterable)` → Joins elements of an iterable into a string.
-
-## 10. Membership Operators (`in`, `not in`)
-
---> The `in` operator checks if a substring exists within a string.
---> The `not in` operator checks if a substring does **not** exist in a string.
---> Example: `"Py" in "Python"` → `True`
-
-## 11. String Repetition (`*`)
-
---> The `*` operator repeats a string multiple times.
---> Example: `"Hi" * 3` → `"HiHiHi"`
-
-## 12. Using Comparison Operators with Strings
-
---> Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
---> Strings are compared lexicographically (alphabetical order based on ASCII values).
+12. Using Comparison Operators with Strings
+    --> Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
+    --> Strings are compared lexicographically (alphabetical order based on ASCII values).
 
 ![Sring Method](image-8.png) ----> Image Fixed upto this
 
 # String Formatting in Python
 
-## 1. Using `%` Operator (Old Style Formatting)
+1.  Using `%` Operator (Old Style Formatting)
+    --> The `%` operator is used like C-style string formatting.
+    --> `%s` for strings, `%d` for integers, `%f` for floating-point numbers.
+    --> Example: `"Hello %s" % name`
+2.  Using `format()` Method (Modern Style)
+    --> The `format()` method allows inserting variables inside curly `{}` braces.
+    --> Supports positional and keyword arguments.
+    --> Example: `"Hello, {}!".format(name)`
+3.  Using f-strings (Python 3.6+)
+    --> Introduced in Python 3.6, f-strings are prefixed with `f` and allow embedding expressions directly inside `{}`.
+    --> Example: `f"Hello, {name}!"`
 
---> The `%` operator is used like C-style string formatting.
---> `%s` for strings, `%d` for integers, `%f` for floating-point numbers.
---> Example: `"Hello %s" % name`
+# Placeholders and Modifiers
 
-## 2. Using `format()` Method (Modern Style)
-
---> The `format()` method allows inserting variables inside curly `{}` braces.
-
-- Supports positional and keyword arguments.
-- Example: `"Hello, {}!".format(name)`
-
-## 3. Using f-strings (Python 3.6+)
-
-- Introduced in Python 3.6, f-strings are prefixed with `f` and allow embedding expressions directly inside `{}`.
-- Example: `f"Hello, {name}!"`
-
-==> Placeholders and Modifiers
 --> A placeholder can contain variables, operations, functions, and modifiers to format the value.
 --> eg : Add a placeholder for the price variable:
+
+```python
 price = 59
 txt = f"The price is {price} dollars"
 print(txt)
+```
 
-## 4. Using Template Strings (`string.Template`)(Best to use in before Python 3.6+)
+4.  Using Template Strings (`string.Template`)(Best to use in before Python 3.6+)
+    --> The `Template` class from the `string` module allows placeholder-based string formatting using `$`.
+5.  Formatting Numbers
+    --> `{:.2f}` → Rounds to 2 decimal places.
+    --> `{:,}` → Adds a thousands separator.
+    --> `{:<10}` → Left-align, `{:>10}` → Right-align, `{:^10}` → Center-align.
+6.  Formatting Dates
+    --> The `strftime()` method from the `datetime` module is used to format dates.
 
-- The `Template` class from the `string` module allows placeholder-based string formatting using `$`.
+==> **Variable Assignment vs. Comparison**
+--> Variable assignment is done using a single equals operator (`=`).
+--> Comparison between two variables is done using the double equals operator (`==`).
+--> The "not equals" operator is marked as (`!=`).
 
-## 5. Formatting Numbers
+==> **The "is" Operator**
+--> Unlike the double equals operator (`==`), the **`is`** operator checks whether two variables refer to the **same object in memory**.
 
-- `{:.2f}` → Rounds to 2 decimal places.
-- `{:,}` → Adds a thousands separator.
-- `{:<10}` → Left-align, `{:>10}` → Right-align, `{:^10}` → Center-align.
-
-## 6. Formatting Dates
-
-- The `strftime()` method from the `datetime` module is used to format dates.
-
-## **Variable Assignment vs. Comparison**
-
-- Variable assignment is done using a single equals operator (`=`).
-- Comparison between two variables is done using the double equals operator (`==`).
-- The "not equals" operator is marked as (`!=`).
-
-## **The "is" Operator**
-
-- Unlike the double equals operator (`==`), the **`is`** operator checks whether two variables refer to the **same object in memory**.
-
-# Boolean Operators
+## Boolean Operators
 
 --> Booleans represent one of two values: True or False.
 --> Python has three boolean operators to evaluate conditions:
@@ -345,23 +332,27 @@ A statement is evaluated as `True` if one of the following is correct:
 
 Falsy values include:
 
-- `None`
-- `False`
-- `0` (integer or float)
-- `0.0` (float zero)
-- `""` (empty string)
-- `[]` (empty list)
-- `{}` (empty dictionary)
-- `set()` (empty set)
-- `()` (empty tuple)
-- object that is made from a class with a **len** function that returns 0 or False
+--> `None`
+--> `False`
+--> `0` (integer or float)
+--> `0.0` (float zero)
+--> `""` (empty string)
+--> `[]` (empty list)
+--> `{}` (empty dictionary)
+--> `set()` (empty set)
+--> `()` (empty tuple)
+--> object that is made from a class with a **len** function that returns 0 or False
 
 ==> Functions can Return a Boolean
 --> can create functions that returns a Boolean Value
 --> Eg :-
+
+```python
 def myFunction() :
-return True
-print(myFunction())
+   return True
+   print(myFunction())
+```
+
 --> Python also has many built-in functions that return a boolean value, like the isinstance() function, which can be used to determine if an object is of a certain data type:
 --> EG:
 x = 200
@@ -382,27 +373,21 @@ print(isinstance(x, int))
 1. Arithmetic Operators
    --> Arithmetic operators are used with numeric values to perform common mathematical operations
    --> ![Arithmetic Operators](image-9.png)
-
 2. Assignment Operators
    --> Assignment operators are used to assign values to variables
    --> ![Assignment Operators](image-10.png)
-
 3. Comparison Operators\*\*
    --> Comparison operators are used to compare two values:
    --> ![Comparison Operators](image-11.png)
-
 4. Logical Operators
    -->Logical operators are used to combine conditional statements:
    --> ![Logical Operators](image-12.png)
-
 5. Identity Operators
    --> Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:
    --> ![Identity Operators](image-13.png)
-
 6. Membership Operators
    --> Membership operators are used to test if a sequence is presented in an object:
    --> ![Membership Operators](image-14.png)
-
 7. Bitwise Operators
    --> Bitwise operators are used to compare (binary) numbers:
    --> ![Bitwise Operators](image-15.png)
@@ -413,14 +398,15 @@ print(isinstance(x, int))
 --> Addition + and subtraction - has the same precedence, and therefore we evaluate the expression from left to right:
 --> ![Operator Precedence](image-16.png)
 
-# List
+## List
 
 --> Lists are very similar to arrays.
 --> can create a list using square brackets []
 --> They can contain any type of variable, and they can contain as many variables as needed
 --> A built-in data structure that allows you to store multiple items in a single variable.
 
-==> List Items
+# List Items
+
 --> Lists are ordered, mutable (changeable), and allow duplicate values.
 --> List items are indexed, the first item has index [0], the second item has index [1] etc.
 
@@ -434,7 +420,8 @@ print(isinstance(x, int))
 ==> Allow Duplicates
 --> lists are indexed, lists can have items with the same value:
 
-==> Accessing Elements
+# Accessing Elements
+
 --> Use indexing (starting from 0) to access elements:
 --> Negative Indexing
 Negative indexing means start from the end
@@ -445,8 +432,6 @@ Negative indexing means start from the end
 --> the search will includes start index but not includes the end index
 --> Range of Negative Indexes
 negative indexes if want to start the search from the end of the list
-
-==> Modifying Lists
 
 ==> Adding Elements
 --> append(): Adds an element at the end of the list.
@@ -462,7 +447,8 @@ negative indexes if want to start the search from the end of the list
 --> for fruit in fruits:
 print(fruit)
 
-==> List Operations
+# List Operations
+
 --> Concatenation: new_list = list1 + list2
 --> Repetition: list3 = list1 \* 2
 --> Check if an item exists: "apple" in fruits
@@ -480,42 +466,35 @@ print(fruit)
 --> Performance Considerations (Time complexity of list operations)
 ![List vs. Tuple](image-17.png)
 
-# Using Operators with Lists in Python
+==> Using Operators with Lists in Python
 
 1. Concatenation (`+`)
-
---> The `+` operator is used to combine two or more lists into a new list.
---> It **does not** modify the original lists but creates a new one.
+   --> The `+` operator is used to combine two or more lists into a new list.
+   --> It **does not** modify the original lists but creates a new one.
 
 2. Repetition (`*`)
-
---> The `*` operator repeats a list multiple times.
+   --> The `*` operator repeats a list multiple times.
 
 3. Membership Operators (`in`, `not in`)
-
---> The `in` operator checks if an element exists in a list.
---> The `not in` operator checks if an element does **not** exist in a list.
+   --> The `in` operator checks if an element exists in a list.
+   --> The `not in` operator checks if an element does **not** exist in a list.
 
 4. Comparison Operators (`==`, `!=`, `<`, `>`, `<=`, `>=`)
-
---> Lists are compared **element by element**.
---> The comparison is **lexicographical** (similar to string comparison based on ASCII values).
+   --> Lists are compared **element by element**.
+   --> The comparison is **lexicographical** (similar to string comparison based on ASCII values).
 
 5. Assignment Operators (`+=`, `*=`)
-
---> The `+=` operator appends elements from another list to the existing list.
---> The `*=` operator repeats and updates the list in place.
+   --> The `+=` operator appends elements from another list to the existing list.
+   --> The `*=` operator repeats and updates the list in place.
 
 6. Identity Operators (`is`, `is not`)
-
---> The `is` operator checks if two lists refer to the **same memory location**.
---> The `is not` operator checks if they refer to **different objects**.
+   --> The `is` operator checks if two lists refer to the **same memory location**.
+   --> The `is not` operator checks if they refer to **different objects**.
 
 7. Logical Operators (`and`, `or`, `not`)
-
---> `and` returns the second list if the first list is non-empty, otherwise returns the first list.
---> `or` returns the first non-empty list.
---> `not` returns `True` if the list is empty, otherwise `False`.
+   --> `and` returns the second list if the first list is non-empty, otherwise returns the first list.
+   --> `or` returns the first non-empty list.
+   --> `not` returns `True` if the list is empty, otherwise `False`.
 
 # List Methods
 
@@ -530,7 +509,8 @@ print(fruit)
 --> Shallow Copy (copy()) → Copies references, not actual objects.
 --> Deep Copy (deepcopy()) → Creates an independent copy.
 
-==> Change List Items
+# Change List Items
+
 --> To change the value of a specific item, refer to the index number:
 --> Example : Change the second item:
 
@@ -586,7 +566,8 @@ print(thislist)
 --> The clear() method empties the list.
 --> The list still remains, but it has no content.
 
-==> Loop Through a List
+# Loop Through a List
+
 --> You can loop through the list items by using a for loop:
 --> Example - Print all items in the list, one by one:
 
@@ -594,15 +575,16 @@ thislist = ["apple", "banana", "cherry"]
 for x in thislist:
 print(x)
 
-# Loop Through the Index Numbers
-
+==> Loop Through the Index Numbers
 --> You can also loop through the list items by referring to their index number.
 --> Use the range() and len() functions to create a suitable iterable.
 --> Example - Print all items by referring to their index number:
 
+```python
 thislist = ["apple", "banana", "cherry"]
 for i in range(len(thislist)):
 print(thislist[i])
+```
 
 ==> Using a While Loop
 --> Can loop through the list items by using a while loop.
@@ -659,15 +641,18 @@ variable_name2 = variable_name1[:]
 list3 = list1 + list2
 --> Another way to join two lists is by appending all the items from list2 into list1, one by one:
 --> eg :-
+
+```python
 for x in list2:
 list1.append(x)
-
 print(list1)
+```
+
 --> can use the extend() method, where the purpose is to add elements from one list to another list:
 list1.extend(list2)
 --> ![List Methods](image-18.png)
 
-# Tuples in Python
+## Tuples in Python
 
 --> A tuple is a built-in immutable data structure in Python that allows you to store multiple items in a single variable.
 --> Tuples are ordered, indexed, and can contain mixed data types like lists, but unchangeable(cannot be modified after creation) .
@@ -696,7 +681,8 @@ print(type(y)) # <class 'tuple'> ✅ tuple (note the comma)
 thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
 print(thistuple)
 
-==> Tuple Items
+# Tuple Items
+
 --> Tuple items are ordered, unchangeable, and allow duplicate values.
 -->Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
 --> A tuple can contain different data types:
@@ -800,36 +786,7 @@ print(min(nums)) # Min value: 1
 --> tuples are immutable, can convert them into lists to modify them.
 ![When to Use Tuples Instead of Lists](image-22.png)
 
-# Dictionaries & Sets
-
---> A dictionary is an unordered, mutable collection of key:value pairs.
---> Each key in a dictionary must be unique and immutable, while values can be of any data type.
---> A dictionary can be created using curly braces {} or the dict() constructor.
---> Each item in a dictionary consists of a key and its corresponding value, separated by a colon ":"
---> Dictionaries are mutable, meaning their contents can be modified after creation.
---> Keys in a dictionary must be unique. If a duplicate key is assigned a new value, it overwrites the previous value.
---> Values can be accessed using their corresponding keys inside square brackets [] or with the get() method.
---> Items can be removed using methods like pop(), popitem(), del, or clear().
---> A dictionary can contain another dictionary as a value, creating a nested structure.
---> data = {
-"names": ["Alice", "Bob", "Charlie"], # List inside dictionary
-"coordinates": (40.7128, -74.0060), # Tuple inside dictionary
-"details": {
-"age": 25,
-"city": "New York"
-}
-}
-
-print(data) # Printing the entire dictionary
-print(data["names"]) # List inside dictionary  
-print(data["details"]["age"]) # Nested dictionary value
-
-variable_name["key1"],variable_name["key2"],variable_name["key3"]
-variable_name["key1"]= "Value" # To assign or add new
---> To create new dict
-dict = {} # create empty dict.
-
-# Set
+## Set
 
 --> A set in Python is an unordered, mutable collection of unique elements, unchangeable( but can remove items and add new items.)
 --> It is used to store distinct items and supports various set operations such as union, intersection, and difference.
@@ -963,6 +920,35 @@ set3 = set1 - set2
 --> Storing unique values in a collection.
 ![Set Methods](image-19.png)
 
+## Dictionaries
+
+--> A dictionary is an unordered, mutable collection of key:value pairs.
+--> Each key in a dictionary must be unique and immutable, while values can be of any data type.
+--> A dictionary can be created using curly braces {} or the dict() constructor.
+--> Each item in a dictionary consists of a key and its corresponding value, separated by a colon ":"
+--> Dictionaries are mutable, meaning their contents can be modified after creation.
+--> Keys in a dictionary must be unique. If a duplicate key is assigned a new value, it overwrites the previous value.
+--> Values can be accessed using their corresponding keys inside square brackets [] or with the get() method.
+--> Items can be removed using methods like pop(), popitem(), del, or clear().
+--> A dictionary can contain another dictionary as a value, creating a nested structure.
+--> data = {
+"names": ["Alice", "Bob", "Charlie"], # List inside dictionary
+"coordinates": (40.7128, -74.0060), # Tuple inside dictionary
+"details": {
+"age": 25,
+"city": "New York"
+}
+}
+
+print(data) # Printing the entire dictionary
+print(data["names"]) # List inside dictionary  
+print(data["details"]["age"]) # Nested dictionary value
+
+variable_name["key1"],variable_name["key2"],variable_name["key3"]
+variable_name["key1"]= "Value" # To assign or add new
+--> To create new dict
+dict = {} # create empty dict.
+
 # Dictionary Methods
 
 --> A dictionary is a collection which is ordered\*, changeable and do not allow duplicates.(Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.)
@@ -1058,6 +1044,7 @@ myfamily = {
 "year" : 2011
 }
 }
+
 --> add three dictionaries into a new dictionary
 child1 = {
 "name" : "Emil",
@@ -1080,21 +1067,23 @@ myfamily = {
 
 ==> Access Items in Nested Dictionaries
 --> To access items from a nested dictionary, you use the name of the dictionaries, starting with the outer dictionary:
-print(myfamily["child2"]["name"])       ----> Reference above exapmle 
+print(myfamily["child2"]["name"]) ----> Reference above exapmle
 
 ==> Loop Through Nested Dictionaries
 --> can loop through a dictionary by using the items() method like this:
 for x, obj in myfamily.items():
-  print(x)
+print(x)
 
-  for y in obj:
-    print(y + ':', obj[y])
-
+for y in obj:
+print(y + ':', obj[y])
 
 ![Dictionary Methods](image-20.png)
 
-# Conditions
+## Conditions
+
 --> Python supports the usual logical conditions from mathematics:
+
+# If statements
 
 Equals: a == b
 Not Equals: a != b
@@ -1103,7 +1092,9 @@ Less than or equal to: a <= b
 Greater than: a > b
 Greater than or equal to: a >= b
 -->These conditions can be used in several ways, most commonly in "if statements" and loops.
+--> An "if statement" is written by using the if keyword.
 
+# Elif
 
 ==> if-elif- else (syntax)
 if(condition):
@@ -1113,12 +1104,112 @@ statement 2
 else:
 statement N
 
-# Nesting
+# Else
 
+--> The else keyword catches anything which isn't caught by the preceding conditions.
+
+# Ternary Operators, or Conditional Expressions.
+
+==> **Short Hand If**
+
+-->if a > b: print("a is greater than b")
+
+==> **Short Hand If ... Else**
+
+--> a = 2
+b = 330
+print("A") if a > b else print("B")
+
+==> multiple else statements on the same line:
+
+--> One line if else statement, with 3 conditions:
+--> a = 330
+b = 330
+print("A") if a > b else print("=") if a == b else print("B")
+
+==> And
+--> The and keyword is a logical operator, and is used to combine conditional statements:
+a = 200
+b = 33
+c = 500
+if a > b and c > a:
+print("Both conditions are True")
+
+==> Or
+--> The or keyword is a logical operator, and is used to combine conditional statements:
+a = 200
+b = 33
+c = 500
+if a > b or a > c:
+print("At least one of the conditions is True")
+
+==> Nested If
+Can have if statements inside if statements, this is called nested if statements.
 --> Writing statement inside another statement
 if (cond 1):
 if (cond 2):
 print()
+
+==> The pass Statement
+--> if statements cannot be empty, but if you for some reason have an if statement with no content, put in the pass statement to avoid getting an error.
+
+```python
+a = 33
+b = 200
+if b > a:
+   pass
+```
+
+## Switch Statement in Python
+
+--> Python does not have a built-in switch statement like some other programming languages (such as C, C++, or Java).
+--> Similar functionality can be achieved using match statements (introduced in Python 3.10) or dictionary-based approaches.
+
+# Python Match
+
+--> The match statement is used to perform different actions based on different conditions.
+
+==> The Python Match Statement
+--> Instead of writing many if..else statements, you can use the match statement.
+--> The match statement selects one of many code blocks to be executed.
+
+```python
+match expression:
+    case x:
+        # code block
+    case y:
+        # code block
+    case z:
+        # code block
+```
+
+==> This is how it works:
+--> The match expression is evaluated once.
+--> The value of the expression is compared with the values of each case.
+--> If there is a match, the associated block of code is executed.
+-->
+
+```Python
+day = 4
+match day:
+  case 1:
+    print("Monday")
+  case 2:
+    print("Tuesday")
+  case 3:
+    print("Wednesday")
+  case 4:
+    print("Thursday")
+  case 5:
+    print("Friday")
+  case 6:
+    print("Saturday")
+  case 7:
+    print("Sunday")
+```
+
+==> Default Value
+Use the underscore character \_ as the last case value if you want a code block to execute when there are not other matches:
 
 # Loops in python
 
@@ -1156,10 +1247,12 @@ while condition:
 statement to print(upto condition is true)
 --> Example:
 
+```python
 count = 1
 while count <= 5:
 print(count)
 count += 1
+```
 
 ==> Loop Control Statements
 Python provides control statements to alter the normal loop execution:
@@ -1167,23 +1260,25 @@ Python provides control statements to alter the normal loop execution:
 ==> break Statement
 --> Exits the loop immediately when encountered.
 --> Stops further iterations even if the loop condition is still True.
---> ```python
+-->
+
+```python
 for num in range(1, 6):
 if num == 3:
 break # Stops the loop at 3
 print(num)
-
-````
+```
 
 ==> continue Statement
 --> Skips the current iteration and moves to the next one.
 --> The loop does not terminate but jumps to the next cycle.
+
 ```python
 for num in range(1, 6):
     if num == 3:
         continue  # Skips printing 3
     print(num)
-````
+```
 
 # for Loop
 
@@ -1213,15 +1308,10 @@ print("Loop completed")
 --> The inner loop runs completely for each iteration of the outer loop.
 --> It is commonly used for processing multi-dimensional data.
 
-## When to Use Which Loop?
+==> When to Use Which Loop?
 
 - Use `for` loops when the number of iterations is known.
 - Use `while` loops when the number of iterations depends on a condition.
-
-## Switch Statement in Python
-
---> Python does not have a built-in switch statement like some other programming languages (such as C, C++, or Java).
---> Similar functionality can be achieved using match statements (introduced in Python 3.10) or dictionary-based approaches.
 
 # Range()
 
