@@ -1163,7 +1163,7 @@ if b > a:
 ## Switch Statement in Python
 
 --> Python does not have a built-in switch statement like some other programming languages (such as C, C++, or Java).
---> Similar functionality can be achieved using match statements (introduced in Python 3.10) or dictionary-based approaches.
+--> Similar functionality can be achieved using **match** statements (introduced in Python 3.10) or dictionary-based approaches.
 
 # Python Match
 
@@ -1211,7 +1211,7 @@ match day:
 ==> Default Value
 Use the underscore character \_ as the last case value if you want a code block to execute when there are not other matches:
 
-# Loops in python
+## Loops in python
 
 --> Loops in Python are used to execute a block of code multiple times.
 --> There are different types of loops, each with its specific use case.
@@ -1356,9 +1356,7 @@ Where:
 --> for el in range(10):
 pass
 
-# Function & Recursion
-
-# Functions in Python
+## Functions in Python
 
 --> Block of statements that perform a specific task.
 --> Syntax
@@ -1395,7 +1393,7 @@ print(sum(2,3))
 --> Assigning a default value to parameter , which is used when no argument is passed
 --> Non default argument follow default argument
 
-# Recursion
+## Recursion
 
 --> A process where a function calls itself to solve a smaller subproblem of the original problem.
 --> It continues calling itself until it reaches a base case, which is a condition where the recursion stops.
@@ -1409,7 +1407,7 @@ print(sum(2,3))
 2. Recursive Case:
    --> This is where the function calls itself with a smaller or simpler input to gradually reach the base case.
 
-# File I/O in Python
+## File I/O in Python
 
 --> File I/O (Input/Output) in Python allows reading from and writing to files.
 --> Python provides built-in functions to handle file operations efficiently.
@@ -1468,11 +1466,11 @@ print(sum(2,3))
    --> import os
    os.remove(filename)
 
-# Module(Code Library)
+# \*\*Module(Code Library)
 
 --> It is a file written by another programmer that generally has a function we can use
 
-# OOPS in Python
+## OOPS in Python
 
 --> To map with real world scenarios we started using objects in code.It is called as object orinted programming .
 --> Object-Oriented Programming (OOP) in Python is based on four fundamental principles:
@@ -1509,7 +1507,7 @@ The term "attributes" is another word for these data variables.
 --> These are the functions defined inside a class that describe the behaviors or actions the object can perform.
 For the Car class, methods could be drive(), brake(), or honk().
 
-# What is a Method?
+# Method
 
 A method in Python is a function that is defined inside a class and operates on instances (objects) of that class. It is used to perform operations related to the object’s data.
 
@@ -1616,12 +1614,12 @@ print(s1.name)
 2. Method Overloading (not directly supported in Python): Achieved through default arguments or variable-length arguments (\*args, \*\*kwargs).
 3. Operator Overloading: The ability to define the behavior of operators (+, -, \*, etc.) for user-defined objects.
 
-# Method Overriding
+==> Method Overriding
 
 --> Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its parent class.
 --> The overridden method in the child class must have the same name and parameters as the method in the parent class.
 
-# Del Keyword
+==> Del Keyword
 
 --> Used to delete objects, such as variables, list items, or dictionary entries.
 --> Once deleted, the object or item is no longer accessible.
