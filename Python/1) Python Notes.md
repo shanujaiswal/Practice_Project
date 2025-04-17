@@ -1210,12 +1210,54 @@ match day:
 
 ==> Default Value
 Use the underscore character \_ as the last case value if you want a code block to execute when there are not other matches:
+-->The value \_ will always match, so it is important to place it as the last case to make it beahave as a default case.
+-->
+
+```python
+day = 4
+match day:
+  case 6:
+    print("Today is Saturday")
+  case 7:
+    print("Today is Sunday")
+  case _:
+    print("Looking forward to the Weekend")
+```
+
+==> Combine Values
+Use the pipe character | as an or operator in the case evaluation to check for more than one value match in one case:
+-->
+
+```python
+day = 4
+match day:
+  case 1 | 2 | 3 | 4 | 5:
+    print("Today is a weekday")
+  case 6 | 7:
+    print("I love weekends!")
+```
+
+==>If Statements as Guards
+You can add if statements in the case evaluation as an extra condition-check:
+
+```Python
+month = 5
+day = 4
+match day:
+  case 1 | 2 | 3 | 4 | 5 if month == 4:
+    print("A weekday in April")
+  case 1 | 2 | 3 | 4 | 5 if month == 5:
+    print("A weekday in May")
+  case _:
+    print("No match")
+```
 
 ## Loops in python
 
 --> Loops in Python are used to execute a block of code multiple times.
 --> There are different types of loops, each with its specific use case.
 --> Traverse means to go through or iterate over each element in a data structure, such as an array, list, or string, one by one.
+--> remember to increment i, or else the loop will continue forever.
 --> for loop ,while loop
 
 ==> Iterator and Iteration
@@ -1248,10 +1290,10 @@ statement to print(upto condition is true)
 --> Example:
 
 ```python
-count = 1
-while count <= 5:
-print(count)
-count += 1
+i = 1
+while i <= 5:
+print(i)
+i += 1
 ```
 
 ==> Loop Control Statements
@@ -1260,7 +1302,6 @@ Python provides control statements to alter the normal loop execution:
 ==> break Statement
 --> Exits the loop immediately when encountered.
 --> Stops further iterations even if the loop condition is still True.
--->
 
 ```python
 for num in range(1, 6):
@@ -1280,12 +1321,20 @@ for num in range(1, 6):
     print(num)
 ```
 
+==> The else Statement
+--> With the else statement we can run a block of code once when the condition no longer is true:
+
 # for Loop
 
 --> The for loop is used for iterating over a sequence, such as a list, tuple, string, or range.
 --> It runs a block of code for each element in the sequence.
 --> The loop variable takes the value of each item in the sequence during each iteration.
+--> works more like an iterator method as found in other object-orientated programming languages.
 --> It automatically stops when all elements in the sequence have been processed.
+--> The for loop does not require an indexing variable to set beforehand.
+
+==> Looping Through a String
+Even strings are iterable objects, they contain a sequence of characters:
 --> syntax
 for element in list:
 print(element)
