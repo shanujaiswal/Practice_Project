@@ -784,7 +784,7 @@ print(min(nums)) # Min value: 1
 
 ==> Converting Between Lists and Tuples
 --> tuples are immutable, can convert them into lists to modify them.
-![When to Use Tuples Instead of Lists](image-22.png)
+![When to Use Tuples Instead of Lists](image-21.png)
 
 ## Set
 
@@ -1278,27 +1278,6 @@ There are two types of loops in Python:
 --> **for loop** - Used for iterating over a sequence (list, tuple, string, dictionary, range, etc.).
 --> **while loop** - Runs as long as a specified condition is `True`.
 
-# while Loop
-
---> The while loop runs a block of code as long as a given condition is True.
---> The loop checks the condition before each iteration.
---> If the condition becomes False, the loop terminates.
---> It requires careful use to prevent infinite loops.
---> Syntax
-while condition:
-statement to print(upto condition is true)
---> Example:
-
-```python
-i = 1
-while i <= 5:
-print(i)
-i += 1
-```
-
-==> Loop Control Statements
-Python provides control statements to alter the normal loop execution:
-
 ==> break Statement
 --> Exits the loop immediately when encountered.
 --> Stops further iterations even if the loop condition is still True.
@@ -1321,6 +1300,27 @@ for num in range(1, 6):
     print(num)
 ```
 
+# while Loop
+
+--> The while loop runs a block of code as long as a given condition is True.
+--> The loop checks the condition before each iteration.
+--> If the condition becomes False, the loop terminates.
+--> It requires careful use to prevent infinite loops.
+--> Syntax
+while condition:
+statement to print(upto condition is true)
+--> Example:
+
+```python
+i = 1
+while i <= 5:
+print(i)
+i += 1
+```
+
+==> Loop Control Statements
+Python provides control statements to alter the normal loop execution:
+
 ==> The else Statement
 --> With the else statement we can run a block of code once when the condition no longer is true:
 
@@ -1332,27 +1332,36 @@ for num in range(1, 6):
 --> works more like an iterator method as found in other object-orientated programming languages.
 --> It automatically stops when all elements in the sequence have been processed.
 --> The for loop does not require an indexing variable to set beforehand.
-
-==> Looping Through a String
-Even strings are iterable objects, they contain a sequence of characters:
 --> syntax
 for element in list:
 print(element)
 else:
 print("message")
 
+==> Looping Through a String
+Even strings are iterable objects, they contain a sequence of characters:
+
+```python
+for x in "banana":
+  print(x)
+```
+
 ==> else Clause in for Loops
 --> The else clause in loops executes after the loop completes all iterations normally.
 --> If the loop is terminated using break, the else block does not execute.
---> ```python
-for num in range(1, 6):
-if num == 3:
-break
-print(num)
-else:
-print("Loop completed")
+-->
 
-==> Nested Loops
+```python
+for num in range(1, 6):
+   if num == 3:
+      break
+      print(num)
+   else:
+      print("Loop completed")
+```
+
+# Nested Loops
+
 --> A nested loop is a loop inside another loop.
 --> The inner loop runs completely for each iteration of the outer loop.
 --> It is commonly used for processing multi-dimensional data.
@@ -1383,8 +1392,9 @@ Where:
 2. Specifying start and stop
    --> If two arguments are provided, the sequence starts from start and stops before stop.
    --> Syntax
-   for i in range(2, 6):
+   for i in range(0x, 6):
    print(i)
+   --> Note that range(6) is not the values of 0 to 6, but the values 0 to 5.
 3. Using a Step Value (start, stop, step)
    --> We can control the increment using the step argument
    --> Syntax
@@ -1408,15 +1418,30 @@ pass
 ## Functions in Python
 
 --> Block of statements that perform a specific task.
+--> Can pass data, known as parameters, into a function
+--> A function can return data as a result.
+
+==> Creating a Function
+--> In Python a function is defined using the def keyword:
 --> Syntax
+
+```python
 def func_name( param1, param2..) : # some work
 return val
 func_name(arg1, arg2..)
+```
+
 --> eg:-
+
+```python
 def sum(a,b):
 s = a + b
 return s
 print(sum(2,3))
+```
+
+==> Calling a Function
+--> To call a function, use the function name followed by parenthesis:
 
 # Types of Functions in Python 🐍
 
@@ -1436,7 +1461,22 @@ print(sum(2,3))
 7. Nested Functions (Inner Functions)
    A function inside another function.
 
-![Types of Functions in Python](image-23.png)
+![Types of Functions in Python](image-22.png)
+
+==> Arguments
+--> Information can be passed into functions as arguments.
+--> Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.
+--> Arguments are often shortened to args in Python documentations.
+--> The following example has a function with one argument (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:
+--> 
+```python
+def my_function(fname):
+  print(fname + " Refsnes")
+
+my_function("Emil")
+my_function("Tobias")
+my_function("Linus")
+```
 
 ==> Default Parameters
 --> Assigning a default value to parameter , which is used when no argument is passed
@@ -1473,7 +1513,7 @@ print(sum(2,3))
    --> 'b' binary mode
    --> 't' text mode (default)
    --> '+' open a disk file for updating (reading and writing)
-   ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-24.png)
+   ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-23.png)
 2. Opening and Closing a File (open,read & Close File)
    --> Use open("filename", "mode") to open a file.
    --> Always close the file using close() to free system resources.
@@ -1686,4 +1726,4 @@ print(s1)
 
 --> Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
 --> Python doesn’t have strict access modifiers like private, protected, or public as in other languages like Java or C++. But we can simulate privacy using naming conventions.
-![Private-Public Mode](image-25.png)
+![Private-Public Mode](image-24.png)
