@@ -1739,6 +1739,65 @@ tri_recursion(6)
 
 --> It is a file written by another programmer that generally has a function we can use
 
+## Python Lambda
+
+--> A lambda function is a small anonymous function.
+--> A lambda function can take any number of arguments, but can only have one expression.
+--> Use lambda functions when an anonymous function is required for a short period of time.
+
+==> Syntax
+lambda arguments : expression
+--> The expression is executed and the result is returned:
+
+==> Why Use Lambda Functions?
+--> The power of lambda is better shown when you use them as an anonymous function inside another function.
+
+## Python Arrays
+
+--> Python does not have built-in support for Arrays, but Python Lists can be used instead.
+--> to work with arrays in Python you will have to import a library, like the NumPy library.
+--> Arrays are used to store multiple values in one single variable:
+--> Create an array containing car names:
+cars = ["Ford", "Volvo", "BMW"]
+
+==> What is an Array?
+--> An array is a special variable, which can hold more than one value at a time.
+--> If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+car1 = "Ford"
+car2 = "Volvo"
+car3 = "BMW"
+--> An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+==> Access the Elements of an Array
+--> Refer to an array element by referring to the index number.
+--> Get the value of the first array item:
+x = cars[0]
+--> Modify the value of the first array item:
+cars[0] = "Toyota"
+
+==> The Length of an Array
+--> Use the len() method to return the length of an array (the number of elements in an array).
+x = len(cars)
+--> The length of an array is always one more than the highest array index.
+
+==> Looping Array Elements
+--> You can use the for in loop to loop through all the elements of an array.
+--> Ex:- Print each item in the cars array:
+for x in cars:
+print(x)
+
+==> Adding Array Elements
+--> You can use the append() method to add an element to an array.
+cars.append("Honda")
+
+==> Removing Array Elements
+--> You can use the pop() method to remove an element from the array
+cars.pop(1) # Delete the second element of the cars array:
+--> use the remove() method to remove an element from the array.
+cars.remove("Volvo") # Delete the element that has the value "Volvo":
+--> The list's remove() method only removes the first occurrence of the specified value.
+![Array Methods](image-24.png)
+
 ## OOPS in Python
 
 --> To map with real world scenarios we started using objects in code.It is called as object orinted programming .
@@ -1906,4 +1965,4 @@ print(s1)
 
 --> Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
 --> Python doesn’t have strict access modifiers like private, protected, or public as in other languages like Java or C++. But we can simulate privacy using naming conventions.
-![Private-Public Mode](image-24.png)
+![Private-Public Mode](image-30.png)
