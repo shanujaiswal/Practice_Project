@@ -2163,7 +2163,7 @@ print(s1)
 
 --> Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
 --> Python doesn’t have strict access modifiers like private, protected, or public as in other languages like Java or C++. But we can simulate privacy using naming conventions.
-![Private-Public Mode](image-30.png)
+![Private-Public Mode](image-25.png)
 
 ## Python Scope
 
@@ -2241,3 +2241,100 @@ print(myfunc1())
 ==> Module
 --> A module to be the same as a code library.
 --> A file containing a set of functions you want to include in your application.
+
+==> Create a Module
+--> To create a module just save the code you want in a file with the file extension .py
+
+==> Use a Module
+--> can use the module just created, by using the import statement:
+
+# When using a function from a module, use the syntax: module_name.function_name.
+
+==> Variables in Module
+The module can contain functions, but also variables of all types (arrays, dictionaries, objects etc)
+
+Example:- Save this code in the file mymodule.py
+
+```Python
+person1 = {
+  "name": "John",
+  "age": 36,
+  "country": "Norway"
+}
+# Import the module named mymodule, and access the person1 dictionary:
+
+import mymodule
+
+a = mymodule.person1["age"]
+print(a)
+```
+
+==> Naming a Module
+--> can name the module file whatever like, but it must have the file extension .py
+==> Re-naming a Module
+--> can create an alias when you import a module, by using the as keyword:
+
+==> Built-in Modules
+--> There are several built-in modules in Python, which can import whenever uses.
+--> Ex:-
+import platform
+
+x = platform.system()
+print(x)
+
+==> Using the dir() Function
+--> There is a built-in function to list all the function names (or variable names) in a module. The dir() function:
+--> The dir() function can be used on all modules, also the ones you create yourself.
+-->
+import platform
+x = dir(platform)
+print(x)
+
+==> Import From Module
+--> can choose to import only parts from a module, by using the from keyword.
+--> Note: When importing using the from keyword, do not use the module name when referring to elements in the module. Example: person1["age"], not mymodule.person1["age"]
+--> from mymodule import person1
+
+print (person1["age"])
+
+## Python Datetime
+
+==> Python Dates
+--> A date in Python is not a data type of its own, but we can import a module named datetime to work with dates as date objects
+import datetime
+
+x = datetime.datetime.now()
+print(x)
+
+==> Date Output
+--> The date contains year, month, day, hour, minute, second, and microsecond.
+--> The datetime module has many methods to return information about the date object.
+
+==> Creating Date Objects
+--> To create a date, we can use the datetime() class (constructor) of the datetime module.
+--> The datetime() class requires three parameters to create a date: year, month, day.
+--> The datetime() class also takes parameters for time and timezone (hour, minute, second, microsecond, tzone), but they are optional, and has a default value of 0, (None for timezone).
+
+==> The strftime() Method
+--> The datetime object has a method for formatting date objects into readable strings.
+--> The method is called strftime(), and takes one parameter, format, to specify the format of the returned string
+![Reference of all the legal format codes](image-26.png)
+
+## Python Maths
+
+--> Python has a set of built-in math functions, including an extensive math module, that allows you to perform mathematical tasks on numbers.
+==> Built-in Math Functions
+--> The min() and max() functions can be used to find the lowest or highest value in an iterable:
+--> The abs() function returns the absolute (positive) value of the specified number:
+--> The pow(x, y) function returns the value of x to the power of y (xy).
+==> The Math Module
+--> Python has also a built-in module called math, which extends the list of mathematical functions.
+--> To use it,must import the math module:
+
+--> When imported the math module, start using methods and constants of the module.
+--> The math.sqrt() method for example, returns the square root of a number:
+--> The math.ceil() method rounds a number upwards to its nearest integer,
+--> the math.floor() method rounds a number downwards to its nearest integer, and returns the result:
+--> The math.pi constant, returns the value of PI (3.14...):
+
+![Python Math Module](image-27.png)
