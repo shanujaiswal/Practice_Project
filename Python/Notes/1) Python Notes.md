@@ -2338,3 +2338,82 @@ print(x)
 --> The math.pi constant, returns the value of PI (3.14...):
 
 ![Python Math Module](image-27.png)
+
+## Python JSON
+
+--> JSON is a syntax for storing and exchanging data.
+--> JSON is text, written with JavaScript object notation.
+==> JSON in Python
+--> Python has a built-in package called json, which can be used to work with JSON data.
+
+# Parse JSON - Convert from JSON to Python
+
+--> If you have a JSON string, you can parse it by using the json.loads() method.
+--> The result will be a Python dictionary.
+--> Example
+Convert from JSON to Python:
+
+```python
+import json
+
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+
+# parse x:
+y = json.loads(x)
+
+# the result is a Python dictionary:
+print(y["age"])
+```
+
+# Convert from Python to JSON
+
+--> If you have a Python object, convert it into a JSON string by using the json.dumps() method.
+--> Can convert Python objects of the following types, into JSON strings:
+dict, list, tuple, string, int, float, True, False, None
+--->
+
+```python
+import json
+
+print(json.dumps({"name": "John", "age": 30}))
+print(json.dumps(["apple", "bananas"]))
+print(json.dumps(("apple", "bananas")))
+print(json.dumps("hello"))
+print(json.dumps(42))
+print(json.dumps(31.76))
+print(json.dumps(True))
+print(json.dumps(False))
+print(json.dumps(None))
+```
+
+![Convert from Python to JSON](image-28.png)
+
+==> Format the Result
+--> A JSON string, is not very easy to read, with no indentations and line breaks.
+--> The json.dumps() method has parameters to make it easier to read the result:
+--> json.dumps(x, indent=4)
+--> You can also define the separators, default value is (", ", ": "), which means using a comma and a space to separate each object, and a colon and a space to separate keys from values:
+json.dumps(x, indent=4, separators=(". ", " = "))
+
+==> Order the Result
+--> The json.dumps() method has parameters to order the keys in the result:
+--> Example Use the sort_keys parameter to specify if the result should be sorted or not:
+
+json.dumps(x, indent=4, sort_keys=True)
+
+## Python RegEx
+
+--> A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern.
+--> RegEx can be used to check if a string contains the specified search pattern.
+==> RegEx Module
+--> Python has a built-in package called re, which can be used to work with Regular Expressions.
+--> Import the re module:
+import re
+==> RegEx in Python
+When you have imported the re module, can start using regular expressions:
+![RegEx Functions](image-29.png)
+![Metacharacters](image-30.png)
+![Flags](image-31.png)
+![Special Sequences](image-32.png)
+![Sets](image-33.png)
