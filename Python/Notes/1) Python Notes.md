@@ -2417,3 +2417,7 @@ When you have imported the re module, can start using regular expressions:
 ![Flags](image-31.png)
 ![Special Sequences](image-32.png)
 ![Sets](image-33.png)
+
+==> The findall() Function
+--> The findall() function returns a list containing all matches.
+
