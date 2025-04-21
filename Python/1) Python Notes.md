@@ -2102,6 +2102,7 @@ class Student(Person):
 # Polymorphism
 
 --> Polymorphism allows a single interface to be used for different types.
+--> The word "polymorphism" means "many forms", and in programming it refers to methods/functions/operators with the same name that can be executed on many objects or classes.
 --> It enables the same function or method to have different behaviors based on the object it is acting upon.
 ==> Types of Polymorphism:
 
@@ -2110,12 +2111,25 @@ class Student(Person):
 3. Operator Overloading: The ability to define the behavior of operators (+, -, \*, etc.) for user-defined objects.
 
 ==> Method Overriding
-
 --> Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its parent class.
 --> The overridden method in the child class must have the same name and parameters as the method in the parent class.
 
-==> Del Keyword
+==> Function Polymorphism
+--> Python function that can be used on different objects is the len() function.
+--> String
+For strings len() returns the number of characters
+--> Tuple
+For tuples len() returns the number of items in the tuple:
+--> Dictionary
+For dictionaries len() returns the number of key/value pairs in the dictionary
 
+==> Class Polymorphism
+--> Often used in Class methods, where we can have multiple classes with the same method name.
+
+==> Inheritance Class Polymorphism
+--> Child classes inherits the properties and methods from the parent class.
+
+==> Del Keyword
 --> Used to delete objects, such as variables, list items, or dictionary entries.
 --> Once deleted, the object or item is no longer accessible.
 --> eg :-
@@ -2150,3 +2164,80 @@ print(s1)
 --> Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
 --> Python doesn’t have strict access modifiers like private, protected, or public as in other languages like Java or C++. But we can simulate privacy using naming conventions.
 ![Private-Public Mode](image-30.png)
+
+## Python Scope
+
+--> A variable is only available from inside the region it is created. This is called scope.
+
+# Local Scope
+
+--> A variable created inside a function belongs to the local scope of that function, and can only be used inside that function.
+
+```python
+def myfunc():
+  x = 300
+  print(x)
+
+myfunc()
+```
+
+==> Function Inside Function
+--> The variable x is not available outside the function, but it is available for any function inside the function
+--> Eg:
+
+```python
+def myfunc():
+  x = 300
+  def myinnerfunc():
+    print(x)
+  myinnerfunc()
+
+myfunc()
+```
+
+# Global Scope
+
+--> A variable created in the main body of the Python code is a global variable and belongs to the global scope.
+--> Global variables are available from within any scope, global and local.
+
+==> Naming Variables
+--> If you operate with the same variable name inside and outside of a function, Python will treat them as two separate variables, one available in the global scope (outside the function) and one available in the local scope (inside the function)
+
+# Global Keyword
+
+--> If need to create a global variable, but are stuck in the local scope, you can use the global keyword.
+--> The global keyword makes the variable global
+--> Use the global keyword if you want to make a change to a global variable inside a function.
+--> Eg:- use the global keyword, the variable belongs to the global scope:
+
+```python
+def myfunc():
+  global x
+  x = 300
+
+myfunc()
+
+print(x)
+```
+
+==> Nonlocal Keyword
+--> The nonlocal keyword is used to work with variables inside nested functions.
+--> The nonlocal keyword makes the variable belong to the outer function.
+
+```Python
+ def myfunc1():
+  x = "Jane"
+  def myfunc2():
+    nonlocal x
+    x = "hello"
+  myfunc2()
+  return x
+
+print(myfunc1())
+```
+
+## Python Modules
+
+==> Module
+--> A module to be the same as a code library.
+--> A file containing a set of functions you want to include in your application.
