@@ -2420,4 +2420,29 @@ When you have imported the re module, can start using regular expressions:
 
 ==> The findall() Function
 --> The findall() function returns a list containing all matches.
+--> The list contains the matches in the order they are found.
+--> If no matches are found, an empty list is returned:
 
+==> The search() Function
+--> The search() function searches the string for a match, and returns a Match object if there is a match.
+--> If there is more than one match, only the first occurrence of the match will be returned:
+--> If no matches are found, the value None is returned:
+
+==> The split() Function
+--> The split() function returns a list where the string has been split at each match:
+--> can control the number of occurrences by specifying the maxsplit parameter
+
+==> The sub() Function
+--> The sub() function replaces the matches with the text of your choice:
+--> control the number of replacements by specifying the count parameter
+
+==> Match Object
+--> A Match Object is an object containing information about the search and the result.
+--> Note: If there is no match, the value None will be returned, instead of the Match Object.
+-->The Match object has properties and methods used to retrieve information about the search, and the result:
+
+1. .span() returns a tuple containing the start-, and end positions of the match.
+2. .string returns the string passed into the function
+3. .group() returns the part of the string where there was a match
+
+--> Note: If there is no match, the value None will be returned, instead of the Match Object.
