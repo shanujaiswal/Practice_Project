@@ -1691,19 +1691,24 @@ tri_recursion(6)
 
 ## File I/O in Python
 
+# Python File Open
+
+--> File handling is an important part of any web application.
 --> File I/O (Input/Output) in Python allows reading from and writing to files.
+--> Python has several functions for creating, reading, updating, and deleting files.
 --> Python provides built-in functions to handle file operations efficiently.
+==> File Handling
 
 1. File Handling Modes
    When working with files, you need to specify the mode:
    --> "r" Read (default mode). Opens file for reading; error if file doesn't exist.
    --> "w" Write. Creates a new file or overwrites an existing one.
-   --> "a" Append. Opens file for writing but preserves existing content.
+   --> "a" Append. Opens file for writing but preserves existing content.will create a file if the specified file does not exists
    --> "r+" Read and Write. File must exist.
-   --> "w+" Write and Read. Creates a new file or overwrites an existing one.
+   --> "w+" Write and Read. Creates a new file or overwrites an existing one.Note: the "w" method will overwrite the entire file.
    --> "a+" Append and Read. Creates file if it doesn’t exist.
-   --> 'x' create a new file and open it for writing
-   --> 'b' binary mode
+   --> 'x' create a new file and open it for writing returns an error if the file exists
+   --> 'b' binary mode -- x = open('demofile.txt', 'b')
    --> 't' text mode (default)
    --> '+' open a disk file for updating (reading and writing)
    ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-23.png)
@@ -1747,6 +1752,36 @@ tri_recursion(6)
    using the os module
    --> import os
    os.remove(filename)
+   ==> Check if File exist:
+   ```python
+   import os
+   if os.path.exists("demofile.txt"):
+   os.remove("demofile.txt")
+   else:
+   print("The file does not exist")
+   ```
+   ==> Delete Folder
+   To delete an entire folder, use the os.rmdir() method:
+   import os
+   os.rmdir("myfolder")
+   You can only remove empty folders.
+
+==> Syntax
+--> To open a file for reading it is enough to specify the name of the file:
+f = open("demofile.txt")
+-->Make sure the file exists, or else you will get an error.
+
+# Open a File on the Server
+
+--> If the file is located in a different location, will have to specify the file path, like this:
+--> f = open("D:\\myfiles\welcome.txt", "r")
+print(f.read())
+==> Read Only Parts of the File
+--> By default the read() method returns the whole text, but can also specify how many characters want to return:
+f = open("demofile.txt", "r")
+print(f.read(5))
+
+--> always close your files. In some cases, due to buffering, changes made to a file may not show until you close the file.
 
 # \*\*Module(Code Library)
 
@@ -1930,9 +1965,9 @@ print(s1.name)
 
 ```python
 class Person:
-   def **init**(self, name, age):
-      self.name = name
-      self.age = age
+ def **init**(self, name, age):
+    self.name = name
+    self.age = age
 p1 = Person("John", 36)
 
 print(p1)      # <__main__.Person object at 0x15039e602100>
@@ -2446,3 +2481,103 @@ When you have imported the re module, can start using regular expressions:
 3. .group() returns the part of the string where there was a match
 
 --> Note: If there is no match, the value None will be returned, instead of the Match Object.
+
+## Python PIP
+
+==> PIP
+--> PIP is a package manager for Python packages, or modules if you like.
+==> Package
+--> A package contains all the files you need for a module.
+--> Modules are Python code libraries you can include in your project.
+==> Check if PIP is Installed
+--> Navigate your command line to the location of Python's script directory, and type the following:
+pip --version
+
+==> Using a Package
+--> Import the "camelcase" package into your project.
+import camelcase
+c = camelcase.CamelCase()
+txt = "hello world"
+print(c.hump(txt))
+==> Remove a Package
+pip uninstall camelcase
+==> List Packages
+pip list
+
+## Python Try Except
+
+-->The try block lets you test a block of code for errors.
+-->The except block lets you handle the error.
+-->The else block lets you execute code when there is no error.
+-->The finally block lets you execute code, regardless of the result of the try- and except blocks.
+
+==> Exception Handling
+--> When an error occurs, or exception as we call it, Python will normally stop and generate an error message.
+--> These exceptions can be handled using the try statement:
+try:
+print(x)
+except:
+print("An exception occurred")
+
+==> Many Exceptions
+--> define as many exception blocks as want, e.g. if want to execute a special block of code for a special kind of error:
+![Built-in Exceptions](image-34.png)
+
+## Python User Input
+
+# User Input
+
+--> Python allows for user input. Means we are able to ask the user for input.
+--> The method is a bit different in Python 3.6 than Python 2.7.
+--> Python 3.6 uses the input() method. Python 2.7 uses the raw_input() method.
+--> Eg :- Python 3.6
+username = input("Enter username:")
+print("Username is: " + username)
+--> Python 2.7
+username = raw_input("Enter username:")
+print("Username is: " + username)
+--> Python stops executing when it comes to the input() function, and continues when the user has given some input.
+
+## Python String Formatting
+
+--> F-String was introduced in Python 3.6, and is now the preferred way of formatting strings.
+--> Before Python 3.6 we had to use the format() method.
+
+# F-Strings
+
+--> F-string allows you to format selected parts of a string.
+--> To specify a string as an f-string, simply put an f in front of the string literal, like this:
+
+```Python
+name = "Alice"
+age = 30
+
+print(f"My name is {name} and I am {age} years old.")
+```
+
+# Placeholders and Modifiers
+
+--> To format values in an f-string, add placeholders {}, a placeholder can contain variables, operations, functions, and modifiers to format the value.
+--> A placeholder can also include a modifier to format the value.
+--> A modifier is included by adding a colon : followed by a legal formatting type, like .2f which means fixed point number with 2 decimals
+
+# Perform Operations in F-Strings
+
+--> can do math operations
+f"The price is {20 _ 59} dollars"
+--> can perform math operations on variables:
+f"The price is {price + (price _ tax)} dollars"
+--> can perform if...else statements inside the placeholders:
+f"It is very {'Expensive' if price>50 else 'Cheap'}"
+![String Formatting Types](image-35.png)
+
+==>String format()
+--> The format() method can still be used, but f-strings are faster and the preferred way to format strings.
+
+==> Multiple Values
+--> want to use more values, just add more values to the format() method:
+--> print(txt.format(price, itemno, count))
+
+==> Index Numbers
+--> Use index numbers (a number inside the curly brackets {0}) to be sure the values are placed in the correct placeholders:
+--> if you want to refer to the same value more than once, use the index number:
