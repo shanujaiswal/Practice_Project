@@ -2581,3 +2581,10 @@ f"It is very {'Expensive' if price>50 else 'Cheap'}"
 ==> Index Numbers
 --> Use index numbers (a number inside the curly brackets {0}) to be sure the values are placed in the correct placeholders:
 --> if you want to refer to the same value more than once, use the index number:
+
+## Reference Images
+![Built in Function](image-36.png)
+![File Methods](image-37.png)
+![Keywords](image-38.png)
+
+![Random Module](image-39.png)
