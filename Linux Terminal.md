@@ -1,13 +1,15 @@
+==> cd --> change directory --> to inside a folder 
+tab button --> autocomplete the path during cd
 ==> pwd --> Displays the current working directory of the terminal 
+==> clear --> this command is used to clear the terminal screen contents will not ve deleted but scrolled down
 ==> / --> Root directory
 ==> echo --> command that writes its argument to standard output 
 ==> su --> Used to switch to roots users(so that super users permissions can be Used to execute commands)
 ==> su username --> Used to switch to a different user 
 ==> sudo --> execute only that comm with roots/ super user privileges
-==> clear --> this command is used to clear the terminal screen contents will not ve deleted but scrolled down
-==> ls 
+==> ls -- is for mac ---> use  dir for windows 
 --> To see a list of all non-hidden files in the current directory. 
---> a to see a list of all files, including hidden files
+--> ls -a --> to see a list of all files, including hidden files
 ==> ls -t --> to see a list of files in order of when they were last modified.
 ==> ls -r --> to see a list of files in the reverse order.
 ==> ls -C or ls -x --> to see a list of files in multiple columns. 

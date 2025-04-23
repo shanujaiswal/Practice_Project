@@ -16,3 +16,11 @@
 --> git config --global user.email "email@gmail.com"
 --> git config --list
 
+Ctrl + ` == Open terminal 
+
+# Clone Status
+--> Clone -- Cloning a repository on our local machine  
+git clone <- some link ->
+
+--> status - displays the state of thecode 
+git status
