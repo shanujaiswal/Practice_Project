@@ -16,11 +16,34 @@
 --> git config --global user.email "email@gmail.com"
 --> git config --list
 
-Ctrl + ` == Open terminal 
+Ctrl + ` == Open terminal
 
-# Clone Status
+# Clone && Status
+
 --> Clone -- Cloning a repository on our local machine  
 git clone <- some link ->
 
---> status - displays the state of thecode 
+--> status - displays the state of thecode
 git status
+
+1. untracked
+   new files that git doesnt yet tracked
+2. modified
+   changed
+3. staged
+   files is ready to be committed
+4. unmodified
+   unchanged
+
+# Add && Commit
+
+--> add - adds new or changed files in working directory to the git staging area
+git add <- file name > --> for mac
+git add . --> for windows
+
+--> commit - it is the record of changes
+git commit -m "Meaningful message to be given"
+
+# Push command 
+--> push - upload local repo content to remote repo 
+git push origin main 
