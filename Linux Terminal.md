@@ -1,5 +1,8 @@
 ==> cd --> change directory --> to go inside a folder
 ==> cd.. --> change directory --> to go outside a folder
+--> mkdir -- make new directory
+--> mkdir shanu -- make new directory folder name shanu
+
 tab button --> autocomplete the path during cd
 ==> pwd --> Displays the current working directory of the terminal
 ==> clear --> this command is used to clear the terminal screen contents will not ve deleted but scrolled down
