@@ -13,11 +13,21 @@ A software application used to manage our DB is called DBMS(Database Management 
 4. Microsoft SQL Server - Microsoft's enterprise database solution with strong Windows integration.
 5. MariaDB - MySQL fork with enhanced features and performance.
 6. SQLite - Lightweight, serverless database that runs within applications.
-7. NoSQL Databases - Non-relational databases designed for specific data models and flexible schemas.
-8. Document Databases - Store data in flexible, JSON-like documents; ideal for content management and applications with variable data.
-9. MongoDB - Popular document database for applications with evolving schemas.
-10. CouchDB - Document database with strong synchronization for distributed applications.
-11. Firebase Firestore - Google's cloud document database for mobile and web apps.
+
+==> NoSQL Databases - Non-relational databases designed for specific data models and flexible schemas.
+
+1. Document Databases - Store data in flexible, JSON-like documents; ideal for content management and applications with variable data.
+2. MongoDB - Popular document database for applications with evolving schemas.
+3. CouchDB - Document database with strong synchronization for distributed applications.
+4. Firebase Firestore - Google's cloud document database for mobile and web apps.
+
+## SQL
+
+--> Structured Query language
+--> Programming language used to interact with relational databases
+--> It is used to perform crud operation:
+create , read , update , delete
+
 
 ## MySQL
 
