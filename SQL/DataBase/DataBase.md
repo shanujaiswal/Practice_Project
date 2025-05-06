@@ -70,13 +70,31 @@ create , read , update , delete
 ![MySQL Date Functions](image-3.png)
 ![MySQL Advanced Functions](image-4.png)
 
-## Creating DataBase
+# Create & Delete DataBase
 
 --> It is not case sensitive
---> It is used create database :- 
+--> It is used create database :-
 CREATE DATABASE DB_NAME;
 CREATE database DB_NAME;
 --> Both are same
 
---> It is used to delete database :- 
+--> It is used to delete database :-
 DROP DATABASE DB_NAME;
+
+use DB_Name;-- command is used to select a specific database to work with in current session
+
+# Create First Table
+
+--> Format
+Create table Table_name(
+Column_name1 DataType Constraint,
+Column_name2 DataType Constraint,
+Column_name3 DataType Constraint
+)
+
+Eg:-
+CREATE TABLE student (
+id INT PRIMARY KEY,
+name VARCHAR(50),
+age INT NOT NULL
+);
