@@ -28,7 +28,6 @@ A software application used to manage our DB is called DBMS(Database Management 
 --> It is used to perform crud operation:
 create , read , update , delete
 
-
 ## MySQL
 
 --> MySQL is a widely used relational database management system (RDBMS).
@@ -70,3 +69,14 @@ create , read , update , delete
 ![MySQL Numeric Functions](image-2.png)
 ![MySQL Date Functions](image-3.png)
 ![MySQL Advanced Functions](image-4.png)
+
+## Creating DataBase
+
+--> It is not case sensitive
+--> It is used create database :- 
+CREATE DATABASE DB_NAME;
+CREATE database DB_NAME;
+--> Both are same
+
+--> It is used to delete database :- 
+DROP DATABASE DB_NAME;

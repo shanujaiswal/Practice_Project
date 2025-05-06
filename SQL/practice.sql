@@ -1,1 +1,4 @@
-CREATE DATABASE TEMP1;
+CREATE database COLLEGE;  
+USE college;
+CREATE table STUDENT(
+Name
