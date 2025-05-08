@@ -64,7 +64,6 @@ create , read , update , delete
 --> A relational database defines database relationships in the form of tables.
 --> The tables are related to each other - based on data common to each.
 
-![ MySQL Data Types](image.png)
 ![MySQL String Functions](image-1.png)
 ![MySQL Numeric Functions](image-2.png)
 ![MySQL Date Functions](image-3.png)
@@ -98,6 +97,27 @@ id INT PRIMARY KEY,
 name VARCHAR(50),
 age INT NOT NULL
 );
+
+## DataTypes
+
+![ MySQL Data Types](image.png)
+![Most Common DataTypes](image-5.png)
+
+==> Signed & Unsigned
+TINYINT UNSIGNED (0 to 255)
+TINYINT UNSIGNED (0 to 255)
+
+
+
+
+
+
+
+
+
+
+
+
 
 CREATE - to create database objects (tables, views, indexes, etc.)
 DROP - to delete/remove database objects
