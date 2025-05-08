@@ -98,3 +98,24 @@ id INT PRIMARY KEY,
 name VARCHAR(50),
 age INT NOT NULL
 );
+
+CREATE - to create database objects (tables, views, indexes, etc.)
+DROP - to delete/remove database objects
+SELECT - to retrieve data from tables
+INSERT - to add new records to a table
+UPDATE - to modify existing records
+DELETE - to remove records from a table
+ALTER - to modify database objects
+JOIN - to combine rows from different tables
+WHERE - to filter records based on conditions
+GROUP BY - to group records for aggregate operations
+ORDER BY - to sort result sets
+HAVING - to filter groups based on conditions
+UNION - to combine result sets from multiple SELECT statements
+INDEX - to create indexes for faster data retrieval
+GRANT - to provide privileges to users
+REVOKE - to remove privileges from users
+COMMIT - to save transaction changes permanently
+ROLLBACK - to undo transaction changes
+TRUNCATE - to remove all records from a table (faster than DELETE)
+CONSTRAINT - to define rules for data in tables
