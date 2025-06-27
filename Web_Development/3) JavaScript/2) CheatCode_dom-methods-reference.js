@@ -196,8 +196,7 @@ console.log("After ^=, x: ", x ^ y); // 2 (0010 in binary)
 console.log("After ^=, y: ", y ^ 1); // 1 (0001 in binary)
 console.log("After ^=, x: ", x ^ 1); // 3 (0011 in binary)
 // Conditional (Ternary) Operator
-let ageCheck = (age >= 18) ? "You are an adult." : "
-You are a minor.";
+let ageCheck = (age >= 18) ? "You are an adult." : "You are a minor.";
 console.log(ageCheck); // "You are an adult."  
 // Nullish Coalescing Operator
 let userInput = null;
