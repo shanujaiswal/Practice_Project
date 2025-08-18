@@ -1,0 +1,5 @@
+cd /"file name" -- get inside file
+
+ls  - to list the contents of a directory
+
+mkdir ("FileNames")-- mkdir command in a terminal is used to create new directories (folders).
