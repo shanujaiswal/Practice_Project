@@ -210,6 +210,14 @@ init - used to create a new git repo
 4. git push --all origin --> Push all branches
 5. git push --tags origin --> Push tags
 
+# Pull Requests (PR)
+
+- Created via GitHub interface or GitHub CLI
+- Allow code review before merging
+- Can be linked to issues
+- Support comments, code suggestions, and approvals
+- Can have required status checks (CI/CD, code review)
+
 # Merging Code
 
 ==> Way 1
@@ -249,161 +257,15 @@ git merge --no-ff feature-branch --> Merge with no fast-forward (creates a merge
    git reset <- commit hash ->
    git reset --hard <- commit hash ->
 
-## Remote Repository Operations
 
-# Working with Remotes:
 
-1. git remote -v --> List remote repositories
-2. git remote add origin https://github.com/username/repo.git --> Add a remote repository
-3. git remote set-url origin https://github.com/username/new-repo.git --> Change remote URL
-4. git remote remove origin --> Remove a remote
 
-- [Remote Repository Operations](#remote-repository-operations)
-- [Collaboration and Code Review](#collaboration-and-code-review)
-- [Advanced Git Techniques](#advanced-git-techniques)
-- [Git Best Practices](#git-best-practices)
-- [Troubleshooting](#troubleshooting)
 
-## Collaboration and Code Review
-
-# Fork
-
-==> A fork is a new repository that shares code and visibility setting with the original "upstream" repository
-==> Fork is a rough copy
-==> Forking Workflow
-
-1. Fork a repository on GitHub
-2. Clone your fork to local machine
-3. Add original repository as "upstream" remote
-4. Create a feature branch
-5. Make changes and push to your fork
-6. Create a Pull Request to the original repository
-
-**Setting Up Upstream:**
-
-# Add the original repository as "upstream"
-
-git remote add upstream https://github.com/original-owner/repo.git
-
-# Fetch from upstream
-
-git fetch upstream
- 
-# Sync your main branch with upstream
-
-git checkout main
-git merge upstream/main
-
-**Pull Requests:**
-
-- Created via GitHub interface or GitHub CLI
-- Allow code review before merging
-- Can be linked to issues
-- Support comments, code suggestions, and approvals
-- Can have required status checks (CI/CD, code review)
-
-**Code Review Best Practices:**
-
-- Keep changes small and focused
-- Write clear PR descriptions
-- Respond to review feedback
-- Request reviews from relevant team members
-- Use GitHub's code suggestion feature
-
-## Advanced Git Techniques
-
-**Stashing Changes:**
-
-# Stash current changes
-
-git stash
-
-# Stash with a message
-
-git stash save "Work in progress on feature X"
-
-# List all stashes
-
-git stash list
-
-# Apply most recent stash without removing it
-
-git stash apply
-
-# Apply specific stash
-
-git stash apply stash@{2}
-
-# Apply and remove most recent stash
-
-git stash pop
-
-# Remove specific stash
-
-git stash drop stash@{1}
-
-# Clear all stashes
-
-git stash clear
-
-**Tagging:**
-
-# List all tags
-
-git tag
-
-# Create a lightweight tag
-
-git tag v1.0.0
-
-# Create an annotated tag
-
-git tag -a v1.0.0 -m "Release version 1.0.0"
-
-# Tag a specific commit
-
-git tag -a v1.0.0 -m "Release version 1.0.0" 9fceb02
-
-# Push tags to remote
-
-git push origin --tags
-
-# Delete a tag
-
-git tag -d v1.0.0
-git push origin --delete v1.0.0 # Delete from remote
-
-**Cherry-Picking:**
-
-# Apply a specific commit from another branch
-
-git cherry-pick commit-hash
-
-# Cherry-pick multiple commits
-
-git cherry-pick commit1 commit2 commit3
-
-# Cherry-pick without committing
-
-git cherry-pick -n commit-hash
-
-**Undoing Changes:**
-
-# Unstage a file
-
-git restore --staged filename.txt
-
-# or (older syntax)
-
-git reset HEAD filename.txt
-
-# Discard changes in working directory
-
-git restore filename.txt
-
-# or (older syntax)
-
-git checkout -- filename.txt
+# Undoing Changes
+1. git restore --staged filename.txt --> Unstage a file
+2. git reset HEAD filename.txt --> or (older syntax)
+3. git restore filename.txt --> Discard changes in working directory
+4. git checkout -- filename.txt --> or (older syntax)
 
 # Undo last commit (keeping changes staged)
 
@@ -434,110 +296,139 @@ git rebase -i HEAD~5 # Edit last 5 commits
 
 # Available operations in interactive rebase:
 
-# p, pick = use commit
+1. p, pick = use commit
+2. r, reword = use commit, but edit the commit message
+3. e, edit = use commit, but stop for amending
+4. s, squash = use commit, but meld into previous commit
+5. f, fixup = like "squash", but discard this commit's log message
+6. d, drop = remove commit
 
-# r, reword = use commit, but edit the commit message
 
-# e, edit = use commit, but stop for amending
+## Remote Repository Operations
 
-# s, squash = use commit, but meld into previous commit
+# Working with Remotes:
 
-# f, fixup = like "squash", but discard this commit's log message
+1. git remote -v --> List remote repositories
+2. git remote add origin https://github.com/username/repo.git --> Add a remote repository
+3. git remote set-url origin https://github.com/username/new-repo.git --> Change remote URL
+4. git remote remove origin --> Remove a remote
 
-# d, drop = remove commit
+- [Remote Repository Operations](#remote-repository-operations)
+- [Collaboration and Code Review](#collaboration-and-code-review)
+- [Advanced Git Techniques](#advanced-git-techniques)
+- [Git Best Practices](#git-best-practices)
+- [Troubleshooting](#troubleshooting)
 
-## Git Best Practices
+## Collaboration and Code Review
 
-**Commit Practices:**
+# Fork
 
-- Write clear, concise commit messages
-- Use present tense in commit messages ("Add feature" not "Added feature")
-- Keep commits focused on a single logical change
-- Commit often, perfect later, publish once
+==> A fork is a new repository that shares code and visibility setting with the original "upstream" repository
+==> Fork is a rough copy
+==> Forking Workflow
 
-**Branching Strategy:**
+1. Fork a repository on GitHub
+2. Clone your fork to local machine
+3. Add original repository as "upstream" remote
+4. Create a feature branch
+5. Make changes and push to your fork
+6. Create a Pull Request to the original repository
 
-- Use meaningful branch names (e.g., `feature/user-authentication`, `fix/login-bug`)
-- Follow a branching model like GitFlow or GitHub Flow
-- Keep branches short-lived
-- Regularly sync with the main branch
+# Setting Up Upstream
 
-**Workflow Tips:**
+1. git remote add upstream https://github.com/original-owner/repo.git --> Add the original repository as "upstream"
+2. git fetch upstream --> Retrieves the latest changes from the upstream (original) repository without merging them into your local branches.
+3. git checkout main --> Switch to your local main branch
+4. git merge upstream/main --> Sync your main branch with upstream
 
-- Pull before pushing to avoid conflicts
-- Use `.gitignore` to exclude unnecessary files
-- Review changes before committing with `git diff`
-- Use descriptive commit messages
-- Set up SSH keys for secure authentication
+# Code Review Best Practices
 
-**Git Hooks:**
+--> Keep changes small and focused
+--> Write clear PR descriptions
+--> Respond to review feedback
+--> Request reviews from relevant team members
+--> Use GitHub's code suggestion feature
 
-- Pre-commit hooks for linting and testing
-- Post-receive hooks for deployment
-- Commit-msg hooks for enforcing commit message format
+## Advanced Git Techniques
+
+# Stashing Changes
+
+1. git stash --> Stash current changesgit stash save "Work in progress on feature X" --> Stash with a message
+2. git stash list --> List all stashes
+3. git stash apply --> Apply most recent stash without removing it
+4. git stash apply stash@{2} --> Apply specific stash
+5. git stash pop --> Apply and remove most recent stash
+6. git stash drop stash@{1} --> Remove specific stash
+7. git stash clear --> Clear all stashes
+
+# Tagging
+
+1. git tag --> List all tags
+2. git tag v1.0.0 --> Create a lightweight tag
+3. git tag -a v1.0.0 -m "Release version 1.0.0" --> Create an annotated tag
+4. git tag -a v1.0.0 -m "Release version 1.0.0" 9fceb02 --> Tag a specific commit
+5. git push origin --tags --> Push tags to remote
+6. git tag -d v1.0.0 --> Delete a tag
+7. git push origin --delete v1.0.0 --> Delete from remote
+
+# Cherry-Picking
+
+1. git cherry-pick commit-hash --> Apply a specific commit from another branch
+2. git cherry-pick commit1 commit2 commit3 --> Cherry-pick multiple commits
+3. git cherry-pick -n commit-hash --> Cherry-pick without committing
+
 
 ## Troubleshooting
 
-**Common Issues and Solutions:**
+Common Issues and Solutions
 
-1. **Merge Conflicts:**
+1. Merge Conflicts
+   git merge --abort --> Abort a merge with conflicts
+   git mergetool --> Use merge tool to resolve conflicts
 
-   # Abort a merge with conflicts
+2. Detached HEAD State
+   git checkout -b new-branch-name --> Create a branch from detached HEAD
+   git checkout main --> Return to main branch
 
-   git merge --abort
+3. Accidentally Committed to Wrong Branch
+   git branch new-branch --> Create a new branch with current changes
+   git reset --hard origin/main --> Reset current branch to before your changes
+   git checkout new-branch --> Switch to the new branch
 
-   # Use merge tool to resolve conflicts
-
-   git mergetool
-
-2. **Detached HEAD State:**
-
-   # Create a branch from detached HEAD
-
-   git checkout -b new-branch-name
-
-   # Return to main branch
-
-   git checkout main
-
-3. **Accidentally Committed to Wrong Branch:**
-
-   # Create a new branch with current changes
-
-   git branch new-branch
-
-   # Reset current branch to before your changes
-
-   git reset --hard origin/main
-
-   # Switch to the new branch
-
-   git checkout new-branch
-
-4. **Fix Last Commit Message:**
-
+4. Fix Last Commit Message
    git commit --amend -m "New commit message"
 
-5. **Recover Deleted Branch:**
+5. Recover Deleted Branch
+   git reflog --> Find the SHA of the deleted branch's tip
+   git checkout -b recovered-branch commit-hash --> Create a new branch at that commit
 
-   # Find the SHA of the deleted branch's tip
+6. Clean Working Directory
+   git clean -f --> Remove untracked files
+   git clean -fd --> Remove untracked files and directories
+   git clean -n --> Preview what will be removed
 
-   git reflog
+## Git Best Practices
 
-   # Create a new branch at that commit
+==> Commit Practices
+--> Write clear, concise commit messages
+--> Use present tense in commit messages ("Add feature" not "Added feature")
+--> Keep commits focused on a single logical change
+--> Commit often, perfect later, publish once
 
-   git checkout -b recovered-branch commit-hash
+==> Branching Strategy
+--> Use meaningful branch names (e.g., `feature/user-authentication`, `fix/login-bug`)
+--> Follow a branching model like GitFlow or GitHub Flow
+--> Keep branches short-lived
+--> Regularly sync with the main branch
 
-6. **Clean Working Directory:**
+==> Workflow Tips
+--> Pull before pushing to avoid conflicts
+--> Use `.gitignore` to exclude unnecessary files
+--> Review changes before committing with `git diff`
+--> Use descriptive commit messages
+--> Set up SSH keys for secure authentication
 
-   # Remove untracked files
-
-   git clean -f
-
-   # Remove untracked files and directories
-
-   git clean -fd
-
-   # Preview what will be removed
-
-   git clean -n
+==> Git Hooks
+--> Pre-commit hooks for linting and testing
+--> Post-receive hooks for deployment
+--> Commit-msg hooks for enforcing commit message format
