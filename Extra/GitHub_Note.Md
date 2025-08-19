@@ -105,10 +105,16 @@ Download from https://git-scm.com/download/win
 
 --> If you find yourself stuck in the list view, SHIFT + G to jump the end of the list, then q to exit the view
 
-# Clone && Status
+# Clone
 
 ==> Clone -- Cloning a repository on our local machine  
-git clone <- some link ->
+==> git clone <- some link ->
+
+1. git clone https://github.com/username/repo.git --> Clone a repository
+2. git clone -b branch-name https://github.com/username/repo.git --> Clone a specific branch
+3. git clone https://github.com/username/repo.git my-directory --> Clone to a specific directory
+
+# Status
 
 ==> status - displays the state of thecode
 --> git status --> Check the current status
@@ -175,19 +181,34 @@ init - used to create a new git repo
 
 1. git branch --> List all local branches
 2. git branch -M new-name --> Rename current branch to 'main'
-3. git checkout <-branch name -> --> to navigate or
+3. git checkout <-branch name-> --> to navigate (or)
 4. git switch branch-name
 5. git branch feature-name --> Create a new branch but not switch to it — you'll still be on your current branch.
-6. git checkout -b <-new branch name-> --> Create and switch to a new branch or
+6. git checkout -b <-new branch name-> --> Create and switch to a new branch (or)
 7. git switch -c <-feature-name-> --> Modern way to create and switch to a new branch (Git 2.23+)
 8. git branch -d <-branch name> --> to delete branch
 9. git branch -a --> List all branches including remote
 10. git branch -D branch-name --> Force delete a branch (even if not merged)
 
+# Fetching
+
+1. git fetch origin --> Fetch updates from remote without merging
+2. git fetch --all --> Fetch updates from all remotes
+
+# Pulling
+
+1. git pull origin main --> Pull updates from remote (fetch + merge)
+2. git pull --rebase origin main --> Pull with rebase instead of merge
+
 # Push command
 
 ==> push --> upload local repo content to remote repo
-git push origin main
+
+1. git push origin main --> Push changes to remote
+2. git push -u origin main --> Push and set upstream (first push)
+3. git push --force origin main --> Force push (use with caution)
+4. git push --all origin --> Push all branches
+5. git push --tags origin --> Push tags
 
 # Merging Code
 
@@ -199,64 +220,12 @@ git merge <-branch name> --> to merge 2 branches
 Create a PR(Pull Request)
 PR -- It lets you tells others about changes you've pushed to a branch in a repository on Github
 
-# Resolving Merge Conficts
+git merge --no-ff feature-branch --> Merge with no fast-forward (creates a merge commit)
 
---> An event that takes places when Git is unable to automatically resolve differences in code between two commits
+# Resolving Merge Conflicts
 
-# Undoing changes
-
---> case 1 :Staged changes
-git reset <-file name >
-git reset
-
---> case 2 : commited changes (for one commits)
-git reset HEAD~1
-
---> case 3 : commited changes (for many commits)
-git reset <- commit hash ->
-git reset --hard <- commit hash ->
-
-# Fork
-
-==> A fork is a new repository that shares code and visibility setting with the original "upstream" repository
---> Fork is a rough copy
-
----
-
-###### Notes From Claude
-
-# Comprehensive Git and GitHub Guide
-
-## Table of Contents
-
-- [Git Basics](#git-basics)
-- [GitHub Overview](#github-overview)
-- [Getting Started with Git](#getting-started-with-git)
-- [Git Workflow Fundamentals](#git-workflow-fundamentals)
-- [Git Branches](#git-branches)
-- [Remote Repository Operations](#remote-repository-operations)
-- [Collaboration and Code Review](#collaboration-and-code-review)
-- [Advanced Git Techniques](#advanced-git-techniques)
-- [Git Best Practices](#git-best-practices)
-- [Troubleshooting](#troubleshooting)
-
-**Checking Status and History:**
-
-**Merging:**
-
-# First switch to the target branch (usually main/master)
-
-git checkout main
-
-# Merge a branch into the current branch
-
-git merge feature-branch
-
-# Merge with no fast-forward (creates a merge commit)
-
-git merge --no-ff feature-branch
-
-**Handling Merge Conflicts:**
+==> An event that takes places when Git is unable to automatically resolve differences in code between two commits
+==> Handling Merge Conflicts:
 
 1. Git will mark files with conflicts
 2. Open the files and look for conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
@@ -264,93 +233,44 @@ git merge --no-ff feature-branch
 4. Add resolved files with `git add`
 5. Complete the merge with `git commit`
 
-**Rebasing:**
+# Rebasing
 
-# Rebase current branch onto another branch
+1. git rebase main --> Rebase current branch onto another branch
+2. git rebase -i HEAD~3 --> Rebase last 3 commits Interactive rebase for editing commits
 
-git rebase main
+# Undoing changes
 
-# Interactive rebase for editing commits
-
-git rebase -i HEAD~3 # Rebase last 3 commits
+1. Staged changes
+   git reset <-file name >
+   git reset
+2. commited changes (for one commits)
+   git reset HEAD~1
+3. commited changes (for many commits)
+   git reset <- commit hash ->
+   git reset --hard <- commit hash ->
 
 ## Remote Repository Operations
 
-**Working with Remotes:**
+# Working with Remotes:
 
-# List remote repositories
+1. git remote -v --> List remote repositories
+2. git remote add origin https://github.com/username/repo.git --> Add a remote repository
+3. git remote set-url origin https://github.com/username/new-repo.git --> Change remote URL
+4. git remote remove origin --> Remove a remote
 
-git remote -v
-
-# Add a remote repository
-
-git remote add origin https://github.com/username/repo.git
-
-# Change remote URL
-
-git remote set-url origin https://github.com/username/new-repo.git
-
-# Remove a remote
-
-git remote remove origin
-
-**Cloning a Repository:**
-
-# Clone a repository
-
-git clone https://github.com/username/repo.git
-
-# Clone a specific branch
-
-git clone -b branch-name https://github.com/username/repo.git
-
-# Clone to a specific directory
-
-git clone https://github.com/username/repo.git my-directory
-
-**Fetching and Pulling:**
-
-# Fetch updates from remote without merging
-
-git fetch origin
-
-# Fetch updates from all remotes
-
-git fetch --all
-
-# Pull updates from remote (fetch + merge)
-
-git pull origin main
-
-# Pull with rebase instead of merge
-
-git pull --rebase origin main
-
-**Pushing Changes:**
-
-# Push changes to remote
-
-git push origin main
-
-# Push and set upstream (first push)
-
-git push -u origin main
-
-# Force push (use with caution)
-
-git push --force origin main
-
-# Push all branches
-
-git push --all origin
-
-# Push tags
-
-git push --tags origin
+- [Remote Repository Operations](#remote-repository-operations)
+- [Collaboration and Code Review](#collaboration-and-code-review)
+- [Advanced Git Techniques](#advanced-git-techniques)
+- [Git Best Practices](#git-best-practices)
+- [Troubleshooting](#troubleshooting)
 
 ## Collaboration and Code Review
 
-**Forking Workflow:**
+# Fork
+
+==> A fork is a new repository that shares code and visibility setting with the original "upstream" repository
+==> Fork is a rough copy
+==> Forking Workflow
 
 1. Fork a repository on GitHub
 2. Clone your fork to local machine
@@ -368,7 +288,7 @@ git remote add upstream https://github.com/original-owner/repo.git
 # Fetch from upstream
 
 git fetch upstream
-
+ 
 # Sync your main branch with upstream
 
 git checkout main
