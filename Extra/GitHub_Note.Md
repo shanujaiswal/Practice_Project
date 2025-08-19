@@ -1,76 +1,109 @@
-## Github
+## GitHub Overview
 
---> Website that allow developers to store and manage their code using git.
---> we use to upload folder in git hub which is generally known as repository.
+==> What is GitHub?
+--> Web based hosting service for Git repositories allow developers to store and manage their code using git.
+--> Largest host of source code in the world
+--> Acquired by Microsoft in 2018
+--> Provides additional collaboration features beyond Git
+--> we use to upload folder in git hub which is generally known as repository(repo)
 --> changes made in github is called as commit.
---> GitHub is the largest host of source code in the world, and has been owned by Microsoft since 2018.
 
-## Git
+==> Key GitHub Features
+--> Repository hosting
+--> Pull Requests for code review
+--> Issues for tracking bugs and tasks
+--> Projects for project management
+--> Actions for CI/CD (Continuous Integration/Continuous Deployment)
+--> Pages for website hosting
+--> Discussions for community conversations
+--> Security tools (Dependabot, CodeQL, etc.)
+--> Extensive API for integrations
 
---> Git is a version control system.
+==> GitHub Terminology
+--> Repository: A project containing your files and revision history
+--> Fork: A personal copy of another user's repository
+--> Pull Request: Proposed changes to a repository
+--> Issue: Suggestions, tasks, or bug reports for a project
+--> README: Documentation file that appears on the main page of a repository
+--> GitHub Pages: Website hosting directly from a repository
+
+## Git(software)
+
+--> Git is a distributed version control system (DVCS).
 --> Version control System is a tool that helps to track changes in code.
 --> It is popular , free & open source ,fast and scalable
---> Track the history , collaborate.
---> created by Linus Torvalds in 2005 and maintained by Junio Hamano
+--> Track the history , collaborate.Works well for both small and large projects
+--> Created by Linus Torvalds (the creator of Linux) in 2005 and maintained by Junio Hamano
 
-==> What does Git do?
---> Manage projects with Repositories
+# What does Git do?
+
+--> Manage projects with Repositories(Repo)
 --> Clone a project to work on a local copy
 --> Control and track changes with Staging and Committing
 --> Branch and Merge to allow for work on different parts and versions of a project
 --> Pull the latest version of the project to a local copy
 --> Push local updates to the main project
+--> Tracks changes to files over time (version history)
+--> Enables collaboration among multiple developers
+--> Manages projects with repositories
+--> Allows working on different features simultaneously via branches
+--> Enables reverting to previous versions when needed
+--> Facilitates code review and quality control
 
--->git --version --> Tells the version
-==> Configuring Git
---> git config --global user.name "My Name"
---> git config --global user.email "email@gmail.com"
---> git config --list
+# Key Benefits
 
-Ctrl + ` == Open terminal
+--> Full history of changes
+--> Offline work capability
+--> Branching and merging
+--> Data integrity (SHA-1 hash)
+--> Speed and performance
+--> Supports non-linear development
 
-# Creating Git Folder
+# Git Workflow Fundamentals
 
-mkdir myproject --> mkdir makes a new directory.
-cd myproject --> cd changes the current working directory.
+==> The Three States in Git:
 
-# Add && Commit
+1. Working Directory: Your local files where you make changes
+2. Staging Area (Index): Intermediate area for changes ready to be committed
+3. Repository (.git directory): Where Git stores the metadata and object database
 
---> add - adds new or changed files in working directory to the git staging area
-git add <- file name > --> for mac
-git add . --> for windows
---> The shorthand command for git add --all is git add -A
+==> Basic Git Workflow:
 
---> commit - it is the record of changes
-git commit -m "Meaningful message to be given"
---> The commit command performs a commit, and the -m "message" adds a message.
---> git log --history of commits for the repository
+1. Modify files in the working directory
+2. Stage changes using `git add`
+3. Commit changes using `git commit`
+4. Push changes to remote repository using `git push`
+
+## Getting Started with Git
+
+Installing Git:
+
+==> For Ubuntu/Debian
+sudo apt-get install git
+==> For macOS (using Homebrew)
+brew install git
+==> For Windows
+Download from https://git-scm.com/download/win
+
+1. Ctrl + ` == Open terminal
+2. git --version --> Tells the version
+3. git log --> history of commits for the repository
+4. git log --oneline --> View compact history
+5. git log --graph --oneline --all --> View history with graph visualization
+
+# Configuring Git
+
+1. git config --global user.name "My Name" --> Set username globally
+2. git config --global user.email "email@gmail.com" --> Set email globally
+3. git config --global core.editor "code --wait" # For VS Code --> Set default editor
+4. git config --list --> View all configurations
 
 # Git Help
 
---> git command -help - See all the available options for the specific command
---> git help --all - See all possible commands --> This will display a very long list of commands
+1. git command -help --> See all the available options for the specific command
+2. git help --all - See all possible commands --> This will display a very long list of commands
+
 --> If you find yourself stuck in the list view, SHIFT + G to jump the end of the list, then q to exit the view
-
-# init
-
-init - used to create a new git repo
-
-git init # Initialize a new local Git repository
-git remote add origin <link> # Add a remote repository named 'origin'
-git remote -v # Verify the remote repository URLs
-git branch # List all local branches
-git branch -M main # Rename current branch to 'main'
-git push origin main # Push 'main' branch to remote 'origin'
-git push -u origin main # Push and set 'main' to track 'origin/main'
-
-# Branch Commands
-
-git branch - to check branch
-git branch -M main to rename branch
-git checkout <-branch name -> (to navigate)
-git checkout -b <-new branch name ->create new branch
-git branch -d <-branch name> to delete branch
 
 # Clone && Status
 
@@ -78,7 +111,7 @@ git branch -d <-branch name> to delete branch
 git clone <- some link ->
 
 ==> status - displays the state of thecode
-git status
+--> git status --> Check the current status
 
 1. untracked
    new files that git doesnt yet tracked
@@ -89,22 +122,78 @@ git status
 4. unmodified
    unchanged
 
+--> git status -s --> View short status
+
 Short status flags are:
 ?? - Untracked files
 A - Files added to stage
 M - Modified files
 D - Deleted files
 
+# Creating Git Folder
+
+1. mkdir "FileName" --> mkdir makes a new directory.
+2. cd "FileName" --> cd changes the current working directory. or
+3. cd /path/to/directory --> Go to a specific directory using its full path
+4. cd .. --> Go up one directory
+5. cd - --> Go to the previous directory (where you were before the last cd command):
+6. cd or cd ~ --> Go to your home directory
+7. ls -> - to list the contents of a directory
+8. ls -la --> to list all the hidden folder in directory
+
+# init
+
+init - used to create a new git repo
+
+1. git init --> Initialize a new local Git repository
+2. git remote add origin <link> --> Add a remote repository named 'origin'
+3. git remote -v --> Verify the remote repository URLs
+4. git push origin main --> Push 'main' branch to remote 'origin'
+5. git push -u origin main --> Push and set 'main' to track 'origin/main'
+
+## Tracking Files:
+
+# Add
+
+==> add - adds new or changed files in working directory to the git staging area
+
+1. git add filename.txt --> Add a specific file to staging
+2. git add <- file name > --> for mac
+3. git add . --> for windows
+4. git add -A --> The shorthand command for git add --all is
+5. git add file1.txt file2.txt --> Add multiple files
+6. git add -u --> Add all modified and deleted files (not new ones)
+
+# Commit
+
+==> commit - it is the record of changes
+
+1. git commit -m "A Meaningful message to be given" --> Commit with a message
+2. git commit -a -m "Fix bug in feature Y" --> Commit all modified tracked files directly (skips staging)
+
+# Branch Management
+
+1. git branch --> List all local branches
+2. git branch -M new-name --> Rename current branch to 'main'
+3. git checkout <-branch name -> --> to navigate or
+4. git switch branch-name
+5. git branch feature-name --> Create a new branch but not switch to it — you'll still be on your current branch.
+6. git checkout -b <-new branch name-> --> Create and switch to a new branch or
+7. git switch -c <-feature-name-> --> Modern way to create and switch to a new branch (Git 2.23+)
+8. git branch -d <-branch name> --> to delete branch
+9. git branch -a --> List all branches including remote
+10. git branch -D branch-name --> Force delete a branch (even if not merged)
+
 # Push command
 
---> push - upload local repo content to remote repo
+==> push --> upload local repo content to remote repo
 git push origin main
 
 # Merging Code
 
 ==> Way 1
-git diff <-branch name> (to compare commits,branches,files and more)
-git merge <-branch name> (to merge 2 branches)
+git diff <-branch name> --> to compare commits,branches,files and more
+git merge <-branch name> --> to merge 2 branches
 
 ==> Way 2
 Create a PR(Pull Request)
@@ -129,7 +218,7 @@ git reset --hard <- commit hash ->
 
 # Fork
 
---> A fork is a new repository that shares code and visibility setting with the original "upstream" repository
+==> A fork is a new repository that shares code and visibility setting with the original "upstream" repository
 --> Fork is a rough copy
 
 ---
@@ -151,226 +240,7 @@ git reset --hard <- commit hash ->
 - [Git Best Practices](#git-best-practices)
 - [Troubleshooting](#troubleshooting)
 
-## Git Basics
-
-**What is Git?**
-
-- Git is a distributed version control system (DVCS)
-- Created by Linus Torvalds in 2005 (the creator of Linux) and maintained by Junio Hamano
-- Free and open-source
-- Fast, efficient, and scalable
-- Works well for both small and large projects
-
-**What does Git do?**
-
-- Tracks changes to files over time (version history)
-- Enables collaboration among multiple developers
-- Manages projects with repositories
-- Allows working on different features simultaneously via branches
-- Enables reverting to previous versions when needed
-- Facilitates code review and quality control
-
-**Key Benefits:**
-
-- Full history of changes
-- Offline work capability
-- Branching and merging
-- Data integrity (SHA-1 hash)
-- Speed and performance
-- Supports non-linear development
-
-## GitHub Overview
-
-**What is GitHub?**
-
-- Web-based hosting service for Git repositories
-- Largest host of source code in the world
-- Acquired by Microsoft in 2018
-- Provides additional collaboration features beyond Git
-
-**Key GitHub Features:**
-
-- Repository hosting
-- Pull Requests for code review
-- Issues for tracking bugs and tasks
-- Projects for project management
-- Actions for CI/CD (Continuous Integration/Continuous Deployment)
-- Pages for website hosting
-- Discussions for community conversations
-- Security tools (Dependabot, CodeQL, etc.)
-- Extensive API for integrations
-
-**GitHub Terminology:**
-
-- Repository: A project containing your files and revision history
-- Fork: A personal copy of another user's repository
-- Pull Request: Proposed changes to a repository
-- Issue: Suggestions, tasks, or bug reports for a project
-- README: Documentation file that appears on the main page of a repository
-- GitHub Pages: Website hosting directly from a repository
-
-## Getting Started with Git
-
-**Installing Git:**
-
-# For Ubuntu/Debian
-
-sudo apt-get install git
-
-# For macOS (using Homebrew)
-
-brew install git
-
-# For Windows
-
-# Download from https://git-scm.com/download/win
-
-**Checking Git Version:**
-
-git --version
-
-**Configuring Git:**
-
-# Set username globally
-
-git config --global user.name "Your Name"
-
-# Set email globally
-
-git config --global user.email "your.email@example.com"
-
-# Set default editor
-
-git config --global core.editor "code --wait" # For VS Code
-
-# View all configurations
-
-git config --list
-
-**Creating a Repository:**
-
-# Initialize a new repository
-
-mkdir my-project
-cd my-project
-git init
-
-# Check the status
-
-git status
-
-## Git Workflow Fundamentals
-
-**The Three States in Git:**
-
-1. **Working Directory**: Your local files where you make changes
-2. **Staging Area (Index)**: Intermediate area for changes ready to be committed
-3. **Repository (.git directory)**: Where Git stores the metadata and object database
-
-**Basic Git Workflow:**
-
-1. Modify files in the working directory
-2. Stage changes using `git add`
-3. Commit changes using `git commit`
-4. Push changes to remote repository using `git push`
-
-**Tracking Files:**
-
-# Add a specific file to staging
-
-git add filename.txt
-
-# Add multiple files
-
-git add file1.txt file2.txt
-
-# Add all files in current directory
-
-git add .
-
-# Add all files in the project
-
-git add -A
-
-# Add all modified and deleted files (not new ones)
-
-git add -u
-
-**Committing Changes:**
-
-# Commit with a message
-
-git commit -m "Add new feature X"
-
-# Commit all modified tracked files directly (skips staging)
-
-git commit -a -m "Fix bug in feature Y"
-
 **Checking Status and History:**
-
-# View current status
-
-git status
-
-# View short status
-
-git status -s
-
-# View commit history
-
-git log
-
-# View compact history
-
-git log --oneline
-
-# View history with graph visualization
-
-git log --graph --oneline --all
-
-## Git Branches
-
-**Branch Management:**
-
-# List all branches
-
-git branch
-
-# List all branches including remote
-
-git branch -a
-
-# Create a new branch
-
-git branch feature-name
-
-# Create and switch to a new branch
-
-git checkout -b feature-name
-
-# Modern way to create and switch to a new branch (Git 2.23+)
-
-git switch -c feature-name
-
-# Switch to existing branch
-
-git checkout branch-name
-
-# or
-
-git switch branch-name
-
-# Rename current branch
-
-git branch -M new-name
-
-# Delete a branch (after merging)
-
-git branch -d branch-name
-
-# Force delete a branch (even if not merged)
-
-git branch -D branch-name
 
 **Merging:**
 
