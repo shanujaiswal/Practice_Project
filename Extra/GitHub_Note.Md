@@ -151,11 +151,14 @@ D - Deleted files
 
 init - used to create a new git repo
 
-1. git init --> Initialize a new local Git repository
+1. git init --> Initialize a new local Git repository && it is one time per project.
 2. git remote add origin <link> --> Add a remote repository named 'origin'
 3. git remote -v --> Verify the remote repository URLs
 4. git push origin main --> Push 'main' branch to remote 'origin'
 5. git push -u origin main --> Push and set 'main' to track 'origin/main'
+
+--> git init creates a .git folder
+--> .git --> a hidden folder to keep history of all files & sub-folder
 
 ## Tracking Files:
 
@@ -264,32 +267,18 @@ git merge --no-ff feature-branch --> Merge with no fast-forward (creates a merge
 3. git restore filename.txt --> Discard changes in working directory
 4. git checkout -- filename.txt --> or (older syntax)
 
-# Undo last commit (keeping changes staged)
-
-git reset --soft HEAD~1
-
-# Undo last commit (unstaged changes)
-
-git reset HEAD~1
-
-# Undo last commit (discard changes)
-
-git reset --hard HEAD~1
-
-# Undo to a specific commit
-
-git reset --hard commit-hash
-
-# Create a new commit that undoes previous commit
-
-git revert HEAD
-git revert commit-hash
+5. git reset --soft HEAD~1 --> Undo last commit (keeping changes staged)
+6. git reset HEAD~1 --> Undo last commit (unstaged changes)
+7. git reset --hard HEAD~1 --> Undo last commit (discard changes)
+8. git reset --hard commit-hash --> Undo to a specific commit
+9. git revert HEAD --> Create a new commit that undoes previous commit
+10. git revert commit-hash
 
 **Interactive Rebase (History Editing):**
 
 # Rebase with interactive mode
 
-git rebase -i HEAD~5 # Edit last 5 commits
+git rebase -i HEAD~5 --> Edit last 5 commits
 
 # Available operations in interactive rebase:
 
