@@ -257,11 +257,8 @@ git merge --no-ff feature-branch --> Merge with no fast-forward (creates a merge
    git reset <- commit hash ->
    git reset --hard <- commit hash ->
 
-
-
-
-
 # Undoing Changes
+
 1. git restore --staged filename.txt --> Unstage a file
 2. git reset HEAD filename.txt --> or (older syntax)
 3. git restore filename.txt --> Discard changes in working directory
@@ -303,7 +300,6 @@ git rebase -i HEAD~5 # Edit last 5 commits
 5. f, fixup = like "squash", but discard this commit's log message
 6. d, drop = remove commit
 
-
 ## Remote Repository Operations
 
 # Working with Remotes:
@@ -312,12 +308,6 @@ git rebase -i HEAD~5 # Edit last 5 commits
 2. git remote add origin https://github.com/username/repo.git --> Add a remote repository
 3. git remote set-url origin https://github.com/username/new-repo.git --> Change remote URL
 4. git remote remove origin --> Remove a remote
-
-- [Remote Repository Operations](#remote-repository-operations)
-- [Collaboration and Code Review](#collaboration-and-code-review)
-- [Advanced Git Techniques](#advanced-git-techniques)
-- [Git Best Practices](#git-best-practices)
-- [Troubleshooting](#troubleshooting)
 
 ## Collaboration and Code Review
 
@@ -353,13 +343,14 @@ git rebase -i HEAD~5 # Edit last 5 commits
 
 # Stashing Changes
 
-1. git stash --> Stash current changesgit stash save "Work in progress on feature X" --> Stash with a message
-2. git stash list --> List all stashes
-3. git stash apply --> Apply most recent stash without removing it
-4. git stash apply stash@{2} --> Apply specific stash
-5. git stash pop --> Apply and remove most recent stash
-6. git stash drop stash@{1} --> Remove specific stash
-7. git stash clear --> Clear all stashes
+1. git stash --> Stash current changes
+2. git stash save "Work in progress on feature X" --> Stash with a message
+3. git stash list --> List all stashes
+4. git stash apply --> Apply most recent stash without removing it
+5. git stash apply stash@{2} --> Apply specific stash
+6. git stash pop --> Apply and remove most recent stash
+7. git stash drop stash@{1} --> Remove specific stash
+8. git stash clear --> Clear all stashes
 
 # Tagging
 
@@ -376,7 +367,6 @@ git rebase -i HEAD~5 # Edit last 5 commits
 1. git cherry-pick commit-hash --> Apply a specific commit from another branch
 2. git cherry-pick commit1 commit2 commit3 --> Cherry-pick multiple commits
 3. git cherry-pick -n commit-hash --> Cherry-pick without committing
-
 
 ## Troubleshooting
 
