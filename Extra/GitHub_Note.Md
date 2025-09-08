@@ -142,10 +142,12 @@ D - Deleted files
 2. cd "FileName" --> cd changes the current working directory. or
 3. cd /path/to/directory --> Go to a specific directory using its full path
 4. cd .. --> Go up one directory
-5. cd - --> Go to the previous directory (where you were before the last cd command):
-6. cd or cd ~ --> Go to your home directory
-7. ls -> - to list the contents of a directory
-8. ls -la --> to list all the hidden folder in directory
+5. cd ../.. --> Go back 2 directory
+6. cd - --> Go to the previous directory (where you were before the last cd command):
+7. cd or cd ~ --> Go to your home directory
+8. ls --> to list the contents of a directory
+9. ls -la --> to list all the hidden folder in directory
+10. pwd --> Print current Working Directory.
 
 # init
 
@@ -162,6 +164,8 @@ init - used to create a new git repo
 
 ## Tracking Files:
 
+Working Dire --> **git add** --> Staging Area --> **git commit** --> Repo  --> ** Git Push** --> Git Hub 
+
 # Add
 
 ==> add - adds new or changed files in working directory to the git staging area
@@ -175,7 +179,7 @@ init - used to create a new git repo
 
 # Commit
 
-==> commit - it is the record of changes
+==> commit - it is the record of changes or a checkpoint
 
 1. git commit -m "A Meaningful message to be given" --> Commit with a message
 2. git commit -a -m "Fix bug in feature Y" --> Commit all modified tracked files directly (skips staging)
