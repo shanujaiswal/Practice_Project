@@ -43,6 +43,8 @@ The algorithm maintains a "sorted sublist" that grows with each iteration.
 
 ![Time Complexity Analysis](image-2.png)
 
+Space Complexity --> O(1)
+
 ==> Advantages
 --> Efficient for small datasets (often faster than more complex algorithms for n ≤ 10)
 --> Stable (doesn't change relative order of equal elements)
