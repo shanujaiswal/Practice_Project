@@ -22,7 +22,7 @@
 
 --> An algorithm is a step-by-step procedure or formula for solving a problem, while programming is the process of writing code to implement those algorithms
 
-## Priori Analysis (Algorithms) && Posteriori Testing (Programs)
+# Priori Analysis (Algorithms) && Posteriori Testing (Programs)
 
 ==> Priori Analysis (Algorithms)
 --> Algorithm: The theoretical approach to problem-solving
@@ -52,7 +52,7 @@
 
 --> Effectiveness – All operations must be basic enough to be performed, in principle, by a person using only paper and pencil in a finite amount of time.
 
-## Time & Space Complexities
+# Time & Space Complexities
 
 ==> What is Big-O?
 
