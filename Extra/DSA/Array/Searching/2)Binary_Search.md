@@ -30,11 +30,12 @@ If the number is not in the list (e.g., searching for 8), the search ends when t
 
 ==> Time Complexity
 
-Best Case: Target is the middle element → O(1).
-Worst Case: Element not present → O(log n) (halves search space each step).
+1. Best Case: Target is the middle element → O(1).
+2. Worst Case: Element not present → O(log n) (halves search space each step).
+
 ![Time Complexity Analysis](image-1.png)
 
-Note :- Binary Search is extremely fast for large datasets but requires the list to be sorted beforehand. It's much more efficient than Linear Search for sorted data.
+# Note :- Binary Search is extremely fast for large datasets but requires the list to be sorted beforehand. It's much more efficient than Linear Search for sorted data.
 
 # Binary Search Implementation
 

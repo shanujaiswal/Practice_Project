@@ -29,7 +29,7 @@ Best Case:- Target is the first element → O(1)
 Worst Case:- Target is last or not present → O(n) (checks all elements)
 ![Time Complexity Analysis ](image.png)
 
-Note :- Linear Search is easy to understand but can be slow for large lists compared to faster methods like Binary Search.
+# Note :- Linear Search is easy to understand but can be slow for large lists compared to faster methods like Binary Search.
 
 # Linear Search Implementation
 
