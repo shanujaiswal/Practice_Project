@@ -1,0 +1,87 @@
+## Insertion Sort
+
+==> What is Insertion Sort?
+--> Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time.
+--> It works similarly to how you might sort playing cards in your hands - you take each new card and insert it into its proper position among the already sorted cards.
+
+==> How Does It Work?
+Consider this unsorted array: [7, 3, 5, 2, 1]
+
+1. First Element (7):
+   --> Already "sorted" as the first item
+   --> [7, 3, 5, 2, 1]
+2. Second Element (3):
+   --> Insert before 7
+   --> [3, 7, 5, 2, 1]
+3. Third Element (5):
+   --> Insert between 3 and 7
+   --> [3, 5, 7, 2, 1]
+4. Fourth Element (2):
+   --> Insert at beginning
+   --> [2, 3, 5, 7, 1]
+5. Fifth Element (1):
+   --> Insert at beginning
+   --> [1, 2, 3, 5, 7]
+
+The algorithm maintains a "sorted sublist" that grows with each iteration.
+
+==> Algorithm Steps
+
+1. Start with the second element (consider first element as sorted)
+2. Pick the next element (key) from the unsorted portion
+3. Compare the key with elements in the sorted portion:
+   --> Shift elements greater than the key one position right
+   --> Stop when you find an element ≤ the key
+4. Insert the key in its correct position
+5. Repeat until all elements are processed
+
+==> Time Complexity
+
+1. Best Case: Already sorted array → O(n) (only comparisons, no shifts).
+2. Average Case: Randomly ordered array → O(n²).
+3. Worst Case: Reverse sorted array → O(n²) (maximum comparisons and shifts).
+
+![Time Complexity Analysis](image-2.png)
+
+==> Advantages
+--> Efficient for small datasets (often faster than more complex algorithms for n ≤ 10)
+--> Stable (doesn't change relative order of equal elements)
+--> Adaptive (performs well with partially sorted data)
+--> Online (can sort as it receives input)
+
+# Note:-
+
+--> Insertion Sort is often used when the data is nearly sorted (where it approaches O(n) time) or when the dataset is small.
+--> Some hybrid algorithms like TimSort use Insertion Sort for small subarrays due to its low overhead.
+
+# Insertion Sort Implementation
+
+==> // Insertion Sort in JavaScript
+
+```JavaScript
+function insertionSort(arr) {
+  // Start from the second element (index 1)
+  for (let i = 1; i < arr.length; i++) {
+    // Current element to be inserted
+    let current = arr[i];
+    // Compare with the sorted portion
+    let j = i - 1;
+
+    // Shift elements greater than current to the right
+    while (j >= 0 && arr[j] > current) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+    // Insert the current element in correct position
+    arr[j + 1] = current;
+  }
+  return arr;
+}
+
+// Usage example
+const unsortedArray = [12, 11, 13, 5, 6];
+console.log("Unsorted array:", unsortedArray);
+const sortedArray = insertionSort(unsortedArray);
+console.log("Sorted array:", sortedArray);
+```
+
