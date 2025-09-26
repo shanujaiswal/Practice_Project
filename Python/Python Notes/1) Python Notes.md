@@ -6,6 +6,8 @@
 --> Python can be used on a server to create web applications.
 --> There are two major Python versions, Python 2 and Python 3. Python 2 and 3 are quite different
 --> One difference between Python 2 and 3 is the print statement. In Python 2, the "print" statement is not a function, and therefore it is invoked without parentheses. However, in Python 3, it is a function, and must be invoked with parentheses.
+--> REPL -- Read Evalate Print Loop
+--> A Python error is a code mistake that stops the programs.
 
 ## Indentation
 
@@ -1438,8 +1440,11 @@ pass
 --> Syntax
 
 ```python
+# Function Defination
 def func_name( param1, param2..) : # some work
-return val
+return val     # Logic
+
+# Function Call
 func_name(arg1, arg2..)
 ```
 
@@ -2583,10 +2588,9 @@ f"It is very {'Expensive' if price>50 else 'Cheap'}"
 --> if you want to refer to the same value more than once, use the index number:
 
 ## Reference Images
+
 ![Built in Function](image-36.png)
 ![File Methods](image-37.png)
 ![Keywords](image-38.png)
 
 ![Random Module](image-39.png)
-
-
