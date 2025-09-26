@@ -23,6 +23,19 @@ input()--> default is always a str
 int(input()) ---> value will be integer
 float(input()) ---> value will be float
 
+# User Input
+
+--> Python allows for user input. Means we are able to ask the user for input.
+--> The method is a bit different in Python 3.6 than Python 2.7.
+--> Python 3.6 uses the input() method. Python 2.7 uses the raw_input() method.
+--> Eg :- Python 3.6
+username = input("Enter username:")
+print("Username is: " + username)
+--> Python 2.7
+username = raw_input("Enter username:")
+print("Username is: " + username)
+--> Python stops executing when it comes to the input() function, and continues when the user has given some input.
+
 ## Comments
 
 --> used to explain Python code.
@@ -289,9 +302,38 @@ print(x)
     --> Introduced in Python 3.6, f-strings are prefixed with `f` and allow embedding expressions directly inside `{}`.
     --> Example: `f"Hello, {name}!"`
 
+## Python String Formatting
+
+--> F-String was introduced in Python 3.6, and is now the preferred way of formatting strings.
+--> Before Python 3.6 we had to use the format() method.
+
+# F-Strings
+
+--> F-string allows you to format selected parts of a string.
+
+==> Perform Operations in F-Strings
+--> can do math operations
+f"The price is {20 _ 59} dollars"
+--> can perform math operations on variables:
+f"The price is {price + (price _ tax)} dollars"
+--> can perform if...else statements inside the placeholders:
+f"It is very {'Expensive' if price>50 else 'Cheap'}"
+
+--> To specify a string as an f-string, simply put an f in front of the string literal, like this:
+
+```Python
+name = "Alice"
+age = 30
+
+print(f"My name is {name} and I am {age} years old.")
+```
+
 # Placeholders and Modifiers
 
 --> A placeholder can contain variables, operations, functions, and modifiers to format the value.
+--> To format values in an f-string, add placeholders {}, a placeholder can contain variables, operations, functions, and modifiers to format the value.
+--> A placeholder can also include a modifier to format the value.
+--> A modifier is included by adding a colon : followed by a legal formatting type, like .2f which means fixed point number with 2 decimals
 --> eg : Add a placeholder for the price variable:
 
 ```python
@@ -2526,71 +2568,12 @@ print("An exception occurred")
 
 ==> Many Exceptions
 --> define as many exception blocks as want, e.g. if want to execute a special block of code for a special kind of error:
-![Built-in Exceptions](image-34.png)
-
-## Python User Input
-
-# User Input
-
---> Python allows for user input. Means we are able to ask the user for input.
---> The method is a bit different in Python 3.6 than Python 2.7.
---> Python 3.6 uses the input() method. Python 2.7 uses the raw_input() method.
---> Eg :- Python 3.6
-username = input("Enter username:")
-print("Username is: " + username)
---> Python 2.7
-username = raw_input("Enter username:")
-print("Username is: " + username)
---> Python stops executing when it comes to the input() function, and continues when the user has given some input.
-
-## Python String Formatting
-
---> F-String was introduced in Python 3.6, and is now the preferred way of formatting strings.
---> Before Python 3.6 we had to use the format() method.
-
-# F-Strings
-
---> F-string allows you to format selected parts of a string.
---> To specify a string as an f-string, simply put an f in front of the string literal, like this:
-
-```Python
-name = "Alice"
-age = 30
-
-print(f"My name is {name} and I am {age} years old.")
-```
-
-# Placeholders and Modifiers
-
---> To format values in an f-string, add placeholders {}, a placeholder can contain variables, operations, functions, and modifiers to format the value.
---> A placeholder can also include a modifier to format the value.
---> A modifier is included by adding a colon : followed by a legal formatting type, like .2f which means fixed point number with 2 decimals
-
-# Perform Operations in F-Strings
-
---> can do math operations
-f"The price is {20 _ 59} dollars"
---> can perform math operations on variables:
-f"The price is {price + (price _ tax)} dollars"
---> can perform if...else statements inside the placeholders:
-f"It is very {'Expensive' if price>50 else 'Cheap'}"
-![String Formatting Types](image-35.png)
-
-==>String format()
---> The format() method can still be used, but f-strings are faster and the preferred way to format strings.
-
-==> Multiple Values
---> want to use more values, just add more values to the format() method:
---> print(txt.format(price, itemno, count))
-
-==> Index Numbers
---> Use index numbers (a number inside the curly brackets {0}) to be sure the values are placed in the correct placeholders:
---> if you want to refer to the same value more than once, use the index number:
 
 ## Reference Images
 
+![Built-in Exceptions](image-34.png)
+![String Formatting Types](image-35.png)
 ![Built in Function](image-36.png)
 ![File Methods](image-37.png)
 ![Keywords](image-38.png)
-
 ![Random Module](image-39.png)
