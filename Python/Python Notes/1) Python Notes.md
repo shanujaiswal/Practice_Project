@@ -125,6 +125,7 @@ y = "is "
 z = "awesome"
 print(x + y + z)
 --> In the print() function, when you try to combine a string and a number with the + operator, Python will give you an error, The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:
+--> write end = "" to avoid/prevent print a new next line at the end.
 
 # Global Variable
 
