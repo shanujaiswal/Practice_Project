@@ -1894,10 +1894,11 @@ cars.remove("Volvo") # Delete the element that has the value "Volvo":
 --> The list's remove() method only removes the first occurrence of the specified value.
 ![Array Methods](image-24.png)
 
-## OOPS in Python
+### OOPS in Python
 
 --> Python is an object oriented programming language.
---> To map with real world scenarios we started using objects in code.It is called as object orinted programming .
+--> To map with real world scenarios we started using objects in code.It is called as object orinted programming.
+--> Solving a problem by creating object is one of the most popular approaches in programming. It is called object oriented programming.
 --> Object-Oriented Programming (OOP) in Python is based on four fundamental principles:
 
 1. Encapsulation – Wrapping data and methods into a single unit (class) and restricting direct access to some components.
@@ -1905,9 +1906,11 @@ cars.remove("Volvo") # Delete the element that has the value "Volvo":
 3. Inheritance – Acquiring properties and behaviors of a parent class in a child class.
 4. Polymorphism – Performing the same operation in different ways based on the object or context.
 
---> there are several other related concepts, such as class, objects, constructors, and method overriding.
+--> There are several other related concepts, such as class, objects, constructors, and method overriding.
 
-# Class and Objects
+## Class and Objects
+
+# Class
 
 --> A class is like an object constructor, or a blueprint for creating objects. It defines attributes (variables) and methods (functions) that describe the behavior of objects.
 ==> Create a Class
