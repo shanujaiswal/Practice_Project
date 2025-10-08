@@ -1897,7 +1897,7 @@ cars.remove("Volvo") # Delete the element that has the value "Volvo":
 ### OOPS in Python
 
 --> Python is an object oriented programming language.
---> To map with real world scenarios we started using objects in code.It is called as object orinted programming.
+--> To map with real world scenarios we started using objects in code.
 --> Solving a problem by creating object is one of the most popular approaches in programming. It is called object oriented programming.
 --> Object-Oriented Programming (OOP) in Python is based on four fundamental principles:
 
