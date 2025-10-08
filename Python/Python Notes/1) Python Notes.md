@@ -1475,11 +1475,16 @@ pass
 
 ## Functions in Python
 
---> Block of statements that perform a specific task.
+--> Block of statements that perform a specific task when it is called.
 --> Can pass data, known as parameters, into a function
 --> A function can return data as a result.
-==> Creating a Function
---> In Python a function is defined using the def keyword:
+
+# Creating a Function
+
+--> In Python a function is defined using the "def" keyword:
+==> Calling a Function
+--> To call a function, use the function name followed by parenthesis:
+
 --> Syntax
 
 ```python
@@ -1499,9 +1504,6 @@ s = a + b
 return s
 print(sum(2,3))
 ```
-
-==> Calling a Function
---> To call a function, use the function name followed by parenthesis:
 
 # Types of Functions in Python 🐍
 
@@ -1527,7 +1529,7 @@ print(sum(2,3))
 
 --> Information can be passed into functions as arguments.
 --> Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.
---> Arguments are often shortened to args in Python documentations.
+--> Arguments are often shortened to "args" in Python documentations.
 --> The following example has a function with one argument (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:
 --> Eg :-
 
@@ -1566,8 +1568,8 @@ def my_function(fname, lname):
 my_function("Emil")
 ```
 
-==> Arbitrary Arguments, _args
---> If you do not know how many arguments that will be passed into your function, add a (_) before the parameter name in the function definition.
+==> Arbitrary Arguments, \*args
+--> If you do not know how many arguments that will be passed into your function, add a (\*) before the parameter name in the function definition.
 --> This way the function will receive a tuple of arguments, and can access the items accordingly:
 --> Arbitrary Arguments are often shortened to \*args in Python documentations.
 --> Example
@@ -1594,7 +1596,7 @@ def my_function(child3, child2, child1):
 my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
 ```
 
-==> Arbitrary Keyword Arguments, **kwargs
+# Arbitrary Keyword Arguments, **kwargs
 --> If you do not know how many keyword arguments that will be passed into your function, add two asterisk: ** before the parameter name in the function definition.
 --> This way the function will receive a dictionary of arguments, and can access the items accordingly:
 --> Example
@@ -1625,7 +1627,7 @@ my_function("Brazil")
 ```
 
 ==> Passing a List as an Argument
---> send any data types of argument to a function (string, number, list, dictionary etc.), and it will be treated as the same data type inside the function.
+--> Send any data types of argument to a function (string, number, list, dictionary etc.), and it will be treated as the same data type inside the function.
 -->if send a List as an argument, it will still be a List when it reaches the function:
 -->
 
@@ -1909,6 +1911,13 @@ cars.remove("Volvo") # Delete the element that has the value "Volvo":
 --> There are several other related concepts, such as class, objects, constructors, and method overriding.
 
 ## Class and Objects
+
+Classes and objects are the two core concepts in object-oriented programming.
+A class defines what an object should look like, and an object is created based on that class.
+
+Class Objects
+Fruit --> Apple, Banana, Mango
+Car --> Volvo, Audi, Toyota
 
 # Class
 
