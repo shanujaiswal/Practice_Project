@@ -1,4 +1,4 @@
-## Python
+### Python
 
 --> Python is a very simple language, and has a very straightforward syntax.
 --> Python is a popular programming language.
@@ -18,23 +18,23 @@
 
 ## Input in Python
 
-input() statement is used to accept value ( using keyboard) from user
-input()--> default is always a str
-int(input()) ---> value will be integer
-float(input()) ---> value will be float
-
-# User Input
-
 --> Python allows for user input. Means we are able to ask the user for input.
+--> Python stops executing when it comes to the input() function, and continues when the user has given some input.
 --> The method is a bit different in Python 3.6 than Python 2.7.
+input() statement is used to accept value ( using keyboard) from user
 --> Python 3.6 uses the input() method. Python 2.7 uses the raw_input() method.
---> Eg :- Python 3.6
-username = input("Enter username:")
-print("Username is: " + username)
+
+1. input()--> default is always a str
+2. int(input()) ---> value will be integer
+3. float(input()) ---> value will be float
+
 --> Python 2.7
 username = raw_input("Enter username:")
 print("Username is: " + username)
---> Python stops executing when it comes to the input() function, and continues when the user has given some input.
+
+--> Eg :- Python 3.6
+username = input("Enter username:")
+print("Username is: " + username)
 
 ## Comments
 
@@ -79,15 +79,16 @@ my var = "John"
 
 --> Variable names with more than one word can be difficult to read.
 --> There are several techniques you can use to make them more readable:
-==> Camel Case
---> Each word, except the first, starts with a capital letter:
-myVariableName = "John"
-==> Pascal Case
---> Each word starts with a capital letter:
-MyVariableName = "John"
-==> Snake Case
---> Each word is separated by an underscore character:
-my_variable_name = "John"
+
+1. Camel Case
+   --> Each word, except the first, starts with a capital letter:
+   myVariableName = "John"
+2. Pascal Case
+   --> Each word starts with a capital letter:
+   MyVariableName = "John"
+3. Snake Case
+   --> Each word is separated by an underscore character:
+   my_variable_name = "John"
 
 # Variables - Assign Multiple Values
 
@@ -114,18 +115,25 @@ print(z)
 
 ==> Output Variables
 --> The Python print() function is often used to output variables.
+--> In the print() function, when you try to combine a string and a number with the + operator, Python will give you an error, The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:
+--> write end = "" to avoid/prevent print a new next line at the end.
 --> In the print() function, you output multiple variables, separated by a comma:
+
+```python
 x = "Python"
 y = "is"
 z = "awesome"
 print(x, y, z)
+```
+
 --> Can also use the + operator to output multiple variables, For numbers, the + character works as a mathematical operator
+
+```Python
 x = "Python "
 y = "is "
 z = "awesome"
 print(x + y + z)
---> In the print() function, when you try to combine a string and a number with the + operator, Python will give you an error, The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:
---> write end = "" to avoid/prevent print a new next line at the end.
+```
 
 # Global Variable
 
@@ -133,6 +141,7 @@ print(x + y + z)
 are known as global variables.
 --> Global variables can be used by everyone, both inside of functions and outside.
 --> If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.
+
 ==> The global Keyword
 --> Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function.
 --> To create a global variable inside a function, you can use the global keyword.
@@ -1596,8 +1605,9 @@ def my_function(child3, child2, child1):
 my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
 ```
 
-# Arbitrary Keyword Arguments, **kwargs
---> If you do not know how many keyword arguments that will be passed into your function, add two asterisk: ** before the parameter name in the function definition.
+# Arbitrary Keyword Arguments, \*\*kwargs
+
+--> If you do not know how many keyword arguments that will be passed into your function, add two asterisk: \*\* before the parameter name in the function definition.
 --> This way the function will receive a dictionary of arguments, and can access the items accordingly:
 --> Example
 If the number of keyword arguments is unknown, add a double \*\* before the parameter name:
@@ -1700,7 +1710,8 @@ def my_function(\*, x):
 print(x)
 my_function(3)
 
-==> Combine Positional-Only and Keyword-Only
+# Combine Positional-Only and Keyword-Only
+
 --> You can combine the two argument types in the same function.
 --> Any argument before the / , are positional-only, and any argument after the \*, are keyword-only.
 --> Example
@@ -1738,6 +1749,16 @@ def tri_recursion(k):
 print("Recursion Example Results:")
 tri_recursion(6)
 ```
+
+## Python Decorators
+
+==> Decorators let us add extra behavior to a function, without changing the function's code.
+==> A decorator is a function that takes another function as input and returns a new function.
+
+# Basic Decorator
+
+==> Define the decorator first, then apply it with @decorator_name above the function.
+
 
 ## File I/O in Python
 
