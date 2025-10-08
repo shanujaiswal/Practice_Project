@@ -1752,8 +1752,8 @@ tri_recursion(6)
 
 ## Python Decorators
 
+==> A decorator is a function that takes another function as argument and returns a new function.
 ==> Decorators let us add extra behavior to a function, without changing the function's code.
-==> A decorator is a function that takes another function as input and returns a new function.
 
 # Basic Decorator
 
