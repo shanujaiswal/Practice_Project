@@ -1749,7 +1749,7 @@ print("Recursion Example Results:")
 tri_recursion(6)
 ```
 
-## **Python Decorators
+## \*\*Python Decorators
 
 ==> A decorator is a function that takes another function as argument and returns a new function.
 ==> Decorators let us add extra behavior to a function, without changing the function's code.
@@ -1758,22 +1758,22 @@ tri_recursion(6)
 
 ==> Define the decorator first, then apply it with @decorator_name above the function.
 
-==> Example 1. 
+==> Example 1.
 
-```Python 
+```Python
 def multiple(func):
     def whatever(a, b):
         return func (a,b) * 10
     return whatever
-    
+
 @multiple
 def add(a,b):
     return a + b
-    
+
 print(add(1,2))
 ```
 
-```Python 
+```Python
 def changecase(func):
   def myinner():
     return func().lower()
@@ -1797,7 +1797,7 @@ print(myfunction())
 
 ==> A decorator can be called multiple times. Just place the decorator above the function you want to decorate.
 
-```Python 
+```Python
 def changecase(func):
   def myinner():
     return func().upper()
@@ -1816,8 +1816,10 @@ print(otherfunction())
 ```
 
 # Arguments in the Decorated Function
+
 ==> Functions that requires arguments can also be decorated, just make sure you pass the arguments to the wrapper function:
-```python 
+
+```python
 def changecase(func):
   def myinner(x):
     return func(x).upper()
@@ -1830,10 +1832,11 @@ def myfunction(nam):
 print(myfunction("John"))
 ```
 
-# *args and **kwargs
-Sometimes the decorator function has no control over the arguments passed from decorated function, to solve this problem, add (*args, **kwargs) to the wrapper function, this way the wrapper function can accept any number, and any type of arguments, and pass them to the decorated function.
+# \*args and \*\*kwargs
 
-==> Example :- Secure the function with *args and **kwargs arguments:
+Sometimes the decorator function has no control over the arguments passed from decorated function, to solve this problem, add (\*args, \*\*kwargs) to the wrapper function, this way the wrapper function can accept any number, and any type of arguments, and pass them to the decorated function.
+
+==> Example :- Secure the function with \*args and \*\*kwargs arguments:
 
 ```Python
 def changecase(func):
@@ -1848,7 +1851,53 @@ def myfunction(nam):
 print(myfunction("John"))
 ```
 
+# Decorator With Arguments
 
+==> Decorators can accept their own arguments by adding another wrapper level.
+==> A decorator factory that takes an argument and transforms the casing based on the argument value.
+
+```Python
+def changecase(n):
+  def changecase(func):
+    def myinner():
+      if n == 1:
+        a = func().lower()
+      else:
+        a = func().upper()
+      return a
+    return myinner
+  return changecase
+
+@changecase(1)
+def myfunction():
+  return "Hello Linus"
+
+print(myfunction())
+```
+
+# Multiple Decorators
+
+--> You can use multiple decorators on one function.
+--> This is done by placing the decorator calls on top of each other.
+--> The decorators are called in the order they are specified.
+
+```python
+def changecase(func):
+  def myinner():
+    return func().upper()
+  return myinner
+
+def addgreeting(func):
+  def myinner():
+    return "Hello " + func() + " Have a good day!"
+  return myinner
+
+@changecase
+@addgreeting
+def myfunction():
+  return "Tobias"
+
+print(myfunction())```
 
 ## File I/O in Python
 
