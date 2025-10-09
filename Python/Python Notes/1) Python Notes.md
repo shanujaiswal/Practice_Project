@@ -1440,6 +1440,11 @@ for num in range(1, 6):
 # Range()
 
 --> Range functions returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.
+--> The built-in range() function returns an immutable sequence of numbers, commonly used for looping a specific number of times.
+--> Immutable means that it cannot be modified after it is created.
+
+==> Creating ranges
+--> The range() function can be called with 1, 2, or 3 arguments, using this syntax:
 --> Syntax of range()
 range( start?, stop, step? )
 Where:
@@ -1450,31 +1455,73 @@ Where:
 
 ==> Using range() in Loops
 
-1. Basic Usage (Only stop is provided)
+1. Call range() With One Argument --> Basic Usage (Only stop is provided)
    --> If only one argument is given, start is assumed to be 0, and step is 1
    --> Syntax
+   ```python
    for i in range(5):
    print(i)
-2. Specifying start and stop
+   ```
+2. Call range() With Two Arguments --> Specifying start and stop
    --> If two arguments are provided, the sequence starts from start and stops before stop.
    --> Syntax
-   for i in range(0x, 6):
+   ```python
+   for i in range(0, 6):
    print(i)
+   ```
    --> Note that range(6) is not the values of 0 to 6, but the values 0 to 5.
-3. Using a Step Value (start, stop, step)
+3. Call range() With Three Arguments --> Using a Step Value (start, stop, step)
    --> We can control the increment using the step argument
    --> Syntax
    for i in range(1, 10, 2):
    print(i)
-4. Using a Negative Step (Descending Order)
+4. Using ranges
+   --> Ranges are often used in for loops to iterate over a sequence of numbers.
+   ```Python
+   for i in range(10):
+   print(i)
+   ```
+5. Using a Negative Step (Descending Order)
    --> If step is negative, range() generates numbers in decreasing order.
    --> Syntax
    for i in range(10, 0, -2):
    print(i)
-5. Using range() with list()
+6. Using range() with list()
    The range() function produces a generator, meaning it doesn’t create a list in memory. However, you can convert it into a list if needed:
    --> Synatx
    print(list(range(5)))
+   print(list(range(1, 6)))
+   print(list(range(5, 20, 3)))
+
+==> Slicing Ranges
+--> Like other sequences, ranges can be sliced to extract a subsequence.
+
+```python
+r = range(10)
+print(r[2])
+print(r[:3])
+```
+
+**Note** : The first print statement returns the value at index 2, and the second print statement returns a new range object, from index 0 to 3.
+
+==> Membership Testing
+Ranges support membership testing with the in operator.
+
+```Python
+r = range(0, 10, 2)
+print(6 in r)
+print(7 in r)
+```
+
+The return value is True when the number is present in the range, and False when it is not.
+
+==> Length
+==> Ranges support the len() function to get the number of elements in the range.
+
+```Python
+r = range(0, 10, 2)
+print(len(r))
+```
 
 ==> Pass Statement
 --> Pass is a null statement that does nothing.It is used as a placeholder when a statement is required syntactically but no action is needed.
@@ -1897,7 +1944,38 @@ def addgreeting(func):
 def myfunction():
   return "Tobias"
 
-print(myfunction())```
+print(myfunction())
+```
+
+# Preserving Function Metadata
+
+==> Functions in Python has metadata that can be accessed using the **name** and **doc** attributes.
+
+==> Example : a function's name can be returned with the **name** attribute:
+
+```Python
+def myfunction():
+  return "Have a great day!"
+
+print(myfunction.__name__)
+```
+
+==> But, when a function is decorated, the metadata of the original function is lost.
+
+```Python
+def changecase(func):
+  def myinner():
+    return func().upper()
+  return myinner
+
+@changecase
+def myfunction():
+  return "Have a great day!"
+
+print(myfunction.__name__)
+```
+
+==> To fix this, Python has a built-in function called functools.wraps that can be used to preserve the original function's name and docstring.
 
 ## File I/O in Python
 
