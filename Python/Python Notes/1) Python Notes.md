@@ -1749,7 +1749,7 @@ print("Recursion Example Results:")
 tri_recursion(6)
 ```
 
-## Python Decorators
+## **Python Decorators
 
 ==> A decorator is a function that takes another function as argument and returns a new function.
 ==> Decorators let us add extra behavior to a function, without changing the function's code.
@@ -1757,6 +1757,97 @@ tri_recursion(6)
 # Basic Decorator
 
 ==> Define the decorator first, then apply it with @decorator_name above the function.
+
+==> Example 1. 
+
+```Python 
+def multiple(func):
+    def whatever(a, b):
+        return func (a,b) * 10
+    return whatever
+    
+@multiple
+def add(a,b):
+    return a + b
+    
+print(add(1,2))
+```
+
+```Python 
+def changecase(func):
+  def myinner():
+    return func().lower()
+  return myinner
+
+@changecase
+def myfunction():
+  return "Hello Sally"
+
+print(myfunction())
+
+```
+
+--> By placing @changecase directly above the function definition, the function myfunction is being "decorated" with the changecase function.
+
+--> The function changecase is the decorator.
+
+--> The function myfunction is the function that gets decorated.
+
+# Multiple Decorator Calls
+
+==> A decorator can be called multiple times. Just place the decorator above the function you want to decorate.
+
+```Python 
+def changecase(func):
+  def myinner():
+    return func().upper()
+  return myinner
+
+@changecase
+def myfunction():
+  return "Hello Sally"
+
+@changecase
+def otherfunction():
+  return "I am speed!"
+
+print(myfunction())
+print(otherfunction())
+```
+
+# Arguments in the Decorated Function
+==> Functions that requires arguments can also be decorated, just make sure you pass the arguments to the wrapper function:
+```python 
+def changecase(func):
+  def myinner(x):
+    return func(x).upper()
+  return myinner
+
+@changecase
+def myfunction(nam):
+  return "Hello " + nam
+
+print(myfunction("John"))
+```
+
+# *args and **kwargs
+Sometimes the decorator function has no control over the arguments passed from decorated function, to solve this problem, add (*args, **kwargs) to the wrapper function, this way the wrapper function can accept any number, and any type of arguments, and pass them to the decorated function.
+
+==> Example :- Secure the function with *args and **kwargs arguments:
+
+```Python
+def changecase(func):
+  def myinner(*args, **kwargs):
+    return func(*args, **kwargs).upper()
+  return myinner
+
+@changecase
+def myfunction(nam):
+  return "Hello " + nam
+
+print(myfunction("John"))
+```
+
 
 
 ## File I/O in Python
