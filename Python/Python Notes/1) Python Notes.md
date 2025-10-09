@@ -2161,7 +2161,7 @@ Car --> Volvo, Audi, Toyota
 
 --> A class is like an object constructor, or a blueprint for creating objects. It defines attributes (variables) and methods (functions) that describe the behavior of objects.
 ==> Create a Class
---> To create a class, use the keyword class:
+--> To create a class, use the keyword "class":
 --> Class name always start with capital letter.
 --> eg: creating class
 class Student:
