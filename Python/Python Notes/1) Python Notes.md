@@ -1,7 +1,6 @@
 ### Python
 
---> Python is a very simple language, and has a very straightforward syntax.
---> Python is a popular programming language.
+--> Python is a very popular simple programming language, and has a very straight forward syntax.
 --> Python is a case-sensitive language. It considers that uppercase and lowercase characters are different.
 --> Python can be used on a server to create web applications.
 --> There are two major Python versions, Python 2 and Python 3. Python 2 and 3 are quite different
@@ -13,7 +12,7 @@
 
 --> Indentation refers to the spaces at the beginning of a code line.
 --> Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.
---> Python uses indentation to indicate a block of code . Python will give you an error if you skip the indentation:
+--> Python uses indentation to indicate a block of code . Python will give an error if skip the indentation:
 --> The standard indentation requires standard Python code to use four spaces,but it has to be at least one.
 
 ## Input in Python
@@ -42,7 +41,7 @@ print("Username is: " + username)
 --> used to make the code more readable.
 --> used to prevent execution when testing code.
 --> Comments starts with a #, and Python will ignore them:
---> Add a multiline string (triple quotes) in our code, and place your comment inside it:
+--> Add a multiline string (triple quotes) in code, and place comment inside it:
 
 ## Variables and Types
 
@@ -78,7 +77,7 @@ my var = "John"
 # Multi Words Variable Names
 
 --> Variable names with more than one word can be difficult to read.
---> There are several techniques you can use to make them more readable:
+--> There are several techniques can use to make them more readable:
 
 1. Camel Case
    --> Each word, except the first, starts with a capital letter:
@@ -100,7 +99,7 @@ x,y,z = "Orange", "Banana", "Cherry"
 --> correct syntax to add the value to 3 variables in one statement
 x = y = z = "Hello World"
 ==> Unpack a Collection
---> If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.
+--> If you have a collection of values in a list, tuple etc. Python allows to extract the values into variables. This is called unpacking.
 ==> Unpack a list:
 
 ```python
@@ -115,9 +114,9 @@ print(z)
 
 ==> Output Variables
 --> The Python print() function is often used to output variables.
---> In the print() function, when you try to combine a string and a number with the + operator, Python will give you an error, The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:
+--> In the print() function, when try to combine a string and a number with the + operator, Python will give an error, The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:
 --> write end = "" to avoid/prevent print a new next line at the end.
---> In the print() function, you output multiple variables, separated by a comma:
+--> In the print() function, output multiple variables, separated by a comma:
 
 ```python
 x = "Python"
