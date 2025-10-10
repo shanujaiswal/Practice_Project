@@ -2157,17 +2157,16 @@ Class Objects
 Fruit --> Apple, Banana, Mango
 Car --> Volvo, Audi, Toyota
 
-# Class
-
+==> Class
 --> A class is like an object constructor, or a blueprint for creating objects. It defines attributes (variables) and methods (functions) that describe the behavior of objects.
-==> Create a Class
+# Create a Class
 --> To create a class, use the keyword "class":
 --> Class name always start with capital letter.
 --> eg: creating class
 class Student:
 name = "karan kumar"
 
-==> Create Object
+# Create Object
 --> An object is an instance of a class that holds data and can perform actions defined by the class.
 eg : Creating object (instance)
 s1 = Student()
@@ -2214,7 +2213,7 @@ A method in Python is a function that is defined inside a class and operates on 
 --> Decorators -- It allow us to wrap another function in order to extend the behavior of the wrapped function ,without permanently modifying it
 
 ==> Special Methods (Dunder Methods)
-**init**() → Constructor method, initializes object attributes.
+__init__() → Constructor method, initializes object attributes.
 **str**() → Returns a string representation of the object.
 **repr**() → Used for debugging, returns an official string representation.
 
@@ -2222,16 +2221,16 @@ A method in Python is a function that is defined inside a class and operates on 
 --> Methods are called using the dot (.) operator with an object (object.method()).
 --> Class methods and static methods can be called using the class name (Class.method()).
 
-# The **init**() Function Constructors
+# The __init__() Function Constructors
 
---> A constructor (**init** method) is a special method that initializes an object's attributes when it is created.
---> All classes have a function called **init**(), which is always executed when the class is being initiated.
+--> A constructor (__init__ method) is a special method that initializes an object's attributes when it is created.
+--> All classes have a function called __init__(), which is always executed when the class is being initiated.
 --> It is automatically called when a new instance of a class is created.
---> Use the **init**() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
+--> Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
 ==> Creating class
 --> To create a class, use the keyword class:
 class Student :
-def **init**(self,fullname):
+def __init__(self,fullname):
 self.name = fullname
 --> The self parameter is a reference to the current instance of the class , and is used to access variable that belong to the class
 
@@ -2263,7 +2262,7 @@ print(s1.name)
 
 ```python
 class Person:
- def **init**(self, name, age):
+ def __init__(self, name, age):
     self.name = name
     self.age = age
 p1 = Person("John", 36)
@@ -2392,12 +2391,12 @@ x = Student("Mike", "Olsen")
 x.printname()
 ```
 
-==> Add the **init**() Function
---> Add the **init**() function to the child class (instead of the pass keyword).
-Note: The **init**() function is called automatically every time the class is being used to create a new object.
+==> Add the __init__() Function
+--> Add the __init__() function to the child class (instead of the pass keyword).
+Note: The __init__() function is called automatically every time the class is being used to create a new object.
 
---> When you add the **init**() function, the child class will no longer inherit the parent's **init**() function.
---> To keep the inheritance of the parent's **init**() function, add a call to the parent's **init**() function:
+--> When you add the __init__() function, the child class will no longer inherit the parent's __init__() function.
+--> To keep the inheritance of the parent's __init__() function, add a call to the parent's __init__() function:
 --> Example
 
 ```python
@@ -2467,7 +2466,7 @@ For dictionaries len() returns the number of key/value pairs in the dictionary
 --> Once deleted, the object or item is no longer accessible.
 --> eg :-
 class Student:
-def **init**(self, name):
+def __init__(self, name):
 self.name = name
 
 s1 = Student("shradha")
