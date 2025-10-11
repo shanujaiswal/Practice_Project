@@ -214,6 +214,7 @@ print(random.randrange(1, 10))
 
 Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
 --> Mixing operators between numbers and strings is not supported:
+![Operator](image-5.png)
 ![Escape Characters](image-6.png)
 ![Slicing ](image-7.png)
 
