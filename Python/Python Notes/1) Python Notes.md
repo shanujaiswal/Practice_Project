@@ -180,7 +180,7 @@ float is superior than int.
 ==> Get the Type
 --> Get the data type of a variable with the type() function
 
-# Rules for identifier (any name )
+# Rules for identifier (any name)
 
 --> A name used to identify a variable, function, class, module, or other object
 
@@ -1977,245 +1977,6 @@ print(myfunction.__name__)
 
 ==> To fix this, Python has a built-in function called functools.wraps that can be used to preserve the original function's name and docstring.
 
-## File I/O in Python
-
-# Python File Open
-
---> File handling is an important part of any web application.
---> File I/O (Input/Output) in Python allows reading from and writing to files.
---> Python has several functions for creating, reading, updating, and deleting files.
---> Python provides built-in functions to handle file operations efficiently.
-==> File Handling
-
-1. File Handling Modes
-   When working with files, you need to specify the mode:
-   --> "r" Read (default mode). Opens file for reading; error if file doesn't exist.
-   --> "w" Write. Creates a new file or overwrites an existing one.
-   --> "a" Append. Opens file for writing but preserves existing content.will create a file if the specified file does not exists
-   --> "r+" Read and Write. File must exist.
-   --> "w+" Write and Read. Creates a new file or overwrites an existing one.Note: the "w" method will overwrite the entire file.
-   --> "a+" Append and Read. Creates file if it doesn’t exist.
-   --> 'x' create a new file and open it for writing returns an error if the file exists
-   --> 'b' binary mode -- x = open('demofile.txt', 'b')
-   --> 't' Default Value. Text mode (default)
-   --> '+' open a disk file for updating (reading and writing)
-   ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-23.png)
-2. Opening and Closing a File (open,read & Close File)
-   --> Use open("filename", "mode") to open a file.
-   --> Always close the file using close() to free system resources.
-   --> Default value is read
-   --> Example
-   f = open("example.txt", "r") # Open file in read mode
-   f.close() # Close file
-3. Reading a File
-   --> read() → Reads entire file.
-   --> readline() → Reads one line at a time.
-   --> readlines() → Reads all lines as a list.
-   --> Example
-   f = open("example.txt", "r")
-   content = f.read() # Reads the entire file
-   f.close()
-4. Writing to a File
-   write() → Writes a string to the file.
-   writelines() → Writes a list of strings.
-   --> Example
-   f = open("example.txt", "w")
-   f.write("Hello, World!") # Overwrites the file with this text
-   f.close()
-5. ** Using with Statement (Best Practice) **
-   The with statement automatically closes the file after execution.
-   --> Example
-   with open("example.txt", "r") as f:
-   content = f.read() # No need to explicitly close the file
-6. File Handling Exceptions
-   Always handle errors using try-except to prevent crashes.
-   --> Example
-   try:
-   f = open("nonexistent.txt", "r")
-   except FileNotFoundError:
-   print("File not found!")
-7. Working with Binary Files
-   Use "rb" or "wb" modes for non-text files (e.g., images, PDFs).
-8. Deleting a File
-   using the os module
-   --> import os
-   os.remove(filename)
-   ==> Check if File exist:
-   ```python
-   import os
-   if os.path.exists("demofile.txt"):
-   os.remove("demofile.txt")
-   else:
-   print("The file does not exist")
-   ```
-   ==> Delete Folder
-   To delete an entire folder, use the os.rmdir() method:
-   import os
-   os.rmdir("myfolder")
-   You can only remove empty folders.
-
-==> Syntax
---> To open a file for reading it is enough to specify the name of the file:
-    f = open("demofile.txt")
---> The code above is the same as:
-    f = open("demofile.txt", "rt")
-    Because "r" for read, and "t" for text are the default values, you do not need to specify them.
---> Make sure the file exists, or else will get an error.
-
-
-# Open a File on the Server
-
---> To open the file, use the built-in open() function.
---> The open() function returns a file object, which has a read() method for reading the content of the file:
-    f = open("demofile.txt")
-    print(f.read())
---> If the file is located in a different location, will have to specify the file path, like this:
-    f = open("D:\\myfiles\welcome.txt", "r")
-    print(f.read())
-==> Read Only Parts of the File
---> By default the read() method returns the whole text, but can also specify how many characters want to return:
-    f = open("demofile.txt", "r")
-    print(f.read(5))
-==> Using the with statement
-==> can also use the with statement when opening a file:
---> Using the with keyword:
-with open("demofile.txt") as f:
-  print(f.read())
---> Then not have to worry about closing your files, the with statement takes care of that.
-
-# Close Files
---> It is a good practice to always close the file when you are done with it.
---> If you are not using the with statement, you must write a close statement in order to close the file:
-
-==> Example
-Close the file when you are finished with it:
-```python 
-f = open("demofile.txt")
-print(f.readline())
-f.close()
-```
-
-Always close your files. In some cases, due to buffering, changes made to a file may not show until you close the file.
-
-# Read Only Parts of the File
-
-==> By default the read() method returns the whole text, but you can also specify how many characters you want to return:
-==> Example
-Return the 5 first characters of the file:
-
-with open("demofile.txt") as f:
-  print(f.read(5))
-
-# Read Lines
-==> Can return one line by using the readline() method:
-==> Example
-Read one line of the file:
-``` python 
-with open("demofile.txt") as f:
-  print(f.readline())
-```
-
-==> By calling readline() two times, you can read the two first lines:
-Example
-Read two lines of the file:
-```python 
-with open("demofile.txt") as f:
-  print(f.readline())
-  print(f.readline())
-```
-
-==> By looping through the lines of the file, you can read the whole file, line by line:
-Example
-Loop through the file line by line:
-```python
-with open("demofile.txt") as f:
-  for x in f:
-    print(x)
-```
-# Python File Write
-==> Write to an Existing File
---> To write to an existing file, you must add a parameter to the open() function:
-"a" - Append - will append to the end of the file
-"w" - Write - will overwrite any existing content
-
---> Example
-Open the file "demofile.txt" and append content to the file:
-```python
-with open("demofile.txt", "a") as f:
-  f.write("Now the file has more content!")
-
-#open and read the file after the appending:
-with open("demofile.txt") as f:
-  print(f.read())
-```
-
-# Overwrite Existing Content
-==> To overwrite the existing content to the file, use the w parameter:
-Example
-Open the file "demofile.txt" and overwrite the content:
-```python
-with open("demofile.txt", "w") as f:
-  f.write("Woops! I have deleted the content!")
-
-#open and read the file after the overwriting:
-with open("demofile.txt") as f:
-  print(f.read())
-```
-
-*** Note: the "w" method will overwrite the entire file.
-
-==> Create a New File
-To create a new file in Python, use the open() method, with one of the following parameters:
-
-"x" - Create - will create a file, returns an error if the file exists
-"a" - Append - will create a file if the specified file does not exists
-"w" - Write - will create a file if the specified file does not exists
-
---> Example
-Create a new file called "myfile.txt":
-```python
-f = open("myfile.txt", "x")
-Result: a new empty file is created.
-```
-Note: If the file already exist, an error will be raised.
-
-# Python Delete File
-==> Delete a File
-To delete a file, you must import the OS module, and run its os.remove() function:
-==> Example
-Remove the file "demofile.txt":
-```python
-import os
-os.remove("demofile.txt")
-```
-
-==> Check if File exist:
---> To avoid getting an error, you might want to check if the file exists before you try to delete it:
---> Example
-Check if file exists, then delete it:
-```python
-import os
-if os.path.exists("demofile.txt"):
-  os.remove("demofile.txt")
-else:
-  print("The file does not exist")
-```
-
-==> Delete Folder
---> To delete an entire folder, use the os.rmdir() method:
---> Example
-Remove the folder "myfolder":
-```python 
-import os
-os.rmdir("myfolder")
-```
-
-Note: You can only remove empty folders.
-
-# \*\*Module(Code Library)
-
---> It is a file written by another programmer that generally has a function we can use
-
 ## Python Lambda
 
 --> A lambda function is a small anonymous function.
@@ -2273,7 +2034,7 @@ cars.pop(1) # Delete the second element of the cars array:
 --> use the remove() method to remove an element from the array.
 cars.remove("Volvo") # Delete the element that has the value "Volvo":
 --> The list's remove() method only removes the first occurrence of the specified value.
-![Array Methods](image-24.png)
+![Array Methods](image-23.png)
 
 ### OOPS in Python
 
@@ -2642,7 +2403,7 @@ print(s1)
 
 --> Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
 --> Python doesn’t have strict access modifiers like private, protected, or public as in other languages like Java or C++. But we can simulate privacy using naming conventions.
-![Private-Public Mode](image-25.png)
+![Private-Public Mode](image-24.png)
 
 ## Python Scope
 
@@ -2718,6 +2479,7 @@ print(myfunc1())
 ## Python Modules
 
 ==> Module
+--> It is a file written by another programmer that generally has a function we can use
 --> A module to be the same as a code library.
 --> A file containing a set of functions you want to include in your application.
 
@@ -2797,7 +2559,7 @@ print(x)
 ==> The strftime() Method
 --> The datetime object has a method for formatting date objects into readable strings.
 --> The method is called strftime(), and takes one parameter, format, to specify the format of the returned string
-![Reference of all the legal format codes](image-26.png)
+![Reference of all the legal format codes](image-25.png)
 
 ## Python Maths
 
@@ -2816,7 +2578,7 @@ print(x)
 --> the math.floor() method rounds a number downwards to its nearest integer, and returns the result:
 --> The math.pi constant, returns the value of PI (3.14...):
 
-![Python Math Module](image-27.png)
+![Python Math Module](image-26.png)
 
 ## Python JSON
 
@@ -2866,7 +2628,7 @@ print(json.dumps(False))
 print(json.dumps(None))
 ```
 
-![Convert from Python to JSON](image-28.png)
+![Convert from Python to JSON](image-27.png)
 
 ==> Format the Result
 --> A JSON string, is not very easy to read, with no indentations and line breaks.
@@ -2891,11 +2653,11 @@ json.dumps(x, indent=4, sort_keys=True)
 import re
 ==> RegEx in Python
 When you have imported the re module, can start using regular expressions:
-![RegEx Functions](image-29.png)
-![Metacharacters](image-30.png)
-![Flags](image-31.png)
-![Special Sequences](image-32.png)
-![Sets](image-33.png)
+![RegEx Functions](image-28.png)
+![alt text](image-29.png)
+![Flags](image-30.png)
+![Special Sequences](image-31.png)
+![Sets](image-32.png)
 
 ==> The findall() Function
 --> The findall() function returns a list containing all matches.
@@ -3042,6 +2804,7 @@ The command line will look like this when the virtual environment is active:
 import cowsay
 cowsay.cow("Good Mooooorning!")
 ```
+
 # Deactivate Virtual Environment
 
 ==> To deactivate the virtual environment use this command:
@@ -3055,97 +2818,256 @@ Example
 --> Delete myfirstproject from the command line interface:
 C:\Users\Your Name> rmdir /s /q myfirstproject
 
+## File I/O in Python
+
+# Python File Open
+
+--> File handling is an important part of any web application.
+--> File I/O (Input/Output) in Python allows reading from and writing to files.
+--> Python has several functions for creating, reading, updating, and deleting files.
+--> Python provides built-in functions to handle file operations efficiently.
+==> File Handling
+
+1. File Handling Modes
+   When working with files, you need to specify the mode:
+   --> "r" Read (default mode). Opens file for reading; error if file doesn't exist.
+   --> "w" Write. Creates a new file or overwrites an existing one.
+   --> "a" Append. Opens file for writing but preserves existing content.will create a file if the specified file does not exists
+   --> "r+" Read and Write. File must exist.
+   --> "w+" Write and Read. Creates a new file or overwrites an existing one.Note: the "w" method will overwrite the entire file.
+   --> "a+" Append and Read. Creates file if it doesn’t exist.
+   --> 'x' create a new file and open it for writing returns an error if the file exists
+   --> 'b' binary mode -- x = open('demofile.txt', 'b')
+   --> 't' Default Value. Text mode (default)
+   --> '+' open a disk file for updating (reading and writing)
+   ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-33.png)
+2. Opening and Closing a File (open,read & Close File)
+   --> Use open("filename", "mode") to open a file.
+   --> Always close the file using close() to free system resources.
+   --> Default value is read
+   --> Example
+   f = open("example.txt", "r") # Open file in read mode
+   f.close() # Close file
+3. Reading a File
+   --> read() → Reads entire file.
+   --> readline() → Reads one line at a time.
+   --> readlines() → Reads all lines as a list.
+   --> Example
+   f = open("example.txt", "r")
+   content = f.read() # Reads the entire file
+   f.close()
+4. Writing to a File
+   write() → Writes a string to the file.
+   writelines() → Writes a list of strings.
+   --> Example
+   f = open("example.txt", "w")
+   f.write("Hello, World!") # Overwrites the file with this text
+   f.close()
+5. ** Using with Statement (Best Practice) **
+   The with statement automatically closes the file after execution.
+   --> Example
+   with open("example.txt", "r") as f:
+   content = f.read() # No need to explicitly close the file
+6. File Handling Exceptions
+   Always handle errors using try-except to prevent crashes.
+   --> Example
+   try:
+   f = open("nonexistent.txt", "r")
+   except FileNotFoundError:
+   print("File not found!")
+7. Working with Binary Files
+   Use "rb" or "wb" modes for non-text files (e.g., images, PDFs).
+8. Deleting a File
+   using the os module
+   --> import os
+   os.remove(filename)
+   ==> Check if File exist:
+   ```python
+   import os
+   if os.path.exists("demofile.txt"):
+   os.remove("demofile.txt")
+   else:
+   print("The file does not exist")
+   ```
+   ==> Delete Folder
+   To delete an entire folder, use the os.rmdir() method:
+   import os
+   os.rmdir("myfolder")
+   You can only remove empty folders.
+
+==> Syntax
+--> To open a file for reading it is enough to specify the name of the file:
+f = open("demofile.txt")
+--> The code above is the same as:
+f = open("demofile.txt", "rt")
+Because "r" for read, and "t" for text are the default values, you do not need to specify them.
+--> Make sure the file exists, or else will get an error.
+
+# Open a File on the Server
+
+--> To open the file, use the built-in open() function.
+--> The open() function returns a file object, which has a read() method for reading the content of the file:
+f = open("demofile.txt")
+print(f.read())
+--> If the file is located in a different location, will have to specify the file path, like this:
+f = open("D:\\myfiles\welcome.txt", "r")
+print(f.read())
+==> Read Only Parts of the File
+--> By default the read() method returns the whole text, but can also specify how many characters want to return:
+f = open("demofile.txt", "r")
+print(f.read(5))
+==> Using the with statement
+==> can also use the with statement when opening a file:
+--> Using the with keyword:
+with open("demofile.txt") as f:
+print(f.read())
+--> Then not have to worry about closing your files, the with statement takes care of that.
 
+# Close Files
 
+--> It is a good practice to always close the file when you are done with it.
+--> If you are not using the with statement, you must write a close statement in order to close the file:
 
+==> Example
+Close the file when you are finished with it:
 
+```python
+f = open("demofile.txt")
+print(f.readline())
+f.close()
+```
 
+Always close your files. In some cases, due to buffering, changes made to a file may not show until you close the file.
 
+# Read Only Parts of the File
 
+==> By default the read() method returns the whole text, but you can also specify how many characters you want to return:
+==> Example
+Return the 5 first characters of the file:
 
+with open("demofile.txt") as f:
+print(f.read(5))
 
+# Read Lines
 
+==> Can return one line by using the readline() method:
+==> Example
+Read one line of the file:
 
+```python
+with open("demofile.txt") as f:
+  print(f.readline())
+```
 
+==> By calling readline() two times, you can read the two first lines:
+Example
+Read two lines of the file:
 
+```python
+with open("demofile.txt") as f:
+  print(f.readline())
+  print(f.readline())
+```
 
+==> By looping through the lines of the file, you can read the whole file, line by line:
+Example
+Loop through the file line by line:
 
+```python
+with open("demofile.txt") as f:
+  for x in f:
+    print(x)
+```
 
+# Python File Write
 
+==> Write to an Existing File
+--> To write to an existing file, you must add a parameter to the open() function:
+"a" - Append - will append to the end of the file
+"w" - Write - will overwrite any existing content
 
+--> Example
+Open the file "demofile.txt" and append content to the file:
 
+```python
+with open("demofile.txt", "a") as f:
+  f.write("Now the file has more content!")
 
+#open and read the file after the appending:
+with open("demofile.txt") as f:
+  print(f.read())
+```
 
+# Overwrite Existing Content
 
+==> To overwrite the existing content to the file, use the w parameter:
+Example
+Open the file "demofile.txt" and overwrite the content:
 
+```python
+with open("demofile.txt", "w") as f:
+  f.write("Woops! I have deleted the content!")
 
+#open and read the file after the overwriting:
+with open("demofile.txt") as f:
+  print(f.read())
+```
 
+\*\*\* Note: the "w" method will overwrite the entire file.
 
+==> Create a New File
+To create a new file in Python, use the open() method, with one of the following parameters:
 
+"x" - Create - will create a file, returns an error if the file exists
+"a" - Append - will create a file if the specified file does not exists
+"w" - Write - will create a file if the specified file does not exists
 
+--> Example
+Create a new file called "myfile.txt":
 
+```python
+f = open("myfile.txt", "x")
+Result: a new empty file is created.
+```
 
+Note: If the file already exist, an error will be raised.
 
+# Python Delete File
 
+==> Delete a File
+To delete a file, you must import the OS module, and run its os.remove() function:
+==> Example
+Remove the file "demofile.txt":
 
+```python
+import os
+os.remove("demofile.txt")
+```
 
+==> Check if File exist:
+--> To avoid getting an error, you might want to check if the file exists before you try to delete it:
+--> Example
+Check if file exists, then delete it:
 
+```python
+import os
+if os.path.exists("demofile.txt"):
+  os.remove("demofile.txt")
+else:
+  print("The file does not exist")
+```
 
+==> Delete Folder
+--> To delete an entire folder, use the os.rmdir() method:
+--> Example
+Remove the folder "myfolder":
 
+```python
+import os
+os.rmdir("myfolder")
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Note: You can only remove empty folders.
 
 ## Reference Images
 
