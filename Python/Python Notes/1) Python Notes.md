@@ -1997,7 +1997,7 @@ print(myfunction.__name__)
    --> "a+" Append and Read. Creates file if it doesn’t exist.
    --> 'x' create a new file and open it for writing returns an error if the file exists
    --> 'b' binary mode -- x = open('demofile.txt', 'b')
-   --> 't' text mode (default)
+   --> 't' Default Value. Text mode (default)
    --> '+' open a disk file for updating (reading and writing)
    ![Difference between modes a, a+, w, w+, and r+ in built-in open function](image-23.png)
 2. Opening and Closing a File (open,read & Close File)
@@ -2056,20 +2056,84 @@ print(myfunction.__name__)
 
 ==> Syntax
 --> To open a file for reading it is enough to specify the name of the file:
-f = open("demofile.txt")
--->Make sure the file exists, or else you will get an error.
+    f = open("demofile.txt")
+--> The code above is the same as:
+    f = open("demofile.txt", "rt")
+    Because "r" for read, and "t" for text are the default values, you do not need to specify them.
+--> Make sure the file exists, or else will get an error.
+
 
 # Open a File on the Server
 
+--> To open the file, use the built-in open() function.
+--> The open() function returns a file object, which has a read() method for reading the content of the file:
+    f = open("demofile.txt")
+    print(f.read())
 --> If the file is located in a different location, will have to specify the file path, like this:
---> f = open("D:\\myfiles\welcome.txt", "r")
-print(f.read())
+    f = open("D:\\myfiles\welcome.txt", "r")
+    print(f.read())
 ==> Read Only Parts of the File
 --> By default the read() method returns the whole text, but can also specify how many characters want to return:
-f = open("demofile.txt", "r")
-print(f.read(5))
+    f = open("demofile.txt", "r")
+    print(f.read(5))
+==> Using the with statement
+==> can also use the with statement when opening a file:
+--> Using the with keyword:
+with open("demofile.txt") as f:
+  print(f.read())
+--> Then not have to worry about closing your files, the with statement takes care of that.
 
---> always close your files. In some cases, due to buffering, changes made to a file may not show until you close the file.
+# Close Files
+--> It is a good practice to always close the file when you are done with it.
+--> If you are not using the with statement, you must write a close statement in order to close the file:
+
+==> Example
+Close the file when you are finished with it:
+```python 
+f = open("demofile.txt")
+print(f.readline())
+f.close()
+```
+
+Always close your files. In some cases, due to buffering, changes made to a file may not show until you close the file.
+
+# Read Only Parts of the File
+
+==> By default the read() method returns the whole text, but you can also specify how many characters you want to return:
+==> Example
+Return the 5 first characters of the file:
+
+with open("demofile.txt") as f:
+  print(f.read(5))
+
+# Read Lines
+==> Can return one line by using the readline() method:
+==> Example
+Read one line of the file:
+``` python 
+with open("demofile.txt") as f:
+  print(f.readline())
+```
+
+==> By calling readline() two times, you can read the two first lines:
+Example
+Read two lines of the file:
+```python 
+with open("demofile.txt") as f:
+  print(f.readline())
+  print(f.readline())
+By looping through the lines of the file, you can read the whole file, line by line:
+
+Example
+Loop through the file line by line:
+
+with open("demofile.txt") as f:
+  for x in f:
+    print(x)
+
+
+
+
 
 # \*\*Module(Code Library)
 
@@ -2867,11 +2931,11 @@ C:\Users\Your Name> python -m venv myfirstproject
 
 --> This will set up a virtual environment, and create a folder named "myfirstproject" with subfolders and files, like this:
 myfirstproject
-  Include
-  Lib
-  Scripts
-  .gitignore
-  pyvenv.cfg
+Include
+Lib
+Scripts
+.gitignore
+pyvenv.cfg
 
 # Activate Virtual Environment
 
@@ -2879,6 +2943,95 @@ myfirstproject
 C:\Users\Your Name> myfirstproject\Scripts\activate
 
 After activation, your prompt will change to show that you are now working in the active environment:
+
+==> Result
+The command line will look like this when the virtual environment is active:
+(myfirstproject) C:\Users\Your Name>
+
+# Install Packages
+
+==> Once your virtual environment is activated, can install packages in it, using pip.
+
+--> We will install a package called 'cowsay':
+(myfirstproject) C:\Users\Your Name> pip install cowsay
+
+# Using Package
+
+--> Now that the 'cowsay' module is installed in your virtual environment, lets use it to display a talking cow.
+--> Create a file called test.py on your computer. You can place it wherever you want, but I will place it in the same location as the myfirstproject folder -not in the folder, but in the same location.
+--> Open the file and insert these three lines in it:
+
+```python
+import cowsay
+cowsay.cow("Good Mooooorning!")
+```
+# Deactivate Virtual Environment
+
+==> To deactivate the virtual environment use this command:
+(myfirstproject) C:\Users\Your Name> deactivate
+
+# Delete Virtual Environment
+
+==> To delete a virtual environment, you can simply delete its folder with all its content. Either directly in the file system, or use the command line interface like this:
+
+Example
+--> Delete myfirstproject from the command line interface:
+C:\Users\Your Name> rmdir /s /q myfirstproject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
