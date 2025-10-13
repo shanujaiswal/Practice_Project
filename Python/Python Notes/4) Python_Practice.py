@@ -485,3 +485,62 @@
 
 # acc1 = Account(10000, 123456)
 # acc1.debit(int(input("Enter the money you want to debit: ")))
+
+
+# Marksheet for a student
+def calculate_percent(func):
+    def inner(self, Name, Marks1, Marks2, Marks3, Marks4, Marks5):
+        func(self, Name, Marks1, Marks2, Marks3, Marks4, Marks5)
+        return (Marks1 + Marks2 + Marks3 + Marks4 + Marks5) / 5
+
+    return inner
+
+
+class Result:
+    @calculate_percent
+    def Details(self, Name, Marks1, Marks2, Marks3, Marks4, Marks5):
+        self.name = Name
+        self.subject1 = Marks1
+        self.subject2 = Marks2
+        self.subject3 = Marks3
+        self.subject4 = Marks4
+        self.subject5 = Marks5
+
+
+def get_name():
+    while True:
+        name = input("Enter Your Name: ")
+        if name.replace(" ", "").isalpha():
+            return name
+        else:
+            print("Invalid input.Name should contain only alphabetic characters.")
+
+
+def get_marks():
+    while True:
+        try:
+            mark_str = input(f"Enter Your Number in {subject_name}: ")
+            if re.fullmatch(r"\d{1,2}(\.\d{1,2})?", mark_str):
+                # If regex matches, safely convert to a float
+                mark = float(mark_str)
+                return mark
+            else:
+                print(
+                    "Invalid input. Please enter a number up to 2 digits, with an optional decimal up to 2 digits."
+                )
+        except ValueError:
+            # This handles cases the regex might not catch, though it's less likely with re.fullmatch
+            print("Invalid input. Please enter a valid number.")
+
+
+try:
+    name = input("Enter Your Name ")
+    Marks1 = int(input("Enter Your Number in Subject1: "))
+    Marks2 = int(input("Enter Your Number in Subject2: "))
+    Marks3 = int(input("Enter Your Number in Subject3: "))
+    Marks4 = int(input("Enter Your Number in Subject4: "))
+    Marks5 = int(input("Enter Your Number in Subject5: "))
+except ValueError:
+    print("Iinvalid input.Please enter a valid number.")
+
+print(Result().Details(name, Marks1, Marks2, Marks3, Marks4, Marks5))
