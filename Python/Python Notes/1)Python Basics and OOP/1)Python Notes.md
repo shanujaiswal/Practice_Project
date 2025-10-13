@@ -156,9 +156,9 @@ x = "fantastic"
 --> Variables can store data of different types, and different types can do different things.
 --> Python has the following data types built-in by default, in these categories:
 --> Can get the data type of any object by using the type() function:
-![Built-in by default data types](image-1.png)
-![Examole of built-in by default data types ](image-2.png)
-![The Specific Data Type](image-3.png)
+![Built-in by default data types](image-01.png)
+![Examole of built-in by default data types ](image-02.png)
+![The Specific Data Type](image-03.png)
 
 1. List is a collection which is ordered and changeable. Allows duplicate members.
 2. Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
@@ -190,7 +190,7 @@ float is superior than int.
 3. An identifier can not start with symbols like !,@,#,%,$ ,etc in our identifier
 4. Identifier can be of any length
 
-![Reserved KeyWords](image-4.png)
+![Reserved KeyWords](image-04.png)
 
 ## Numbers
 
@@ -214,9 +214,9 @@ print(random.randrange(1, 10))
 
 Raw strings treat backslashes (\) as literal characters, useful for file paths and regex.can use raw strings by adding an r before the first quote:
 --> Mixing operators between numbers and strings is not supported:
-![Operator](image-5.png)
-![Escape Characters](image-6.png)
-![Slicing ](image-7.png)
+![Operator](image-05.png)
+![Escape Characters](image-06.png)
+![Slicing ](image-07.png)
 
 # Strings are Arrays
 
@@ -296,7 +296,7 @@ print(x)
     --> Python allows using `==`, `!=`, `<`, `>`, `<=`, `>=` with strings.
     --> Strings are compared lexicographically (alphabetical order based on ASCII values).
 
-![Sring Method](image-8.png) ----> Image Fixed upto this
+![Sring Method](image-08.png) ----> Image Fixed upto this
 
 # String Formatting in Python
 
@@ -426,7 +426,7 @@ print(isinstance(x, int))
 
 1. Arithmetic Operators
    --> Arithmetic operators are used with numeric values to perform common mathematical operations
-   --> ![Arithmetic Operators](image-9.png)
+   --> ![Arithmetic Operators](image-09.png)
 2. Assignment Operators
    --> Assignment operators are used to assign values to variables
    --> ![Assignment Operators](image-10.png)
