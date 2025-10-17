@@ -1,7 +1,8 @@
 ## Database
 
-It is collection of data in a format that can be easily accessed(Digital)
-A software application used to manage our DB is called DBMS(Database Management System)
+==> It is collection of data in a format that can be easily accessed(Digital)
+==> A software application used to manage our DB is called DBMS(Database Management System)
+==> Query --> a question, or the search for a piece of information
 
 # Types of Databases with Use Explanations
 
@@ -107,18 +108,6 @@ age INT NOT NULL
 TINYINT UNSIGNED (0 to 255)
 TINYINT UNSIGNED (0 to 255)
 
-
-
-
-
-
-
-
-
-
-
-
-
 CREATE - to create database objects (tables, views, indexes, etc.)
 DROP - to delete/remove database objects
 SELECT - to retrieve data from tables
@@ -139,3 +128,66 @@ COMMIT - to save transaction changes permanently
 ROLLBACK - to undo transaction changes
 TRUNCATE - to remove all records from a table (faster than DELETE)
 CONSTRAINT - to define rules for data in tables
+
+## Data Definition Language (DDL)
+
+==> Used to define and modify database structures.
+
+1.  CREATE --> Creates database objects like tables, views, indexes, schemas, or databases.--> CREATE TABLE Employees (ID INT, Name VARCHAR(100));
+2.  DROP --> Permanently deletes database objects.--> DROP TABLE Employees;
+3.  ALTER --> Modifies existing database objects (e.g., add/remove columns).--> ALTER TABLE Employees ADD COLUMN Salary DECIMAL(10,2);
+4.  TRUNCATE --> Removes all records from a table ().--> TRUNCATE TABLE Employees;
+5.  INDEX --> Creates an index to .--> CREATE INDEX idx_name ON Employees(Name);
+
+## Data Manipulation Language (DML)
+
+==> Used to manage data within database objects.
+
+1. SELECT --> Retrieves data from one or more tables. --> SELECT \* FROM Employees WHERE Salary > 50000;
+2. INSERT --> Adds new records to a table. --> INSERT INTO Employees (ID, Name) VALUES (1, 'John Doe');
+3. UPDATE --> Modifies existing records. --> UPDATE Employees SET Salary = 60000 WHERE ID = 1;
+4. DELETE --> Removes records from a table. --> DELETE FROM Employees WHERE ID = 1;
+
+## Data Control Language (DCL)
+
+==> Used to manage access and permissions.
+
+1. GRANT --> Grants specific privileges to users. --> GRANT SELECT ON Employees TO user1;
+2. REVOKE --> Removes previously granted privileges. --> REVOKE SELECT ON Employees FROM user1;
+
+## Transaction Control Language (TCL)
+
+==> Used to manage transactions.'
+
+1. COMMIT --> Saves all changes made during a transaction permanently. --> COMMIT;
+2. ROLLBACK --> Undoes all changes made during a transaction. --> ROLLBACK;
+
+## Clauses for Querying and Filtering
+
+1. WHERE --> Filters records based on conditions. --> SELECT \* FROM Employees WHERE Salary > 50000;
+2. GROUP BY --> Groups records for aggregate functions (e.g., COUNT, SUM). --> SELECT Department, COUNT(\*) FROM Employees GROUP BY Department;
+3. HAVING --> Filters groups based on conditions (). --> SELECT Department, COUNT(_) FROM Employees GROUP BY Department HAVING COUNT(_) > 5;
+4. ORDER BY --> Sorts the result set in ascending or descending order. --> SELECT \* FROM Employees ORDER BY Salary DESC;
+
+## Joins
+
+==> Used to combine rows from two or more tables.
+
+1. INNER JOIN --> Returns records with matching values in both tables. --> SELECT Employees.Name, Departments.Name FROM Employees INNER JOIN Departments ON Employees.DeptID = Departments.ID;
+2. LEFT JOIN --> Returns all records from the left table, and matched records from the right. --> SELECT Employees.Name, Departments.Name FROM Employees LEFT JOIN Departments ON Employees.DeptID = Departments.ID;
+3. RIGHT JOIN --> Returns all records from the right table, and matched records from the left.--> SELECT Employees.Name, Departments.Name FROM Employees RIGHT JOIN Departments ON Employees.DeptID = Departments.ID;
+4. FULL JOIN --> Returns all records when there is a match in either table. --> SELECT Employees.Name, Departments.Name FROM Employees FULL JOIN Departments ON Employees.DeptID = Departments.ID;
+
+## Set Operations
+
+UNION --> Combines result sets from multiple SELECT statements ().--> SELECT Name FROM Employees UNION SELECT Name FROM Contractors;
+
+## Constraints
+
+==> Used to define rules for data in tables.
+
+1.  PRIMARY KEY --> Uniquely identifies each record in a table. --> CREATE TABLE Employees (ID INT PRIMARY KEY, Name VARCHAR(100));
+2. FOREIGN KEY --> Ensures referential integrity between tables. --> CREATE TABLE Orders (OrderID INT PRIMARY KEY, EmployeeID INT, FOREIGN KEY (EmployeeID) REFERENCES Employees(ID));
+3. UNIQUE--> Ensures all values in a column are unique.--> CREATE TABLE Employees (ID INT UNIQUE, Name VARCHAR(100));
+4. NOT NULL --> Ensures a column cannot have NULL values. --> CREATE TABLE Employees (ID INT NOT NULL, Name VARCHAR(100));
+5. CHECK --> Ensures values in a column meet a specific condition. --> CREATE TABLE Employees (ID INT, Salary DECIMAL(10,2) CHECK (Salary > 0));
