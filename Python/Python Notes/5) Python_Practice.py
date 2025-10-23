@@ -486,6 +486,39 @@
 # acc1 = Account(10000, 123456)
 # acc1.debit(int(input("Enter the money you want to debit: ")))
 
+#  The largest and smallest element in an array.
+# def largest(a):
+#     largest = a[0]
+#     for i in a:
+#         if i > largest:
+#             largest = i
+#     return largest 
+    
+# a = [1,2,3,4,5]
+# print(largest(a))
+
+# Write an array of integers, find the sum of all even numbers in the array.
+# def even_sum(a):
+#     sum = 0
+#     for i in a:
+#         if i % 2 == 0:
+#             sum += i
+#     return sum
+    
+# a = [2,3,4,5,6,7]
+# print(even_sum(a))
+
+# Write a function to reverse a given string.
+
+# def reverse_string(a):
+#     reverse = ""
+#     for i in range(len(a)-1,-1,-1):
+#         reverse += a[i]
+#     return reverse 
+    
+# a = "shanu"
+# print(reverse_string(a))
+
 
 # Marksheet for a student
 def calculate_percent(func):
