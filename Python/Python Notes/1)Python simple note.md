@@ -85,6 +85,7 @@ x = y = z = "Hello World"
 ==> Unpack a Collection
 --> If you have a collection of values in a list, tuple etc. Python allows to extract the values into variables. This is called unpacking.
 ==> Unpack a list:
+
 ```python
 fruits = ["apple", "banana", "cherry"]
 x, y, z = fruits
@@ -92,3 +93,51 @@ print(x)
 print(y)
 print(z)
 ```
+
+# Output Variables
+
+--> In the print() function, when try to combine a string and a number with the + operator, Python will give an error, The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:
+--> write end = "" to avoid/prevent print a new next line at the end.
+In the print() function, output multiple variables, separated by a comma:
+
+```python
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)
+```
+
+--> Can also use the + operator to output multiple variables, For numbers, the + character works as a mathematical operator
+
+```Python
+x = "Python "
+y = "is "
+z = "awesome"
+print(x + y + z)
+```
+
+# global Variable ??
+
+# Data Type
+
+![Data Tpye](image.png)
+
+1. List is a collection which is ordered and changeable. Allows duplicate members.
+2. Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+3. Set is a collection which is unordered, unchangeable, and unindexed. No duplicate members.
+4. Dictionary is a collection which is ordered and changeable. No duplicate members.
+   Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
+
+Type Conversion(automatically) & type casting(manual)
+
+Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
+float is superior than int.
+--> lst = [1, 2, 3, 4, 5] -- List  
+--> tpl = (1, 2, 3, 4, 5) -- Tuple  
+--> strg = "Hello" -- String  
+--> dct = {"a": 1, "b": 2} -- Dictionary  
+--> st = {1, 2, 3, 4, 5} -- Set  
+--> rng = range(10) -- Range  
+--> byt = b"Hello" -- Bytes
+==> Get the Type
+--> Get the data type of a variable with the type() function
