@@ -194,10 +194,11 @@ float is superior than int.
 
 ## Numbers
 
---> Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals) ,also supports complex numbers ,
+--> Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals), also supports complex numbers
 --> Float can also be scientific numbers with an "e" to indicate the power of 10.
 --> Complex numbers are written with a "j" as the imaginary part:
 --> Cannot convert complex numbers into another number type.
+
 ==> Random Number
 --> Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:
 --> ex:-

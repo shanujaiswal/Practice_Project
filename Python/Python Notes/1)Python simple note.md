@@ -116,7 +116,7 @@ z = "awesome"
 print(x + y + z)
 ```
 
-# global Variable ??
+# Global Variable ??
 
 # Data Type
 
@@ -128,7 +128,7 @@ print(x + y + z)
 4. Dictionary is a collection which is ordered and changeable. No duplicate members.
    Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
 
-Type Conversion(automatically) & type casting(manual)
+## Type Conversion(automatically) & type casting(manual)
 
 Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
 float is superior than int.
@@ -139,5 +139,19 @@ float is superior than int.
 --> st = {1, 2, 3, 4, 5} -- Set  
 --> rng = range(10) -- Range  
 --> byt = b"Hello" -- Bytes
+
 ==> Get the Type
 --> Get the data type of a variable with the type() function
+
+# Numbers
+
+--> Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals), also supports complex numbers.
+--> Float can also be scientific numbers with an "e" to indicate the power of 10.
+--> Complex numbers are written with a "j" as the imaginary part:
+--> Cannot convert complex numbers into another number type.
+
+## Strings
+
+--> Strings are defined either with a single quote or a double quotes.
+--> Triple-Quoted Strings -- For multi-line strings to a variable or embedded quotes.
+--> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
