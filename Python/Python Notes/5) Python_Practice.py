@@ -552,8 +552,8 @@ def get_name():
 def get_marks():
     while True:
         try:
-            mark_str = input(f"Enter Your Number in {subject_name}: ")
-            if re.fullmatch(r"\d{1,2}(\.\d{1,2})?", mark_str):
+            mark_str = input(f"Enter Your Number in {subject_name}:
+                if re.fullmatch(r"\d{1,2}(\.\d{1,2})?", mark_str):
                 # If regex matches, safely convert to a float
                 mark = float(mark_str)
                 return mark
