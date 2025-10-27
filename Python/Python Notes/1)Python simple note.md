@@ -128,6 +128,10 @@ print(x + y + z)
 4. Dictionary is a collection which is ordered and changeable. No duplicate members.
    Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
 
+list and dictionary are mutable(changable) and tuple, set, string, number are not mutable(unchangeable)
+list and tuple and dictionary are ordered and set is unordered
+list and tuple allow duplicate and set and dictionary are not allowed for duplicate
+
 ## Type Conversion(automatically) & type casting(manual)
 
 Type Conversion is the automatic or manual process of changing a variable's data type, while Type Casting is the explicit (manual) conversion using functions like int(), float(), and str().
@@ -155,3 +159,7 @@ float is superior than int.
 --> Strings are defined either with a single quote or a double quotes.
 --> Triple-Quoted Strings -- For multi-line strings to a variable or embedded quotes.
 --> The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
+
+![Operator Sign](image-1.png)
+![Escape Characters](image-2.png)
+![Slicing](image-3.png)
